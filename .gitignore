@@ -1,5 +1,5 @@
 # 용량 큰 데이터
-data\light_data.pkl
+data/light_data.pkl
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
