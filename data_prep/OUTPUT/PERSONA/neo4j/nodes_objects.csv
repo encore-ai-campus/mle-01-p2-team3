@@ -1,0 +1,1548 @@
+object_id,normalized_name,canonical_name,object_count,episode_count,is_background_object,is_story_relevant_candidate
+obj__alarm_horn__d20ed7a8,alarm horn,Alarm Horn,270,22,False,False
+obj__fluid__5cfea13b,fluid,Fluid,286,22,False,False
+obj__stool__801f91a6,stool,Stool,633,46,True,False
+obj__wooden_bar__e18010fd,wooden bar,Wooden Bar,286,22,False,False
+obj__barnacle__d2ba9502,barnacle,Barnacle,475,41,False,False
+obj__dirty_wooden_bucket__d13b74e9,dirty wooden bucket,Dirty Wooden Bucket,235,22,False,False
+obj__lantern__9e87ffce,lantern,Lantern,800,68,True,False
+obj__small_bed__facfd127,small bed,Small Bed,252,21,False,False
+obj__torch__69756f3c,torch,Torch,3240,297,True,False
+obj__cell__8d27600b,cell,Cell,431,35,False,False
+obj__wall__2d86bdac,wall,Wall,7849,597,True,False
+obj__bar__37b51d19,bar,Bar,1822,146,False,False
+obj__mud__c95e3dd9,mud,Mud,1145,102,False,False
+obj__water__9460370b,water,Water,3145,249,False,False
+obj__water_tower__01fa0e05,water tower,Water Tower,135,10,False,False
+obj__door__2feaaf89,door,Door,4548,345,True,False
+obj__tack_for_the_work_horses__cfc71b82,tack for the work horses,Tack For The Work Horses,143,13,False,False
+obj__enchanted_torch__16750954,enchanted torch,Enchanted Torch,239,20,False,False
+obj__ocean__45d20b1d,ocean,Ocean,704,38,False,False
+obj__castle__9355a9f9,castle,Castle,1685,129,False,False
+obj__cliff__9e94e929,cliff,Cliff,194,18,False,False
+obj__moat__3c3a57f1,moat,Moat,565,43,False,False
+obj__weapon__282aa351,weapon,Weapon,2246,208,False,False
+obj__bed__001cbc05,bed,Bed,5084,374,True,False
+obj__trunk__8d0411b3,trunk,Trunk,811,61,False,False
+obj__lion__6b42d00c,lion,Lion,279,22,False,False
+obj__crystal__cc989606,crystal,Crystal,537,55,False,False
+obj__window__05b8c74c,window,Window,5994,435,True,False
+obj__tree__c0af77cf,tree,Tree,8760,659,False,False
+obj__church__916586c8,church,Church,675,51,False,False
+obj__narrow_door__7026bb84,narrow door,Narrow Door,291,22,False,False
+obj__bone__a57fc812,bone,Bone,3238,305,False,False
+obj__grass__09d440e4,grass,Grass,3783,286,False,False
+obj__leaf__bab4ff04,leaf,Leaf,482,39,False,False
+obj__bird__abaecf8c,bird,Bird,454,42,False,False
+obj__scarab_beetle__8ba162cb,scarab beetle,Scarab Beetle,271,20,False,False
+obj__wooden_table__1c031e74,wooden table,Wooden Table,862,66,False,False
+obj__painting__6a7c1b1d,painting,Painting,3269,245,False,False
+obj__ornate_chair__4f8c7394,ornate chair,Ornate Chair,285,22,False,False
+obj__hanging_tapestry__84c3304e,hanging tapestry,Hanging Tapestry,575,48,False,False
+obj__small_table__a17ce4c9,small table,Small Table,970,67,False,False
+obj__room__fef2576d,room,Room,1908,146,True,False
+obj__cold_stone_wall__6ffb863d,cold stone wall,Cold Stone Wall,235,18,False,False
+obj__secret_tunnel__57b3c615,secret tunnel,Secret Tunnel,235,18,False,False
+obj__corridor__b254e0ae,corridor,Corridor,235,18,False,False
+obj__floor__75158758,floor,Floor,2070,157,True,False
+obj__chain__9951112f,chain,Chain,1135,105,False,False
+obj__kingdom__dc420563,kingdom,Kingdom,235,18,False,False
+obj__skeletons__138f64f4,skeletons,Skeletons,795,66,False,False
+obj__big_chandelier__0bf29dde,big chandelier,Big Chandelier,297,20,False,False
+obj__red_brick__89df469e,red brick,Red Brick,223,20,False,False
+obj__kings_throne__528cca0d,kings throne,Kings Throne,297,20,False,True
+obj__dinner__ad5acdfa,dinner,Dinner,322,23,False,False
+obj__candle__ce23a732,candle,Candle,6204,491,True,False
+obj__light__2ac43aa4,light,Light,532,38,False,False
+obj__king__b2086154,king,King,322,23,False,False
+obj__grey_brick__5eac8ede,grey brick,Grey Brick,322,23,False,False
+obj__scale__0cb47aeb,scale,Scale,194,18,False,False
+obj__gold_bar__526d5246,gold bar,Gold Bar,76,7,False,True
+obj__oak_wood__c6992fc9,oak wood,Oak Wood,198,18,False,False
+obj__big_wooden_table__e1e51e21,big wooden table,Big Wooden Table,220,18,False,False
+obj__aisle__beac3deb,aisle,Aisle,198,18,False,False
+obj__sword_of_the_guards__3a72e503,sword of the guards,Sword Of The Guards,147,13,False,True
+obj__wood_trim__6e9be179,wood trim,Wood Trim,379,22,False,False
+obj__stones__a6251e42,stones,Stones,282,22,False,False
+obj__lookout_tower__846da8ae,lookout tower,Lookout Tower,295,22,False,False
+obj__lagoon__664a6ce4,lagoon,Lagoon,272,21,False,False
+obj__lily_pad__01249156,lily pad,Lily Pad,234,21,False,False
+obj__moss__06a311b9,moss,Moss,1777,154,False,False
+obj__ship__2a3f1166,ship,Ship,880,66,False,False
+obj__product__f5bf48aa,product,Product,240,21,False,False
+obj__fish__83e4a96a,fish,Fish,1043,90,False,False
+obj__pew__08db7753,pew,Pew,1605,105,False,False
+obj__stained_glass__a27f240f,stained glass,Stained Glass,706,51,False,False
+obj__altar__ff70cae5,altar,Altar,1942,153,False,False
+obj__rock__9a1f3094,rock,Rock,3441,292,False,False
+obj__opening__c1d8ae6c,opening,Opening,271,21,False,False
+obj__passage__84edc120,passage,Passage,271,21,False,False
+obj__mountain__ec6d9c89,mountain,Mountain,714,58,False,False
+obj__weed__8417a031,weed,Weed,714,70,False,False
+obj__shutter__69768fb9,shutter,Shutter,255,20,False,False
+obj__small_decrepit_graveyard__03ddbf73,small decrepit graveyard,Small Decrepit Graveyard,255,20,False,False
+obj__river__a5b03048,river,River,907,64,False,False
+obj__gurgling_water__abb663d5,gurgling water,Gurgling Water,241,18,False,False
+obj__land__87cf962b,land,Land,241,18,False,False
+obj__dirt__c90b1198,dirt,Dirt,2604,195,False,False
+obj__clear_air__75a1f18a,clear air,Clear Air,241,18,False,False
+obj__basket__0f6cdb62,basket,Basket,289,28,False,False
+obj__worm__6d3f321e,worm,Worm,282,29,False,False
+obj__carcass__05692c36,carcass,Carcass,74,14,False,False
+obj__mudpit__d7eeb908,mudpit,Mudpit,239,21,False,False
+obj__vegetation__831740e4,vegetation,Vegetation,100,11,False,False
+obj__thick_water__c0b5ac4c,thick water,Thick Water,281,21,False,False
+obj__pot__ecbfde13,pot,Pot,1464,126,False,False
+obj__pan__96ac0342,pan,Pan,399,42,False,False
+obj__oven__2eb68694,oven,Oven,275,21,False,False
+obj__knife__4cbfe673,knife,Knife,1673,158,False,True
+obj__observation_deck__8a5e076c,observation deck,Observation Deck,294,21,False,False
+obj__stair__8148a665,stair,Stair,1153,76,False,False
+obj__beautiful_land__af37dc64,beautiful land,Beautiful Land,294,21,False,False
+obj__beautiful_farmland__68a4deb3,beautiful farmland,Beautiful Farmland,294,21,False,False
+obj__countryside__9cff47d1,countryside,Countryside,294,21,False,False
+obj__vessel__5e47949e,vessel,Vessel,277,21,False,False
+obj__gold__e07e81c2,gold,Gold,2679,237,False,True
+obj__door_to_the_shack__2e6f4cd6,door to the shack,Door To The Shack,269,21,False,False
+obj__mold__0ad9f975,mold,Mold,221,21,False,False
+obj__shingle__1b77f14a,shingle,Shingle,351,21,False,False
+obj__roof_of_the_shack__6072f38d,roof of the shack,Roof Of The Shack,269,21,False,False
+obj__front_porch__d103110e,front porch,Front Porch,269,21,False,False
+obj__door_frame__d8ed5dcc,door frame,Door Frame,269,21,False,False
+obj__small_flap__bc47d78e,small flap,Small Flap,265,20,False,False
+obj__stretched_canvas__69cab42b,stretched canvas,Stretched Canvas,329,21,False,False
+obj__patch__e5c5e6da,patch,Patch,269,20,False,False
+obj__rug__717de68e,rug,Rug,2069,163,True,False
+obj__claw_foot_tub__dea7ebd9,claw foot tub,Claw Foot Tub,304,22,False,False
+obj__mirror__fbe322a8,mirror,Mirror,818,63,False,False
+obj__linen__a6ab62e9,linen,Linen,825,64,False,False
+obj__green_jungle__1cf19f75,green jungle,Green Jungle,258,20,False,False
+obj__treehouse__e56e22e5,treehouse,Treehouse,382,29,False,False
+obj__wall_hanging__f923af84,wall hanging,Wall Hanging,224,20,False,False
+obj__mess_of_vines__2f0d5ca5,mess of vines,Mess Of Vines,258,20,False,False
+obj__jungle_floor__535c6c64,jungle floor,Jungle Floor,258,20,False,False
+obj__debris__2df9afbf,debris,Debris,701,50,False,False
+obj__trash_bin__e68fdb50,trash bin,Trash Bin,160,16,False,False
+obj__lamp_post__04ff1913,lamp post,Lamp Post,279,22,False,False
+obj__small_gazebo__1d26542c,small gazebo,Small Gazebo,279,22,False,False
+obj__flower__608f0b98,flower,Flower,5989,555,False,False
+obj__fire__015f28b9,fire,Fire,384,29,False,False
+obj__meal__d9ed7694,meal,Meal,487,50,False,False
+obj__cooking_pot__d6065971,cooking pot,Cooking Pot,255,22,False,False
+obj__kitchen__09228dac,kitchen,Kitchen,266,20,False,False
+obj__building__1b20e902,building,Building,2136,166,False,False
+obj__large_chest_of_drawers__58e773ac,large chest of drawers,Large Chest Of Drawers,337,22,False,True
+obj__large_four_poster_bed__9062e6cd,large four poster bed,Large Four Poster Bed,337,22,False,False
+obj__plank__05b8b9bd,plank,Plank,319,22,False,False
+obj__gauzy_purple_fabric__aef91cd6,gauzy purple fabric,Gauzy Purple Fabric,239,22,False,False
+obj__duvet__fbed3603,duvet,Duvet,262,22,False,False
+obj__table__aab9e1de,table,Table,8970,666,True,False
+obj__king_s_armor__0b27e3d2,king's armor,King'S Armor,108,10,False,True
+obj__king_s_clothing__b21f56e5,king's clothing,King'S Clothing,215,22,False,False
+obj__gilded_mirror__3470e427,gilded mirror,Gilded Mirror,144,11,False,False
+obj__tassel__f7aeb082,tassel,Tassel,258,22,False,False
+obj__crossbow_with_no_string__1ef3f353,crossbow with no string,Crossbow With No String,187,18,False,False
+obj__largest_trash_heap__4fa556da,largest trash heap,Largest Trash Heap,202,20,False,False
+obj__wooden_chair_with_one_leg_broken__937b3306,wooden chair with one leg broken,Wooden Chair With One Leg Broken,239,18,False,False
+obj__rag_dool_with_the_head_detached__3a06597d,rag dool with the head detached,Rag Dool With The Head Detached,149,18,False,False
+obj__long_skinny_tree__f6769706,long skinny tree,Long Skinny Tree,125,9,False,False
+obj__needle__4bf84bab,needle,Needle,326,24,False,False
+obj__stone__0a840ef4,stone,Stone,4538,385,False,False
+obj__branches__92ec19ff,branches,Branches,453,41,False,False
+obj__lamp__263addb7,lamp,Lamp,1019,72,True,False
+obj__vine__a77b5176,vine,Vine,1121,89,False,False
+obj__twine__3054ce7c,twine,Twine,365,21,False,False
+obj__bow__18222660,bow,Bow,697,68,False,False
+obj__branch__9603a224,branch,Branch,1106,88,False,False
+obj__stick__37f8bf33,stick,Stick,716,61,False,False
+obj__hill__debaee4a,hill,Hill,1567,123,False,False
+obj__tower__79835ea3,tower,Tower,1585,118,False,False
+obj__signal_fire__5c608671,signal fire,Signal Fire,279,21,False,False
+obj__hammers__362aa834,hammers,Hammers,259,22,False,False
+obj__iron__bcd31c71,iron,Iron,239,20,False,False
+obj__tongs__90418476,tongs,Tongs,284,20,False,False
+obj__hammer__5f9901fc,hammer,Hammer,378,36,False,False
+obj__forge__228410f5,forge,Forge,256,20,False,False
+obj__wooden_workbench__2b2f907d,wooden workbench,Wooden Workbench,256,20,False,False
+obj__tool__39ab32c5,tool,Tool,2486,217,False,False
+obj__large_ornate_carpet__3dd94407,large ornate carpet,Large Ornate Carpet,112,8,False,False
+obj__armor__3ee45b1f,armor,Armor,1214,111,False,True
+obj__manikin__42da0307,manikin,Manikin,252,19,False,False
+obj__mace__22213c39,mace,Mace,580,48,False,False
+obj__lance__3573c6ef,lance,Lance,124,11,False,False
+obj__shackle__bf676db8,shackle,Shackle,912,76,False,False
+obj__worn_quilt__6d462c07,worn quilt,Worn Quilt,233,21,False,False
+obj__woven_blue_rug__4044eca6,woven blue rug,Woven Blue Rug,255,21,False,False
+obj__wooden_bed__13590b18,wooden bed,Wooden Bed,254,21,False,False
+obj__dresser__c4193732,dresser,Dresser,263,21,False,False
+obj__priceless_painting_of_past_kings__d46c0026,priceless painting of past kings,Priceless Painting Of Past Kings,246,18,False,False
+obj__jewel__29d233ae,jewel,Jewel,1247,122,False,True
+obj__red_carpet__268d65fc,red carpet,Red Carpet,1310,96,False,False
+obj__crown__408e69f6,crown,Crown,554,53,False,True
+obj__golden_throne__7600de15,golden throne,Golden Throne,825,57,False,True
+obj__priceless_painting__0da86388,priceless painting,Priceless Painting,240,18,False,False
+obj__vaulted_ceiling__d75b1bd9,vaulted ceiling,Vaulted Ceiling,246,18,False,False
+obj__small_metal_bucket__f969b62e,small metal bucket,Small Metal Bucket,264,22,False,False
+obj__metal_bucket__12d72eba,metal bucket,Metal Bucket,270,23,False,False
+obj__sapphire__94149db1,sapphire,Sapphire,990,84,False,False
+obj__ruby__58e53d13,ruby,Ruby,783,64,False,False
+obj__metal__86094b61,metal,Metal,263,20,False,False
+obj__silver__97f01451,silver,Silver,683,58,False,False
+obj__small_wooden_bed__29397509,small wooden bed,Small Wooden Bed,318,20,False,False
+obj__small_wooden_cabinet__043a76b4,small wooden cabinet,Small Wooden Cabinet,318,20,False,False
+obj__wooden_chair__953b4e21,wooden chair,Wooden Chair,389,29,False,False
+obj__second_pair_of_clothing__c18eb6a6,second pair of clothing,Second Pair Of Clothing,258,20,False,False
+obj__colorful_homemade_quilt__daf8c1cd,colorful homemade quilt,Colorful Homemade Quilt,303,20,False,False
+obj__straw_mattress__cc48f53b,straw mattress,Straw Mattress,268,20,False,False
+obj__colorful_homemade_tapestry__dabebc4d,colorful homemade tapestry,Colorful Homemade Tapestry,268,20,False,False
+obj__waterfall__911b1ca4,waterfall,Waterfall,484,39,False,False
+obj__monkey__d0763eda,monkey,Monkey,215,20,False,False
+obj__nests__9e4addf3,nests,Nests,365,29,False,False
+obj__chandelier__9ac23ec9,chandelier,Chandelier,1403,109,False,False
+obj__colorful_painting__35555167,colorful painting,Colorful Painting,233,19,False,False
+obj__seat__554e4b55,seat,Seat,1656,128,False,False
+obj__gown__c3390dfc,gown,Gown,191,21,False,False
+obj__handmade_rug__34c3a1be,handmade rug,Handmade Rug,227,18,False,False
+obj__tapestry__8873d146,tapestry,Tapestry,3689,285,False,False
+obj__bench__1d28d258,bench,Bench,3112,235,True,False
+obj__wildflower__0cf83c1b,wildflower,Wildflower,609,54,False,False
+obj__blacksmith__c2428781,blacksmith,Blacksmith,317,20,False,False
+obj__armory__f1c6e216,armory,Armory,611,41,False,False
+obj__small_wooden_house__d397b27d,small wooden house,Small Wooden House,247,20,False,False
+obj__temple__44fdfd6b,temple,Temple,1461,94,False,False
+obj__town__7198cda5,town,Town,352,27,False,False
+obj__public_bath__46b0f4d1,public bath,Public Bath,112,8,False,False
+obj__farm__e67ed91b,farm,Farm,247,20,False,False
+obj__pub__3a21cd73,pub,Pub,317,20,False,False
+obj__tombstone__dba875f1,tombstone,Tombstone,351,27,False,False
+obj__small_metal_fence__202a2879,small metal fence,Small Metal Fence,261,20,False,False
+obj__adornment__f215cd95,adornment,Adornment,214,20,False,False
+obj__statue__a643f0c6,statue,Statue,3335,246,False,False
+obj__ceiling__246b2dd5,ceiling,Ceiling,1727,138,True,False
+obj__rectory__af9459b5,rectory,Rectory,267,20,False,False
+obj__wood__22811dd9,wood,Wood,2176,193,False,False
+obj__pirate__ad015ef4,pirate,Pirate,333,26,False,False
+obj__cargo__f91cd5d6,cargo,Cargo,211,19,False,False
+obj__clouds__073caed7,clouds,Clouds,475,36,False,False
+obj__sky__900bc885,sky,Sky,680,52,False,False
+obj__path__d6fe1d0b,path,Path,451,35,False,False
+obj__fog__3811727d,fog,Fog,214,16,False,False
+obj__suit_of_armor__66f246e8,suit of armor,Suit Of Armor,502,46,False,True
+obj__scroll__089b0cdd,scroll,Scroll,421,42,False,True
+obj__booth__d20ad56e,booth,Booth,182,16,False,False
+obj__sheer_screen__8afeae01,sheer screen,Sheer Screen,182,16,False,False
+obj__curtain__2805ba35,curtain,Curtain,669,50,True,False
+obj__confessional__f24d3972,confessional,Confessional,154,11,False,False
+obj__blacksmith_s_hammer__922ff8c9,blacksmith's hammer,Blacksmith'S Hammer,167,20,False,False
+obj__spice__77f4de0c,spice,Spice,704,60,False,False
+obj__food__62506be3,food,Food,1736,189,False,False
+obj__large_green_land__da6c2794,large green land,Large Green Land,267,20,False,False
+obj__house__2ca63cdd,house,House,464,30,False,False
+obj__bag__4a827154,bag,Bag,607,61,False,False
+obj__filth_from_kingdom__1a138d54,filth from kingdom,Filth From Kingdom,245,19,False,False
+obj__horse__f1bdf5ed,horse,Horse,1379,113,False,False
+obj__corn__c548ea99,corn,Corn,141,18,False,False
+obj__sheep__23ec24c5,sheep,Sheep,478,38,False,False
+obj__highly_fortified_tower__d6964cd0,highly fortified tower,Highly Fortified Tower,267,20,False,False
+obj__shrub__2f5bae73,shrub,Shrub,1496,121,False,False
+obj__scent__8a9191c5,scent,Scent,222,18,False,False
+obj__shelf__1f650330,shelf,Shelf,2878,227,True,False
+obj__wine__3f206bd2,wine,Wine,826,82,False,False
+obj__bar_stool__3d9b3e79,bar stool,Bar Stool,70,5,False,False
+obj__market__c1c16452,market,Market,403,31,False,False
+obj__tavern__7e2c4fe3,tavern,Tavern,252,20,False,False
+obj__tempior_market__261e7a56,tempior market,Tempior Market,252,20,False,False
+obj__traveler__8be0c6f8,traveler,Traveler,241,20,False,False
+obj__silverware__1d574946,silverware,Silverware,877,70,False,False
+obj__beam__5435eeb7,beam,Beam,556,41,False,False
+obj__banquet__c0d9ac80,banquet,Banquet,253,21,False,False
+obj__ornate_throne__6d2124f0,ornate throne,Ornate Throne,84,8,False,True
+obj__fairy_lights__688fba7e,fairy lights,Fairy Lights,252,19,False,False
+obj__pulpit__7fe264a8,pulpit,Pulpit,484,37,False,False
+obj__pen__03f00e8e,pen,Pen,416,35,False,False
+obj__clothes_line__34c6b35a,clothes line,Clothes Line,510,19,False,False
+obj__pen_for_the_chickens__00bc2be0,pen for the chickens,Pen For The Chickens,276,24,False,False
+obj__plain_pretty_basic_wooden_cabin__178f54fc,plain pretty basic wooden cabin,Plain Pretty Basic Wooden Cabin,255,19,False,False
+obj__lean_to_tent__9480ce89,lean-to tent,Lean-To Tent,267,20,False,False
+obj__swamp__5d47a77d,swamp,Swamp,732,57,False,False
+obj__earth__852488dd,earth,Earth,231,17,False,False
+obj__finest_silk_and_velvet__4b240706,finest silk and velvet,Finest Silk And Velvet,435,19,False,False
+obj__bed_big__c0df2fb5,bed big,Bed Big,239,19,False,False
+obj__pillow__028dbbfa,pillow,Pillow,362,30,False,False
+obj__long_wooden_tables__cbdd6e6f,long wooden tables,Long Wooden Tables,247,19,False,False
+obj__goblets__9daf09d5,goblets,Goblets,380,36,False,False
+obj__incense__9ce99053,incense,Incense,591,57,False,False
+obj__cover__41d0e299,cover,Cover,210,20,False,False
+obj__carving__99524e31,carving,Carving,257,22,False,False
+obj__throne__253d405e,throne,Throne,932,73,False,True
+obj__arrow__9022a153,arrow,Arrow,1087,104,False,False
+obj__shield__28c69b4c,shield,Shield,587,63,False,True
+obj__sword__f3b462d9,sword,Sword,2857,270,False,True
+obj__bows__e949ecf5,bows,Bows,549,51,False,False
+obj__gun__5161ebb0,gun,Gun,200,18,False,False
+obj__axe__c89ee4a2,axe,Axe,875,79,False,False
+obj__bow_and_arrow__44d92711,bow and arrow,Bow And Arrow,306,34,False,False
+obj__quilts__b4282792,quilts,Quilts,278,19,False,False
+obj__drapes__05fa6332,drapes,Drapes,705,57,False,False
+obj__fire_place__c3fff920,fire place,Fire Place,301,19,False,False
+obj__big_rug__8b300f23,big rug,Big Rug,243,19,False,False
+obj__soft_bed__892f4639,soft bed,Soft Bed,243,19,False,False
+obj__trinket__e0221e6c,trinket,Trinket,483,42,False,False
+obj__big_window__16ada8d1,big window,Big Window,243,19,False,False
+obj__bassinet__f68de0d7,bassinet,Bassinet,291,20,False,False
+obj__clothes__e7a80f49,clothes,Clothes,570,50,False,False
+obj__chair__a09272b5,chair,Chair,5910,458,True,False
+obj__little_wooden_stools__e372025a,little wooden stools,Little Wooden Stools,94,9,False,False
+obj__stall__f0069dfe,stall,Stall,735,60,False,False
+obj__hook__5a582ef1,hook,Hook,506,43,False,False
+obj__hay__4982b37a,hay,Hay,1501,140,False,False
+obj__basin_for_water__55a3f7f1,basin for water,Basin For Water,354,26,False,False
+obj__food_item__8103f77a,food item,Food Item,225,25,False,False
+obj__bucket__c2bfd017,bucket,Bucket,753,71,False,False
+obj__cabinet__6f796183,cabinet,Cabinet,677,49,False,False
+obj__bottles__529ec26c,bottles,Bottles,374,32,False,False
+obj__tile__13181d8c,tile,Tile,765,65,False,False
+obj__stone_oven__16b9fb23,stone oven,Stone Oven,342,26,False,False
+obj__counter__886bb73b,counter,Counter,342,26,False,False
+obj__other_tools__4983ca9c,other tools,Other Tools,317,26,False,False
+obj__plate__5da21a3e,plate,Plate,2148,190,False,False
+obj__cupboard__cba460ea,cupboard,Cupboard,342,26,False,False
+obj__stage__9a8c2b9d,stage,Stage,765,62,False,False
+obj__tapestrie__a044fda2,tapestrie,Tapestrie,151,14,False,False
+obj__long_wooden_dining_table__5e130bd0,long wooden dining table,Long Wooden Dining Table,294,27,False,False
+obj__end_table__f29d2ad1,end table,End Table,279,23,False,False
+obj__vase__324aeae7,vase,Vase,707,61,False,False
+obj__chaises__e2ce35dc,chaises,Chaises,279,23,False,False
+obj__wooden_chest__37f24596,wooden chest,Wooden Chest,298,25,False,True
+obj__guards_toilet_basin__cb0fb522,guards toilet basin,Guards Toilet Basin,125,11,False,False
+obj__bush__dbbc546e,bush,Bush,663,48,False,False
+obj__baskets_of_flowers__ccff3130,baskets of flowers,Baskets Of Flowers,131,13,False,False
+obj__small_vine__101a74df,small vine,Small Vine,281,23,False,False
+obj__plant__9ea0a36b,plant,Plant,2037,165,False,False
+obj__cup__f3f58ee4,cup,Cup,490,46,False,False
+obj__daimond__60759e19,daimond,Daimond,292,29,False,False
+obj__stained_glass_window__d86160f4,stained-glass window,Stained-Glass Window,295,24,False,False
+obj__cross__22aadb26,cross,Cross,1811,147,False,False
+obj__long_table__bfcbcb84,long table,Long Table,335,24,False,False
+obj__picture__5456fc54,picture,Picture,694,58,False,False
+obj__polished_gold__49517d05,polished gold,Polished Gold,274,20,False,True
+obj__insect__dce41a93,insect,Insect,384,39,False,False
+obj__riverbank__fb2793d9,riverbank,Riverbank,283,21,False,False
+obj__book__821f0328,book,Book,3088,275,False,True
+obj__more_than_king_sized_bed__0b38bafc,more-than-king-sized bed,More-Than-King-Sized Bed,250,22,False,False
+obj__desk__b506e098,desk,Desk,822,66,False,False
+obj__royal_blue_canopy__6e50eb42,royal blue canopy,Royal Blue Canopy,269,22,False,False
+obj__jewelry__449de323,jewelry,Jewelry,658,61,False,False
+obj__makeshift_stall__517d1acb,makeshift stall,Makeshift Stall,291,23,False,False
+obj__bauble__06dea58b,bauble,Bauble,489,42,False,False
+obj__gold_in_his_pocket__bb34f1fa,gold in his pocket,Gold In His Pocket,87,9,False,True
+obj__fetilizer__7bcd6e83,fetilizer,Fetilizer,117,10,False,False
+obj__cookpot__2bf72dd5,cookpot,Cookpot,208,22,False,False
+obj__meat__07202a7e,meat,Meat,404,47,False,False
+obj__balcony__d85f7317,balcony,Balcony,300,23,False,False
+obj__doorway__8d60d347,doorway,Doorway,543,39,False,False
+obj__staircase__7dbf02f9,staircase,Staircase,300,23,False,False
+obj__80_foot_tall_bronze_statue_of_a_8_legged_goddess__4a9638b2,80-foot tall bronze statue of a 8 legged goddess,80-Foot Tall Bronze Statue Of A 8 Legged Goddess,56,4,False,False
+obj__money__9726255e,money,Money,314,34,False,False
+obj__shoe__d8a48e3f,shoe,Shoe,170,18,False,False
+obj__wardrobe__e1c8ac33,wardrobe,Wardrobe,198,15,False,False
+obj__robe__3950a4dc,robe,Robe,384,34,False,False
+obj__crucifix__abea2566,crucifix,Crucifix,276,21,False,False
+obj__pillar__590d8d93,pillar,Pillar,766,60,False,False
+obj__wheat__d29db4ac,wheat,Wheat,55,5,False,False
+obj__boat__dd8fc45d,boat,Boat,1121,87,False,False
+obj__bait_buckets__f5cee290,bait buckets,Bait Buckets,42,4,False,False
+obj__rope__379e86ff,rope,Rope,1180,119,False,False
+obj__cloth__b9d27d6b,cloth,Cloth,1175,98,False,False
+obj__central_atrium__23ea1c89,central atrium,Central Atrium,276,23,False,False
+obj__gift__a0ec3b46,gift,Gift,336,32,False,False
+obj__garden_plot__e5931b57,garden plot,Garden Plot,276,23,False,False
+obj__rose__fcdc7b42,rose,Rose,397,42,False,False
+obj__hedge__124be636,hedge,Hedge,276,23,False,False
+obj__potted_flower__3c3401c5,potted flower,Potted Flower,104,9,False,False
+obj__shape_of_a_large_rectangle__01d5ccd1,shape of a large rectangle,Shape Of A Large Rectangle,276,23,False,False
+obj__huge_pavilion_of_stone_patio__c02a23dc,huge pavilion of stone patio,Huge Pavilion Of Stone Patio,276,23,False,False
+obj__summer_palace__282bef56,summer palace,Summer Palace,276,23,False,False
+obj__courtyard__2c2bf458,courtyard,Courtyard,75,6,False,False
+obj__arcadian_garden__a23616f9,arcadian garden,Arcadian Garden,276,23,False,False
+obj__beautiful_courtyard__708635c3,beautiful courtyard,Beautiful Courtyard,276,23,False,False
+obj__stalagmite__b88d9eaf,stalagmite,Stalagmite,545,42,False,False
+obj__rotting_meat__33fc2c56,rotting meat,Rotting Meat,254,24,False,False
+obj__jug_of_water__77ac54a6,jug of water,Jug Of Water,127,12,False,False
+obj__carvings__3ccde912,carvings,Carvings,201,16,False,False
+obj__idol__416c1556,idol,Idol,774,61,False,False
+obj__towering_arch_of_marble_and_silver__c054e36d,towering arch of marble and silver,Towering Arch Of Marble And Silver,270,20,False,False
+obj__walkway__ed97ef15,walkway,Walkway,522,39,False,False
+obj__entrance__2a20afe0,entrance,Entrance,459,35,False,False
+obj__ornate_stonework__18b116e4,ornate stonework,Ornate Stonework,270,20,False,False
+obj__marble_floor__3d7af4f4,marble floor,Marble Floor,303,22,False,False
+obj__stands__41157b1d,stands,Stands,168,12,False,False
+obj__murals__4744f556,murals,Murals,303,22,False,False
+obj__golden_plate__f2ebbf8c,golden plate,Golden Plate,233,21,False,False
+obj__hymnal__e376d84e,hymnal,Hymnal,169,16,False,False
+obj__ornate_altar__aa16252b,ornate altar,Ornate Altar,275,21,False,False
+obj__white_cloth__71e8b3f5,white cloth,White Cloth,261,21,False,False
+obj__chalice__d6bd3fcb,chalice,Chalice,411,38,False,False
+obj__small_wooden_bowl__262672db,small wooden bowl,Small Wooden Bowl,218,19,False,False
+obj__spoon__4b8e2308,spoon,Spoon,283,26,False,False
+obj__brown_cloth_door__58e44aef,brown cloth door,Brown Cloth Door,217,19,False,False
+obj__primitive_fishing_pole__5fb5778c,primitive fishing pole,Primitive Fishing Pole,111,11,False,False
+obj__coffin__7eac63f9,coffin,Coffin,419,36,False,False
+obj__sandstone__cde1652e,sandstone,Sandstone,261,20,False,False
+obj__kindgdom_s_desert__6d84dcdd,kindgdom's desert,Kindgdom'S Desert,261,20,False,False
+obj__towering_mesa__148ef02b,towering mesa,Towering Mesa,98,7,False,False
+obj__face__d5ca3224,face,Face,261,20,False,False
+obj__crystal_blue_sky__82920573,crystal blue sky,Crystal Blue Sky,135,11,False,False
+obj__stack_of_hay__0a23bbbe,stack of hay,Stack Of Hay,254,20,False,False
+obj__coconut_tree__42fb71d9,coconut tree,Coconut Tree,508,20,False,False
+obj__wooden_boat_part__2d262aa3,wooden boat part,Wooden Boat Part,254,20,False,False
+obj__execution_stand__ac2dd07e,execution stand,Execution Stand,319,20,False,False
+obj__dog__06d80eb0,dog,Dog,472,37,False,False
+obj__flail__a0964006,flail,Flail,94,10,False,False
+obj__spears__8ba35d7d,spears,Spears,373,38,False,False
+obj__pike__fa7735b7,pike,Pike,337,31,False,False
+obj__boulders__317f40e6,boulders,Boulders,393,30,False,False
+obj__sun__ebd556e6,sun,Sun,639,48,False,False
+obj__banner__12df53fe,banner,Banner,693,53,False,False
+obj__dirty_and_grimy_floor__b5a23839,dirty and grimy floor,Dirty And Grimy Floor,267,20,False,False
+obj__marbled_floor__2af8ba46,marbled floor,Marbled Floor,267,20,False,False
+obj__floor_decor__888617a6,floor decor,Floor Decor,127,10,False,False
+obj__decoration__044d1970,decoration,Decoration,446,31,False,False
+obj__floor_decorations__9e0bf4cc,floor decorations,Floor Decorations,267,20,False,False
+obj__windows__0f4137ed,windows,Windows,267,20,False,False
+obj__shack__2d729003,shack,Shack,387,31,False,False
+obj__knight__efead510,knight,Knight,126,9,False,False
+obj__colorful_wildlife__1bc71266,colorful wildlife,Colorful Wildlife,253,19,False,False
+obj__cloth_and_drape__16b14aa3,cloth and drape,Cloth And Drape,186,20,False,False
+obj__animal__1e4483e8,animal,Animal,341,33,False,False
+obj__smell__d938ad5c,smell,Smell,245,21,False,False
+obj__fur_carpet__fba17e66,fur carpet,Fur Carpet,242,20,False,False
+obj__mahogany_writing_desk__d82e44a0,mahogany writing desk,Mahogany Writing Desk,254,20,False,False
+obj__fluffy_pillows__3903975d,fluffy pillows,Fluffy Pillows,195,20,False,False
+obj__giant_four_poster_bed__7f796816,giant four poster bed,Giant Four Poster Bed,254,20,False,False
+obj__barrack__fd95e9b6,barrack,Barrack,294,21,False,False
+obj__dining_hall__10c40af2,dining hall,Dining Hall,294,21,False,False
+obj__wooden_wall__e4341f1f,wooden wall,Wooden Wall,294,21,False,False
+obj__log__dc1d71bb,log,Log,446,31,False,False
+obj__bonfire__b0759e17,bonfire,Bonfire,294,21,False,False
+obj__rack__11690b09,rack,Rack,713,55,False,False
+obj__herb_garden__cfb90463,herb garden,Herb Garden,229,20,False,False
+obj__fur__40bc2c33,fur,Fur,349,31,False,False
+obj__small_village__37a2d768,small village,Small Village,238,21,False,False
+obj__shop__fb54f3c5,shop,Shop,568,42,False,False
+obj__big_table__d8cf7347,big table,Big Table,251,19,False,False
+obj__golden_trim__74cc75fd,golden trim,Golden Trim,242,20,False,False
+obj__golden_cloth__97aa2af8,golden cloth,Golden Cloth,245,20,False,False
+obj__sand__88336b5b,sand,Sand,2039,160,False,False
+obj__torn_fabric__a4073b7a,torn fabric,Torn Fabric,263,22,False,False
+obj__artifact__8e5b948a,artifact,Artifact,188,22,False,False
+obj__den__32ce9c04,den,Den,173,13,False,False
+obj__small_dirt_country_road__489d72c5,small dirt country road,Small Dirt Country Road,297,22,False,False
+obj__large_stone_fireplace__e98ede63,large stone fireplace,Large Stone Fireplace,267,20,False,False
+obj__alter__5667da2f,alter,Alter,790,61,False,False
+obj__hard_bench__e34ea7fd,hard bench,Hard Bench,252,18,False,False
+obj__piano__d113f1c3,piano,Piano,308,22,False,False
+obj__large_dark_oak_and_gold_bench__c2ec298d,large dark oak and gold bench,Large Dark Oak And Gold Bench,252,18,False,True
+obj__tent__7b65dcf0,tent,Tent,395,31,False,False
+obj__small_alter__e8b14be8,small alter,Small Alter,287,20,False,False
+obj__lake__97d986e2,lake,Lake,249,20,False,False
+obj__green_short_grass__78409116,green short grass,Green Short Grass,287,20,False,False
+obj__trail__c6b8b330,trail,Trail,381,31,False,False
+obj__treasure__82210e61,treasure,Treasure,472,40,False,True
+obj__mug__4c032833,mug,Mug,403,45,False,False
+obj__bar_counter__526e63ea,bar counter,Bar Counter,63,5,False,False
+obj__well_equipped_kitchen__1c17cb56,well-equipped kitchen,Well-Equipped Kitchen,242,18,False,False
+obj__candle_stick__db7f7097,candle stick,Candle Stick,204,19,False,False
+obj__cherry_wood_colored_table__17bd66cd,cherry wood colored table,Cherry Wood Colored Table,204,19,False,False
+obj__small_water_spring__583c7fc5,small water spring,Small Water Spring,192,14,False,False
+obj__roof__3a393f7a,roof,Roof,205,16,False,False
+obj__fence__dc42bba7,fence,Fence,1024,82,False,False
+obj__small_sliding_window_covered_with_metal__1267d427,small sliding window covered with metal,Small Sliding Window Covered With Metal,208,17,False,False
+obj__knocker__6551d3cd,knocker,Knocker,208,17,False,False
+obj__rivet__be43c2c5,rivet,Rivet,208,17,False,False
+obj__archway__29ce6182,archway,Archway,91,8,False,False
+obj__rough_clothing__0f8af01c,rough clothing,Rough Clothing,248,21,False,False
+obj__roasting_meat__6c2db81b,roasting meat,Roasting Meat,246,21,False,False
+obj__sweetmeat__20eb3f71,sweetmeat,Sweetmeat,215,21,False,False
+obj__impassable_vegetation__8d07f65a,impassable vegetation,Impassable Vegetation,246,21,False,False
+obj__jungle__5d991220,jungle,Jungle,281,21,False,False
+obj__beast__b878bc12,beast,Beast,281,21,False,False
+obj__drawing__d8eb8762,drawing,Drawing,319,27,False,False
+obj__large_ornate_table__053d4c9c,large ornate table,Large Ornate Table,530,22,False,False
+obj__higher_dining_table__227786b4,higher dining table,Higher Dining Table,265,22,False,False
+obj__vast_ceilings__1ee4cb75,vast ceilings,Vast Ceilings,265,22,False,False
+obj__colorful_lizard__f9b3e2e6,colorful lizard,Colorful Lizard,480,19,False,False
+obj__small_fire__96bb4181,small fire,Small Fire,240,19,False,False
+obj__coconut__763b8741,coconut,Coconut,480,45,False,False
+obj__wooden_spit__82032ff9,wooden spit,Wooden Spit,219,19,False,False
+obj__palace__667940ea,palace,Palace,536,41,False,False
+obj__spiderwebs__90a475fe,spiderwebs,Spiderwebs,170,13,False,False
+obj__gravestone__506fed0a,gravestone,Gravestone,612,48,False,False
+obj__goddess__5e37719b,goddess,Goddess,273,22,False,False
+obj__ornament__417d2d18,ornament,Ornament,472,40,False,False
+obj__large_gate__0f1083bf,large gate,Large Gate,285,25,False,False
+obj__jar__68995fcb,jar,Jar,1063,96,False,False
+obj__barn__5dfcc0aa,barn,Barn,213,17,False,False
+obj__shed__5589981e,shed,Shed,654,51,False,False
+obj__slight_fog__de8b85d5,slight fog,Slight Fog,293,23,False,False
+obj__giant_withered_oak_tree__2dd891f9,giant withered oak tree,Giant Withered Oak Tree,121,9,False,False
+obj__mattress__64b51654,mattress,Mattress,379,28,False,False
+obj__bell__8d45c85b,bell,Bell,438,37,False,False
+obj__plush_mattress__4841c20b,plush mattress,Plush Mattress,267,20,False,False
+obj__chifferobe__0b2d9319,chifferobe,Chifferobe,267,20,False,False
+obj__sacred_flame__fb44211c,sacred flame,Sacred Flame,365,22,False,False
+obj__tattered_map__7af8f60b,tattered map,Tattered Map,40,6,False,True
+obj__bear__893b56e3,bear,Bear,244,18,False,False
+obj__incense_burner__53158abd,incense burner,Incense Burner,126,9,False,False
+obj__torture_implements__8f1e707f,torture implements,Torture Implements,233,18,False,False
+obj__remains__f9cb365d,remains,Remains,522,36,False,False
+obj__implements__37371cb8,implements,Implements,207,18,False,False
+obj__foliage__bae73ab7,foliage,Foliage,258,20,False,False
+obj__canopy__ea9e8078,canopy,Canopy,258,20,False,False
+obj__pile_of_hay__40c193f5,pile of hay,Pile Of Hay,68,7,False,False
+obj__smoke__fdfa02ec,smoke,Smoke,233,20,False,False
+obj__tome__a4b46da1,tome,Tome,298,27,False,False
+obj__magical_lights__82cea940,magical lights,Magical Lights,217,20,False,False
+obj__small_pool_of_water__47021774,small pool of water,Small Pool Of Water,536,21,False,False
+obj__stored_jugs_of_water__c48db900,stored jugs of water,Stored Jugs Of Water,47,5,False,False
+obj__village__813f8ce5,village,Village,268,21,False,False
+obj__rose_bush__9f663235,rose bush,Rose Bush,445,31,False,False
+obj__fountain__79de7a61,fountain,Fountain,1113,81,False,False
+obj__small_lake__1f398a97,small lake,Small Lake,301,20,False,False
+obj__lilac_tree_in_full_bloom__4439a53e,lilac tree in full bloom,Lilac Tree In Full Bloom,2,1,False,False
+obj__intricate_labyrinth_made_of_shrubs__cf0382f7,intricate labyrinth made of shrubs,Intricate Labyrinth Made Of Shrubs,257,20,False,False
+obj__broken_fishing_pole__91b78bc2,broken fishing pole,Broken Fishing Pole,107,16,False,False
+obj__fork__b2fcb4ba,fork,Fork,95,8,False,False
+obj__broken_glass__8fad6644,broken glass,Broken Glass,78,7,False,False
+obj__skillet__8fa6aa4d,skillet,Skillet,46,4,False,False
+obj__lush_maroon_carpet__7a6b263e,lush maroon carpet,Lush Maroon Carpet,322,19,False,False
+obj__parchment__cc1681e6,parchment,Parchment,757,60,False,False
+obj__map__1d78dc8e,map,Map,482,40,False,True
+obj__odd_and_end__46d0903f,odd and end,Odd And End,266,19,False,False
+obj__seed__fe4c0f30,seed,Seed,444,38,False,False
+obj__herb__4fc237f4,herb,Herb,276,21,False,False
+obj__jars_of_seeds__1c85711f,jars of seeds,Jars Of Seeds,284,21,False,False
+obj__long_windows__9d8c03bf,long windows,Long Windows,279,20,False,False
+obj__long_hallway__01bbbc98,long hallway,Long Hallway,279,20,False,False
+obj__main_hall__8f1c5099,main hall,Main Hall,279,20,False,False
+obj__hand_carved_stone__5ee6448f,hand carved stone,Hand Carved Stone,266,20,False,False
+obj__barrel_of_salted_herring__fb34c457,barrel of salted herring,Barrel Of Salted Herring,115,10,False,False
+obj__tar__db5570bf,tar,Tar,217,21,False,False
+obj__mast__ceb74219,mast,Mast,326,21,False,False
+obj__deck__236c8934,deck,Deck,340,27,False,False
+obj__rusty_anchor__1da19d5e,rusty anchor,Rusty Anchor,185,15,False,False
+obj__painting_of_his_quests__30f9a58a,painting of his quests,Painting Of His Quests,112,8,False,False
+obj__magical_crystal__f8d5d939,magical crystal,Magical Crystal,176,16,False,False
+obj__ancient_magical_crystal_that_was_found_in_the_heart_of_a_mystical_dragon__713c2f0f,ancient magical crystal that was found in the heart of a mystical dragon,Ancient Magical Crystal That Was Found In The Heart Of A Mystical Dragon,18,3,False,False
+obj__piece_of_fortune__e676af6c,piece of fortune,Piece Of Fortune,214,16,False,False
+obj__piece_of_armor__498a2c12,piece of armor,Piece Of Armor,186,16,False,True
+obj__treasure_chest__758181f6,treasure chest,Treasure Chest,342,26,False,True
+obj__necklaces__90ebce90,necklaces,Necklaces,245,16,False,False
+obj__fabric__62188325,fabric,Fabric,158,14,False,False
+obj__murky_dark_water__b2141b6a,murky dark water,Murky Dark Water,264,17,False,False
+obj__summer_sun__73f5f352,summer sun,Summer Sun,222,17,False,False
+obj__algae__4360ef48,algae,Algae,90,8,False,False
+obj__entire_castle__52816c14,entire castle,Entire Castle,222,17,False,False
+obj__quill__63d5ed47,quill,Quill,361,33,False,False
+obj__blanket__b24f10fa,blanket,Blanket,1046,95,False,False
+obj__desert__3fd6b621,desert,Desert,221,19,False,False
+obj__coins__68849520,coins,Coins,84,11,False,True
+obj__pool__b10a8c0b,pool,Pool,361,29,False,False
+obj__green_shrubbery__bfe14255,green shrubbery,Green Shrubbery,221,19,False,False
+obj__palm_tree__5c5c66e2,palm tree,Palm Tree,823,65,False,False
+obj__bowl__9c44fc81,bowl,Bowl,88,9,False,False
+obj__inkwell__04013f78,inkwell,Inkwell,127,10,False,False
+obj__giant_golden_buddha__df778f34,giant golden buddha,Giant Golden Buddha,279,18,False,False
+obj__mats_on_the_ground__0d07bc9f,mats on the ground,Mats On The Ground,231,18,False,False
+obj__amethyst__c24f284a,amethyst,Amethyst,195,16,False,False
+obj__skull__f13460bd,skull,Skull,418,45,False,False
+obj__food_storage__d30bfe34,food storage,Food Storage,72,7,False,False
+obj__mystical_necklace_with_a_colorful_crystal__d8b3110c,mystical necklace with a colorful crystal,Mystical Necklace With A Colorful Crystal,19,2,False,False
+obj__well__f9323f5b,well,Well,645,51,False,False
+obj__dock__05debdb8,dock,Dock,453,39,False,False
+obj__large_glimmering_ruby__507a0258,large glimmering ruby,Large Glimmering Ruby,76,9,False,False
+obj__rat__e756f6aa,rat,Rat,310,31,False,False
+obj__rune__afee110d,rune,Rune,219,18,False,False
+obj__carpet__37c6ab2f,carpet,Carpet,285,25,True,False
+obj__arrowhead__82bd1387,arrowhead,Arrowhead,141,11,False,False
+obj__alchemists_lab__d5456245,alchemists lab,Alchemists Lab,14,1,False,False
+obj__huge_vat_of_brewing_liquid__e4806d7a,huge vat of brewing liquid,Huge Vat Of Brewing Liquid,122,11,False,False
+obj__smoke_and_light__713b7b21,smoke and light,Smoke And Light,122,11,False,False
+obj__potion__1e041f12,potion,Potion,193,18,False,True
+obj__vat__d04a4a2c,vat,Vat,111,11,False,False
+obj__beaker__d6e7fe03,beaker,Beaker,124,11,False,False
+obj__paper__7e3f6604,paper,Paper,339,34,False,False
+obj__bookshelf__b75624ce,bookshelf,Bookshelf,180,19,False,False
+obj__books__7d8949bc,books,Books,184,26,False,False
+obj__pole__8ebcf604,pole,Pole,198,22,False,False
+obj__quaint_manor__d20a35e6,quaint manor,Quaint Manor,257,20,False,False
+obj__home__106a6c24,home,Home,987,79,False,False
+obj__bookshop__2a4a0bf9,bookshop,Bookshop,257,20,False,False
+obj__small_stone_fence__a4ba50e0,small stone fence,Small Stone Fence,257,20,False,False
+obj__shelter__8bcf6c4f,shelter,Shelter,180,14,False,False
+obj__skeleton__84df077b,skeleton,Skeleton,927,83,False,False
+obj__fire_pit__f01b5974,fire pit,Fire Pit,429,34,False,False
+obj__spider__f1a81d78,spider,Spider,186,15,False,False
+obj__broken_lantern__a0c802b3,broken lantern,Broken Lantern,401,33,False,False
+obj__path_to_the_old_mine__4e82bee7,path to the old mine,Path To The Old Mine,273,21,False,False
+obj__stained_glass_art_of_old__650dcd17,stained glass art of old,Stained Glass Art Of Old,249,20,False,False
+obj__field__06e3d36f,field,Field,265,20,False,False
+obj__broken_pottery__56218a26,broken pottery,Broken Pottery,55,6,False,False
+obj__record__de17f0f2,record,Record,268,20,False,False
+obj__religious_text__7b1aac89,religious text,Religious Text,449,46,False,False
+obj__sign__04b29480,sign,Sign,707,54,False,False
+obj__seagull__48bf7c55,seagull,Seagull,233,17,False,False
+obj__large_oak_tree__73959369,large oak tree,Large Oak Tree,247,18,False,False
+obj__iron_gate__811c5971,iron gate,Iron Gate,335,24,False,False
+obj__harness__04c75d4c,harness,Harness,196,18,False,False
+obj__piece__5ae34741,piece,Piece,457,39,False,False
+obj__heavy_trunks__be241388,heavy trunks,Heavy Trunks,231,19,False,False
+obj__polishing_cloths__2ab5feb8,polishing cloths,Polishing Cloths,93,10,False,False
+obj__clothing__50cf1991,clothing,Clothing,442,36,False,False
+obj__beer__3e1867f5,beer,Beer,344,38,False,False
+obj__grey_stone_floor__ec33ce70,grey stone floor,Grey Stone Floor,261,19,False,False
+obj__window_pane__5f4dbe80,window pane,Window Pane,261,19,False,False
+obj__headstone__b74caf85,headstone,Headstone,302,24,False,False
+obj__open_grave__1d39cbb1,open grave,Open Grave,142,11,False,False
+obj__instrument__2d083cc4,instrument,Instrument,586,50,False,False
+obj__torture_equipment__43bba101,torture equipment,Torture Equipment,178,20,False,False
+obj__blood__6b157916,blood,Blood,242,20,False,False
+obj__placard__2c27bb2c,placard,Placard,279,20,False,False
+obj__name_placard__118e4caa,name placard,Name Placard,220,20,False,False
+obj__gate__63d721d2,gate,Gate,535,40,False,False
+obj__flowers__7d37c580,flowers,Flowers,134,11,False,False
+obj__stove__43c3e6f8,stove,Stove,369,29,False,False
+obj__mildew__12246e27,mildew,Mildew,102,8,False,False
+obj__dandelion__c2f79d98,dandelion,Dandelion,165,20,False,False
+obj__grassland__1b2dd777,grassland,Grassland,254,20,False,False
+obj__oak_tree__6e9dd085,oak tree,Oak Tree,449,33,False,False
+obj__treasures__6900d0f4,treasures,Treasures,217,18,False,False
+obj__precious_stone__83231a3f,precious stone,Precious Stone,417,36,False,False
+obj__tombs__39013ac3,tombs,Tombs,189,18,False,False
+obj__carved_statue__a9f4a98f,carved statue,Carved Statue,86,8,False,False
+obj__tomb__bc804441,tomb,Tomb,434,37,False,False
+obj__personalized_tomb__00358b31,personalized tomb,Personalized Tomb,189,18,False,False
+obj__materials__2d2ac038,materials,Materials,216,18,False,False
+obj__quarters__95dd2120,quarters,Quarters,84,6,False,False
+obj__open_plain__e9c34600,open plain,Open Plain,288,21,False,False
+obj__feces__68d03fef,feces,Feces,389,29,False,False
+obj__fields__d05b6ed7,fields,Fields,242,17,False,False
+obj__drape__8a5e2f29,drape,Drape,246,21,False,False
+obj__gunpowder__0f088204,gunpowder,Gunpowder,271,21,False,False
+obj__rope_work__ca13d844,rope work,Rope Work,196,20,False,False
+obj__water_gate__d7948cfb,water gate,Water Gate,211,20,False,False
+obj__water_gate_is_all_harden_wood__a090dac5,water gate is all harden wood,Water Gate Is All Harden Wood,211,20,False,False
+obj__crane__b0267358,crane,Crane,253,20,False,False
+obj__fishing_ships__153dcbf9,fishing ships,Fishing Ships,138,13,False,False
+obj__root__63a9f0ea,root,Root,196,19,False,False
+obj__things__e64c3132,things,Things,329,27,False,False
+obj__nautical_themed_decor__1e2560de,nautical themed decor,Nautical Themed Decor,276,20,False,False
+obj__buoy__b2106b0b,buoy,Buoy,276,20,False,False
+obj__mounted_fish__bcc45b1f,mounted fish,Mounted Fish,240,20,False,False
+obj__replica_boat__35c96d85,replica boat,Replica Boat,253,20,False,False
+obj__large_wardrobe__7b0380d4,large wardrobe,Large Wardrobe,260,20,False,False
+obj__map_of_the_kingdom__2c65bd82,map of the kingdom,Map Of The Kingdom,227,23,False,True
+obj__large_table_with_an_ordinate_cushion_for_the_king_s_crown__cca00e9f,large table with an ordinate cushion for the king's crown,Large Table With An Ordinate Cushion For The King'S Crown,12,1,False,True
+obj__fancy_roof__77deaa16,fancy roof,Fancy Roof,260,20,False,False
+obj__wooden_headboard__b8610d6b,wooden headboard,Wooden Headboard,260,20,False,False
+obj__large_bed__fcb7005b,large bed,Large Bed,260,20,False,False
+obj__large_tapestry__98d7f45f,large tapestry,Large Tapestry,260,20,False,False
+obj__poison_ivy__b1ccc334,poison ivy,Poison Ivy,210,20,False,False
+obj__fruit__e0deff34,fruit,Fruit,163,19,False,False
+obj__big_bed__aa3d4fd7,big bed,Big Bed,227,18,False,False
+obj__drapery__daeb14f9,drapery,Drapery,151,12,False,False
+obj__lamps__399daeca,lamps,Lamps,189,18,False,False
+obj__soaring_ceiling_painted_with_the_richest_cobalt_blue_and_ruby_red_paints__45929422,soaring ceiling painted with the richest cobalt blue and ruby red paints,Soaring Ceiling Painted With The Richest Cobalt Blue And Ruby Red Paints,24,2,False,False
+obj__calm_water_fountain__839a635a,calm water fountain,Calm Water Fountain,233,17,False,False
+obj__red_silk_prayer_bench__4683e4a4,red silk prayer bench,Red Silk Prayer Bench,241,19,False,False
+obj__crossbow__68ea5b5f,crossbow,Crossbow,321,28,False,False
+obj__longbows__fd739c14,longbows,Longbows,210,18,False,False
+obj__historical_relic__c987f405,historical relic,Historical Relic,81,8,False,False
+obj__golden_cross__6b9aadd2,golden cross,Golden Cross,86,8,False,False
+obj__shrine__86454297,shrine,Shrine,224,18,False,False
+obj__mosaic__0964b521,mosaic,Mosaic,260,18,False,False
+obj__column__1afd3281,column,Column,121,10,False,False
+obj__sculpture__5aeef5db,sculpture,Sculpture,662,54,False,False
+obj__footprint__869d06a7,footprint,Footprint,290,19,False,False
+obj__roots__c5f6f584,roots,Roots,102,13,False,False
+obj__dead_creature__1ce204b7,dead creature,Dead Creature,290,19,False,False
+obj__ground__57855271,ground,Ground,505,40,False,False
+obj__pond__d873154f,pond,Pond,234,19,False,False
+obj__shovel__2c997ee3,shovel,Shovel,739,73,False,False
+obj__stable__f40faf63,stable,Stable,260,20,False,False
+obj__bookcase__796ab53a,bookcase,Bookcase,308,24,False,False
+obj__box__34be958a,box,Box,529,41,False,False
+obj__tape__3ad76632,tape,Tape,375,30,False,False
+obj__tapes_and_records__28af5f81,tapes and records,Tapes And Records,154,15,False,False
+obj__religous_texts__ca9ee77f,religous texts,Religous Texts,169,15,False,False
+obj__text__1cb251ec,text,Text,732,61,False,False
+obj__closet__840c6b39,closet,Closet,431,33,False,False
+obj__bottle_of_wine__0d945479,bottle of wine,Bottle Of Wine,126,12,False,False
+obj__huge_frost_window__b3b7e31e,huge frost window,Huge Frost Window,217,16,False,False
+obj__frost_window__af45409e,frost window,Frost Window,217,16,False,False
+obj__big_organ__435c8830,big organ,Big Organ,217,16,False,False
+obj__gold_trim__526da778,gold trim,Gold Trim,217,16,False,True
+obj__wooden_fence__89954ec5,wooden fence,Wooden Fence,210,15,False,False
+obj__wood_is_gathered_to_make_fire__13c56c22,wood is gathered to make fire,Wood Is Gathered To Make Fire,177,15,False,False
+obj__glass__2570c919,glass,Glass,433,34,False,False
+obj__peg__ac401416,peg,Peg,170,17,False,False
+obj__dusty_floor__3b0bcf0c,dusty floor,Dusty Floor,121,11,False,False
+obj__manical__8a653a0b,manical,Manical,161,17,False,False
+obj__rough_stone_floor__06de05c0,rough stone floor,Rough Stone Floor,205,16,False,False
+obj__dust__63712a25,dust,Dust,196,16,False,False
+obj__gray_stone__8859a5fa,gray stone,Gray Stone,183,16,False,False
+obj__block__14511f2f,block,Block,462,37,False,False
+obj__fountaints__9ba42934,fountaints,Fountaints,351,24,False,False
+obj__turquoise_color_water__0b38299c,turquoise color water,Turquoise Color Water,234,19,False,False
+obj__thing__8afc1e9b,thing,Thing,234,19,False,False
+obj__mermaid__2ccb3dd4,mermaid,Mermaid,234,19,False,False
+obj__gem__9855b7f5,gem,Gem,258,28,False,True
+obj__block_and_tackle__12050bc8,block and tackle,Block And Tackle,271,21,False,False
+obj__rotted_wood_timber__50f13209,rotted wood timber,Rotted Wood Timber,249,21,False,False
+obj__axes__42b47eed,axes,Axes,107,9,False,False
+obj__timber__f22152af,timber,Timber,277,21,False,False
+obj__mine_cart__9090ba7a,mine cart,Mine Cart,147,11,False,False
+obj__stained_wooden_troughs__45ba836b,stained wooden troughs,Stained Wooden Troughs,232,18,False,False
+obj__old_sun_bleached_sailcloth__95d193e8,old sun-bleached sailcloth,Old Sun-Bleached Sailcloth,220,18,False,False
+obj__baskets_of_freshly_caught_fish__8abc7c51,baskets of freshly-caught fish,Baskets Of Freshly-Caught Fish,205,25,False,False
+obj__piece_of_old_sun_bleached_sailcloth__b8978feb,piece of old sun-bleached sailcloth,Piece Of Old Sun-Bleached Sailcloth,241,18,False,False
+obj__old_fish_shaped_sign__346bd22e,old fish-shaped sign,Old Fish-Shaped Sign,48,4,False,False
+obj__towel__226f863b,towel,Towel,120,15,False,False
+obj__sand_that_is_white_as_snow__2e097339,sand that is white as snow,Sand That Is White As Snow,289,22,False,False
+obj__water_is_as_clear_as_a_crystal__1a70064f,water is as clear as a crystal,Water Is As Clear As A Crystal,233,22,False,False
+obj__cobweb__0366e5f3,cobweb,Cobweb,327,21,False,False
+obj__rock_wall__22084bc7,rock wall,Rock Wall,281,21,False,False
+obj__old_machinery__ff774a18,old machinery,Old Machinery,281,21,False,False
+obj__machinery__cc68ce7f,machinery,Machinery,281,21,False,False
+obj__small_wooden_table__09919883,small wooden table,Small Wooden Table,277,22,False,False
+obj__small_window__e75d1d7c,small window,Small Window,277,22,False,False
+obj__small_candle_holder__87e00597,small candle holder,Small Candle Holder,229,22,False,False
+obj__fish_wrap_or_butcher_paper__762832e0,fish wrap or butcher paper,Fish Wrap Or Butcher Paper,28,2,False,False
+obj__ore__be98d2fd,ore,Ore,155,12,False,False
+obj__piece_of_miner_s_robe_ripped_on_sides__7c4f494c,piece of miner's robe ripped on sides,Piece Of Miner'S Robe Ripped On Sides,28,2,False,False
+obj__torture_rack__1ae0719b,torture rack,Torture Rack,69,5,False,False
+obj__lighthouse__fad0ce22,lighthouse,Lighthouse,203,16,False,False
+obj__ink_pot__2edd9451,ink pot,Ink Pot,143,16,False,False
+obj__ghost__71144850,ghost,Ghost,337,29,False,False
+obj__crab__bd589331,crab,Crab,80,8,False,False
+obj__golden_goblet__b813daca,golden goblet,Golden Goblet,141,14,False,False
+obj__purple_runner_carpets__90d3ca9e,purple runner carpets,Purple Runner Carpets,61,5,False,False
+obj__barrel__4133c51c,barrel,Barrel,245,20,False,False
+obj__place__ebed715e,place,Place,189,15,False,False
+obj__beautiful_blossoming_jasmine_flowers__52af9d37,beautiful blossoming jasmine flowers,Beautiful Blossoming Jasmine Flowers,143,15,False,False
+obj__lush_green_trees__ab509144,lush green trees,Lush Green Trees,189,15,False,False
+obj__outside_temple__4d6f89cb,outside temple,Outside Temple,17,2,False,False
+obj__front_door__466ae3f8,front door,Front Door,189,15,False,False
+obj__pink_and_white_outline__59f56665,pink and white outline,Pink And White Outline,189,15,False,False
+obj__rare_wood_from_a_tree_that_doesn_t_exist_anymore__11a4c82b,rare wood from a tree that doesn't exist anymore,Rare Wood From A Tree That Doesn'T Exist Anymore,17,2,False,False
+obj__grave__386a023b,grave,Grave,242,19,False,False
+obj__stone_used_is_ancient_and_antique_with_a_shiny_gloss_of_silver__9a91fb51,stone used is ancient and antique with a shiny gloss of silver,Stone Used Is Ancient And Antique With A Shiny Gloss Of Silver,31,3,False,False
+obj__garden__e2704f30,garden,Garden,518,42,False,False
+obj__outside_castle__fd9e3171,outside castle,Outside Castle,236,20,False,False
+obj__pitchforks_and_scythes__c100a581,pitchforks and scythes,Pitchforks And Scythes,86,9,False,False
+obj__plant_matter__243142a7,plant matter,Plant Matter,239,20,False,False
+obj__clothes_made_of_various_plant_matter_such_as_large_leaves_and_vines__411802db,clothes made of various plant matter such as large leaves and vines,Clothes Made Of Various Plant Matter Such As Large Leaves And Vines,38,4,False,False
+obj__large_leaves__57c0a245,large leaves,Large Leaves,202,20,False,False
+obj__black_ceiling__3108d9f2,black ceiling,Black Ceiling,147,11,False,False
+obj__rainbow__cd13b6a6,rainbow,Rainbow,361,27,False,False
+obj__candy__c48ba993,candy,Candy,43,5,False,False
+obj__scrap_of_fur__6843a638,scrap of fur,Scrap Of Fur,107,10,False,False
+obj__chunks_of_raw_meat__58641dab,chunks of raw meat,Chunks Of Raw Meat,138,11,False,False
+obj__dragon_toe_nail__d507afce,dragon toe nail,Dragon Toe Nail,209,21,False,False
+obj__cauldron__fc8423be,cauldron,Cauldron,524,41,False,False
+obj__wing__3328e4f7,wing,Wing,263,21,False,False
+obj__leg__4e1df3d2,leg,Leg,264,21,False,False
+obj__cracker__2f63b257,cracker,Cracker,88,8,False,False
+obj__instruments_of_torture__0b5cd3f0,instruments of torture,Instruments Of Torture,89,8,False,False
+obj__cannon__74c96872,cannon,Cannon,311,27,False,False
+obj__row__f1965a85,row,Row,238,17,False,False
+obj__huge_window_in_the_front__44fcf37b,huge window in the front,Huge Window In The Front,238,17,False,False
+obj__dripping_water__20d1cf24,dripping water,Dripping Water,108,9,False,False
+obj__vegetable__4bd349cd,vegetable,Vegetable,338,34,False,False
+obj__drawbridge__2201f21d,drawbridge,Drawbridge,182,13,False,False
+obj__furniture__fd87f596,furniture,Furniture,421,34,False,False
+obj__precious_gem__bdf08747,precious gem,Precious Gem,93,11,False,True
+obj__coin__96a9519b,coin,Coin,952,100,False,True
+obj__red_spice__31eade69,red spice,Red Spice,147,12,False,False
+obj__utensil__57fd5861,utensil,Utensil,231,19,False,False
+obj__iron_grill__8f822991,iron grill,Iron Grill,233,19,False,False
+obj__banana__72b302bf,banana,Banana,106,10,False,False
+obj__helmet__17b9183a,helmet,Helmet,435,35,False,False
+obj__device__913f9c49,device,Device,287,23,False,False
+obj__food_tray__2860d942,food tray,Food Tray,360,36,False,False
+obj__window_with_metal_bars__6821dadc,window with metal bars,Window With Metal Bars,138,10,False,False
+obj__golden_accent__35d1859c,golden accent,Golden Accent,273,20,False,False
+obj__red_curtain__b9deb6c7,red curtain,Red Curtain,273,20,False,False
+obj__velvet_seat__de2018e9,velvet seat,Velvet Seat,228,20,False,False
+obj__poster__49e20b87,poster,Poster,413,30,False,False
+obj__single_shelf__e6169432,single shelf,Single Shelf,231,17,False,False
+obj__old_prayer_books__a67540e1,old prayer books,Old Prayer Books,189,17,False,False
+obj__ink__0a16bc32,ink,Ink,113,9,False,False
+obj__simple_wooden_table__24c606eb,simple wooden table,Simple Wooden Table,231,17,False,False
+obj__trees__2d5563ed,trees,Trees,469,38,False,False
+obj__out_house__e435fac0,out house,Out House,90,8,False,False
+obj__oak_door__f35693af,oak door,Oak Door,82,7,False,False
+obj__chapel__5ee4b863,chapel,Chapel,266,19,False,False
+obj__railing__e1148a3f,railing,Railing,256,17,False,False
+obj__gold_hair__19d3d258,gold hair,Gold Hair,181,17,False,True
+obj__sea_monster__a86b8a35,sea monster,Sea Monster,224,17,False,False
+obj__hull__1947b668,hull,Hull,224,17,False,False
+obj__sea_monster_on_the_bow__6a718877,sea monster on the bow,Sea Monster On The Bow,224,17,False,False
+obj__eye__f19bd084,eye,Eye,224,17,False,False
+obj__chimney__ed109e09,chimney,Chimney,282,18,False,False
+obj__shuttered_windows__ed1c0a92,shuttered windows,Shuttered Windows,282,18,False,False
+obj__protective_gear__75e76e58,protective gear,Protective Gear,112,10,False,False
+obj__spare_bowstring__22f98b70,spare bowstring,Spare Bowstring,70,5,False,False
+obj__weights__63f4f1e9,weights,Weights,202,16,False,False
+obj__targets__aa6f6d62,targets,Targets,203,16,False,False
+obj__target__42aefbae,target,Target,413,34,False,False
+obj__bail__3b09b526,bail,Bail,234,16,False,False
+obj__training_apparatus__79a6a944,training apparatus,Training Apparatus,245,16,False,False
+obj__wood_floor__83e72887,wood floor,Wood Floor,85,7,False,False
+obj__lavender__153fa526,lavender,Lavender,140,14,False,False
+obj__rabbit_fur_coverlet__09a1e10f,rabbit fur coverlet,Rabbit Fur Coverlet,66,7,False,False
+obj__watering_can__2d4f3e6f,watering can,Watering Can,159,13,False,False
+obj__eggs__ab92d9fa,eggs,Eggs,174,21,False,False
+obj__milk__ecbdb882,milk,Milk,172,20,False,False
+obj__cow__81566e98,cow,Cow,556,40,False,False
+obj__large_pile_of_hay__3b874c4d,large pile of hay,Large Pile Of Hay,220,20,False,False
+obj__cactus__42239b83,cactus,Cactus,610,49,False,False
+obj__bookshelves__c9b925be,bookshelves,Bookshelves,293,21,False,False
+obj__ornate_desk__dc4f0799,ornate desk,Ornate Desk,293,21,False,False
+obj__elderberry__8625dc8c,elderberry,Elderberry,235,21,False,False
+obj__squat_chair_with_a_high_back__626e17ba,squat chair with a high back,Squat Chair With A High Back,520,21,False,False
+obj__handle__e1260894,handle,Handle,150,12,False,False
+obj__pier__c72e2158,pier,Pier,255,20,False,False
+obj__beach__7193529a,beach,Beach,510,20,False,False
+obj__fine_white_sand__dafdfa7e,fine white sand,Fine White Sand,255,20,False,False
+obj__gigantic_and_lavish_marble_pier__0bf8a9b3,gigantic and lavish marble pier,Gigantic And Lavish Marble Pier,255,20,False,False
+obj__small_door__0fe2fb71,small door,Small Door,532,19,False,False
+obj__sewer__a8891c8e,sewer,Sewer,266,20,False,False
+obj__sand_dune__24550f43,sand dune,Sand Dune,120,9,False,False
+obj__meadow__07a42035,meadow,Meadow,337,25,False,False
+obj__wooden_floors__57d5f2f7,wooden floors,Wooden Floors,267,20,False,False
+obj__woodland__f6216ab8,woodland,Woodland,267,20,False,False
+obj__spiral_staircase__031e4915,spiral staircase,Spiral Staircase,267,20,False,False
+obj__wooden_platform__5cf03d2b,wooden platform,Wooden Platform,244,19,False,False
+obj__platform__34a6e5d6,platform,Platform,244,19,False,False
+obj__beach_house__64bd4f8d,beach house,Beach House,287,18,False,False
+obj__it_s_door__a8f6e193,it's door,It'S Door,231,18,False,False
+obj__hole__de97e75e,hole,Hole,371,28,False,False
+obj__watering_buckets__c14993d1,watering buckets,Watering Buckets,169,14,False,False
+obj__cattle__bd5f4b04,cattle,Cattle,126,9,False,False
+obj__hunting_rifles__ad8ad349,hunting rifles,Hunting Rifles,115,11,False,False
+obj__set__cdaeeeba,set,Set,252,19,False,False
+obj__hymnbook__4c06da20,hymnbook,Hymnbook,84,7,False,False
+obj__back_row_seat__dd01b781,back row seat,Back Row Seat,266,19,False,False
+obj__cobblestone__e5ee4c19,cobblestone,Cobblestone,347,29,False,False
+obj__dune__cabdb101,dune,Dune,211,18,False,False
+obj__street__1f4a9685,street,Street,428,35,False,False
+obj__spike__a60e7822,spike,Spike,386,29,False,False
+obj__foot_print__f2718daf,foot print,Foot Print,121,9,False,False
+obj__skins__ada1fd05,skins,Skins,93,9,False,False
+obj__leather_cloth__674a4e2b,leather cloth,Leather Cloth,115,11,False,False
+obj__statue_of_a_god__4d7a3231,statue of a god,Statue Of A God,244,20,False,False
+obj__weaponry__55c11277,weaponry,Weaponry,84,7,False,False
+obj__musty_shelves__fd76e99e,musty shelves,Musty Shelves,288,19,False,False
+obj__bridge__98ac6b4b,bridge,Bridge,395,31,False,False
+obj__dusty_picture__a1ff1900,dusty picture,Dusty Picture,129,10,False,False
+obj__carpet_piece__5fee0847,carpet piece,Carpet Piece,266,19,False,False
+obj__temple_of_the_gods__c3f3d5d5,temple of the gods,Temple Of The Gods,233,19,False,False
+obj__temple_entrance__71ae50b0,temple entrance,Temple Entrance,233,19,False,False
+obj__cement__c6d3456c,cement,Cement,100,9,False,False
+obj__lush_green_vegetation__596d4a54,lush green vegetation,Lush Green Vegetation,223,17,False,False
+obj__pine_cone__70fd7f29,pine cone,Pine Cone,210,16,False,False
+obj__hand_carved_30_person_kings_dining_table__7127d203,hand carved 30 person kings dining table,Hand Carved 30 Person Kings Dining Table,254,19,False,False
+obj__gold_plated_dome__a60be98f,gold plated dome,Gold Plated Dome,254,19,False,True
+obj__hand_woven_rug__483828c9,hand woven rug,Hand Woven Rug,254,19,False,False
+obj__tack_room__f10918c1,tack room,Tack Room,162,12,False,False
+obj__rusty_gate__bb21d8ec,rusty gate,Rusty Gate,163,12,False,False
+obj__quiver__5ae271c6,quiver,Quiver,92,7,False,False
+obj__grape_juice__0cf7fae6,grape juice,Grape Juice,143,12,False,False
+obj__holder__a403f799,holder,Holder,229,19,False,False
+obj__ritual_dagger__5135a6e3,ritual dagger,Ritual Dagger,179,22,False,True
+obj__hard_wooden_chair_under_the_eaves__c20e22fa,hard wooden chair under the eaves,Hard Wooden Chair Under The Eaves,11,1,False,False
+obj__higher_elevations__8b8907eb,higher elevations,Higher Elevations,252,18,False,False
+obj__water_in_the_sky__959372a9,water in the sky,Water In The Sky,234,18,False,False
+obj__rainfall__6a14d6e8,rainfall,Rainfall,252,18,False,False
+obj__heavy_blanket__a0a97a12,heavy blanket,Heavy Blanket,103,9,False,False
+obj__steel_statue__106172e1,steel statue,Steel Statue,240,19,False,False
+obj__trough__bdd00dfe,trough,Trough,141,11,False,False
+obj__small_wooden_structure__2eb6e08b,small wooden structure,Small Wooden Structure,214,18,False,False
+obj__wood_flooring__8ed44a5e,wood flooring,Wood Flooring,214,18,False,False
+obj__road__3c68cbe4,road,Road,766,43,False,False
+obj__sign_saying_apothecary__b058c223,sign saying apothecary,Sign Saying Apothecary,70,5,False,False
+obj__buildings__a1b0311b,buildings,Buildings,204,15,False,False
+obj__angel__f4f068e7,angel,Angel,97,8,False,False
+obj__rope_bridge__657c3187,rope bridge,Rope Bridge,84,6,False,False
+obj__grain__c7730632,grain,Grain,157,16,False,False
+obj__hats__f4efffe4,hats,Hats,200,18,False,False
+obj__shoes__b0a8b6f8,shoes,Shoes,206,16,False,False
+obj__single_bulb_of_light__babcad85,single bulb of light,Single Bulb Of Light,180,14,False,False
+obj__fan__50bd8c21,fan,Fan,182,16,False,False
+obj__welcome_mat__fc0d07ca,welcome mat,Welcome Mat,180,14,False,False
+obj__coat__77eaa26c,coat,Coat,166,15,False,False
+obj__wet_outer_wear__e4457038,wet outer wear,Wet Outer Wear,180,14,False,False
+obj__brush__68f6f171,brush,Brush,75,10,False,False
+obj__grape__b781cbb2,grape,Grape,122,13,False,False
+obj__corroded_vessels_placed__8e9f38a4,corroded vessels placed,Corroded Vessels Placed,183,14,False,False
+obj__art__2c5f64ab,art,Art,458,36,False,False
+obj__silver_incense_burner__040b94a3,silver incense burner,Silver Incense Burner,74,8,False,False
+obj__compass__869d7b08,compass,Compass,105,14,False,False
+obj__dart_board__0c91e73a,dart board,Dart Board,203,16,False,False
+obj__wooden_stools__6111c2ce,wooden stools,Wooden Stools,139,11,False,False
+obj__stand__945b93f3,stand,Stand,114,9,False,False
+obj__huge_statue__fd0902e7,huge statue,Huge Statue,212,16,False,False
+obj__ornate_statue__a19f003c,ornate statue,Ornate Statue,212,16,False,False
+obj__scepter__02ba5e71,scepter,Scepter,209,27,False,False
+obj__golden_table__cc813c36,golden table,Golden Table,250,20,False,False
+obj__gold_clothing__aa9cca1f,gold clothing,Gold Clothing,197,20,False,True
+obj__large_wooden_door_with_iron_hardware__7decb632,large wooden door with iron hardware,Large Wooden Door With Iron Hardware,14,1,False,False
+obj__honeysuckle_has_been_allowed_to_climb_the_garden_wall__bd461135,honeysuckle has been allowed to climb the garden wall,Honeysuckle Has Been Allowed To Climb The Garden Wall,6,1,False,False
+obj__money_box__3c5aca86,money box,Money Box,163,13,False,False
+obj__bag_of_herbs__92ed6778,bag of herbs,Bag Of Herbs,165,18,False,False
+obj__garden_bench__56179ef4,garden bench,Garden Bench,83,7,False,False
+obj__flowerpot__aba0ef9e,flowerpot,Flowerpot,102,9,False,False
+obj__fresh_red_paint__a602708e,fresh red paint,Fresh Red Paint,198,19,False,False
+obj__loft__428c6692,loft,Loft,261,19,False,False
+obj__ladder__4fbf0df9,ladder,Ladder,261,19,False,False
+obj__pitch_fork__6304a2f7,pitch fork,Pitch Fork,54,8,False,False
+obj__seashell__1c2123d7,seashell,Seashell,175,17,False,False
+obj__sea_glass__90849e38,sea glass,Sea Glass,148,12,False,False
+obj__paddle__a13afceb,paddle,Paddle,198,18,False,False
+obj__plant_life__badbc2cf,plant-life,Plant-Life,91,9,False,False
+obj__metal_meal_tray__a90a21a7,metal meal tray,Metal Meal Tray,110,9,False,False
+obj__reptile__74790f43,reptile,Reptile,87,9,False,False
+obj__child__1b7d5726,child,Child,62,7,False,False
+obj__goblet__2c7ff6e4,goblet,Goblet,331,35,False,False
+obj__crate__dd4827af,crate,Crate,470,41,False,False
+obj__various_diamonds__4ba2c6a6,various diamonds,Various Diamonds,218,17,False,False
+obj__gold_laced_furniture__4a2ba3fd,gold-laced furniture,Gold-Laced Furniture,280,17,False,False
+obj__portraits__0e1a7094,portraits,Portraits,238,17,False,False
+obj__self_portrait__e43e2945,self-portrait,Self-Portrait,238,17,False,False
+obj__long_wooden_table__f4fe208e,long wooden table,Long Wooden Table,98,7,False,False
+obj__magic_book__56b3a09c,magic book,Magic Book,110,10,False,True
+obj__chicken_coop__6afcba65,chicken coop,Chicken Coop,98,7,False,False
+obj__bog__e07cd172,bog,Bog,70,5,False,False
+obj__reeds__fcc2b501,reeds,Reeds,360,24,False,False
+obj__pail__8e218227,pail,Pail,72,6,False,False
+obj__rake__058cc845,rake,Rake,200,24,False,False
+obj__giant_club__eebfe170,giant club,Giant Club,65,12,False,False
+obj__comfortable_cushion__175a4fa8,comfortable cushion,Comfortable Cushion,174,20,False,False
+obj__king_s_flagon__6999e14b,king's flagon,King'S Flagon,83,10,False,False
+obj__pile_of_treasure__1068050a,pile of treasure,Pile Of Treasure,498,18,False,True
+obj__vulture__f7a13e18,vulture,Vulture,337,25,False,False
+obj__crevice__67f4ee23,crevice,Crevice,446,33,False,False
+obj__pelican__dcd32506,pelican,Pelican,240,19,False,False
+obj__piling__7978ee8f,piling,Piling,240,19,False,False
+obj__peasant__0ef44d86,peasant,Peasant,240,19,False,False
+obj__bottle_of_sacramental_wine__24cad21a,bottle of sacramental wine,Bottle Of Sacramental Wine,71,8,False,False
+obj__pic_axe__0cf49548,pic axe,Pic Axe,134,11,False,False
+obj__mop_bucket__a6ac44ec,mop bucket,Mop Bucket,200,19,False,False
+obj__stone_arch__70c26664,stone arch,Stone Arch,208,18,False,False
+obj__cabin__92faafe2,cabin,Cabin,185,17,False,False
+obj__cuff__59d3b7da,cuff,Cuff,65,7,False,False
+obj__gold_cup__1a784123,gold cup,Gold Cup,314,27,False,True
+obj__huge_bed__ff7828da,huge bed,Huge Bed,252,18,False,False
+obj__red_wine__07d4b2aa,red wine,Red Wine,280,18,False,False
+obj__silk__5339078d,silk,Silk,227,18,False,False
+obj__bedding__6e15ca28,bedding,Bedding,376,29,False,False
+obj__beached_row_boat__d85032d1,beached row boat,Beached Row Boat,77,7,False,False
+obj__small_burning_candle__6569aa16,small burning candle,Small Burning Candle,100,9,False,False
+obj__ornate_table__b129d90b,ornate table,Ornate Table,101,8,False,False
+obj__large_shelf__a5b0b65c,large shelf,Large Shelf,290,19,False,False
+obj__vial__808e7e17,vial,Vial,310,33,False,False
+obj__small_pots__2ef16f01,small pots,Small Pots,262,19,False,False
+obj__roaring_fireplace__b96baf11,roaring fireplace,Roaring Fireplace,150,11,False,False
+obj__scrolls__3543d1f6,scrolls,Scrolls,210,21,False,False
+obj__head__96e89a29,head,Head,154,12,False,False
+obj__raggedy_bible__6cddb936,raggedy bible,Raggedy Bible,56,6,False,False
+obj__torture_instrument__34de683a,torture instrument,Torture Instrument,204,18,False,False
+obj__dinner_table__e244b34b,dinner table,Dinner Table,308,26,False,False
+obj__place_mat__05cb36f0,place mat,Place Mat,217,18,False,False
+obj__sandy_beach__81d445db,sandy beach,Sandy Beach,205,15,False,False
+obj__wheelbarrow__bfbdadcb,wheelbarrow,Wheelbarrow,157,12,False,False
+obj__gardening_equipment__c63ad06b,gardening equipment,Gardening Equipment,227,17,False,False
+obj__broken_vase__1affa941,broken vase,Broken Vase,122,10,False,False
+obj__high_grass__8365620f,high grass,High Grass,254,18,False,False
+obj__dense_fog__c49073e3,dense fog,Dense Fog,226,18,False,False
+obj__wind__7e25b972,wind,Wind,341,27,False,False
+obj__graveyard__7b3ab674,graveyard,Graveyard,226,18,False,False
+obj__old_broom__50873bf9,old broom,Old Broom,210,18,False,False
+obj__bucket_for_eliminating_waste__2371ab3a,bucket for eliminating waste,Bucket For Eliminating Waste,228,19,False,False
+obj__bench_made_of_stone__4e6a3f37,bench made of stone,Bench Made Of Stone,267,19,False,False
+obj__sheet__7b03871d,sheet,Sheet,70,5,False,False
+obj__jug_that_holds_the_wine_the_servants_fill_glasses_with__aa5ad5a7,jug that holds the wine the servants fill glasses with,Jug That Holds The Wine The Servants Fill Glasses With,5,1,False,False
+obj__anvil__6090177f,anvil,Anvil,269,20,False,False
+obj__fishing_net__4b180e39,fishing net,Fishing Net,255,28,False,False
+obj__candy_shop__7b16bcac,candy shop,Candy Shop,217,17,False,False
+obj__general_store__53a8fbb0,general store,General Store,217,17,False,False
+obj__broom__5bfab488,broom,Broom,198,23,False,False
+obj__beaten_copper_pot__62d08e67,beaten copper pot,Beaten Copper Pot,164,17,False,False
+obj__fur_skin_rug__06b6c3a7,fur skin rug,Fur Skin Rug,208,17,False,False
+obj__treasure_map__ed5c105a,treasure map,Treasure Map,57,9,False,True
+obj__talisman__54466dc2,talisman,Talisman,206,17,False,False
+obj__cursed_amulet__573403c6,cursed amulet,Cursed Amulet,200,17,False,False
+obj__ware__f52845d1,ware,Ware,210,17,False,False
+obj__letter__f5b75010,letter,Letter,208,17,False,True
+obj__hut__a11c6523,hut,Hut,202,15,False,False
+obj__pitchfork__ca9bc2a0,pitchfork,Pitchfork,496,45,False,False
+obj__artwork__431a210e,artwork,Artwork,295,22,False,False
+obj__grey_stone__5d91f1e6,grey stone,Grey Stone,99,9,False,False
+obj__crack__463c8a75,crack,Crack,197,15,False,False
+obj__thorn_bush__dc9a5bd4,thorn bush,Thorn Bush,84,6,False,False
+obj__merchandise__93d1fa1b,merchandise,Merchandise,207,15,False,False
+obj__kettle__a442b546,kettle,Kettle,243,20,False,False
+obj__medicine__d9e5d212,medicine,Medicine,179,14,False,False
+obj__grappling_hook__aa3f0428,grappling hook,Grappling Hook,88,8,False,False
+obj__holy_water__065d956e,holy water,Holy Water,123,13,False,False
+obj__sculptures__3b80b907,sculptures,Sculptures,132,11,False,False
+obj__empty_fish_tank__f16636ac,empty fish tank,Empty Fish Tank,126,9,False,False
+obj__mining_cart__b356e4a2,mining cart,Mining Cart,137,10,False,False
+obj__bell_tower__53496f39,bell tower,Bell Tower,47,4,False,False
+obj__key__3c6e0b8a,key,Key,280,27,False,True
+obj__escape_tunnel__1b49b7eb,escape tunnel,Escape Tunnel,240,19,False,False
+obj__dead_body__6d339e07,dead body,Dead Body,66,7,False,False
+obj__glitter__817e2b1d,glitter,Glitter,97,12,False,False
+obj__flask__319c3206,flask,Flask,88,8,False,False
+obj__bright_colored_curtains__e86250ee,bright colored curtains,Bright Colored Curtains,126,10,False,False
+obj__tulip__0ae57c94,tulip,Tulip,199,19,False,False
+obj__fishing_rod__f60fbe02,fishing rod,Fishing Rod,239,27,False,False
+obj__baptismal_font__73e4d1b8,baptismal font,Baptismal Font,108,8,False,False
+obj__broken_tool__1407371c,broken tool,Broken Tool,146,12,False,False
+obj__priceless_pieces_of_art__fceec9eb,priceless pieces of art,Priceless Pieces Of Art,112,8,False,False
+obj__comfortable_chair__d7e73b1c,comfortable chair,Comfortable Chair,148,11,False,False
+obj__dolly__178eca01,dolly,Dolly,112,8,False,False
+obj__chasim__286b461c,chasim,Chasim,97,9,False,False
+obj__ornate_goblet__8f8d5ad5,ornate goblet,Ornate Goblet,90,8,False,False
+obj__crow_bar__35cca483,crow bar,Crow Bar,76,8,False,False
+obj__tithe_plate__eb8b22d2,tithe plate,Tithe Plate,85,8,False,False
+obj__fireplace__f0cd112e,fireplace,Fireplace,394,30,True,False
+obj__empty_coin_bag__2d3dd595,empty coin bag,Empty Coin Bag,123,13,False,True
+obj__guards_armor__38837eb1,guards armor,Guards Armor,76,10,False,True
+obj__large_earthenware_jug_of_water_for_cooking_and_drinking__af86fbd9,large earthenware jug of water for cooking and drinking,Large Earthenware Jug Of Water For Cooking And Drinking,14,1,False,False
+obj__sand_for_the_cacti__50a48dbc,sand for the cacti,Sand For The Cacti,136,12,False,False
+obj__diamond__75c6f031,diamond,Diamond,178,19,False,False
+obj__shell__2591c98b,shell,Shell,382,40,False,False
+obj__grog__3c12626d,grog,Grog,78,9,False,False
+obj__chain_mail__8ae7c7e2,chain mail,Chain Mail,169,17,False,False
+obj__blade__2c066a21,blade,Blade,119,12,False,False
+obj__snake__de1b2a7b,snake,Snake,274,23,False,False
+obj__hoe_for_digging__77390acb,hoe for digging,Hoe For Digging,182,19,False,False
+obj__skinning_knife__21880fa9,skinning knife,Skinning Knife,146,12,False,True
+obj__gear__fae005cf,gear,Gear,202,17,False,False
+obj__sword_on_the_wall__245fbb1c,sword on the wall,Sword On The Wall,108,10,False,True
+obj__muddy_chute__afce3e03,muddy chute,Muddy Chute,149,11,False,False
+obj__wildlife__fce889a7,wildlife,Wildlife,197,15,False,False
+obj__lilypad__0a2dbfa4,lilypad,Lilypad,118,10,False,False
+obj__frog__938c2cc0,frog,Frog,172,15,False,False
+obj__old_bicycle__f81f6411,old bicycle,Old Bicycle,96,9,False,False
+obj__eisel__e64e97dc,eisel,Eisel,112,11,False,False
+obj__bulb__e77f0155,bulb,Bulb,126,9,False,False
+obj__puddle_of_water__efc19e00,puddle of water,Puddle Of Water,127,10,False,False
+obj__empty_mug__451acc4c,empty mug,Empty Mug,93,8,False,False
+obj__tools__4a931512,tools,Tools,98,9,False,False
+obj__campfire__a0511348,campfire,Campfire,215,18,False,False
+obj__wooden_cross__1b3dffb3,wooden cross,Wooden Cross,129,12,False,False
+obj__hay_shovel__5decb2f8,hay shovel,Hay Shovel,33,3,False,False
+obj__babbling_brook__af496cb9,babbling brook,Babbling Brook,95,7,False,False
+obj__simple_wooden_bucket_for_holding_umbrellas_walking_sticks_and_etc__9f8bf8ce,simple wooden bucket for holding umbrellas walking sticks and etc,Simple Wooden Bucket For Holding Umbrellas Walking Sticks And Etc,14,1,False,False
+obj__step__2764ca9d,step,Step,112,8,False,False
+obj__gravestones_some_at_oblique_angles__c2eafe40,gravestones some at oblique angles,Gravestones Some At Oblique Angles,71,6,False,False
+obj__mug_of_mead__fff5b9ab,mug of mead,Mug Of Mead,69,8,False,False
+obj__drawbridge_to_the_castle__a75eb6d2,drawbridge to the castle,Drawbridge To The Castle,155,12,False,False
+obj__wizard__d8d3a01b,wizard,Wizard,86,8,False,False
+obj__pastel_sky__9647f673,pastel sky,Pastel Sky,129,10,False,False
+obj__pool_of_blood__76bf9a65,pool of blood,Pool Of Blood,112,8,False,False
+obj__knights_armor__d303ff7f,knights armor,Knights Armor,92,10,False,True
+obj__kings_sword__74838ba0,kings sword,Kings Sword,77,10,False,True
+obj__body_parts__5cff4938,body parts,Body Parts,122,12,False,False
+obj__stalactite__7e36513d,stalactite,Stalactite,181,17,False,False
+obj__awning__e42a2b0a,awning,Awning,138,10,False,False
+obj__apron__c700b304,apron,Apron,103,9,False,False
+obj__cozy_fur_rug__0e54f1ca,cozy fur rug,Cozy Fur Rug,148,11,False,False
+obj__holy_book_on_a_shelf_underneath_the_seat__6bc48b01,holy book on a shelf underneath the seat,Holy Book On A Shelf Underneath The Seat,5,1,False,True
+obj__paint_brushes__47ede3c2,paint brushes,Paint Brushes,61,6,False,False
+obj__dish__d51f95cd,dish,Dish,179,16,False,False
+obj__pick__27cf1e36,pick,Pick,213,20,False,False
+obj__desk_chair__9a353467,desk chair,Desk Chair,89,8,False,False
+obj__expensive_pillow__b19a6ba2,expensive pillow,Expensive Pillow,41,6,False,False
+obj__old_armor__6f9aa955,old armor,Old Armor,135,12,False,True
+obj__wooden_cart__0f4e7c82,wooden cart,Wooden Cart,92,7,False,False
+obj__feed__09353387,feed,Feed,118,10,False,False
+obj__fossil__bd2ad056,fossil,Fossil,99,9,False,False
+obj__magical_gem__d775e9fe,magical gem,Magical Gem,48,9,False,True
+obj__mushroom__4e026537,mushroom,Mushroom,60,7,False,False
+obj__shedding__c694aed0,shedding,Shedding,85,7,False,False
+obj__candle_holder__ba5bf220,candle holder,Candle Holder,150,15,False,False
+obj__feather__82d65a57,feather,Feather,70,7,False,False
+obj__single_tent__a87e256b,single tent,Single Tent,190,17,False,False
+obj__basket_of_grain__efaa070c,basket of grain,Basket Of Grain,81,10,False,False
+obj__porcelain_vase__cdce9fb4,porcelain vase,Porcelain Vase,84,8,False,False
+obj__spear__dc700272,spear,Spear,131,13,False,False
+obj__potion_and_cure__9a60f493,potion and cure,Potion And Cure,126,9,False,True
+obj__sceptre__8e734fa6,sceptre,Sceptre,25,4,False,False
+obj__good__755f85c2,good,Good,1,1,False,False
+obj__baptismal__1c6b90de,baptismal,Baptismal,75,6,False,False
+obj__chest__14952ea7,chest,Chest,205,15,False,True
+obj__fallen_tree__0ed450cc,fallen tree,Fallen Tree,65,6,False,False
+obj__sleeping_bag__7b66f470,sleeping bag,Sleeping Bag,230,26,False,False
+obj__work_of_art__f0a4082b,work of art,Work Of Art,113,9,False,False
+obj__park_bench__f937d73a,park bench,Park Bench,42,3,False,False
+obj__hickory_nut__c0e55d3e,hickory nut,Hickory Nut,13,1,False,False
+obj__stone_bench__f9b1f4a1,stone bench,Stone Bench,115,10,False,False
+obj__swing__ce04e521,swing,Swing,125,13,False,False
+obj__latch__42f3c93a,latch,Latch,106,10,False,False
+obj__hammock__65037fe2,hammock,Hammock,154,11,False,False
+obj__costumes__f0fa9e58,costumes,Costumes,98,10,False,False
+obj__slime__f79f0528,slime,Slime,63,6,False,False
+obj__ornate_plate__2709f4e7,ornate plate,Ornate Plate,79,8,False,False
+obj__alligator__88a93408,alligator,Alligator,150,13,False,False
+obj__icicle__390b9d5a,icicle,Icicle,88,8,False,False
+obj__paintings_of_ancestor__1fcb1e25,paintings of ancestor,Paintings Of Ancestor,140,10,False,False
+obj__ale__f7a38033,ale,Ale,69,7,False,False
+obj__large_table__5dd897a4,large table,Large Table,84,6,False,False
+obj__bat__5f3f4681,bat,Bat,96,8,False,False
+obj__ropes__55453933,ropes,Ropes,84,6,False,False
+obj__crow_s_nest_full_of_emeralds__57ffec06,crow's nest full of emeralds,Crow'S Nest Full Of Emeralds,94,7,False,False
+obj__sail__163ccb63,sail,Sail,84,7,False,False
+obj__campfire_burning__b60b91d1,campfire burning,Campfire Burning,140,10,False,False
+obj__tunic__5f7f5750,tunic,Tunic,10,3,False,False
+obj__chandlier__325ec1b6,chandlier,Chandlier,126,9,False,False
+obj__dress__ccaaac95,dress,Dress,88,10,False,False
+obj__nails__22fc8656,nails,Nails,153,14,False,False
+obj__dim_lamp__ef272ed0,dim lamp,Dim Lamp,104,11,False,False
+obj__turtle__d4705b9f,turtle,Turtle,241,19,False,False
+obj__couch__a7453d03,couch,Couch,111,9,False,False
+obj__chamber_pot_discreetly_hidden__68577b6d,chamber pot discreetly hidden,Chamber Pot Discreetly Hidden,167,13,False,False
+obj__firewood_for_the_fireplace__1054da9d,firewood for the fireplace,Firewood For The Fireplace,98,7,False,False
+obj__painting_and_work_of_art__ce24e6c8,painting and work of art,Painting And Work Of Art,144,11,False,False
+obj__large_pet_lion__e455b4e0,large pet lion,Large Pet Lion,48,6,False,False
+obj__basin__f4d3b5a1,basin,Basin,122,10,False,False
+obj__black_soil__9e4ddb48,black soil,Black Soil,81,6,False,False
+obj__luxuriously_soft_couch__895b1860,luxuriously soft couch,Luxuriously Soft Couch,115,10,False,False
+obj__duster__b88a4290,duster,Duster,71,11,False,False
+obj__bible__a7c01f5c,bible,Bible,207,34,False,False
+obj__white_wooden_gate__407d4402,white wooden gate,White Wooden Gate,117,10,False,False
+obj__food_trough__1da0139d,food trough,Food Trough,146,12,False,False
+obj__purse__204e3937,purse,Purse,20,9,False,False
+obj__painting_of_mother_mary__354321e1,painting of mother mary,Painting Of Mother Mary,79,9,False,False
+obj__wooden_bench__0d4cbffc,wooden bench,Wooden Bench,176,13,False,False
+obj__witches_broom__f212efa6,witches broom,Witches Broom,74,8,False,False
+obj__gallows__4857f076,gallows,Gallows,169,13,False,False
+obj__bathroom_pot__b59b4d02,bathroom pot,Bathroom Pot,119,9,False,False
+obj__message_in_a_bottle__ce9e79f7,message in a bottle,Message In A Bottle,44,6,False,False
+obj__leaking_roof__4ccc15cb,leaking roof,Leaking Roof,72,6,False,False
+obj__oar__82d8a8be,oar,Oar,149,13,False,False
+obj__paintbrush__774d1f7e,paintbrush,Paintbrush,6,1,False,False
+obj__pine_tree__0e7e318c,pine tree,Pine Tree,213,16,False,False
+obj__sickle__97997986,sickle,Sickle,209,18,False,False
+obj__clearing__5832a4d8,clearing,Clearing,17,2,False,False
+obj__haystack__a1cae1a6,haystack,Haystack,213,16,False,False
+obj__coin_bag__70cb36fe,coin bag,Coin Bag,66,6,False,True
+obj__collection_envelopes__4bb2fdab,collection envelopes,Collection Envelopes,117,9,False,False
+obj__dried_blood__847b2435,dried blood,Dried Blood,233,20,False,False
+obj__wood_burning_fire__62edbace,wood burning fire,Wood Burning Fire,126,9,False,False
+obj__feather_fountain_pen__767a9b83,feather fountain pen,Feather Fountain Pen,99,8,False,False
+obj__ink_jar__cadfda08,ink jar,Ink Jar,88,9,False,False
+obj__rosary__0563ad2e,rosary,Rosary,14,2,False,False
+obj__plyers__d54711ad,plyers,Plyers,4,1,False,False
+obj__mausoleum__6cfc4bc5,mausoleum,Mausoleum,107,8,False,False
+obj__nut__18fc9c6b,nut,Nut,17,4,False,False
+obj__iron_maiden__cf6f0b2d,iron maiden,Iron Maiden,249,21,False,False
+obj__tray__75b2ade1,tray,Tray,92,8,False,False
+obj__old_mop__85848a07,old mop,Old Mop,96,11,False,False
+obj__moldy_bread__629f5023,moldy bread,Moldy Bread,111,15,False,False
+obj__empty_gruel_bowl__3d850bdb,empty gruel bowl,Empty Gruel Bowl,84,10,False,False
+obj__chamber_pot__a150637e,chamber pot,Chamber Pot,116,10,False,False
+obj__horseshoe__5cdb501c,horseshoe,Horseshoe,131,10,False,False
+obj__burrow__51b1bb6c,burrow,Burrow,117,9,False,False
+obj__bee_hive__9ce088b5,bee hive,Bee Hive,112,8,False,False
+obj__enchanted_amulet__cae6f1f3,enchanted amulet,Enchanted Amulet,119,12,False,False
+obj__streetlight__424e4b7f,streetlight,Streetlight,130,10,False,False
+obj__bottle__3a385ac0,bottle,Bottle,13,2,False,False
+obj__ornate_mosaic__ef0ca3aa,ornate mosaic,Ornate Mosaic,85,7,False,False
+obj__sarcophagus__f9c81e6c,sarcophagus,Sarcophagus,99,8,False,False
+obj__wrought_iron_chandelier__bc9ae526,wrought iron chandelier,Wrought Iron Chandelier,140,10,False,False
+obj__horse_tack__a26c0077,horse tack,Horse Tack,218,21,False,False
+obj__treat__15bf1e39,treat,Treat,20,6,False,False
+obj__spell__f557af0e,spell,Spell,8,2,False,False
+obj__suitcase__15b7493d,suitcase,Suitcase,4,1,False,False
+obj__tropical_birds__05450ce4,tropical birds,Tropical Birds,23,4,False,False
+obj__pocket_watch__1f7b4343,pocket watch,Pocket Watch,1,1,False,False
+obj__daggers__a5734a45,daggers,Daggers,111,10,False,False
+obj__coal__5271e118,coal,Coal,35,7,False,False
+obj__ink_well__98846fbe,ink well,Ink Well,90,9,False,False
+obj__ceremonial_hat__8ff9fe75,ceremonial hat,Ceremonial Hat,99,8,False,False
+obj__hitching_post__c1aa141d,hitching post,Hitching Post,98,7,False,False
+obj__shirt__c9507f53,shirt,Shirt,16,4,False,False
+obj__plow__2e2f5b37,plow,Plow,98,7,False,False
+obj__worshipper__067dfc54,worshipper,Worshipper,84,6,False,False
+obj__baptism_pool__db08472a,baptism pool,Baptism Pool,105,8,False,False
+obj__dead_people__d415a08e,dead people,Dead People,136,15,False,False
+obj__wheelbarrows__6ccbceaa,wheelbarrows,Wheelbarrows,56,4,False,False
+obj__rusty_bar__905126ea,rusty bar,Rusty Bar,57,5,False,False
+obj__knocking_nob__8297f90a,knocking nob,Knocking Nob,92,7,False,False
+obj__quills__a65f94ad,quills,Quills,85,7,False,False
+obj__candelabra__02475550,candelabra,Candelabra,87,7,False,False
+obj__stone_carving_of_an_angel__0cb9d11b,stone carving of an angel,Stone Carving Of An Angel,117,10,False,False
+obj__cutting_board__6d9b7831,cutting board,Cutting Board,156,14,False,False
+obj__poison__35393c24,poison,Poison,12,3,False,False
+obj__old_weapons__2a6f79dd,old weapons,Old Weapons,133,11,False,False
+obj__wand__642fd86b,wand,Wand,242,24,False,False
+obj__door_knocker__44a8e128,door knocker,Door Knocker,102,10,False,False
+obj__old_shack__8562c06c,old shack,Old Shack,71,6,False,False
+obj__cash_box__25dc29c9,cash box,Cash Box,96,8,False,False
+obj__chisel__323e689c,chisel,Chisel,16,3,False,False
+obj__fine_art__f3a307bc,fine art,Fine Art,100,8,False,False
+obj__armor_set__c3bfe09b,armor set,Armor Set,109,10,False,True
+obj__offering_plate__64989cf1,offering plate,Offering Plate,73,8,False,False
+obj__ancient_relic__499a60f9,ancient relic,Ancient Relic,85,9,False,False
+obj__broken_cutlass__b555e3cf,broken cutlass,Broken Cutlass,109,10,False,False
+obj__farming_equipment__f20ead96,farming equipment,Farming Equipment,111,10,False,False
+obj__knight_fighting_gear__6f034f64,knight fighting gear,Knight Fighting Gear,93,10,False,False
+obj__cape__8b04f409,cape,Cape,46,5,False,False
+obj__trapdoor__40a2c5fd,trapdoor,Trapdoor,96,7,False,False
+obj__huge_lock_on_door__078802cd,huge lock on door,Huge Lock On Door,73,7,False,False
+obj__steering_wheel__c266866d,steering wheel,Steering Wheel,98,7,False,False
+obj__hair_brush__3b80945e,hair brush,Hair Brush,84,6,False,False
+obj__rag__7542dc7e,rag,Rag,75,17,False,False
+obj__giant_firepit__a69eb2c6,giant firepit,Giant Firepit,95,8,False,False
+obj__embalming_equipment__29ed2c78,embalming equipment,Embalming Equipment,120,10,False,False
+obj__pouch__6104635b,pouch,Pouch,25,4,False,False
+obj__clam__fb8b6976,clam,Clam,79,10,False,False
+obj__cushion__c136346b,cushion,Cushion,53,6,False,False
+obj__footstool__a7567f45,footstool,Footstool,75,6,False,False
+obj__citrus_fruit__6fc120fd,citrus fruit,Citrus Fruit,51,10,False,False
+obj__small_garden__e38d1524,small garden,Small Garden,140,10,False,False
+obj__napkin__720106da,napkin,Napkin,96,9,False,False
+obj__old_cup__95299bcf,old cup,Old Cup,111,9,False,False
+obj__pitch_pipe__008f8d85,pitch pipe,Pitch Pipe,17,3,False,False
+obj__sack__6829d8e0,sack,Sack,106,12,False,False
+obj__hatchet__c3e6c670,hatchet,Hatchet,61,7,False,False
+obj__bit_for_horse__6b00ee0f,bit for horse,Bit For Horse,85,7,False,False
+obj__trap__ca97f68c,trap,Trap,70,5,False,False
+obj__kneeler__02d8b44e,kneeler,Kneeler,140,10,False,False
+obj__lever__ba6e7efe,lever,Lever,408,30,False,False
+obj__copper_vase__b9868dce,copper vase,Copper Vase,76,7,False,False
+obj__manacle__adf2b892,manacle,Manacle,265,23,False,False
+obj__cougar__0dc42522,cougar,Cougar,155,12,False,False
+obj__wood_table__8469c953,wood table,Wood Table,153,11,False,False
+obj__old_dry_tree_stump__17cce7ba,old dry tree stump,Old Dry Tree Stump,98,7,False,False
+obj__royal_coat_of_arms__b50fa2f0,royal coat of arms,Royal Coat Of Arms,69,8,False,False
+obj__pitcher__849d11a4,pitcher,Pitcher,2,1,False,False
+obj__notebook__fb5d1b4a,notebook,Notebook,8,5,False,False
+obj__flag__327a6c43,flag,Flag,288,23,False,False
+obj__small_crucifix__b4d3a05a,small crucifix,Small Crucifix,63,5,False,False
+obj__uniform__a489ffed,uniform,Uniform,89,9,False,False
+obj__metal_fitting__2d034c0c,metal fitting,Metal Fitting,98,13,False,False
+obj__stein__f569ab23,stein,Stein,96,9,False,False
+obj__spring_nearby__223e4ebc,spring nearby,Spring Nearby,140,10,False,False
+obj__floor_to_ceiling_mirror__a0c94dbc,floor to ceiling mirror,Floor To Ceiling Mirror,113,9,False,False
+obj__horse_trough__6eb62bb1,horse trough,Horse Trough,88,7,False,False
+obj__prayer_book__02828fc9,prayer book,Prayer Book,83,10,False,True
+obj__washing_board__62fd5c41,washing board,Washing Board,98,9,False,False
+obj__shop_counter__2c0d0a0f,shop counter,Shop Counter,70,5,False,False
+obj__small_bucket__4269bdf5,small bucket,Small Bucket,96,13,False,False
+obj__stone_fireplace__a49374de,stone fireplace,Stone Fireplace,91,7,False,False
+obj__jacket__f4ebf8a0,jacket,Jacket,3,1,False,False
+obj__rolling_pin__0c89c315,rolling pin,Rolling Pin,2,1,False,False
+obj__brook__4843d65c,brook,Brook,83,7,False,False
+obj__cell_phone__1d688452,cell phone,Cell Phone,44,5,False,False
+obj__computer__df53ca26,computer,Computer,98,7,False,False
+obj__adventurer_s_remains__61bcc500,adventurer's remains,Adventurer'S Remains,95,9,False,False
+obj__ring__1a5df958,ring,Ring,2,2,False,True
+obj__cobbled_walkway__f9c3d16f,cobbled walkway,Cobbled Walkway,117,9,False,False
+obj__chicken__742929dc,chicken,Chicken,48,6,False,False
+obj__case__cd14c323,case,Case,129,11,False,False
+obj__thick_mud__50d28105,thick mud,Thick Mud,94,7,False,False
+obj__silerware__6c26769d,silerware,Silerware,68,8,False,False
+obj__family_photo__0ca5a75b,family photo,Family Photo,19,4,False,False
+obj__old_bible__0f94a568,old bible,Old Bible,90,13,False,False
+obj__puppet__76874790,puppet,Puppet,7,1,False,False
+obj__crystal_ball__8df897a1,crystal ball,Crystal Ball,102,17,False,False
+obj__velvet_cushion__2bc59549,velvet cushion,Velvet Cushion,83,7,False,False
+obj__staff__12532084,staff,Staff,63,8,False,False
+obj__dirty_rug__7782dda9,dirty rug,Dirty Rug,70,5,False,False
+obj__water_pail__c40dd343,water pail,Water Pail,97,7,False,False
+obj__bale__c0ef99bb,bale,Bale,100,8,False,False
+obj__rotten_flesh__042280f1,rotten flesh,Rotten Flesh,15,2,False,False
+obj__vanity__20351d66,vanity,Vanity,129,10,False,False
+obj__cloak__7d067ef3,cloak,Cloak,1,1,False,False
+obj__hanging_religious_carving__e4da61ed,hanging religious carving,Hanging Religious Carving,116,9,False,False
+obj__family_heirloom__8800126c,family heirloom,Family Heirloom,5,2,False,False
+obj__sewing_supplies__35517f20,sewing supplies,Sewing Supplies,2,1,False,False
+obj__decaying_fallen_tree__c19f703f,decaying fallen tree,Decaying Fallen Tree,70,5,False,False
+obj__cobblestone_walkway__78a18150,cobblestone walkway,Cobblestone Walkway,87,8,False,False
+obj__screen__599eba19,screen,Screen,107,9,False,False
+obj__pot_of_gold__e874293a,pot of gold,Pot Of Gold,84,9,False,True
+obj__pile_of_discarded_armor__f121dcf0,pile of discarded armor,Pile Of Discarded Armor,82,6,False,True
+obj__cheese__fea0f1f6,cheese,Cheese,8,6,False,False
+obj__large_ladle__f9e6e3ad,large ladle,Large Ladle,86,10,False,False
+obj__pot_for_cooking__70064869,pot for cooking,Pot For Cooking,48,5,False,False
+obj__fly__af17bc3b,fly,Fly,51,4,False,False
+obj__bibles__bf5953fb,bibles,Bibles,47,7,False,False
+obj__bear_rug__895e105d,bear rug,Bear Rug,78,6,False,False
+obj__low_grass__6f5cf1cf,low grass,Low Grass,183,14,False,False
+obj__vegetable_or_plant__04505669,vegetable or plant,Vegetable Or Plant,164,14,False,False
+obj__writing_paper__8934f6a5,writing paper,Writing Paper,50,6,False,False
+obj__bead__1e35b4e9,bead,Bead,105,8,False,False
+obj__ale_bottle__ac21bcd8,ale bottle,Ale Bottle,14,3,False,False
+obj__vest__8140abdd,vest,Vest,118,9,False,False
+obj__money_register__1d315cd1,money register,Money Register,134,11,False,False
+obj__rotting_wooden_fence__588da74f,rotting wooden fence,Rotting Wooden Fence,55,4,False,False
+obj__stone_craving__55317b9f,stone craving,Stone Craving,28,2,False,False
+obj__monkeys_hand__ee239361,monkeys hand,Monkeys Hand,12,1,False,False
+obj__satchel__5bc2049d,satchel,Satchel,11,2,False,False
+obj__coin_pouch__4644408c,coin pouch,Coin Pouch,63,5,False,True
+obj__copper__e7e94d9e,copper,Copper,53,5,False,False
+obj__cooking_instruments_of_every_type__0cef673b,cooking instruments of every type,Cooking Instruments Of Every Type,126,10,False,False
+obj__ingredient__1a1ecbaa,ingredient,Ingredient,125,10,False,False
+obj__serving_platter__1b7c5fca,serving platter,Serving Platter,88,7,False,False
+obj__huge_oven__74f5e1a3,huge oven,Huge Oven,130,10,False,False
+obj__cooking_instrument__a1eae697,cooking instrument,Cooking Instrument,130,10,False,False
+obj__writing_desk__52656f52,writing desk,Writing Desk,57,5,False,False
+obj__twig__5669b8e4,twig,Twig,1,1,False,False
+obj__hymn_book__2c15b657,hymn book,Hymn Book,19,3,False,True
+obj__clinging_vine__8870926e,clinging vine,Clinging Vine,28,2,False,False
+obj__gavel__e9dd19c2,gavel,Gavel,1,1,False,False
+obj__beer_keg__b675c54a,beer keg,Beer Keg,71,6,False,False
+obj__terraced_cottage__c099cba3,terraced cottage,Terraced Cottage,126,9,False,False
+obj__pickaxe__da352f90,pickaxe,Pickaxe,20,3,False,False
+obj__sail_cloth__92e61c8b,sail cloth,Sail Cloth,92,10,False,False
+obj__backpack__96982677,backpack,Backpack,8,2,False,False
+obj__cane__0165801c,cane,Cane,13,1,False,False
+obj__locket__e5a168f5,locket,Locket,1,1,False,False
+obj__salt__ceb20772,salt,Salt,60,5,False,False
+obj__small_stuffed_animal__bb9cadb6,small stuffed animal,Small Stuffed Animal,7,1,False,False
+obj__coinpurse__52582964,coinpurse,Coinpurse,13,1,False,False
+obj__pitcher_of_water__9efc18bd,pitcher of water,Pitcher Of Water,14,2,False,False
+obj__trousers__1a637268,trousers,Trousers,3,1,False,False
+obj__flute__2642b905,flute,Flute,2,2,False,False
+obj__laundry__fd330c14,laundry,Laundry,23,2,False,False
+obj__trowel__a16d79df,trowel,Trowel,99,8,False,False
+obj__bowl_of_fruit__82f8a42b,bowl of fruit,Bowl Of Fruit,46,6,False,False
+obj__charcoal__42133a3d,charcoal,Charcoal,5,2,False,False
+obj__rope_belt__28ac2df4,rope belt,Rope Belt,1,1,False,False
+obj__jeweled_comb__5d851964,jeweled comb,Jeweled Comb,1,1,False,False
+obj__lush_tapestry__d6de28ef,lush tapestry,Lush Tapestry,102,8,False,False
+obj__walking_stick__14cb1b7c,walking stick,Walking Stick,18,2,False,False
+obj__huge_cast_iron_pot__ff3e0298,huge cast iron pot,Huge Cast Iron Pot,42,3,False,False
+obj__piece_of_cheese__4d627716,piece of cheese,Piece Of Cheese,12,1,False,False
+obj__google__c822c1b6,google,Google,3,1,False,False
+obj__ball_and_chain__f1504bf7,ball and chain,Ball And Chain,7,1,False,False
+obj__empty_coin_pouch__607b79c9,empty coin pouch,Empty Coin Pouch,9,3,False,True
+obj__ritual_knife__afcda0df,ritual knife,Ritual Knife,4,1,False,True
+obj__hairbrush__df3caeed,hairbrush,Hairbrush,2,2,False,False
+obj__seeds__4c3712ef,seeds,Seeds,2,1,False,False
+obj__firewood__63c596dc,firewood,Firewood,197,17,False,False
+obj__small_sachel__fd3009ed,small sachel,Small Sachel,13,4,False,False
+obj__cigar__5e5bc84c,cigar,Cigar,24,2,False,False
+obj__ball__7a10ea1b,ball,Ball,147,15,False,False
+obj__rum__6845b7dc,rum,Rum,4,1,False,False
+obj__cross_pendent__15dba9e6,cross pendent,Cross Pendent,5,1,False,False
+obj__stalagmites_rising_from_the_ground__2b44e510,stalagmites rising from the ground,Stalagmites Rising From The Ground,18,2,False,False
+obj__knapsack__dba645eb,knapsack,Knapsack,2,1,False,False
+obj__fishing_hook__043155ec,fishing hook,Fishing Hook,6,1,False,False
+obj__lace_handkerchief__4b0ceede,lace handkerchief,Lace Handkerchief,3,2,False,False
+obj__glittery_pointed_cap__290ac538,glittery pointed cap,Glittery Pointed Cap,1,1,False,False
+obj__oil__c5af0543,oil,Oil,10,2,False,False
+obj__sliding_panel__0763629c,sliding panel,Sliding Panel,29,3,False,False
+obj__palette__5ca5a8d0,palette,Palette,4,1,False,False
+obj__whip__9bbd1d39,whip,Whip,122,15,False,False
+obj__pencil__a8f6830b,pencil,Pencil,2,1,False,False
+obj__hankercheif_from_a_lady__350db706,hankercheif from a lady,Hankercheif From A Lady,2,1,False,False
+obj__lute__44aefe1a,lute,Lute,8,1,False,False
+obj__potato__8ee20279,potato,Potato,11,1,False,False
+obj__fire_starting_item__82820a31,fire-starting item,Fire-Starting Item,13,1,False,False
+obj__vestment__5e7ccc9c,vestment,Vestment,4,1,False,False
+obj__spyglass__0a5d79f5,spyglass,Spyglass,1,1,False,False
+obj__handkerchief__77643606,handkerchief,Handkerchief,7,3,False,False
+obj__canteen__2c9e6c9d,canteen,Canteen,5,1,False,False
+obj__doghouse__fef2a213,doghouse,Doghouse,72,7,False,False
+obj__dead_mouse__71f28f4d,dead mouse,Dead Mouse,13,2,False,False
+obj__cleaning_cloth__1af28ecb,cleaning cloth,Cleaning Cloth,8,1,False,False
+obj__bug__ae0e4bda,bug,Bug,7,2,False,False
+obj__berry__5076e333,berry,Berry,10,1,False,False
+obj__traders_log__b3ecd7ba,traders log,Traders Log,9,1,False,False
+obj__mighty_hammer__cda153d5,mighty hammer,Mighty Hammer,3,1,False,False
+obj__lye_soap__d41a6136,lye soap,Lye Soap,5,1,False,False
+obj__lillypad__da2814ff,lillypad,Lillypad,9,1,False,False
+obj__boot__881cc415,boot,Boot,7,3,False,False
+obj__sleeping_cap__568eedc8,sleeping cap,Sleeping Cap,6,1,False,False
+obj__sandal__67071e9d,sandal,Sandal,1,1,False,False
+obj__medallion__5d9d043a,medallion,Medallion,7,1,False,False
+obj__pig_slop__4978f4ef,pig slop,Pig Slop,5,1,False,False
+obj__sliverware__e607800b,sliverware,Sliverware,1,1,False,False
+obj__toy__10016b6e,toy,Toy,102,9,False,False
+obj__4_leaf_clover__977443fb,4 leaf clover,4 Leaf Clover,3,1,False,False
+obj__leech__496b1789,leech,Leech,8,1,False,False
+obj__ash__2852f697,ash,Ash,102,11,False,False
+obj__rich__e7f4f8bd,rich,Rich,100,10,False,False
+obj__benches__808a2c94,benches,Benches,245,18,False,False
+obj__sconces__660577d0,sconces,Sconces,144,11,False,False
+obj__orb__95cc0182,orb,Orb,4,1,False,False
+obj__hall__5ab06702,hall,Hall,154,11,False,False
+obj__old_sword__e6228bf4,old sword,Old Sword,84,6,False,True
+obj__wyverns__7311bc38,wyverns,Wyverns,128,11,False,False
+obj__remnants_of_campfires__b1a827d2,remnants of campfires,Remnants Of Campfires,56,4,False,False
+obj__homeless__76d1f304,homeless,Homeless,113,9,False,False
+obj__cot__97223fab,cot,Cot,132,11,False,False
+obj__gravel__745106b0,gravel,Gravel,154,11,False,False
+obj__cave__e386df9e,cave,Cave,283,21,False,False
+obj__research__7412df2b,research,Research,133,11,False,False
+obj__lab__f9664ea1,lab,Lab,133,11,False,False
+obj__sink__f6e04117,sink,Sink,133,11,False,False
+obj__supply__aaf9a7ad,supply,Supply,133,11,False,False
+obj__refrigerator__945c0503,refrigerator,Refrigerator,133,11,False,False
+obj__bed_pan__c06f3a0a,bed pan,Bed Pan,77,7,False,False
+obj__ancient_armor__f5db6a94,ancient armor,Ancient Armor,92,10,False,True
+obj__bodies__bcb43315,bodies,Bodies,125,11,False,False
+obj__zombie__0eda241f,zombie,Zombie,130,11,False,False
+obj__dusty_rug__73adb723,dusty rug,Dusty Rug,146,11,False,False
+obj__club__95cc6b4a,club,Club,42,3,False,False
+obj__cage__9f1f78a3,cage,Cage,255,20,False,False
+obj__wooden_door__83ffb289,wooden door,Wooden Door,141,11,False,False
+obj__heavy_lock__8a70c747,heavy lock,Heavy Lock,129,11,False,False
+obj__scythe__59811bb3,scythe,Scythe,43,4,False,False
+obj__green_grass__3e98017a,green grass,Green Grass,147,11,False,False
+obj__pad__4dca00da,pad,Pad,134,11,False,False
+obj__drainage_pipe__605eca48,drainage pipe,Drainage Pipe,134,11,False,False
+obj__relic_armor__a370269a,relic armor,Relic Armor,74,7,False,True
+obj__moldy__5a0b281e,moldy,Moldy,130,11,False,False
+obj__gangrene__6ea67f52,gangrene,Gangrene,130,11,False,False
+obj__death__2e8d6dbf,death,Death,130,11,False,False
+obj__decay__63faabca,decay,Decay,130,11,False,False
+obj__rot__0d3d238b,rot,Rot,130,11,False,False
+obj__flame__599dd3c7,flame,Flame,272,22,False,False
+obj__tankard__cd3296ec,tankard,Tankard,71,6,False,False
+obj__cloud_storm_sink__d7c0460d,cloud storm sink,Cloud Storm Sink,43,4,False,False
+obj__darts__b1f965d0,darts,Darts,41,6,False,False
+obj__bouzoukis__b45a7b37,bouzoukis,Bouzoukis,131,11,False,False
+obj__harp__8af0537e,harp,Harp,99,11,False,False
+obj__guitars__6bbeb91a,guitars,Guitars,86,7,False,False
+obj__store__8cd892b7,store,Store,142,11,False,False
+obj__business__f5d7e253,business,Business,142,11,False,False
+obj__lyre__7816a2cc,lyre,Lyre,132,11,False,False
+obj__discarded_sword__52bb1572,discarded sword,Discarded Sword,42,6,False,True
+obj__walls__ed0aa594,walls,Walls,153,11,False,False
+obj__splinter__1f74df58,splinter,Splinter,137,11,False,False
+obj__diary__23eee8e9,diary,Diary,66,8,False,False
+obj__thick_blue_ice__9c619e4a,thick blue ice,Thick Blue Ice,141,11,False,False
+obj__swamp_flower__2b6ec6d6,swamp flower,Swamp Flower,65,6,False,False
+obj__soul__765ae843,soul,Soul,260,19,False,False
+obj__tunnel__13621569,tunnel,Tunnel,140,10,False,False
+obj__tooth__28b26be5,tooth,Tooth,170,15,False,False
+obj__small_child__7d4cd6e7,small child,Small Child,9,1,False,False
+obj__structure__07414f4e,structure,Structure,142,11,False,False
+obj__straps__1412cf4c,straps,Straps,141,11,False,False
+obj__molten_magma__34b3f454,molten magma,Molten Magma,154,11,False,False
+obj__black_rock__84ccec02,black rock,Black Rock,113,11,False,False
+obj__illustration__5b193832,illustration,Illustration,141,11,False,False
+obj__uncomfortable_bed__af4f843a,uncomfortable bed,Uncomfortable Bed,141,11,False,False
+obj__small_table_with_a_candle__4e910ddc,small table with a candle,Small Table With A Candle,141,11,False,False
+obj__stars__a5df375d,stars,Stars,56,4,False,False
+obj__abode__9d72aa55,abode,Abode,154,11,False,False
+obj__stream__f7b44cfa,stream,Stream,140,11,False,False
+obj__forest__f379cfd7,forest,Forest,141,11,False,False
+obj__emblem__77950b6e,emblem,Emblem,135,11,False,False
+obj__crest__79cb0897,crest,Crest,135,11,False,False
+obj__arena__f2f645b7,arena,Arena,135,11,False,False
+obj__hooks__4e819c83,hooks,Hooks,114,9,False,False
+obj__seaweed__a7ef14cb,seaweed,Seaweed,93,9,False,False
+obj__hoe__30403192,hoe,Hoe,102,9,False,False
+obj__dull_brown_boxy_looking_building__aadf9131,dull brown boxy looking building,Dull Brown Boxy Looking Building,146,11,False,False
+obj__golden_dragon_egg__6846cb0a,golden dragon egg,Golden Dragon Egg,77,7,False,False
+obj__red_awning_proclaiming_dragon_lift_in_golden_script__a15a675b,red awning proclaiming dragon lift in golden script,Red Awning Proclaiming Dragon Lift In Golden Script,146,11,False,False
+obj__drink__0b18a3d7,drink,Drink,216,17,False,False
+obj__globe__78f91519,globe,Globe,117,10,False,False
+obj__dusty_books_and_scrolls__cb667a6d,dusty books and scrolls,Dusty Books And Scrolls,87,7,False,False
+obj__tables__9ab2ec7e,tables,Tables,140,10,False,False
+obj__telescope__8833f74b,telescope,Telescope,167,13,False,False
+obj__recesses__617c7fa1,recesses,Recesses,141,11,False,False
+obj__heavy_cloth__64889bf5,heavy cloth,Heavy Cloth,139,11,False,False
+obj__round_stone_table__1333dff7,round stone table,Round Stone Table,141,11,False,False
+obj__lab_equipment__f6a8cb3e,lab equipment,Lab Equipment,127,11,False,False
+obj__objects__5891da2d,objects,Objects,136,11,False,False
+obj__observatory__c9554bf9,observatory,Observatory,140,10,False,False
+obj__wares__972cdfe4,wares,Wares,211,20,False,False
+obj__old_wooden_table__6f335200,old wooden table,Old Wooden Table,140,10,False,False
+obj__roaring_fire__892887c0,roaring fire,Roaring Fire,140,10,False,False
+obj__animal_skin__e5a9a106,animal skin,Animal Skin,109,10,False,False
+obj__lounges__4637f349,lounges,Lounges,127,10,False,False
+obj__pottery__7c584bb5,pottery,Pottery,128,10,False,False
+obj__teapot__4b562406,teapot,Teapot,104,10,False,False
+obj__brazier__b353146f,brazier,Brazier,129,10,False,False
+obj__snow__2b93fbdf,snow,Snow,140,10,False,False
+obj__ice__7bdff765,ice,Ice,124,10,False,False
+obj__campsite__d5519060,campsite,Campsite,84,6,False,False
+obj__bones__775f1728,bones,Bones,216,19,False,False
+obj__oak_table__81b0e618,oak table,Oak Table,117,9,False,False
+obj__history__3cd15f8f,history,History,114,10,False,False
+obj__magelight__6d10a5b6,magelight,Magelight,111,10,False,False
+obj__spellbook__c89d3140,spellbook,Spellbook,122,17,False,False
+obj__round_table__72997723,round table,Round Table,114,10,False,False
+obj__leaves__79f7d2ef,leaves,Leaves,217,20,False,False
+obj__marble__550a6aee,marble,Marble,111,10,False,False
+obj__rusted_helmet__8c9552d2,rusted helmet,Rusted Helmet,87,7,False,False
+obj__rocky_cliffs__b3e507b3,rocky cliffs,Rocky Cliffs,127,10,False,False
+obj__wizard_book__691ba511,wizard book,Wizard Book,30,4,False,True
+obj__portal_for_evil_to_access__62dfb833,portal for evil to access,Portal For Evil To Access,127,10,False,False
+obj__cells__5c203840,cells,Cells,127,10,False,False
+obj__secret__5ebe2294,secret,Secret,127,10,False,False
+obj__dome__1b71c8e9,dome,Dome,140,10,False,False
+obj__cone__29d6fc96,cone,Cone,62,5,False,False
+obj__hollowed_out_tree__ef7871d3,hollowed out tree,Hollowed Out Tree,122,9,False,False
+obj__pile__8b66e7d5,pile,Pile,103,9,False,False
+obj__document__fdc3bdef,document,Document,106,10,False,False
+obj__web__2567a5ec,web,Web,198,16,False,False
+obj__journal__fb9141b4,journal,Journal,99,10,False,False
+obj__concrete__00ecf6d0,concrete,Concrete,127,10,False,False
+obj__wedding_ring__de6b3bbf,wedding ring,Wedding Ring,60,7,False,True
+obj__glade__698e4cf3,glade,Glade,140,10,False,False
+obj__news_of_the_kingdom__23cd6a61,news of the kingdom,News Of The Kingdom,130,10,False,False
+obj__market_stand__bd0be1af,market stand,Market Stand,130,10,False,False
+obj__dry_dock__87fd700b,dry dock,Dry Dock,139,10,False,False
+obj__scuba_gear__a6a50cd8,scuba gear,Scuba Gear,23,3,False,False
+obj__trident__47cb44be,trident,Trident,86,11,False,False
+obj__item__447b7147,item,Item,121,10,False,False
+obj__coral_pearl_and_seashells__4503e83c,coral pearl and seashells,Coral Pearl And Seashells,127,10,False,False
+obj__dye__778c378f,dye,Dye,120,10,False,False
+obj__golden_crown__168ced79,golden crown,Golden Crown,22,3,False,True
+obj__paint__c1940aee,paint,Paint,114,9,False,False
+obj__pedestal__2cc296f8,pedestal,Pedestal,110,9,False,False
+obj__morsel__fe36f5da,morsel,Morsel,97,10,False,False
+obj__knitted_rug__89a4c149,knitted rug,Knitted Rug,52,5,False,False
+obj__frames__dcdc1ac0,frames,Frames,127,10,False,False
+obj__old_fire_pit__2d7b6e07,old fire pit,Old Fire Pit,85,7,False,False
+obj__pit_of_quicksand__e152dbcb,pit of quicksand,Pit Of Quicksand,42,3,False,False
+obj__potion_supplies__d0bf5c39,potion supplies,Potion Supplies,109,8,False,True
+obj__stairs__3db0e01f,stairs,Stairs,70,5,False,False
+obj__dragon_crescent__e7b0728e,dragon crescent,Dragon Crescent,77,7,False,False
+obj__jukebox__2c2c8ebb,jukebox,Jukebox,75,6,False,False
+obj__fire_stoker__3a710bdd,fire stoker,Fire Stoker,36,5,False,False
+obj__jewels__6d50d149,jewels,Jewels,77,9,False,True
+obj__sorcerer_s_orb__4e7d83fc,sorcerer's orb,Sorcerer'S Orb,40,6,False,False
+obj__advertisement__f3334ac9,advertisement,Advertisement,98,7,False,False
+obj__mysterious_tent__5e7d16a5,mysterious tent,Mysterious Tent,14,1,False,False
+obj__mystical_booth__6d4900b2,mystical booth,Mystical Booth,44,4,False,False
+obj__king_s_crown__688725c1,king's crown,King'S Crown,62,7,False,True
+obj__rocking_chair__b3395e60,rocking chair,Rocking Chair,71,6,False,False
+obj__wooden_wardrobe__cea8d755,wooden wardrobe,Wooden Wardrobe,29,3,False,False
+obj__dead_king_s_crown__04effd1b,dead king's crown,Dead King'S Crown,54,4,False,True
+obj__litter__69091668,litter,Litter,33,3,False,False
+obj__sedimentary_rock__08e4b3e8,sedimentary rock,Sedimentary Rock,85,7,False,False
+obj__stain__59f9211b,stain,Stain,71,6,False,False
+obj__shops__54299698,shops,Shops,84,6,False,False
+obj__igneous_rock__9596b7ed,igneous rock,Igneous Rock,81,6,False,False
+obj__grass_blade__264db411,grass blade,Grass Blade,56,4,False,False
+obj__wood_polish__0f615677,wood polish,Wood Polish,3,1,False,False
+obj__feather_duster__71655960,feather duster,Feather Duster,3,2,False,False
+obj__barrel_of_rocks__0fc5368e,barrel of rocks,Barrel Of Rocks,5,1,False,False
+obj__kit__ffa044f5,kit,Kit,11,1,False,False
+obj__barstool__e9975ab4,barstool,Barstool,28,2,False,False
+obj__human_arm__73f9f370,human arm,Human Arm,12,1,False,False
+obj__bag_of_shells__7db78740,bag of shells,Bag Of Shells,2,1,False,False
+obj__bread__dba7b12a,bread,Bread,1,1,False,False
+obj__satchel_fox_pelts__bfe9a1bd,satchel fox pelts,Satchel Fox Pelts,5,1,False,False
+obj__book_of_legal_history__c53d8739,book of legal history,Book Of Legal History,3,1,False,True

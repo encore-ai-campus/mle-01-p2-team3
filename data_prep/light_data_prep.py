@@ -3,8 +3,7 @@ LIGHT 데이터셋 기반 King 중심 GraphRAG 전처리 파이프라인.
 
 폴더 구조
 ---------
-이 스크립트와 ipynb 파일이 있는 폴더를 프로젝트 루트로 사용합니다.
-
+제 프로젝트 루트 폴더를 기준으로 사용합니다.
 
 project_root/
 ├─ data
@@ -12,8 +11,10 @@ project_root/
 │   ├─ light_unseen_data.pkl
 │   └─ light_environment.pkl
 └─ data_prep
-    ├─ light_graphrag_preprocess_final.py
-    ├─ data_prep_01.ipynb
+    ├─ light_data_prep.py
+    ├─ light_data_prep.ipynb
+    ├─ light_data_prep_persona.py
+    ├─ light_data_prep_persona.ipynb
     └─ OUTPUT/
         ├─ metrics/
         ├─ subsets/
@@ -21,16 +22,6 @@ project_root/
         ├─ graphrag/
         └─ preprocessing_summary.json
 
-실행 예시
----------
-기본 실행:
-    python light_graphrag_preprocess_final.py
-
-기존 OUTPUT 폴더를 지우고 다시 생성:
-    python light_graphrag_preprocess_final.py --clean
-
-다른 경로를 직접 지정:
-    python light_graphrag_preprocess_final.py --raw-dir ./raw --out-dir ./OUTPUT --clean
 
 중요한 설계 원칙
 ---------------
