@@ -1,0 +1,71 @@
+source_character_id,target_character_id,source_character_name,target_character_name,co_episode_count,is_target_agent_pair
+char__king,char__queen,king,queen,44,True
+char__king,char__servant,king,servant,33,True
+char__king,char__maid,king,maid,17,True
+char__guard,char__king,guard,king,15,True
+char__king,char__townperson,king,townperson,14,True
+char__king,char__knight,king,knight,13,True
+char__guest,char__king,guest,king,12,True
+char__brother,char__king,brother,king,10,True
+char__king,char__person,king,person,10,True
+char__king,char__princess,king,princess,9,True
+char__king,char__merchant,king,merchant,9,True
+char__blacksmith,char__king,blacksmith,king,8,True
+char__king,char__subject,king,subject,7,True
+char__king,char__officer,king,officer,6,True
+char__king,char__noble,king,noble,6,True
+char__diplomat,char__king,diplomat,king,6,True
+char__king,char__kings,king,kings,6,True
+char__king,char__murderer,king,murderer,5,True
+char__chef,char__king,chef,king,5,True
+char__king,char__spider,king,spider,5,True
+char__king,char__royal_family,king,royal family,4,True
+char__his_father,char__king,his father,king,4,True
+char__king,char__prisoner,king,prisoner,4,True
+char__enemy,char__king,enemy,king,4,True
+char__debtor,char__king,debtor,king,3,True
+char__king,char__thief,king,thief,3,True
+char__king,char__visitor,king,visitor,3,True
+char__king,char__people,king,people,3,True
+char__dragon,char__king,dragon,king,3,True
+char__customer,char__king,customer,king,3,True
+char__king,char__priest,king,priest,3,True
+char__child,char__king,child,king,3,True
+char__king,char__priests,king,priests,3,True
+char__king,char__villager,king,villager,2,True
+char__fool,char__king,fool,king,2,True
+char__king,char__pheasant,king,pheasant,2,True
+char__king,char__man,king,man,2,True
+char__animal,char__king,animal,king,2,True
+char__dogs,char__king,dogs,king,2,True
+char__king,char__rabbit,king,rabbit,2,True
+char__king,char__soldier,king,soldier,2,True
+char__courtier,char__king,courtier,king,2,True
+char__king,char__young_student_reading_a_book_beneath_a_dogwood_tree,king,young student reading a book beneath a dogwood tree,2,True
+char__gardener_pulling_weeds,char__king,gardener pulling weeds,king,1,True
+char__king,char__sioux_chef,king,sioux chef,1,True
+char__drunks,char__king,drunks,king,1,True
+char__family_member,char__king,family member,king,1,True
+char__king,char__wild_boar,king,wild boar,1,True
+char__king,char__trader,king,trader,1,True
+char__king,char__waiting_priest,king,waiting priest,1,True
+char__king,char__mightiest_warriors,king,mightiest warriors,1,True
+char__king,char__traders,king,traders,1,True
+char__king,char__scholar,king,scholar,1,True
+char__king,char__patron,king,patron,1,True
+char__king,char__tern,king,tern,1,True
+char__king,char__prior,king,prior,1,True
+char__king,char__proprietor,king,proprietor,1,True
+char__king,char__worshipper,king,worshipper,1,True
+char__king,char__prince,king,prince,1,True
+char__king,char__lady_in_waiting,king,lady in waiting,1,True
+char__king,char__mystical_dragon,king,mystical dragon,1,True
+char__king,char__parishioner,king,parishioner,1,True
+char__goblin_king_s_bartender,char__king,goblin king's bartender,king,1,True
+char__king,char__spiders,king,spiders,1,True
+char__helpers,char__king,helpers,king,1,True
+char__hunter,char__king,hunter,king,1,True
+char__horse,char__king,horse,king,1,True
+char__king,char__rat,king,rat,1,True
+char__executioners,char__king,executioners,king,1,True
+char__king,char__staircase,king,staircase,1,True

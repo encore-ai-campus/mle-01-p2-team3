@@ -1,956 +1,265 @@
-character_id,normalized_name,canonical_name,is_focus_character,is_generic_name,appearance_count,speaker_turn_count,mention_count,unique_episode_count,total_score,overall_rank,source
-char__king,king,King,True,False,929,6064,6285,3151,15136,1,light_combined
-char__person,person,Person,False,True,659,4254,615,1090,6846,2,light_combined
-char__queen,queen,Queen,False,False,422,2712,1827,1108,5805,3,light_combined
-char__guard,guard,Guard,False,True,495,3167,1032,918,5684,4,light_combined
-char__servant,servant,Servant,False,True,433,2758,591,613,4648,5,light_combined
-char__priest,priest,Priest,False,False,388,2459,774,683,4397,6,light_combined
-char__man,man,Man,False,True,183,1197,2238,1722,3984,7,light_combined
-char__child,child,Child,False,True,305,1927,1112,779,3954,8,light_combined
-char__peasant,peasant,Peasant,False,True,352,2259,419,493,3734,9,light_combined
-char__knight,knight,Knight,False,False,312,1962,758,539,3656,10,light_combined
-char__people,people,People,False,True,52,319,2767,1990,3242,11,light_combined
-char__rat,rat,Rat,False,True,226,1453,734,401,2865,12,light_combined
-char__horse,horse,Horse,False,True,192,1243,822,449,2641,13,light_combined
-char__family,family,Family,False,True,42,268,2224,1386,2618,14,light_combined
-char__bird,bird,Bird,False,True,213,1348,585,411,2572,15,light_combined
-char__fish,fish,Fish,False,True,115,735,1292,531,2372,16,light_combined
-char__animal,animal,Animal,False,True,205,1329,359,374,2303,17,light_combined
-char__maid,maid,Maid,False,False,197,1289,370,339,2250,18,light_combined
-char__villager,villager,Villager,False,True,222,1395,131,264,2192,19,light_combined
-char__thief,thief,Thief,False,False,191,1238,372,335,2183,20,light_combined
-char__god,god,God,False,False,62,379,1475,841,2040,21,light_combined
-char__traveler,traveler,Traveler,False,True,185,1159,223,286,1937,22,light_combined
-char__witch,witch,Witch,False,False,133,865,579,352,1843,23,light_combined
-char__spider,spider,Spider,False,False,148,981,408,240,1833,24,light_combined
-char__father,father,Father,False,True,26,156,1580,821,1814,25,light_combined
-char__friend,friend,Friend,False,True,14,89,1654,1172,1785,26,light_combined
-char__princess,princess,Princess,False,False,131,867,520,336,1780,27,light_combined
-char__lord,lord,Lord,False,True,46,273,1366,756,1777,28,light_combined
-char__ghost,ghost,Ghost,False,False,152,941,372,237,1769,29,light_combined
-char__soldier,soldier,Soldier,False,False,161,992,228,231,1703,30,light_combined
-char__dog,dog,Dog,False,False,114,701,659,399,1702,31,light_combined
-char__guest,guest,Guest,False,True,164,1023,122,218,1637,32,light_combined
-char__merchant,merchant,Merchant,False,False,146,907,247,264,1592,33,light_combined
-char__farmer,farmer,Farmer,False,True,135,845,317,297,1567,34,light_combined
-char__cat,cat,Cat,False,False,111,698,527,295,1558,35,light_combined
-char__thing,thing,Thing,False,False,6,42,1457,1306,1517,36,light_combined
-char__wife,wife,Wife,False,True,71,472,826,640,1511,37,light_combined
-char__monk,monk,Monk,False,False,140,893,161,159,1474,38,light_combined
-char__fisherman,fisherman,Fisherman,False,False,136,876,151,183,1435,39,light_combined
-char__royal,royal,Royal,False,False,49,308,908,696,1363,40,light_combined
-char__visitor,visitor,Visitor,False,True,133,850,71,155,1320,41,light_combined
-char__woman,woman,Woman,False,True,97,608,384,375,1283,42,light_combined
-char__dragon,dragon,Dragon,False,False,89,565,435,227,1267,43,light_combined
-char__prisoner,prisoner,Prisoner,False,False,113,704,138,176,1181,44,light_combined
-char__mouse,mouse,Mouse,False,False,83,558,354,208,1161,45,light_combined
-char__bat,bat,Bat,False,False,99,619,236,142,1152,46,light_combined
-char__wizard,wizard,Wizard,False,False,66,444,490,283,1132,47,light_combined
-char__deer,deer,Deer,False,False,91,626,231,150,1130,48,light_combined
-char__dogs,dogs,Dogs,False,False,94,600,246,227,1128,49,light_combined
-char__blacksmith,blacksmith,Blacksmith,False,False,94,599,245,214,1126,50,light_combined
-char__village,village,Village,False,False,4,28,1048,730,1088,51,light_combined
-char__hunter,hunter,Hunter,False,False,94,607,148,142,1037,52,light_combined
-char__creature,creature,Creature,False,False,70,431,345,323,986,53,light_combined
-char__mother,mother,Mother,False,True,45,288,559,399,982,54,light_combined
-char__sailor,sailor,Sailor,False,False,89,578,110,117,955,55,light_combined
-char__royal_family,royal family,Royal Family,False,False,86,544,152,205,954,56,light_combined
-char__prince,prince,Prince,False,False,56,347,414,273,929,57,light_combined
-char__boy,boy,Boy,False,True,18,121,747,495,922,58,light_combined
-char__archer,archer,Archer,False,False,85,560,91,95,906,59,light_combined
-char__priests,priests,Priests,False,False,86,548,89,145,895,60,light_combined
-char__worshipper,worshipper,Worshipper,False,False,89,575,12,90,854,61,light_combined
-char__friends,friends,Friends,False,False,12,70,738,579,844,62,light_combined
-char__children,children,Children,False,False,21,141,637,470,841,63,light_combined
-char__bandit,bandit,Bandit,False,False,77,484,121,127,836,64,light_combined
-char__troll,troll,Troll,False,False,66,410,228,116,836,65,light_combined
-char__noble,noble,Noble,False,False,61,376,277,271,836,66,light_combined
-char__snake,snake,Snake,False,False,55,354,309,170,828,67,light_combined
-char__fairy,fairy,Fairy,False,False,59,389,259,154,825,68,light_combined
-char__chicken,chicken,Chicken,False,False,56,347,297,183,812,69,light_combined
-char__worker,worker,Worker,False,False,74,472,110,152,804,70,light_combined
-char__kings,kings,Kings,False,False,45,284,380,360,799,71,light_combined
-char__no_one,no one,No One,False,False,11,74,692,610,799,72,light_combined
-char__family_member,family member,Family Member,False,False,86,528,11,92,797,73,light_combined
-char__chef,chef,Chef,False,False,64,385,220,167,797,74,light_combined
-char__spirit,spirit,Spirit,False,False,49,327,320,227,794,75,light_combined
-char__farmers,farmers,Farmers,False,False,76,478,71,125,777,76,light_combined
-char__son,son,Son,False,False,19,119,596,388,772,77,light_combined
-char__snakes,snakes,Snakes,False,False,67,443,114,132,758,78,light_combined
-char__insects,insects,Insects,False,False,65,402,160,157,757,79,light_combined
-char__goblin,goblin,Goblin,False,False,65,426,118,88,739,80,light_combined
-char__pirate,pirate,Pirate,False,False,64,425,117,90,734,81,light_combined
-char__enemy,enemy,Enemy,False,False,54,336,209,190,707,82,light_combined
-char__owner,owner,Owner,False,False,51,343,205,192,701,83,light_combined
-char__guards,guards,Guards,False,False,4,28,646,478,686,84,light_combined
-char__member,member,Member,False,False,60,396,106,135,682,85,light_combined
-char__parishioner,parishioner,Parishioner,False,False,66,441,34,74,673,86,light_combined
-char__jester,jester,Jester,False,False,50,319,204,135,673,87,light_combined
-char__preacher,preacher,Preacher,False,False,60,412,67,65,659,88,light_combined
-char__cook,cook,Cook,False,False,31,205,357,270,655,89,light_combined
-char__customer,customer,Customer,False,False,67,416,31,84,648,90,light_combined
-char__vulture,vulture,Vulture,False,False,60,384,81,72,645,91,light_combined
-char__lady,lady,Lady,False,True,10,57,549,387,636,92,light_combined
-char__fight,fight,Fight,False,False,3,13,611,459,633,93,light_combined
-char__rabbit,rabbit,Rabbit,False,False,49,321,161,104,629,94,light_combined
-char__fly,fly,Fly,False,False,16,108,473,319,629,95,light_combined
-char__fool,fool,Fool,False,False,15,102,480,361,627,96,light_combined
-char__mice,mice,Mice,False,False,44,294,197,153,623,97,light_combined
-char__husband,husband,Husband,False,True,14,98,483,296,623,98,light_combined
-char__criminal,criminal,Criminal,False,False,54,369,73,95,604,99,light_combined
-char__captain,captain,Captain,False,False,43,281,194,115,604,100,light_combined
-char__bear,bear,Bear,False,False,37,262,207,155,580,101,light_combined
-char__cow,cow,Cow,False,False,46,297,136,103,571,102,light_combined
-char__gods,gods,Gods,False,False,23,148,348,262,565,103,light_combined
-char__bishop,bishop,Bishop,False,False,49,319,93,72,559,104,light_combined
-char__resident,resident,Resident,False,False,57,371,15,63,557,105,light_combined
-char__wolf,wolf,Wolf,False,False,35,231,217,130,553,106,light_combined
-char__worms,worms,Worms,False,False,34,215,235,151,552,107,light_combined
-char__others,others,Others,False,False,7,37,490,448,548,108,light_combined
-char__craftsman,craftsman,Craftsman,False,False,53,321,63,68,543,109,light_combined
-char__brother,brother,Brother,False,False,24,150,319,231,541,110,light_combined
-char__daughter,daughter,Daughter,False,False,25,170,285,218,530,111,light_combined
-char__lizards,lizards,Lizards,False,False,48,320,64,73,528,112,light_combined
-char__soldiers,soldiers,Soldiers,False,False,28,176,253,201,513,113,light_combined
-char__angel,angel,Angel,False,False,39,262,127,72,506,114,light_combined
-char__battle,battle,Battle,False,False,2,14,481,338,501,115,light_combined
-char__outlaw,outlaw,Outlaw,False,False,46,306,56,54,500,116,light_combined
-char__squire,squire,Squire,False,False,41,263,103,79,489,117,light_combined
-char__army,army,Army,False,False,21,130,295,242,488,118,light_combined
-char__adventurer,adventurer,Adventurer,False,False,46,307,41,62,486,119,light_combined
-char__frog,frog,Frog,False,False,32,195,195,101,486,120,light_combined
-char__light,light,Light,False,False,3,14,459,374,482,121,light_combined
-char__altar_boy,altar boy,Altar Boy,False,False,50,301,30,60,481,122,light_combined
-char__local,local,Local,False,False,34,217,160,176,479,123,light_combined
-char__high_priestess,high priestess,High Priestess,False,False,46,285,49,58,472,124,light_combined
-char__townsperson,townsperson,Townsperson,False,False,48,306,21,58,471,125,light_combined
-char__subject,subject,Subject,False,False,41,258,87,98,468,126,light_combined
-char__pig,pig,Pig,False,False,35,211,146,99,462,127,light_combined
-char__wench,wench,Wench,False,False,37,234,106,97,451,128,light_combined
-char__nun,nun,Nun,False,False,42,264,55,69,445,129,light_combined
-char__seagull,seagull,Seagull,False,False,42,269,46,45,441,130,light_combined
-char__beggar,beggar,Beggar,False,False,38,258,58,53,430,131,light_combined
-char__goddess,goddess,Goddess,False,False,23,152,209,108,430,132,light_combined
-char__clergyman,clergyman,Clergyman,False,False,43,274,24,50,427,133,light_combined
-char__crow,crow,Crow,False,False,36,241,78,52,427,134,light_combined
-char__beast,beast,Beast,False,False,18,114,259,198,427,135,light_combined
-char__butler,butler,Butler,False,False,40,265,41,51,426,136,light_combined
-char__congregant,congregant,Congregant,False,False,44,281,10,44,423,137,light_combined
-char__squirrel,squirrel,Squirrel,False,False,38,232,77,60,423,138,light_combined
-char__families,families,Families,False,False,37,232,76,100,419,139,light_combined
-char__vendor,vendor,Vendor,False,False,44,261,22,52,415,140,light_combined
-char__wolves,wolves,Wolves,False,False,23,159,182,121,410,141,light_combined
-char__cockroach,cockroach,Cockroach,False,False,38,239,50,43,403,142,light_combined
-char__turtles,turtles,Turtles,False,False,38,254,33,48,401,143,light_combined
-char__faery,faery,Faery,False,False,38,234,53,45,401,144,light_combined
-char__villagers,villagers,Villagers,False,False,23,132,200,170,401,145,light_combined
-char__miner,miner,Miner,False,False,40,246,30,46,396,146,light_combined
-char__gardener,gardener,Gardener,False,False,36,218,67,63,393,147,light_combined
-char__fox,fox,Fox,False,False,26,159,155,91,392,148,light_combined
-char__lizard,lizard,Lizard,False,False,23,152,163,80,384,149,light_combined
-char__dwarf,dwarf,Dwarf,False,False,34,225,54,50,381,150,light_combined
-char__high_priest,high priest,High Priest,False,False,33,218,61,65,378,151,light_combined
-char__duke,duke,Duke,False,False,29,179,109,76,375,152,light_combined
-char__soul,soul,Soul,False,False,5,35,322,263,372,153,light_combined
-char__worshiper,worshiper,Worshiper,False,False,38,247,8,42,369,154,light_combined
-char__mourner,mourner,Mourner,False,False,38,246,3,38,363,155,light_combined
-char__townperson,townperson,Townperson,False,False,39,240,4,40,361,156,light_combined
-char__sister,sister,Sister,False,False,16,92,220,130,360,157,light_combined
-char__court_jester,court jester,Court Jester,False,False,35,242,11,39,358,158,light_combined
-char__mariner,mariner,Mariner,False,False,33,237,18,36,354,159,light_combined
-char__leader,leader,Leader,False,False,29,173,88,89,348,160,light_combined
-char__general,general,General,False,False,24,153,122,88,347,161,light_combined
-char__acolyte,acolyte,Acolyte,False,False,37,219,16,39,346,162,light_combined
-char__parent,parent,Parent,False,False,37,219,16,42,346,163,light_combined
-char__musician,musician,Musician,False,False,34,219,25,40,346,164,light_combined
-char__demon,demon,Demon,False,False,23,150,125,86,344,165,light_combined
-char__roach,roach,Roach,False,False,29,186,70,43,343,166,light_combined
-char__monkey,monkey,Monkey,False,False,31,165,83,55,341,167,light_combined
-char__girl,girl,Girl,False,True,20,106,174,159,340,168,light_combined
-char__ambassador,ambassador,Ambassador,False,False,33,206,34,44,339,169,light_combined
-char__monster,monster,Monster,False,False,18,125,160,110,339,170,light_combined
-char__bug,bug,Bug,False,False,21,142,132,98,337,171,light_combined
-char__bartender,bartender,Bartender,False,False,31,210,32,45,335,172,light_combined
-char__old_man,old man,Old Man,False,False,19,128,147,114,332,173,light_combined
-char__assistant,assistant,Assistant,False,False,28,168,76,73,328,174,light_combined
-char__royalty,royalty,Royalty,False,False,21,135,129,136,327,175,light_combined
-char__tower,tower,Tower,False,False,1,7,317,211,327,176,light_combined
-char__inhabitant,inhabitant,Inhabitant,False,False,33,214,9,35,322,177,light_combined
-char__gnome,gnome,Gnome,False,False,28,186,51,33,321,178,light_combined
-char__mermaid,mermaid,Mermaid,False,False,29,181,51,43,319,179,light_combined
-char__town_baker,town baker,Town Baker,False,False,25,236,7,26,318,180,light_combined
-char__cooks,cooks,Cooks,False,False,30,197,30,52,317,181,light_combined
-char__groom,groom,Groom,False,False,29,177,48,57,312,182,light_combined
-char__gypsy,gypsy,Gypsy,False,False,29,192,32,37,311,183,light_combined
-char__pelican,pelican,Pelican,False,False,29,184,32,35,303,184,light_combined
-char__ox,ox,Ox,False,False,27,176,46,36,303,185,light_combined
-char__hiker,hiker,Hiker,False,False,30,198,14,32,302,186,light_combined
-char__butterfly,butterfly,Butterfly,False,False,29,175,40,35,302,187,light_combined
-char__goat,goat,Goat,False,False,21,134,103,58,300,188,light_combined
-char__spiders,spiders,Spiders,False,False,19,129,113,94,299,189,light_combined
-char__sheep,sheep,Sheep,False,False,16,106,145,85,299,190,light_combined
-char__executioner,executioner,Executioner,False,False,26,181,38,41,297,191,light_combined
-char__follower,follower,Follower,False,False,26,172,44,47,294,192,light_combined
-char__mage,mage,Mage,False,False,25,155,64,45,294,193,light_combined
-char__flies,flies,Flies,False,False,15,97,151,107,293,194,light_combined
-char__homeless,homeless,Homeless,False,False,24,140,80,71,292,195,light_combined
-char__deity,deity,Deity,False,False,25,161,54,44,290,196,light_combined
-char__elf,elf,Elf,False,False,24,160,57,43,289,197,light_combined
-char__gravedigger,gravedigger,Gravedigger,False,False,30,178,19,36,287,198,light_combined
-char__mayor,mayor,Mayor,False,False,26,170,39,33,287,199,light_combined
-char__caretaker,caretaker,Caretaker,False,False,28,176,26,37,286,200,light_combined
-char__spirits,spirits,Spirits,False,False,11,76,172,124,281,201,light_combined
-char__town_sheriff,town sheriff,Town Sheriff,False,False,31,187,0,31,280,202,light_combined
-char__doctor,doctor,Doctor,False,False,19,120,103,74,280,203,light_combined
-char__grandmother,grandmother,Grandmother,False,False,27,155,42,48,278,204,light_combined
-char__lady_in_waiting,lady in waiting,Lady In Waiting,False,False,29,180,9,36,276,205,light_combined
-char__explorer,explorer,Explorer,False,False,27,170,23,32,274,206,light_combined
-char__cardinal,cardinal,Cardinal,False,False,25,168,30,36,273,207,light_combined
-char__flirty_barmaid,flirty barmaid,Flirty Barmaid,False,False,29,181,1,29,269,208,light_combined
-char__party,party,Party,False,False,10,70,169,113,269,209,light_combined
-char__wall,wall,Wall,False,False,3,15,243,192,267,210,light_combined
-char__torturer,torturer,Torturer,False,False,24,161,33,41,266,211,light_combined
-char__clergy,clergy,Clergy,False,False,28,169,12,34,265,212,light_combined
-char__wise_men,wise men,Wise Men,False,False,27,175,8,30,264,213,light_combined
-char__his_wife,his wife,His Wife,False,False,26,149,37,60,264,214,light_combined
-char__watchman,watchman,Watchman,False,False,25,166,22,32,263,215,light_combined
-char__priestess,priestess,Priestess,False,False,15,96,121,77,262,216,light_combined
-char__trader,trader,Trader,False,False,25,157,29,37,261,217,light_combined
-char__kid,kid,Kid,False,False,11,77,151,109,261,218,light_combined
-char__patron,patron,Patron,False,False,23,160,31,40,260,219,light_combined
-char__owl,owl,Owl,False,False,21,147,50,34,260,220,light_combined
-char__souls,souls,Souls,False,False,16,96,115,96,259,221,light_combined
-char__pastor,pastor,Pastor,False,False,24,149,36,31,257,222,light_combined
-char__turtle,turtle,Turtle,False,False,10,68,159,75,257,223,light_combined
-char__assassin,assassin,Assassin,False,False,22,141,48,46,255,224,light_combined
-char__scribe,scribe,Scribe,False,False,22,145,43,33,254,225,light_combined
-char__chambermaid,chambermaid,Chambermaid,False,False,17,112,90,68,253,226,light_combined
-char__archaeologist,archaeologist,Archaeologist,False,False,29,155,10,35,252,227,light_combined
-char__orc,orc,Orc,False,False,17,116,85,49,252,228,light_combined
-char__attendee,attendee,Attendee,False,False,25,167,7,26,249,229,light_combined
-char__subjects,subjects,Subjects,False,False,15,102,101,92,248,230,light_combined
-char__preist,preist,Preist,False,False,25,155,17,38,247,231,light_combined
-char__ogre,ogre,Ogre,False,False,20,130,56,32,246,232,light_combined
-char__faeries,faeries,Faeries,False,False,20,139,46,40,245,233,light_combined
-char__horse_tied_up_in_front_of_a_shop,horse tied up in front of a shop,Horse Tied Up In Front Of A Shop,False,False,25,168,0,25,243,234,light_combined
-char__warrior,warrior,Warrior,False,False,17,106,85,77,242,235,light_combined
-char__potion,potion,Potion,False,False,3,21,209,122,239,236,light_combined
-char__pet,pet,Pet,False,False,10,53,155,122,238,237,light_combined
-char__traveller,traveller,Traveller,False,False,21,139,34,46,236,238,light_combined
-char__table,table,Table,False,False,2,8,222,195,236,239,light_combined
-char__pope,pope,Pope,False,False,21,133,38,32,234,240,light_combined
-char__bridge,bridge,Bridge,False,False,2,14,211,107,231,241,light_combined
-char__residents_of_the_cottage,residents of the cottage,Residents Of The Cottage,False,False,23,159,0,23,228,242,light_combined
-char__castle_guards,castle guards,Castle Guards,False,False,24,154,1,25,227,243,light_combined
-char__diplomat,diplomat,Diplomat,False,False,22,142,19,29,227,244,light_combined
-char__gather,gather,Gather,False,False,5,29,182,169,226,245,light_combined
-char__giant_frog,giant frog,Giant Frog,False,False,22,149,10,23,225,246,light_combined
-char__alchemist,alchemist,Alchemist,False,False,23,133,22,29,224,247,light_combined
-char__loved_ones,loved ones,Loved Ones,False,False,19,126,41,51,224,248,light_combined
-char__mistress,mistress,Mistress,False,False,17,106,66,56,223,249,light_combined
-char__boar,boar,Boar,False,False,15,92,86,53,223,250,light_combined
-char__rodent,rodent,Rodent,False,False,18,113,55,52,222,251,light_combined
-char__queen_s,queen's,Queen'S,False,False,12,76,110,112,222,252,light_combined
-char__hog,hog,Hog,False,False,21,133,25,26,221,253,light_combined
-char__judge,judge,Judge,False,False,12,72,113,98,221,254,light_combined
-char__mate,mate,Mate,False,False,11,64,124,109,221,255,light_combined
-char__serving_wench,serving wench,Serving Wench,False,False,25,136,8,29,219,256,light_combined
-char__king_fulmer,king fulmer,King Fulmer,False,False,22,144,8,22,218,257,light_combined
-char__student,student,Student,False,False,21,123,32,32,218,258,light_combined
-char__there_is_also_a_young_woman_selling_flowers_to_passersby,there is also a young woman selling flowers to passersby,There Is Also A Young Woman Selling Flowers To Passersby,False,False,24,145,0,24,217,259,light_combined
-char__old_man_with_a_fishing_rod,old man with a fishing rod,Old Man With A Fishing Rod,False,False,23,148,0,23,217,260,light_combined
-char__painter,painter,Painter,False,False,20,134,23,30,217,261,light_combined
-char__concubine,concubine,Concubine,False,False,21,146,6,24,215,262,light_combined
-char__intruder,intruder,Intruder,False,False,20,122,33,37,215,263,light_combined
-char__rat_chews_on_a_dropped_hymnbook,rat chews on a dropped hymnbook,Rat Chews On A Dropped Hymnbook,False,False,23,144,0,23,213,264,light_combined
-char__lost_traveler,lost traveler,Lost Traveler,False,False,24,139,1,24,212,265,light_combined
-char__predator,predator,Predator,False,False,22,133,13,30,212,266,light_combined
-char__ladies,ladies,Ladies,False,False,14,85,85,83,212,267,light_combined
-char__sacrifice,sacrifice,Sacrifice,False,False,3,21,181,119,211,268,light_combined
-char__their_family,their family,Their Family,False,False,21,142,5,25,210,269,light_combined
-char__nobleman,nobleman,Nobleman,False,False,19,108,45,49,210,270,light_combined
-char__blacksmith_apprentice,blacksmith apprentice,Blacksmith Apprentice,False,False,23,135,5,23,209,271,light_combined
-char__traitor,traitor,Traitor,False,False,16,101,60,44,209,272,light_combined
-char__royal_family_member,royal family member,Royal Family Member,False,False,22,140,2,24,208,273,light_combined
-char__lawyer,lawyer,Lawyer,False,False,20,128,19,26,207,274,light_combined
-char__beaver,beaver,Beaver,False,False,19,122,28,22,207,275,light_combined
-char__groundskeeper_of_the_castle,groundskeeper of the castle,Groundskeeper Of The Castle,False,False,22,140,0,22,206,276,light_combined
-char__camel,camel,Camel,False,False,19,116,32,25,205,277,light_combined
-char__ancient_king,ancient king,Ancient King,False,False,21,136,4,21,203,278,light_combined
-char__grandfather,grandfather,Grandfather,False,False,15,105,52,48,202,279,light_combined
-char__hunting_dog,hunting dog,Hunting Dog,False,False,20,126,15,27,201,280,light_combined
-char__police,police,Police,False,False,17,109,41,43,201,281,light_combined
-char__trolls,trolls,Trolls,False,False,15,92,63,50,200,282,light_combined
-char__mystical_lion,mystical lion,Mystical Lion,False,False,21,133,3,21,199,283,light_combined
-char__iguana,iguana,Iguana,False,False,18,119,26,20,199,284,light_combined
-char__nuns,nuns,Nuns,False,False,19,123,18,30,198,285,light_combined
-char__colorful_bird,colorful bird,Colorful Bird,False,False,22,128,3,22,197,286,light_combined
-char__dancer,dancer,Dancer,False,False,17,114,30,30,195,287,light_combined
-char__genie,genie,Genie,False,False,14,98,55,25,195,288,light_combined
-char__murderer,murderer,Murderer,False,False,18,109,31,32,194,289,light_combined
-char__drunk,drunk,Drunk,False,False,3,14,171,141,194,290,light_combined
-char__cleaning_person,cleaning person,Cleaning Person,False,False,20,130,3,20,193,291,light_combined
-char__archaeologists,archaeologists,Archaeologists,False,False,19,133,2,19,192,292,light_combined
-char__tribesman,tribesman,Tribesman,False,False,16,133,11,17,192,293,light_combined
-char__critter,critter,Critter,False,False,19,109,24,28,190,294,light_combined
-char__messenger,messenger,Messenger,False,False,15,105,39,34,189,295,light_combined
-char__floor,floor,Floor,False,False,1,7,177,160,187,296,light_combined
-char__king_s_architect,king's architect,King'S Architect,False,False,19,122,7,19,186,297,light_combined
-char__sons,sons,Sons,False,False,8,56,106,88,186,298,light_combined
-char__emperor,emperor,Emperor,False,False,17,119,15,21,185,299,light_combined
-char__captured_knight,captured knight,Captured Knight,False,False,20,123,1,20,184,300,light_combined
-char__stable_boy,stable boy,Stable Boy,False,False,14,88,54,44,184,301,light_combined
-char__scorpion,scorpion,Scorpion,False,False,14,86,56,35,184,302,light_combined
-char__helpers,helpers,Helpers,False,False,18,124,4,21,182,303,light_combined
-char__weary_traveler,weary traveler,Weary Traveler,False,False,18,117,9,24,180,304,light_combined
-char__raccoon,raccoon,Raccoon,False,False,15,101,34,22,180,305,light_combined
-char__young_princess,young princess,Young Princess,False,False,20,115,4,22,179,306,light_combined
-char__drunkard,drunkard,Drunkard,False,False,18,105,20,29,179,307,light_combined
-char__teacher,teacher,Teacher,False,False,16,101,30,36,179,308,light_combined
-char__crab,crab,Crab,False,False,13,84,56,26,179,309,light_combined
-char__baby,baby,Baby,False,False,5,28,136,105,179,310,light_combined
-char__proprietor,proprietor,Proprietor,False,False,18,120,3,20,177,311,light_combined
-char__robber,robber,Robber,False,False,17,113,12,23,176,312,light_combined
-char__swimmer,swimmer,Swimmer,False,False,17,104,19,27,174,313,light_combined
-char__officer,officer,Officer,False,False,15,98,31,29,174,314,light_combined
-char__fishermen,fishermen,Fishermen,False,False,14,96,36,44,174,315,light_combined
-char__bride,bride,Bride,False,False,13,83,52,50,174,316,light_combined
-char__sad_townsman,sad townsman,Sad Townsman,False,False,18,117,2,18,173,317,light_combined
-char__handmaid,handmaid,Handmaid,False,False,16,111,12,21,171,318,light_combined
-char__minister,minister,Minister,False,False,16,102,21,19,171,319,light_combined
-char__young_boy,young boy,Young Boy,False,False,15,100,26,36,171,320,light_combined
-char__royal_chef,royal chef,Royal Chef,False,False,18,111,5,22,170,321,light_combined
-char__governor,governor,Governor,False,False,16,104,18,16,170,322,light_combined
-char__citizen,citizen,Citizen,False,False,12,80,54,51,170,323,light_combined
-char__footman,footman,Footman,False,False,18,102,12,21,168,324,light_combined
-char__salesman,salesman,Salesman,False,False,18,96,18,29,168,325,light_combined
-char__invader,invader,Invader,False,False,17,106,11,19,168,326,light_combined
-char__king_and_queen,king and queen,King And Queen,False,False,9,60,81,80,168,327,light_combined
-char__unicorn,unicorn,Unicorn,False,False,9,59,82,44,168,328,light_combined
-char__figure,figure,Figure,False,False,3,15,143,136,167,329,light_combined
-char__king_of,king of,King Of,False,False,1,7,157,131,167,330,light_combined
-char__old_woman,old woman,Old Woman,False,False,15,102,18,27,165,331,light_combined
-char__small_animals,small animals,Small Animals,False,False,18,105,5,22,164,332,light_combined
-char__bodyguard,bodyguard,Bodyguard,False,False,15,99,19,24,163,333,light_combined
-char__skeleton,skeleton,Skeleton,False,False,11,77,53,41,163,334,light_combined
-char__pilgrims,pilgrims,Pilgrims,False,False,17,104,7,18,162,335,light_combined
-char__temple_guard,temple guard,Temple Guard,False,False,16,109,5,18,162,336,light_combined
-char__turkey,turkey,Turkey,False,False,11,75,53,27,161,337,light_combined
-char__old_wizened_priestess,old wizened priestess,Old Wizened Priestess,False,False,16,110,1,16,159,338,light_combined
-char__tadpole,tadpole,Tadpole,False,False,16,92,18,22,158,339,light_combined
-char__hermit,hermit,Hermit,False,False,14,92,24,18,158,340,light_combined
-char__egyptians,egyptians,Egyptians,False,False,17,104,2,17,157,341,light_combined
-char__fisher,fisher,Fisher,False,False,15,102,8,16,155,342,light_combined
-char__milk_maid,milk maid,Milk Maid,False,False,15,98,12,20,155,343,light_combined
-char__village_official,village official,Village Official,False,False,16,102,4,18,154,344,light_combined
-char__wrongdoer,wrongdoer,Wrongdoer,False,False,15,105,4,15,154,345,light_combined
-char__barn_cat,barn cat,Barn Cat,False,False,17,99,3,18,153,346,light_combined
-char__donkey,donkey,Donkey,False,False,10,70,53,28,153,347,light_combined
-char__bat_queen,bat queen,Bat Queen,False,False,15,96,11,16,152,348,light_combined
-char__watchmen,watchmen,Watchmen,False,False,15,90,17,23,152,349,light_combined
-char__milkmaid,milkmaid,Milkmaid,False,False,15,96,10,19,151,350,light_combined
-char__dirt,dirt,Dirt,False,False,4,28,111,91,151,351,light_combined
-char__grounds_keeper,grounds keeper,Grounds Keeper,False,False,16,96,6,19,150,352,light_combined
-char__faerie,faerie,Faerie,False,False,11,77,40,29,150,353,light_combined
-char__empress,empress,Empress,False,False,17,83,15,18,149,354,light_combined
-char__gobber,gobber,Gobber,False,False,13,87,23,14,149,355,light_combined
-char__sinners,sinners,Sinners,False,False,12,78,35,35,149,356,light_combined
-char__demons,demons,Demons,False,False,8,49,76,60,149,357,light_combined
-char__young_man,young man,Young Man,False,False,6,42,89,73,149,358,light_combined
-char__old_homeless_man,old homeless man,Old Homeless Man,False,False,15,101,1,15,147,359,light_combined
-char__polar_bear,polar bear,Polar Bear,False,False,14,98,7,16,147,360,light_combined
-char__weddings,weddings,Weddings,False,False,14,79,26,25,147,361,light_combined
-char__insect,insect,Insect,False,False,7,38,88,68,147,362,light_combined
-char__tavern_owner,tavern owner,Tavern Owner,False,False,16,95,3,17,146,363,light_combined
-char__songbird,songbird,Songbird,False,False,15,91,9,16,145,364,light_combined
-char__mad_king,mad king,Mad King,False,False,14,93,10,20,145,365,light_combined
-char__old_gnaisha,old gnaisha,Old Gnaisha,False,False,15,94,5,16,144,366,light_combined
-char__petitioner,petitioner,Petitioner,False,False,15,92,7,15,144,367,light_combined
-char__armorer,armorer,Armorer,False,False,14,92,10,15,144,368,light_combined
-char__farmer_bob,farmer bob,Farmer Bob,False,False,14,90,12,18,144,369,light_combined
-char__groundskeeper,groundskeeper,Groundskeeper,False,False,13,72,33,34,144,370,light_combined
-char__family_dog,family dog,Family Dog,False,False,15,98,0,15,143,371,light_combined
-char__resting_travelers,resting travelers,Resting Travelers,False,False,16,94,0,16,142,372,light_combined
-char__steward,steward,Steward,False,False,14,90,10,19,142,373,light_combined
-char__camera_man,camera man,Camera Man,False,False,13,91,12,14,142,374,light_combined
-char__freind,freind,Freind,False,False,13,85,18,29,142,375,light_combined
-char__calf,calf,Calf,False,False,12,84,22,23,142,376,light_combined
-char__prisoners,prisoners,Prisoners,False,False,4,28,102,83,142,377,light_combined
-char__alligator,alligator,Alligator,False,False,12,72,33,24,141,378,light_combined
-char__monkey_friend,monkey friend,Monkey Friend,False,False,15,93,2,17,140,379,light_combined
-char__royal_member,royal member,Royal Member,False,False,15,93,2,16,140,380,light_combined
-char__head_priest,head priest,Head Priest,False,False,12,95,9,14,140,381,light_combined
-char__stable_hand,stable hand,Stable Hand,False,False,12,80,24,26,140,382,light_combined
-char__werewolf,werewolf,Werewolf,False,False,11,70,37,25,140,383,light_combined
-char__wizards,wizards,Wizards,False,False,10,57,53,50,140,384,light_combined
-char__fairy_interpreter,fairy interpreter,Fairy Interpreter,False,False,14,92,5,15,139,385,light_combined
-char__wealthy_noble,wealthy noble,Wealthy Noble,False,False,14,92,5,15,139,386,light_combined
-char__bluebird,bluebird,Bluebird,False,False,14,88,9,14,139,387,light_combined
-char__sea_witch,sea witch,Sea Witch,False,False,13,86,14,17,139,388,light_combined
-char__vagrants,vagrants,Vagrants,False,False,14,93,3,16,138,389,light_combined
-char__historian,historian,Historian,False,False,14,92,4,14,138,390,light_combined
-char__weapons_master,weapons master,Weapons Master,False,False,14,91,5,14,138,391,light_combined
-char__president,president,President,False,False,11,77,28,12,138,392,light_combined
-char__captive,captive,Captive,False,False,11,77,27,32,137,393,light_combined
-char__small_child_cleaning_boat,small child cleaning boat,Small Child Cleaning Boat,False,False,14,94,0,14,136,394,light_combined
-char__future_heir_to_the_throne,future heir to the throne,Future Heir To The Throne,False,False,14,93,1,14,136,395,light_combined
-char__alter_boy,alter boy,Alter Boy,False,False,14,85,9,17,136,396,light_combined
-char__scientist,scientist,Scientist,False,False,13,85,12,19,136,397,light_combined
-char__man_woman,man woman,Man Woman,False,False,12,84,16,18,136,398,light_combined
-char__slave,slave,Slave,False,False,6,36,82,69,136,399,light_combined
-char__devil,devil,Devil,False,False,5,35,86,65,136,400,light_combined
-char__scavenger,scavenger,Scavenger,False,False,13,91,5,15,135,401,light_combined
-char__fruit_bat,fruit bat,Fruit Bat,False,False,13,84,12,14,135,402,light_combined
-char__reluctant_nun,reluctant nun,Reluctant Nun,False,False,14,91,1,14,134,403,light_combined
-char__grass_snake,grass snake,Grass Snake,False,False,14,89,3,15,134,404,light_combined
-char__performer,performer,Performer,False,False,14,82,10,18,134,405,light_combined
-char__plants,plants,Plants,False,False,3,21,104,90,134,406,light_combined
-char__tourist,tourist,Tourist,False,False,12,79,18,24,133,407,light_combined
-char__military_commander,military commander,Military Commander,False,False,14,89,1,15,132,408,light_combined
-char__church_mouse,church mouse,Church Mouse,False,False,13,86,7,16,132,409,light_combined
-char__pheasant,pheasant,Pheasant,False,False,12,68,28,20,132,410,light_combined
-char__hound,hound,Hound,False,False,10,65,37,30,132,411,light_combined
-char__challenger,challenger,Challenger,False,False,14,85,4,16,131,412,light_combined
-char__local_bazaar,local bazaar,Local Bazaar,False,False,13,89,3,13,131,413,light_combined
-char__small_living_thing,small living thing,Small Living Thing,False,False,15,82,3,15,130,414,light_combined
-char__king_s_guardsman,king's guardsman,King'S Guardsman,False,False,14,87,1,15,130,415,light_combined
-char__mysterious_owner,mysterious owner,Mysterious Owner,False,False,13,91,0,13,130,416,light_combined
-char__shipwrecked_survivor,shipwrecked survivor,Shipwrecked Survivor,False,False,13,91,0,13,130,417,light_combined
-char__traveler_long_past,traveler long past,Traveler Long Past,False,False,15,84,0,15,129,418,light_combined
-char__castle_guard,castle guard,Castle Guard,False,False,12,84,9,20,129,419,light_combined
-char__mischievous_teenager,mischievous teenager,Mischievous Teenager,False,False,13,89,0,13,128,420,light_combined
-char__ornate_birds,ornate birds,Ornate Birds,False,False,13,89,0,13,128,421,light_combined
-char__talking_cat,talking cat,Talking Cat,False,False,12,73,19,22,128,422,light_combined
-char__apprentice,apprentice,Apprentice,False,False,8,54,50,54,128,423,light_combined
-char__torture_master,torture master,Torture Master,False,False,13,79,8,15,126,424,light_combined
-char__bat_king,bat king,Bat King,False,False,12,78,12,13,126,425,light_combined
-char__companion,companion,Companion,False,False,7,48,56,59,125,426,light_combined
-char__tourists,tourists,Tourists,False,False,12,84,4,16,124,427,light_combined
-char__stable_hands,stable hands,Stable Hands,False,False,12,78,10,17,124,428,light_combined
-char__armed_guardsmen,armed guardsmen,Armed Guardsmen,False,False,14,80,1,14,123,429,light_combined
-char__zuric,zuric,Zuric,False,False,11,77,13,11,123,430,light_combined
-char__master_wizard,master wizard,Master Wizard,False,False,11,75,14,14,122,431,light_combined
-char__war_officer,war officer,War Officer,False,False,12,84,1,13,121,432,light_combined
-char__eagle,eagle,Eagle,False,False,9,57,37,23,121,433,light_combined
-char__there_is_the_lighthouse_keeper_on_his_daily_walk_up_the_boardwalk,there is the lighthouse keeper on his daily walk up the boardwalk,There Is The Lighthouse Keeper On His Daily Walk Up The Boardwalk,False,False,12,83,0,12,119,434,light_combined
-char__runaway,runaway,Runaway,False,False,12,72,11,18,119,435,light_combined
-char__king_s_guardsmen,king's guardsmen,King'S Guardsmen,False,False,13,77,2,15,118,436,light_combined
-char__people_saved_by_the_paladinsa,people saved by the paladinsa,People Saved By The Paladinsa,False,False,12,82,0,12,118,437,light_combined
-char__local_merchant,local merchant,Local Merchant,False,False,12,78,4,16,118,438,light_combined
-char__leper,leper,Leper,False,False,11,72,13,14,118,439,light_combined
-char__scholar,scholar,Scholar,False,False,11,62,23,23,118,440,light_combined
-char__ghosts,ghosts,Ghosts,False,False,5,35,68,58,118,441,light_combined
-char__unicorn_hunters,unicorn hunters,Unicorn Hunters,False,False,12,79,2,13,117,442,light_combined
-char__choir_member,choir member,Choir Member,False,False,12,75,6,12,117,443,light_combined
-char__founder,founder,Founder,False,False,12,74,7,13,117,444,light_combined
-char__zombie,zombie,Zombie,False,False,9,63,27,20,117,445,light_combined
-char__ghosts_of_previous_occupants,ghosts of previous occupants,Ghosts Of Previous Occupants,False,False,12,79,1,12,116,446,light_combined
-char__organist,organist,Organist,False,False,11,77,6,14,116,447,light_combined
-char__businessman,businessman,Businessman,False,False,11,76,7,12,116,448,light_combined
-char__wizard_overseer,wizard overseer,Wizard Overseer,False,False,13,75,1,13,115,449,light_combined
-char__man_sleeping_inside,man sleeping inside,Man Sleeping Inside,False,False,12,79,0,12,115,450,light_combined
-char__stray_cat_sun_bathing,stray cat sun-bathing,Stray Cat Sun-Bathing,False,False,12,79,0,12,115,451,light_combined
-char__architect,architect,Architect,False,False,8,56,35,27,115,452,light_combined
-char__nobles,nobles,Nobles,False,False,7,42,52,54,115,453,light_combined
-char__foxes,foxes,Foxes,False,False,4,28,75,45,115,454,light_combined
-char__acolyte_preparing_for_evening_prayer_service,acolyte preparing for evening prayer service,Acolyte Preparing For Evening Prayer Service,False,False,12,78,0,12,114,455,light_combined
-char__bigfoot,bigfoot,Bigfoot,False,False,11,71,10,11,114,456,light_combined
-char__prior,prior,Prior,False,False,9,61,26,25,114,457,light_combined
-char__staff,staff,Staff,False,False,4,23,79,57,114,458,light_combined
-char__organ_player,organ player,Organ Player,False,False,12,76,1,12,113,459,light_combined
-char__jungle,jungle,Jungle,False,False,2,14,93,57,113,460,light_combined
-char__old_maniacal_man,old maniacal man,Old Maniacal Man,False,False,12,74,2,12,112,461,light_combined
-char__her_maid,her maid,Her Maid,False,False,11,77,2,12,112,462,light_combined
-char__reaper,reaper,Reaper,False,False,11,70,9,15,112,463,light_combined
-char__homeless_man,homeless man,Homeless Man,False,False,11,67,12,20,112,464,light_combined
-char__boat_workers,boat workers,Boat Workers,False,False,12,75,0,12,111,465,light_combined
-char__cooker,cooker,Cooker,False,False,12,74,1,12,111,466,light_combined
-char__humble_knight,humble knight,Humble Knight,False,False,12,74,1,12,111,467,light_combined
-char__denizen,denizen,Denizen,False,False,11,77,1,12,111,468,light_combined
-char__priest_in_ornate_robes,priest in ornate robes,Priest In Ornate Robes,False,False,11,77,0,11,110,469,light_combined
-char__princess_who_lives_in_the_castle_and_can_t_escape,princess who lives in the castle and can't escape,Princess Who Lives In The Castle And Can'T Escape,False,False,11,77,0,11,110,470,light_combined
-char__economist,economist,Economist,False,False,11,70,7,13,110,471,light_combined
-char__advisor,advisor,Advisor,False,False,7,43,46,39,110,472,light_combined
-char__bedroom,bedroom,Bedroom,False,False,4,28,70,62,110,473,light_combined
-char__young_maiden,young maiden,Young Maiden,False,False,12,70,3,14,109,474,light_combined
-char__debtor,debtor,Debtor,False,False,11,74,2,11,109,475,light_combined
-char__jacob,jacob,Jacob,False,False,11,62,14,15,109,476,light_combined
-char__lazy_insects,lazy insects,Lazy Insects,False,False,11,71,4,11,108,477,light_combined
-char__towns_folk,towns folk,Towns Folk,False,False,11,68,7,15,108,478,light_combined
-char__homeless_person,homeless person,Homeless Person,False,False,11,67,8,14,108,479,light_combined
-char__traders,traders,Traders,False,False,10,67,11,20,108,480,light_combined
-char__zombies,zombies,Zombies,False,False,9,56,25,23,108,481,light_combined
-char__gaurd,gaurd,Gaurd,False,False,10,64,13,21,107,482,light_combined
-char__evil_wizard,evil wizard,Evil Wizard,False,False,9,59,21,19,107,483,light_combined
-char__character,character,Character,False,False,6,41,48,46,107,484,light_combined
-char__well_off_business_man,well off business man,Well Off Business Man,False,False,11,72,1,12,106,485,light_combined
-char__castaway,castaway,Castaway,False,False,11,71,2,11,106,486,light_combined
-char__offender,offender,Offender,False,False,11,71,2,11,106,487,light_combined
-char__many_insects,many insects,Many Insects,False,False,11,70,3,14,106,488,light_combined
-char__artists,artists,Artists,False,False,10,64,12,18,106,489,light_combined
-char__warden,warden,Warden,False,False,9,63,16,14,106,490,light_combined
-char__king_himself,king himself,King Himself,False,False,7,44,41,47,106,491,light_combined
-char__evil_priestess,evil priestess,Evil Priestess,False,False,11,67,5,13,105,492,light_combined
-char__secret_lovers_seeking_privacy,secret lovers seeking privacy,Secret Lovers Seeking Privacy,False,False,11,71,0,11,104,493,light_combined
-char__long_dead_monk,long dead monk,Long Dead Monk,False,False,11,70,1,11,104,494,light_combined
-char__courtier,courtier,Courtier,False,False,11,67,4,13,104,495,light_combined
-char__dark_king,dark king,Dark King,False,False,10,70,4,11,104,496,light_combined
-char__farm_worker,farm worker,Farm Worker,False,False,10,70,4,12,104,497,light_combined
-char__joel,joel,Joel,False,False,10,66,8,11,104,498,light_combined
-char__vagabond,vagabond,Vagabond,False,False,10,60,14,17,104,499,light_combined
-char__dark_lord,dark lord,Dark Lord,False,False,8,49,31,24,104,500,light_combined
-char__although_the_temple_is_full_no_one_is_speaking_and_all_you_can_hear_are_muted_scuffling_feet,although the temple is full no one is speaking and all you can hear are muted scuffling feet,Although The Temple Is Full No One Is Speaking And All You Can Hear Are Muted Scuffling Feet,False,False,11,70,0,11,103,501,light_combined
-char__scribe_constantly_writing,scribe constantly writing,Scribe Constantly Writing,False,False,11,70,0,11,103,502,light_combined
-char__wyvern,wyvern,Wyvern,False,False,11,64,6,11,103,503,light_combined
-char__individual,individual,Individual,False,False,10,51,22,31,103,504,light_combined
-char__royal_prince,royal prince,Royal Prince,False,False,11,67,2,11,102,505,light_combined
-char__foreign_ambassador,foreign ambassador,Foreign Ambassador,False,False,10,70,2,11,102,506,light_combined
-char__electric_eel,electric eel,Electric Eel,False,False,10,66,6,13,102,507,light_combined
-char__librarian,librarian,Librarian,False,False,10,63,9,14,102,508,light_combined
-char__soldier_named_ulmer,soldier named ulmer,Soldier Named Ulmer,False,False,11,68,0,11,101,509,light_combined
-char__giant_toads,giant toads,Giant Toads,False,False,11,67,1,11,101,510,light_combined
-char__fox_trying_to_steal_chickens,fox trying to steal chickens,Fox Trying To Steal Chickens,False,False,11,67,0,11,100,511,light_combined
-char__goblin_king_s_bartender,goblin king's bartender,Goblin King'S Bartender,False,False,10,70,0,10,100,512,light_combined
-char__king_s_horses,king's horses,King'S Horses,False,False,10,70,0,10,100,513,light_combined
-char__recently_tortured,recently tortured,Recently Tortured,False,False,10,70,0,10,100,514,light_combined
-char__temple_members,temple members,Temple Members,False,False,10,70,0,10,100,515,light_combined
-char__they_are_not_quite_outcast,they are not quite outcast,They Are Not Quite Outcast,False,False,10,70,0,10,100,516,light_combined
-char__farmers_wife,farmers wife,Farmers Wife,False,False,10,69,1,11,100,517,light_combined
-char__captain_of_the_guard,captain of the guard,Captain Of The Guard,False,False,9,63,10,17,100,518,light_combined
-char__enchantress,enchantress,Enchantress,False,False,9,63,10,12,100,519,light_combined
-char__dove,dove,Dove,False,False,8,56,20,16,100,520,light_combined
-char__magician,magician,Magician,False,False,7,47,32,23,100,521,light_combined
-char__traveling_salesmen_stopping_for_a_drink,traveling salesmen stopping for a drink,Traveling Salesmen Stopping For A Drink,False,False,11,66,0,11,99,522,light_combined
-char__foreman_ordering_his_workers,foreman ordering his workers,Foreman Ordering His Workers,False,False,11,63,3,11,99,523,light_combined
-char__supplicant,supplicant,Supplicant,False,False,10,63,6,12,99,524,light_combined
-char__barbarian,barbarian,Barbarian,False,False,9,56,16,17,99,525,light_combined
-char__evil_witch,evil witch,Evil Witch,False,False,8,50,25,27,99,526,light_combined
-char__his_father,his father,His Father,False,False,7,44,34,37,99,527,light_combined
-char__shark,shark,Shark,False,False,6,42,39,22,99,528,light_combined
-char__goblins,goblins,Goblins,False,False,3,21,69,45,99,529,light_combined
-char__nobel,nobel,Nobel,False,False,11,55,10,14,98,530,light_combined
-char__pastry_chef,pastry chef,Pastry Chef,False,False,10,66,2,10,98,531,light_combined
-char__assistant_chef,assistant chef,Assistant Chef,False,False,10,65,3,13,98,532,light_combined
-char__midget,midget,Midget,False,False,10,64,4,10,98,533,light_combined
-char__eunuch,eunuch,Eunuch,False,False,9,63,8,12,98,534,light_combined
-char__brave_knight,brave knight,Brave Knight,False,False,9,49,22,28,98,535,light_combined
-char__carpenter,carpenter,Carpenter,False,False,8,53,21,19,98,536,light_combined
-char__chief,chief,Chief,False,False,3,21,68,45,98,537,light_combined
-char__lector,lector,Lector,False,False,9,63,7,9,97,538,light_combined
-char__wasp,wasp,Wasp,False,False,9,58,12,10,97,539,light_combined
-char__yeti,yeti,Yeti,False,False,9,54,16,11,97,540,light_combined
-char__goat_for_company_for_the_horses,goat for company for the horses,Goat For Company For The Horses,False,False,11,63,0,11,96,541,light_combined
-char__his_horse,his horse,His Horse,False,False,9,63,6,15,96,542,light_combined
-char__bacteria,bacteria,Bacteria,False,False,8,56,16,11,96,543,light_combined
-char__guardsman,guardsman,Guardsman,False,False,8,53,19,23,96,544,light_combined
-char__parrot,parrot,Parrot,False,False,8,43,29,17,96,545,light_combined
-char__book_keeper,book keeper,Book Keeper,False,False,10,61,4,10,95,546,light_combined
-char__agricultural_advisor,agricultural advisor,Agricultural Advisor,False,False,9,63,5,11,95,547,light_combined
-char__firemen,firemen,Firemen,False,False,9,63,5,9,95,548,light_combined
-char__royal_dog,royal dog,Royal Dog,False,False,9,63,5,11,95,549,light_combined
-char__director,director,Director,False,False,9,52,16,13,95,550,light_combined
-char__local_villagers,local villagers,Local Villagers,False,False,10,64,0,10,94,551,light_combined
-char__wise_looking_turtle,wise-looking turtle,Wise-Looking Turtle,False,False,10,64,0,10,94,552,light_combined
-char__tanner,tanner,Tanner,False,False,9,59,8,11,94,553,light_combined
-char__woodpecker,woodpecker,Woodpecker,False,False,8,56,14,15,94,554,light_combined
-char__family_members,family members,Family Members,False,False,7,49,24,27,94,555,light_combined
-char__dragon_who_breathes_fire_and_won_t_let_her_out,dragon who breathes fire and won't let her out,Dragon Who Breathes Fire And Won'T Let Her Out,False,False,10,63,0,10,93,556,light_combined
-char__exiled_person,exiled person,Exiled Person,False,False,10,63,0,10,93,557,light_combined
-char__large_experienced_guard_with_a_grizzly_expression,large experienced guard with a grizzly expression,Large Experienced Guard With A Grizzly Expression,False,False,10,63,0,10,93,558,light_combined
-char__nurse,nurse,Nurse,False,False,10,54,9,16,93,559,light_combined
-char__chief_wife,chief wife,Chief Wife,False,False,9,63,3,9,93,560,light_combined
-char__angels,angels,Angels,False,False,7,49,23,24,93,561,light_combined
-char__young_student_reading_a_book_beneath_a_dogwood_tree,young student reading a book beneath a dogwood tree,Young Student Reading A Book Beneath A Dogwood Tree,False,False,10,62,0,10,92,562,light_combined
-char__tax_agent,tax agent,Tax Agent,False,False,9,63,2,9,92,563,light_combined
-char__party_goers,party goers,Party Goers,False,False,9,61,4,11,92,564,light_combined
-char__most_evil_creature,most evil creature,Most Evil Creature,False,False,9,60,5,9,92,565,light_combined
-char__wealthy_bookshop_owner,wealthy bookshop owner,Wealthy Bookshop Owner,False,False,11,58,0,11,91,566,light_combined
-char__drunk_reeling_out_of_the_saloon,drunk reeling out of the saloon,Drunk Reeling Out Of The Saloon,False,False,10,61,0,10,91,567,light_combined
-char__cleaning_maid,cleaning maid,Cleaning Maid,False,False,9,63,1,9,91,568,light_combined
-char__descendant_of_the_sons,descendant of the sons,Descendant Of The Sons,False,False,9,63,1,9,91,569,light_combined
-char__kings_bodyguard,kings bodyguard,Kings Bodyguard,False,False,9,63,1,9,91,570,light_combined
-char__sword_makers,sword makers,Sword Makers,False,False,9,63,1,9,91,571,light_combined
-char__usher,usher,Usher,False,False,9,60,4,11,91,572,light_combined
-char__jailer,jailer,Jailer,False,False,9,58,6,11,91,573,light_combined
-char__grave_digger,grave digger,Grave Digger,False,False,9,51,13,12,91,574,light_combined
-char__trader_s_wife_that_traveled_with_him,trader's wife that traveled with him,Trader'S Wife That Traveled With Him,False,False,10,60,0,10,90,575,light_combined
-char__large_spider_high_in_one_corner,large spider high in one corner,Large Spider High In One Corner,False,False,9,63,0,9,90,576,light_combined
-char__people_in_the_observatory,people in the observatory,People In The Observatory,False,False,9,63,0,9,90,577,light_combined
-char__small_foxes_who_have_made_the_ice_cave_their_home,small foxes who have made the ice cave their home,Small Foxes Who Have Made The Ice Cave Their Home,False,False,9,63,0,9,90,578,light_combined
-char__soldier_named_zinney,soldier named zinney,Soldier Named Zinney,False,False,9,63,0,9,90,579,light_combined
-char__spider_spins_its_web_in_the_pew_corner,spider spins its web in the pew corner,Spider Spins Its Web In The Pew Corner,False,False,9,63,0,9,90,580,light_combined
-char__person_of_the_wood,person of the wood,Person Of The Wood,False,False,9,61,2,9,90,581,light_combined
-char__waitress,waitress,Waitress,False,False,9,56,7,10,90,582,light_combined
-char__snakes_slithering_around_the_cavern,snakes slithering around the cavern,Snakes Slithering Around The Cavern,False,False,9,62,0,9,89,583,light_combined
-char__lady_of_the_court,lady of the court,Lady Of The Court,False,False,9,58,4,10,89,584,light_combined
-char__spelunker,spelunker,Spelunker,False,False,9,56,6,9,89,585,light_combined
-char__hangman,hangman,Hangman,False,False,8,55,10,9,89,586,light_combined
-char__deckhand,deckhand,Deckhand,False,False,9,57,4,10,88,587,light_combined
-char__stray_dogs,stray dogs,Stray Dogs,False,False,9,57,4,13,88,588,light_combined
-char__knights_in_training,knights in training,Knights In Training,False,False,9,60,0,9,87,589,light_combined
-char__wall_repairman,wall repairman,Wall Repairman,False,False,9,60,0,9,87,590,light_combined
-char__maintenance_person,maintenance person,Maintenance Person,False,False,9,58,2,9,87,591,light_combined
-char__eel,eel,Eel,False,False,5,35,37,19,87,592,light_combined
-char__small_aggressive_looking_dog,small aggressive-looking dog,Small Aggressive-Looking Dog,False,False,9,59,0,9,86,593,light_combined
-char__lady_of_the_house,lady of the house,Lady Of The House,False,False,9,56,3,12,86,594,light_combined
-char__ugly_toad,ugly toad,Ugly Toad,False,False,8,56,6,8,86,595,light_combined
-char__scorpions,scorpions,Scorpions,False,False,7,49,16,15,86,596,light_combined
-char__fighter,fighter,Fighter,False,False,6,37,31,32,86,597,light_combined
-char__chained_cat,chained cat,Chained Cat,False,False,10,55,0,10,85,598,light_combined
-char__one_unicorn,one unicorn,One Unicorn,False,False,10,54,1,11,85,599,light_combined
-char__curious_boy,curious boy,Curious Boy,False,False,9,58,0,9,85,600,light_combined
-char__farmer_bob_s_wife,farmer bob's wife,Farmer Bob'S Wife,False,False,9,58,0,9,85,601,light_combined
-char__fat_rats,fat rats,Fat Rats,False,False,9,57,1,10,85,602,light_combined
-char__skeletons,skeletons,Skeletons,False,False,4,28,45,43,85,603,light_combined
-char__scullery_boy,scullery boy,Scullery Boy,False,False,9,56,1,9,84,604,light_combined
-char__dungeon_master,dungeon master,Dungeon Master,False,False,9,53,4,11,84,605,light_combined
-char__scullery_maid,scullery maid,Scullery Maid,False,False,9,53,4,13,84,606,light_combined
-char__troop,troop,Troop,False,False,9,52,5,12,84,607,light_combined
-char__wild_boar,wild boar,Wild Boar,False,False,8,53,7,14,84,608,light_combined
-char__care_taker,care taker,Care Taker,False,False,8,56,3,8,83,609,light_combined
-char__groom_of_the_stool,groom of the stool,Groom Of The Stool,False,False,8,56,3,8,83,610,light_combined
-char__occupant,occupant,Occupant,False,False,8,56,3,10,83,611,light_combined
-char__fighters,fighters,Fighters,False,False,8,49,10,16,83,612,light_combined
-char__maester,maester,Maester,False,False,8,49,10,10,83,613,light_combined
-char__mystical_dragon,mystical dragon,Mystical Dragon,False,False,9,54,1,9,82,614,light_combined
-char__sad_woman,sad woman,Sad Woman,False,False,8,56,2,8,82,615,light_combined
-char__shop_keeper,shop keeper,Shop Keeper,False,False,8,56,2,9,82,616,light_combined
-char__baby_dragon,baby dragon,Baby Dragon,False,False,8,53,5,9,82,617,light_combined
-char__hawk,hawk,Hawk,False,False,8,44,14,11,82,618,light_combined
-char__apothecary,apothecary,Apothecary,False,False,5,29,38,26,82,619,light_combined
-char__wise_woman,wise woman,Wise Woman,False,False,9,46,8,11,81,620,light_combined
-char__large_spiders,large spiders,Large Spiders,False,False,8,56,1,9,81,621,light_combined
-char__organism,organism,Organism,False,False,8,50,7,9,81,622,light_combined
-char__his_wolf_companion_always_at_his_side,his wolf companion always at his side,His Wolf Companion Always At His Side,False,False,9,53,0,9,80,623,light_combined
-char__elderly_man,elderly man,Elderly Man,False,False,8,56,0,8,80,624,light_combined
-char__lady_of_the_house_coming_to_greet_you,lady of the house coming to greet you,Lady Of The House Coming To Greet You,False,False,8,56,0,8,80,625,light_combined
-char__religious_clerk,religious clerk,Religious Clerk,False,False,8,56,0,8,80,626,light_combined
-char__sneaky_thief,sneaky thief,Sneaky Thief,False,False,8,53,3,10,80,627,light_combined
-char__masons,masons,Masons,False,False,8,49,7,12,80,628,light_combined
-char__smith,smith,Smith,False,False,5,29,36,27,80,629,light_combined
-char__gravedigger_doing_his_work,gravedigger doing his work,Gravedigger Doing His Work,False,False,9,52,0,9,79,630,light_combined
-char__high_priest_reading_an_arcane_book,high priest reading an arcane book,High Priest Reading An Arcane Book,False,False,9,52,0,9,79,631,light_combined
-char__some_kind_of_police,some kind of police,Some Kind Of Police,False,False,8,55,0,8,79,632,light_combined
-char__squire_still_keeping_everything_sharp,squire still keeping everything sharp,Squire Still Keeping Everything Sharp,False,False,8,55,0,8,79,633,light_combined
-char__pet_goldfish,pet goldfish,Pet Goldfish,False,False,8,54,1,9,79,634,light_combined
-char__hoakbera,hoakbera,Hoakbera,False,False,8,49,6,8,79,635,light_combined
-char__hummingbird,hummingbird,Hummingbird,False,False,7,49,9,9,79,636,light_combined
-char__wildlife,wildlife,Wildlife,False,False,5,35,29,28,79,637,light_combined
-char__grim_reaper,grim reaper,Grim Reaper,False,False,8,52,2,9,78,638,light_combined
-char__court_wizard,court wizard,Court Wizard,False,False,8,49,5,12,78,639,light_combined
-char__watcher,watcher,Watcher,False,False,8,44,10,12,78,640,light_combined
-char__foreigner,foreigner,Foreigner,False,False,7,49,8,11,78,641,light_combined
-char__reindeer,reindeer,Reindeer,False,False,7,44,13,11,78,642,light_combined
-char__beetle,beetle,Beetle,False,False,5,35,28,18,78,643,light_combined
-char__caveman,caveman,Caveman,False,False,9,41,9,11,77,644,light_combined
-char__boatswain,boatswain,Boatswain,False,False,8,50,3,8,77,645,light_combined
-char__magical_elf,magical elf,Magical Elf,False,False,8,50,3,8,77,646,light_combined
-char__pet_dog,pet dog,Pet Dog,False,False,8,49,4,12,77,647,light_combined
-char__veteran,veteran,Veteran,False,False,7,46,10,12,77,648,light_combined
-char__loved_one,loved one,Loved One,False,False,6,42,17,20,77,649,light_combined
-char__royal_guard,royal guard,Royal Guard,False,False,4,27,38,37,77,650,light_combined
-char__chilling_wind_or_voice,chilling wind or voice,Chilling Wind Or Voice,False,False,9,49,0,9,76,651,light_combined
-char__person_who_adventured_the_cave_but_has_been_injured_and_is_awaiting_either_a_rescuer_or_death,person who adventured the cave but has been injured and is awaiting either a rescuer or death,Person Who Adventured The Cave But Has Been Injured And Is Awaiting Either A Rescuer Or Death,False,False,8,52,0,8,76,652,light_combined
-char__old_men,old men,Old Men,False,False,8,50,2,10,76,653,light_combined
-char__waiter,waiter,Waiter,False,False,8,50,2,8,76,654,light_combined
-char__tribe_chief,tribe chief,Tribe Chief,False,False,8,49,3,8,76,655,light_combined
-char__baby_shower,baby shower,Baby Shower,False,False,7,47,8,7,76,656,light_combined
-char__dignitary,dignitary,Dignitary,False,False,7,42,13,10,76,657,light_combined
-char__mosquito,mosquito,Mosquito,False,False,6,42,16,18,76,658,light_combined
-char__artist,artist,Artist,False,False,4,28,36,35,76,659,light_combined
-char__merchant_who_sells_his_goods_at_the_most_popular_area_around,merchant who sells his goods at the most popular area around,Merchant Who Sells His Goods At The Most Popular Area Around,False,False,8,51,0,8,75,660,light_combined
-char__wizard_of_the_town,wizard of the town,Wizard Of The Town,False,False,8,51,0,8,75,661,light_combined
-char__diseased_distempered_dog,diseased distempered dog,Diseased Distempered Dog,False,False,8,50,1,8,75,662,light_combined
-char__enigmatic_wizard,enigmatic wizard,Enigmatic Wizard,False,False,8,50,1,8,75,663,light_combined
-char__local_artist,local artist,Local Artist,False,False,8,50,1,8,75,664,light_combined
-char__treasure_seekers,treasure seekers,Treasure Seekers,False,False,8,48,3,10,75,665,light_combined
-char__king_s_son,king's son,King'S Son,False,False,7,49,5,9,75,666,light_combined
-char__jesters,jesters,Jesters,False,False,6,29,28,24,75,667,light_combined
-char__staircase,staircase,Staircase,False,False,5,22,38,27,75,668,light_combined
-char__amphibian,amphibian,Amphibian,False,False,7,49,4,9,74,669,light_combined
-char__gamekeeper,gamekeeper,Gamekeeper,False,False,7,49,4,7,74,670,light_combined
-char__large_spider,large spider,Large Spider,False,False,7,49,4,8,74,671,light_combined
-char__shipwright,shipwright,Shipwright,False,False,10,40,3,10,73,672,light_combined
-char__bazaar_owner,bazaar owner,Bazaar Owner,False,False,9,45,1,10,73,673,light_combined
-char__god_of_their_pagan_religion,god of their pagan religion,God Of Their Pagan Religion,False,False,8,49,0,8,73,674,light_combined
-char__tern,tern,Tern,False,False,8,48,1,8,73,675,light_combined
-char__bighorn_sheep,bighorn sheep,Bighorn Sheep,False,False,7,49,3,8,73,676,light_combined
-char__veterinarian,veterinarian,Veterinarian,False,False,7,49,3,10,73,677,light_combined
-char__gecko,gecko,Gecko,False,False,7,43,9,8,73,678,light_combined
-char__grazing_milk_cow_in_the_background,grazing milk cow in the background,Grazing Milk Cow In The Background,False,False,9,45,0,9,72,679,light_combined
-char__garter_snake,garter snake,Garter Snake,False,False,7,49,2,9,72,680,light_combined
-char__woodland_spirits,woodland spirits,Woodland Spirits,False,False,7,47,4,8,72,681,light_combined
-char__big_sheep_like_brown_dog,big sheep-like brown dog,Big Sheep-Like Brown Dog,False,False,8,47,0,8,71,682,light_combined
-char__pet_cat,pet cat,Pet Cat,False,False,8,47,0,8,71,683,light_combined
-char__surface_dweller,surface dweller,Surface Dweller,False,False,7,49,1,7,71,684,light_combined
-char__manservant,manservant,Manservant,False,False,7,44,6,9,71,685,light_combined
-char__survivors,survivors,Survivors,False,False,7,44,6,12,71,686,light_combined
-char__otter,otter,Otter,False,False,6,42,11,7,71,687,light_combined
-char__albino_fish_totally_blind_swims_in_a_tiny_pool,albino fish totally blind swims in a tiny pool,Albino Fish Totally Blind Swims In A Tiny Pool,False,False,8,46,0,8,70,688,light_combined
-char__bloodied_prisoner,bloodied prisoner,Bloodied Prisoner,False,False,8,46,0,8,70,689,light_combined
-char__knight_in_shining_armor,knight in shining armor,Knight In Shining Armor,False,False,8,46,0,8,70,690,light_combined
-char__child_lost_from_his_mother,child lost from his mother,Child Lost From His Mother,False,False,7,49,0,7,70,691,light_combined
-char__cowardly_guard_nervously_awaiting_an_attack,cowardly guard nervously awaiting an attack,Cowardly Guard Nervously Awaiting An Attack,False,False,7,49,0,7,70,692,light_combined
-char__graveyard_keeper_who_lives_across_the_yard,graveyard keeper who lives across the yard,Graveyard Keeper Who Lives Across The Yard,False,False,7,49,0,7,70,693,light_combined
-char__lady_in_a_white_decadent_dress,lady in a white decadent dress,Lady In A White Decadent Dress,False,False,7,49,0,7,70,694,light_combined
-char__stable_boy_rushing_in_to_alert_the_knight,stable boy rushing in to alert the knight,Stable Boy Rushing In To Alert The Knight,False,False,7,49,0,7,70,695,light_combined
-char__mountain_lion,mountain lion,Mountain Lion,False,False,7,45,4,8,70,696,light_combined
-char__fellow_traveler,fellow traveler,Fellow Traveler,False,False,7,43,6,11,70,697,light_combined
-char__cricket,cricket,Cricket,False,False,7,37,12,13,70,698,light_combined
-char__toad,toad,Toad,False,False,1,7,60,34,70,699,light_combined
-char__dockworker,dockworker,Dockworker,False,False,7,47,1,7,69,700,light_combined
-char__torture_assistant,torture assistant,Torture Assistant,False,False,7,47,1,7,69,701,light_combined
-char__juror,juror,Juror,False,False,6,42,9,7,69,702,light_combined
-char__blacksmiths,blacksmiths,Blacksmiths,False,False,5,33,21,23,69,703,light_combined
-char__squirrels,squirrels,Squirrels,False,False,4,15,42,32,69,704,light_combined
-char__king_s_trusted_adviser,king's trusted adviser,King'S Trusted Adviser,False,False,8,44,0,8,68,705,light_combined
-char__inn_keeper,inn keeper,Inn Keeper,False,False,7,42,5,10,68,706,light_combined
-char__admiral,admiral,Admiral,False,False,6,42,8,7,68,707,light_combined
-char__her_husband,her husband,Her Husband,False,False,5,35,18,19,68,708,light_combined
-char__blind_knight_holding_a_sword,blind knight holding a sword,Blind Knight Holding A Sword,False,False,7,46,0,7,67,709,light_combined
-char__madam_and_her_girls,madam and her girls,Madam And Her Girls,False,False,7,46,0,7,67,710,light_combined
-char__mightiest_warriors,mightiest warriors,Mightiest Warriors,False,False,7,45,1,7,67,711,light_combined
-char__mysterious_merchant,mysterious merchant,Mysterious Merchant,False,False,7,45,1,8,67,712,light_combined
-char__horseflies,horseflies,Horseflies,False,False,7,43,3,8,67,713,light_combined
-char__chameleon,chameleon,Chameleon,False,False,7,42,4,8,67,714,light_combined
-char__wizard_s_assistant,wizard's assistant,Wizard'S Assistant,False,False,7,41,5,8,67,715,light_combined
-char__marksman,marksman,Marksman,False,False,7,38,8,11,67,716,light_combined
-char__formal,formal,Formal,False,False,6,42,7,13,67,717,light_combined
-char__vagrant,vagrant,Vagrant,False,False,6,42,7,10,67,718,light_combined
-char__toucan,toucan,Toucan,False,False,6,40,9,7,67,719,light_combined
-char__chamber_maid,chamber maid,Chamber Maid,False,False,6,39,10,12,67,720,light_combined
-char__lone_captain,lone captain,Lone Captain,False,False,8,41,1,8,66,721,light_combined
-char__policeman_walking_a_beat,policeman walking a beat,Policeman Walking A Beat,False,False,7,45,0,7,66,722,light_combined
-char__pond_visitor,pond visitor,Pond Visitor,False,False,7,45,0,7,66,723,light_combined
-char__rabid_rat,rabid rat,Rabid Rat,False,False,7,43,2,8,66,724,light_combined
-char__guy_with_the_key_when_he_lets_in_the_king,guy with the key when he lets in the king,Guy With The Key When He Lets In The King,False,False,7,44,0,7,65,725,light_combined
-char__vigilant_guard,vigilant guard,Vigilant Guard,False,False,7,43,1,7,65,726,light_combined
-char__widow,widow,Widow,False,False,6,33,14,18,65,727,light_combined
-char__bee,bee,Bee,False,False,6,29,18,14,65,728,light_combined
-char__rival,rival,Rival,False,False,5,27,23,23,65,729,light_combined
-char__king_checking_in_on_his_outpost,king checking in on his outpost,King Checking In On His Outpost,False,False,7,43,0,7,64,730,light_combined
-char__master_of_ceremonies,master of ceremonies,Master Of Ceremonies,False,False,7,40,3,8,64,731,light_combined
-char__golem,golem,Golem,False,False,4,27,25,12,64,732,light_combined
-char__king_consort,king consort,King Consort,False,False,7,42,0,7,63,733,light_combined
-char__camper,camper,Camper,False,False,6,42,3,6,63,734,light_combined
-char__missionary,missionary,Missionary,False,False,6,42,3,7,63,735,light_combined
-char__pet_bird,pet bird,Pet Bird,False,False,6,41,4,9,63,736,light_combined
-char__bedbug,bedbug,Bedbug,False,False,6,39,6,7,63,737,light_combined
-char__straw,straw,Straw,False,False,4,24,27,15,63,738,light_combined
-char__chiefs,chiefs,Chiefs,False,False,6,42,2,8,62,739,light_combined
-char__stinging_scorpion,stinging scorpion,Stinging Scorpion,False,False,6,42,2,7,62,740,light_combined
-char__swamp_monster,swamp monster,Swamp Monster,False,False,6,42,2,6,62,741,light_combined
-char__choirboy,choirboy,Choirboy,False,False,6,41,3,8,62,742,light_combined
-char__field_mice,field mice,Field Mice,False,False,6,39,5,9,62,743,light_combined
-char__lands_lord,lands lord,Lands Lord,False,False,7,40,0,7,61,744,light_combined
-char__dinner_guests,dinner guests,Dinner Guests,False,False,6,42,1,7,61,745,light_combined
-char__favored_knight,favored knight,Favored Knight,False,False,6,42,1,6,61,746,light_combined
-char__lord_and_controller,lord and controller,Lord And Controller,False,False,6,42,1,6,61,747,light_combined
-char__saber_tooth_tiger,saber tooth tiger,Saber Tooth Tiger,False,False,6,42,1,6,61,748,light_combined
-char__bivalve,bivalve,Bivalve,False,False,6,36,7,6,61,749,light_combined
-char__alien,alien,Alien,False,False,7,37,2,8,60,750,light_combined
-char__goldfinch,goldfinch,Goldfinch,False,False,7,37,2,7,60,751,light_combined
-char__fierce_assassin,fierce assassin,Fierce Assassin,False,False,6,42,0,6,60,752,light_combined
-char__former_resident_who_has_escaped_whatever_fate_befell_his_people_and_has_returned_home_to_look_for_other_survivors,former resident who has escaped whatever fate befell his people and has returned home to look for other survivors,Former Resident Who Has Escaped Whatever Fate Befell His People And Has Returned Home To Look For Other Survivors,False,False,6,42,0,6,60,753,light_combined
-char__horse_caretaker_trainer,horse caretaker trainer,Horse Caretaker Trainer,False,False,6,42,0,6,60,754,light_combined
-char__king_s_mother_who_sits_at_their_side,king's mother who sits at their side,King'S Mother Who Sits At Their Side,False,False,6,42,0,6,60,755,light_combined
-char__large_black_vulture,large black vulture,Large Black Vulture,False,False,6,42,0,6,60,756,light_combined
-char__woman_walking_the_beach,woman walking the beach,Woman Walking The Beach,False,False,6,42,0,6,60,757,light_combined
-char__woolly_mammoth,woolly mammoth,Woolly Mammoth,False,False,6,42,0,6,60,758,light_combined
-char__young_boy_who_is_a_deck_hand,young boy who is a deck hand,Young Boy Who Is A Deck Hand,False,False,6,42,0,6,60,759,light_combined
-char__murderers,murderers,Murderers,False,False,6,36,6,12,60,760,light_combined
-char__choir_room,choir room,Choir Room,False,False,5,35,10,14,60,761,light_combined
-char__young_girl,young girl,Young Girl,False,False,5,35,10,14,60,762,light_combined
-char__waiting_priest,waiting priest,Waiting Priest,False,False,7,38,0,7,59,763,light_combined
-char__masked_torturer,masked torturer,Masked Torturer,False,False,7,37,1,8,59,764,light_combined
-char__jacob_s_son,jacob's son,Jacob'S Son,False,False,6,37,4,6,59,765,light_combined
-char__geese,geese,Geese,False,False,5,35,9,9,59,766,light_combined
-char__stray_cat,stray cat,Stray Cat,False,False,6,36,4,8,58,767,light_combined
-char__peacock,peacock,Peacock,False,False,5,35,8,8,58,768,light_combined
-char__janitor,janitor,Janitor,False,False,5,35,7,8,57,769,light_combined
-char__other_travelers_coming_to_see_the_geothermal_valley,other travelers coming to see the geothermal valley,Other Travelers Coming To See The Geothermal Valley,False,False,6,38,0,6,56,770,light_combined
-char__poet_who_recites_his_best_work,poet who recites his best work,Poet Who Recites His Best Work,False,False,6,38,0,6,56,771,light_combined
-char__rat_feasting_on_leftovers,rat feasting on leftovers,Rat Feasting On Leftovers,False,False,6,38,0,6,56,772,light_combined
-char__town_jester,town jester,Town Jester,False,False,6,36,2,6,56,773,light_combined
-char__large_creature,large creature,Large Creature,False,False,6,35,3,8,56,774,light_combined
-char__loving_wife,loving wife,Loving Wife,False,False,6,35,3,8,56,775,light_combined
-char__groundskeepers,groundskeepers,Groundskeepers,False,False,6,37,0,6,55,776,light_combined
-char__large_beast,large beast,Large Beast,False,False,5,35,5,8,55,777,light_combined
-char__scantily_clad_virgins,scantily clad virgins,Scantily Clad Virgins,False,False,5,35,5,6,55,778,light_combined
-char__water_nymph,water nymph,Water Nymph,False,False,5,35,5,6,55,779,light_combined
-char__groundskeeper_who_keeps_the_field_clean_and_the_grass_trimmed_for_the_archers_who_train,groundskeeper who keeps the field clean and the grass trimmed for the archers who train,Groundskeeper Who Keeps The Field Clean And The Grass Trimmed For The Archers Who Train,False,False,6,36,0,6,54,780,light_combined
-char__ghost_of_a_miner,ghost of a miner,Ghost Of A Miner,False,False,6,35,1,7,54,781,light_combined
-char__treasure_hunter,treasure hunter,Treasure Hunter,False,False,6,34,2,7,54,782,light_combined
-char__infant,infant,Infant,False,False,5,35,4,6,54,783,light_combined
-char__milk_man,milk man,Milk Man,False,False,5,28,11,8,54,784,light_combined
-char__monarch,monarch,Monarch,False,False,4,28,14,17,54,785,light_combined
-char__guards_assigned_to_defend_the_abandoned_looking_camp,guards assigned to defend the abandoned looking camp,Guards Assigned To Defend The Abandoned Looking Camp,False,False,6,35,0,6,53,786,light_combined
-char__knight_captain_or_general_that_may_oversee_the_guards,knight captain or general that may oversee the guards,Knight Captain Or General That May Oversee The Guards,False,False,6,35,0,6,53,787,light_combined
-char__old_one_eyed_owl,old one-eyed owl,Old One-Eyed Owl,False,False,6,35,0,6,53,788,light_combined
-char__priest_s_mistress,priest's mistress,Priest'S Mistress,False,False,6,35,0,6,53,789,light_combined
-char__troll_s_spouse,troll's spouse,Troll'S Spouse,False,False,6,35,0,6,53,790,light_combined
-char__trilobite,trilobite,Trilobite,False,False,5,35,3,5,53,791,light_combined
-char__adulterer,adulterer,Adulterer,False,False,5,31,7,9,53,792,light_combined
-char__powerful_but_aged_wizard,powerful but aged wizard,Powerful But Aged Wizard,False,False,6,34,0,6,52,793,light_combined
-char__master_at_arms,master at arms,Master At Arms,False,False,6,31,3,7,52,794,light_combined
-char__cavalry,cavalry,Cavalry,False,False,5,35,2,6,52,795,light_combined
-char__friend_of_the_princess,friend of the princess,Friend Of The Princess,False,False,5,35,2,5,52,796,light_combined
-char__rabid_wolf,rabid wolf,Rabid Wolf,False,False,5,35,2,6,52,797,light_combined
-char__unicorn_groomer,unicorn groomer,Unicorn Groomer,False,False,5,35,2,5,52,798,light_combined
-char__cleric,cleric,Cleric,False,False,4,28,12,10,52,799,light_combined
-char__gator,gator,Gator,False,False,4,28,12,8,52,800,light_combined
-char__maggot,maggot,Maggot,False,False,4,28,12,9,52,801,light_combined
-char__audience_member,audience member,Audience Member,False,False,6,32,1,6,51,802,light_combined
-char__sell_swords,sell swords,Sell Swords,False,False,6,31,2,8,51,803,light_combined
-char__curiosity_seekers,curiosity seekers,Curiosity Seekers,False,False,5,35,1,5,51,804,light_combined
-char__diver,diver,Diver,False,False,5,35,1,5,51,805,light_combined
-char__town_official,town official,Town Official,False,False,5,35,1,6,51,806,light_combined
-char__barkeep,barkeep,Barkeep,False,False,4,28,11,13,51,807,light_combined
-char__genie_from_a_lamp,genie from a lamp,Genie From A Lamp,False,False,6,32,0,6,50,808,light_combined
-char__queen_s_subject,queen's subject,Queen'S Subject,False,False,6,32,0,6,50,809,light_combined
-char__animal_such_as_a_cat,animal such as a cat,Animal Such As A Cat,False,False,5,35,0,5,50,810,light_combined
-char__lord_chamberlain,lord chamberlain,Lord Chamberlain,False,False,5,35,0,5,50,811,light_combined
-char__maester_who_helps_keep_the_documents_in_order,maester who helps keep the documents in order,Maester Who Helps Keep The Documents In Order,False,False,5,35,0,5,50,812,light_combined
-char__town_game_warden,town game warden,Town Game Warden,False,False,5,35,0,5,50,813,light_combined
-char__fletchers,fletchers,Fletchers,False,False,5,34,1,5,50,814,light_combined
-char__ghouls,ghouls,Ghouls,False,False,5,32,3,7,50,815,light_combined
-char__boat_captain,boat captain,Boat Captain,False,False,5,31,4,7,50,816,light_combined
-char__merperson,merperson,Merperson,False,False,5,29,6,5,50,817,light_combined
-char__dolphin,dolphin,Dolphin,False,False,4,22,16,12,50,818,light_combined
-char__lazy_snake,lazy snake,Lazy Snake,False,False,6,29,1,6,48,819,light_combined
-char__praying_mantis,praying mantis,Praying Mantis,False,False,5,26,7,7,48,820,light_combined
-char__entertainer,entertainer,Entertainer,False,False,5,24,9,13,48,821,light_combined
-char__his_queen,his queen,His Queen,False,False,4,28,8,12,48,822,light_combined
-char__village_youth,village youth,Village Youth,False,False,5,32,0,5,47,823,light_combined
-char__council_man,council man,Council Man,False,False,5,30,2,6,47,824,light_combined
-char__king_s_brother,king's brother,King'S Brother,False,False,5,29,3,8,47,825,light_combined
-char__attendant,attendant,Attendant,False,False,4,28,7,9,47,826,light_combined
-char__person_on_a_pilgrimage,person on a pilgrimage,Person On A Pilgrimage,False,False,5,31,0,5,46,827,light_combined
-char__civilian,civilian,Civilian,False,False,4,28,6,8,46,828,light_combined
-char__butt,butt,Butt,False,False,3,21,16,15,46,829,light_combined
-char__hero,hero,Hero,False,False,1,7,36,29,46,830,light_combined
-char__king_s_dog,king's dog,King'S Dog,False,False,5,30,0,5,45,831,light_combined
-char__town_baker_s_husband,town baker's husband,Town Baker'S Husband,False,False,5,29,1,5,45,832,light_combined
-char__bar_host,bar host,Bar Host,False,False,5,28,2,5,45,833,light_combined
-char__manikin,manikin,Manikin,False,False,4,28,5,5,45,834,light_combined
-char__talking_crab,talking crab,Talking Crab,False,False,4,28,5,7,45,835,light_combined
-char__king_s_guard,king's guard,King'S Guard,False,False,2,7,32,31,45,836,light_combined
-char__poor_subsistence_farmer,poor subsistence farmer,Poor Subsistence Farmer,False,False,5,29,0,5,44,837,light_combined
-char__rival_jeweler,rival jeweler,Rival Jeweler,False,False,5,29,0,5,44,838,light_combined
-char__royal_jester,royal jester,Royal Jester,False,False,4,28,4,7,44,839,light_combined
-char__village_chief,village chief,Village Chief,False,False,4,28,4,6,44,840,light_combined
-char__giant_spider,giant spider,Giant Spider,False,False,4,26,6,6,44,841,light_combined
-char__dragonfly,dragonfly,Dragonfly,False,False,4,25,7,8,44,842,light_combined
-char__gardener_pulling_weeds,gardener pulling weeds,Gardener Pulling Weeds,False,False,5,28,0,5,43,843,light_combined
-char__high_sorceress,high sorceress,High Sorceress,False,False,5,28,0,5,43,844,light_combined
-char__repentant_person,repentant person,Repentant Person,False,False,5,28,0,5,43,845,light_combined
-char__prison_guard,prison guard,Prison Guard,False,False,4,28,2,6,42,846,light_combined
-char__patient,patient,Patient,False,False,2,10,26,26,42,847,light_combined
-char__large_eel,large eel,Large Eel,False,False,4,28,1,4,41,848,light_combined
-char__pit_guardian,pit guardian,Pit Guardian,False,False,4,28,1,4,41,849,light_combined
-char__scullions,scullions,Scullions,False,False,4,28,1,4,41,850,light_combined
-char__sword_maker,sword-maker,Sword-Maker,False,False,4,28,1,4,41,851,light_combined
-char__troubadours,troubadours,Troubadours,False,False,4,28,1,5,41,852,light_combined
-char__another_prisoner,another prisoner,Another Prisoner,False,False,5,24,1,6,40,853,light_combined
-char__abbess,abbess,Abbess,False,False,4,28,0,4,40,854,light_combined
-char__beautiful_calico_cat_napping_beside_the_coat_rack,beautiful calico cat napping beside the coat rack,Beautiful Calico Cat Napping Beside The Coat Rack,False,False,4,28,0,4,40,855,light_combined
-char__demonic_hound,demonic hound,Demonic Hound,False,False,4,28,0,4,40,856,light_combined
-char__dragon_rider,dragon rider,Dragon Rider,False,False,4,28,0,4,40,857,light_combined
-char__eccentric_astronomer_who_lives_in_the_tower,eccentric astronomer who lives in the tower,Eccentric Astronomer Who Lives In The Tower,False,False,4,28,0,4,40,858,light_combined
-char__enemy_king,enemy king,Enemy King,False,False,4,28,0,4,40,859,light_combined
-char__give_the_form_of_only_the_word,give the form of only the word,Give The Form Of Only The Word,False,False,4,28,0,4,40,860,light_combined
-char__laborsmen,laborsmen,Laborsmen,False,False,4,28,0,4,40,861,light_combined
-char__large_mosquito,large mosquito,Large Mosquito,False,False,4,28,0,4,40,862,light_combined
-char__shape_shifting_cat,shape-shifting cat,Shape-Shifting Cat,False,False,4,28,0,4,40,863,light_combined
-char__skeleton_assistant,skeleton assistant,Skeleton Assistant,False,False,4,28,0,4,40,864,light_combined
-char__tour_guides,tour guides,Tour Guides,False,False,4,28,0,4,40,865,light_combined
-char__turtle_can_t_escape_fast_enough_to_avoid_being_eaten,turtle can't escape fast enough to avoid being eaten,Turtle Can'T Escape Fast Enough To Avoid Being Eaten,False,False,4,28,0,4,40,866,light_combined
-char__woman_gathering_supplies,woman gathering supplies,Woman Gathering Supplies,False,False,4,28,0,4,40,867,light_combined
-char__cut_throat,cut throat,Cut Throat,False,False,4,26,2,5,40,868,light_combined
-char__black_stray_cat,black stray cat,Black Stray Cat,False,False,4,27,0,4,39,869,light_combined
-char__half_wild_cat_chasing_away_mice,half-wild cat chasing away mice,Half-Wild Cat Chasing Away Mice,False,False,4,27,0,4,39,870,light_combined
-char__poorer_citizens_of_the_empire,poorer citizens of the empire,Poorer Citizens Of The Empire,False,False,4,27,0,4,39,871,light_combined
-char__lady_of_the_hour,lady of the hour,Lady Of The Hour,False,False,4,25,2,6,39,872,light_combined
-char__hobbit,hobbit,Hobbit,False,False,4,21,6,5,39,873,light_combined
-char__friend_of_farmer,friend of farmer,Friend Of Farmer,False,False,4,25,0,5,37,874,light_combined
-char__napping_mouse,napping mouse,Napping Mouse,False,False,4,25,0,4,37,875,light_combined
-char__stable_caretaker,stable caretaker,Stable Caretaker,False,False,4,25,0,4,37,876,light_combined
-char__drunks,drunks,Drunks,False,False,3,21,7,8,37,877,light_combined
-char__teachers,teachers,Teachers,False,False,3,21,7,9,37,878,light_combined
-char__churchgoer,churchgoer,Churchgoer,False,False,4,23,1,5,36,879,light_combined
-char__spirits_of_our_ancestors,spirits of our ancestors,Spirits Of Our Ancestors,False,False,4,22,2,5,36,880,light_combined
-char__undead_warrior,undead warrior,Undead Warrior,False,False,3,21,6,6,36,881,light_combined
-char__men_and_women_working,men and women working,Men And Women Working,False,False,4,23,0,4,35,882,light_combined
-char__farm_hand,farm hand,Farm Hand,False,False,3,21,4,6,34,883,light_combined
-char__lumberjack,lumberjack,Lumberjack,False,False,3,21,4,6,34,884,light_combined
-char__pit_hound,pit hound,Pit Hound,False,False,4,21,0,4,33,885,light_combined
-char__prisoner_of_the_troll,prisoner of the troll,Prisoner Of The Troll,False,False,4,21,0,4,33,886,light_combined
-char__ice_king,ice king,Ice King,False,False,3,21,2,3,32,887,light_combined
-char__scalawag,scalawag,Scalawag,False,False,3,21,2,3,32,888,light_combined
-char__shoe_shiner,shoe shiner,Shoe Shiner,False,False,3,21,2,4,32,889,light_combined
-char__battle_master,battle master,Battle Master,False,False,4,18,1,4,31,890,light_combined
-char__seaman,seaman,Seaman,False,False,4,16,3,5,31,891,light_combined
-char__minstrel,minstrel,Minstrel,False,False,3,21,1,4,31,892,light_combined
-char__mercenary,mercenary,Mercenary,False,False,2,14,11,10,31,893,light_combined
-char__town_baker_s_child,town baker's child,Town Baker'S Child,False,False,4,18,0,4,30,894,light_combined
-char__band_member,band member,Band Member,False,False,3,21,0,3,30,895,light_combined
-char__cowardly_young_man_in_armour,cowardly young man in armour,Cowardly Young Man In Armour,False,False,3,21,0,3,30,896,light_combined
-char__cypher_the_dragon,cypher the dragon,Cypher The Dragon,False,False,3,21,0,3,30,897,light_combined
-char__king_visiting_the_shipyard,king visiting the shipyard,King Visiting The Shipyard,False,False,3,21,0,3,30,898,light_combined
-char__outside_attackers,outside attackers,Outside Attackers,False,False,3,21,0,3,30,899,light_combined
-char__round_man_with_a_bushy_mustache,round man with a bushy mustache,Round Man With A Bushy Mustache,False,False,3,21,0,3,30,900,light_combined
-char__sioux_chef,sioux chef,Sioux Chef,False,False,3,21,0,3,30,901,light_combined
-char__property_owner,property owner,Property Owner,False,False,3,20,0,3,29,902,light_combined
-char__adults,adults,Adults,False,False,2,14,9,11,29,903,light_combined
-char__king_omako_iii,king omako iii,King Omako Iii,False,False,4,16,0,4,28,904,light_combined
-char__serving_boy,serving boy,Serving Boy,False,False,3,18,1,4,28,905,light_combined
-char__paladin,paladin,Paladin,False,False,2,14,8,6,28,906,light_combined
-char__executioners,executioners,Executioners,False,False,4,14,0,4,26,907,light_combined
-char__bears_cubs_it_fights_to_protect,bears cubs it fights to protect,Bears Cubs It Fights To Protect,False,False,3,17,0,3,26,908,light_combined
-char__foolhardy_adventurer_who_came_to_check_out_the_ruins,foolhardy adventurer who came to check out the ruins,Foolhardy Adventurer Who Came To Check Out The Ruins,False,False,3,17,0,3,26,909,light_combined
-char__crocodiles,crocodiles,Crocodiles,False,False,3,15,2,5,26,910,light_combined
-char__frightened_rat,frightened rat,Frightened Rat,False,False,3,16,0,3,25,911,light_combined
-char__garden_dog,garden dog,Garden Dog,False,False,3,16,0,3,25,912,light_combined
-char__horse_thieves,horse thieves,Horse Thieves,False,False,3,16,0,3,25,913,light_combined
-char__damage_dealer,damage dealer,Damage Dealer,False,False,3,15,0,3,24,914,light_combined
-char__mountain_goat,mountain goat,Mountain Goat,False,False,3,14,1,3,24,915,light_combined
-char__anchovy,anchovy,Anchovy,False,False,2,14,4,2,24,916,light_combined
-char__therapist,therapist,Therapist,False,False,2,14,4,4,24,917,light_combined
-char__old_person,old person,Old Person,False,False,2,14,3,5,23,918,light_combined
-char__retainer,retainer,Retainer,False,False,2,14,3,4,23,919,light_combined
-char__towns_person,towns person,Towns Person,False,False,2,14,3,5,23,920,light_combined
-char__raven,raven,Raven,False,False,2,12,5,7,23,921,light_combined
-char__king_s_child,king's child,King'S Child,False,False,2,14,2,4,22,922,light_combined
-char__music_paper,music paper,Music Paper,False,False,2,14,2,2,22,923,light_combined
-char__magical_being,magical being,Magical Being,False,False,2,8,8,8,22,924,light_combined
-char__head_monk,head monk,Head Monk,False,False,2,14,1,3,21,925,light_combined
-char__rich_king,rich king,Rich King,False,False,2,14,1,3,21,926,light_combined
-char__sick_person,sick person,Sick Person,False,False,2,14,1,3,21,927,light_combined
-char__ancient_savage_chieftan,ancient savage chieftan,Ancient Savage Chieftan,False,False,2,14,0,2,20,928,light_combined
-char__crypt_keeper,crypt keeper,Crypt Keeper,False,False,2,14,0,2,20,929,light_combined
-char__king_s_treasurer,king's treasurer,King'S Treasurer,False,False,2,14,0,2,20,930,light_combined
-char__mud_golem,mud golem,Mud Golem,False,False,2,14,0,2,20,931,light_combined
-char__poker_players,poker players,Poker Players,False,False,2,14,0,2,20,932,light_combined
-char__turtle_in_a_cage_filled_with_grapes,turtle in a cage filled with grapes,Turtle In A Cage Filled With Grapes,False,False,2,14,0,2,20,933,light_combined
-char__gravekeeper,gravekeeper,Gravekeeper,False,False,2,13,1,2,20,934,light_combined
-char__fauna,fauna,Fauna,False,False,2,8,6,6,20,935,light_combined
-char__server,server,Server,False,False,2,7,5,5,18,936,light_combined
-char__rich_man,rich man,Rich Man,False,False,1,7,8,7,18,937,light_combined
-char__court_treasurer,court treasurer,Court Treasurer,False,False,2,11,0,2,17,938,light_combined
-char__trainer,trainer,Trainer,False,False,1,7,7,5,17,939,light_combined
-char__christian_villagers,christian villagers,Christian Villagers,False,False,2,9,0,2,15,940,light_combined
-char__dirty_stone,dirty stone,Dirty Stone,False,False,2,7,0,2,13,941,light_combined
-char__goner,goner,Goner,False,False,1,7,3,3,13,942,light_combined
-char__general_defending_the_tower,general defending the tower,General Defending The Tower,False,False,1,7,0,1,10,943,light_combined
-char__louse,louse,Louse,False,False,1,7,0,1,10,944,light_combined
-char__pair_of_cheerful_wrens_nesting_under_the_eaves,pair of cheerful wrens nesting under the eaves,Pair Of Cheerful Wrens Nesting Under The Eaves,False,False,1,7,0,1,10,945,light_combined
-char__piano_player,piano player,Piano Player,False,False,1,7,0,1,10,946,light_combined
-char__publican,publican,Publican,False,False,1,7,0,1,10,947,light_combined
-char__sentry,sentry,Sentry,False,False,1,7,0,1,10,948,light_combined
-char__shaddy_lady,shaddy lady,Shaddy Lady,False,False,1,7,0,1,10,949,light_combined
-char__snow_guards,snow guards,Snow Guards,False,False,1,7,0,1,10,950,light_combined
-char__water_monster,water monster,Water Monster,False,False,1,7,0,1,10,951,light_combined
-char__starfish,starfish,Starfish,False,False,1,6,1,1,10,952,light_combined
-char__cave_troll,cave troll,Cave Troll,False,False,1,2,5,4,10,953,light_combined
-char__town_doctor,town doctor,Town Doctor,False,False,1,4,1,2,8,954,light_combined
-char__dead_creature,dead creature,Dead Creature,False,False,1,2,1,2,6,955,light_combined
+character_id,normalized_name,canonical_name,is_target_agent_name,is_generic_name,appearance_count,speaker_turn_count,mention_count,unique_episode_count,total_score,overall_rank_in_target_subset,source
+char__king,king,King,True,False,332,2117,447,332,3560,1,top_king_persona_subset
+char__queen,queen,Queen,False,False,44,281,143,101,556,2,top_king_persona_subset
+char__servant,servant,Servant,False,True,33,188,53,45,340,3,top_king_persona_subset
+char__maid,maid,Maid,False,False,17,112,30,24,193,4,top_king_persona_subset
+char__guard,guard,Guard,False,True,15,96,52,36,193,5,top_king_persona_subset
+char__knight,knight,Knight,False,False,13,90,33,20,162,6,top_king_persona_subset
+char__people,people,People,False,True,3,16,109,65,134,7,top_king_persona_subset
+char__brother,brother,Brother,False,False,10,70,33,21,133,8,top_king_persona_subset
+char__townperson,townperson,Townperson,False,False,14,88,2,14,132,9,top_king_persona_subset
+char__guest,guest,Guest,False,True,12,80,5,12,121,10,top_king_persona_subset
+char__merchant,merchant,Merchant,False,False,9,63,20,15,110,11,top_king_persona_subset
+char__person,person,Person,False,True,10,61,13,19,104,12,top_king_persona_subset
+char__princess,princess,Princess,False,False,9,63,12,14,102,13,top_king_persona_subset
+char__blacksmith,blacksmith,Blacksmith,False,False,8,51,24,17,99,14,top_king_persona_subset
+char__lord,lord,Lord,False,True,0,0,97,46,97,15,top_king_persona_subset
+char__man,man,Man,False,True,2,14,71,57,91,16,top_king_persona_subset
+char__chef,chef,Chef,False,False,5,35,25,18,75,17,top_king_persona_subset
+char__noble,noble,Noble,False,False,6,42,13,17,73,18,top_king_persona_subset
+char__subject,subject,Subject,False,False,7,39,12,12,72,19,top_king_persona_subset
+char__family,family,Family,False,True,0,0,72,45,72,20,top_king_persona_subset
+char__royal,royal,Royal,False,False,0,0,72,55,72,21,top_king_persona_subset
+char__father,father,Father,False,True,0,0,71,35,71,22,top_king_persona_subset
+char__diplomat,diplomat,Diplomat,False,False,6,42,5,8,65,23,top_king_persona_subset
+char__dragon,dragon,Dragon,False,False,3,19,32,13,60,24,top_king_persona_subset
+char__guards,guards,Guards,False,False,0,0,60,44,60,25,top_king_persona_subset
+char__officer,officer,Officer,False,False,6,38,3,6,59,26,top_king_persona_subset
+char__spider,spider,Spider,False,False,5,35,9,6,59,27,top_king_persona_subset
+char__enemy,enemy,Enemy,False,False,4,28,14,11,54,28,top_king_persona_subset
+char__child,child,Child,False,True,3,18,27,19,54,29,top_king_persona_subset
+char__kings,kings,Kings,False,False,6,30,4,9,52,30,top_king_persona_subset
+char__thing,thing,Thing,False,False,0,0,48,46,48,31,top_king_persona_subset
+char__murderer,murderer,Murderer,False,False,5,28,4,5,47,32,top_king_persona_subset
+char__fool,fool,Fool,False,False,2,11,30,21,47,33,top_king_persona_subset
+char__his_father,his father,His Father,False,False,4,28,3,6,43,34,top_king_persona_subset
+char__royal_family,royal family,Royal Family,False,False,4,24,6,10,42,35,top_king_persona_subset
+char__wife,wife,Wife,False,True,0,0,42,28,42,36,top_king_persona_subset
+char__priest,priest,Priest,False,False,3,20,11,11,40,37,top_king_persona_subset
+char__son,son,Son,False,False,0,0,39,26,39,38,top_king_persona_subset
+char__rabbit,rabbit,Rabbit,False,False,2,14,17,4,37,39,top_king_persona_subset
+char__visitor,visitor,Visitor,False,True,3,21,4,4,34,40,top_king_persona_subset
+char__thief,thief,Thief,False,False,3,9,16,8,34,41,top_king_persona_subset
+char__battle,battle,Battle,False,False,0,0,34,24,34,42,top_king_persona_subset
+char__prisoner,prisoner,Prisoner,False,False,4,15,5,9,32,43,top_king_persona_subset
+char__mother,mother,Mother,False,True,0,0,32,16,32,44,top_king_persona_subset
+char__debtor,debtor,Debtor,False,False,3,21,1,3,31,45,top_king_persona_subset
+char__pheasant,pheasant,Pheasant,False,False,2,12,11,5,29,46,top_king_persona_subset
+char__customer,customer,Customer,False,False,3,18,1,3,28,47,top_king_persona_subset
+char__priests,priests,Priests,False,False,3,18,1,4,28,48,top_king_persona_subset
+char__villager,villager,Villager,False,True,2,14,6,4,26,49,top_king_persona_subset
+char__dogs,dogs,Dogs,False,False,2,14,5,6,25,50,top_king_persona_subset
+char__prince,prince,Prince,False,False,1,7,14,11,24,51,top_king_persona_subset
+char__apothecary,apothecary,Apothecary,False,False,0,0,24,10,24,52,top_king_persona_subset
+char__friend,friend,Friend,False,True,0,0,24,13,24,53,top_king_persona_subset
+char__animal,animal,Animal,False,True,2,9,8,6,23,54,top_king_persona_subset
+char__fight,fight,Fight,False,False,0,0,23,19,23,55,top_king_persona_subset
+char__soldier,soldier,Soldier,False,False,2,14,2,2,22,56,top_king_persona_subset
+char__horse,horse,Horse,False,True,1,7,11,7,21,57,top_king_persona_subset
+char__daughter,daughter,Daughter,False,False,0,0,21,16,21,58,top_king_persona_subset
+char__woman,woman,Woman,False,True,0,0,21,18,21,59,top_king_persona_subset
+char__courtier,courtier,Courtier,False,False,2,14,0,2,20,60,top_king_persona_subset
+char__young_student_reading_a_book_beneath_a_dogwood_tree,young student reading a book beneath a dogwood tree,Young Student Reading A Book Beneath A Dogwood Tree,False,False,2,14,0,2,20,61,top_king_persona_subset
+char__children,children,Children,False,False,0,0,20,17,20,62,top_king_persona_subset
+char__no_one,no one,No One,False,False,0,0,18,16,18,63,top_king_persona_subset
+char__army,army,Army,False,False,0,0,17,12,17,64,top_king_persona_subset
+char__god,god,God,False,False,0,0,16,13,16,65,top_king_persona_subset
+char__subjects,subjects,Subjects,False,False,0,0,15,11,15,66,top_king_persona_subset
+char__prior,prior,Prior,False,False,1,7,4,4,14,67,top_king_persona_subset
+char__chambermaid,chambermaid,Chambermaid,False,False,0,0,14,8,14,68,top_king_persona_subset
+char__king_of,king of,King Of,False,False,0,0,14,14,14,69,top_king_persona_subset
+char__scholar,scholar,Scholar,False,False,1,7,3,2,13,70,top_king_persona_subset
+char__boy,boy,Boy,False,True,0,0,13,12,13,71,top_king_persona_subset
+char__lady,lady,Lady,False,True,0,0,13,11,13,72,top_king_persona_subset
+char__soldiers,soldiers,Soldiers,False,False,0,0,13,8,13,73,top_king_persona_subset
+char__rat,rat,Rat,False,True,1,7,2,2,12,74,top_king_persona_subset
+char__spiders,spiders,Spiders,False,False,1,7,2,2,12,75,top_king_persona_subset
+char__hunter,hunter,Hunter,False,False,1,7,1,2,11,76,top_king_persona_subset
+char__lady_in_waiting,lady in waiting,Lady In Waiting,False,False,1,7,1,2,11,77,top_king_persona_subset
+char__parishioner,parishioner,Parishioner,False,False,1,7,1,1,11,78,top_king_persona_subset
+char__patron,patron,Patron,False,False,1,7,1,1,11,79,top_king_persona_subset
+char__trader,trader,Trader,False,False,1,7,1,1,11,80,top_king_persona_subset
+char__dog,dog,Dog,False,False,0,0,11,4,11,81,top_king_persona_subset
+char__peasant,peasant,Peasant,False,True,0,0,11,9,11,82,top_king_persona_subset
+char__village,village,Village,False,False,0,0,11,9,11,83,top_king_persona_subset
+char__drunks,drunks,Drunks,False,False,1,7,0,1,10,84,top_king_persona_subset
+char__family_member,family member,Family Member,False,False,1,7,0,1,10,85,top_king_persona_subset
+char__gardener_pulling_weeds,gardener pulling weeds,Gardener Pulling Weeds,False,False,1,7,0,1,10,86,top_king_persona_subset
+char__goblin_king_s_bartender,goblin king's bartender,Goblin King'S Bartender,False,False,1,7,0,1,10,87,top_king_persona_subset
+char__helpers,helpers,Helpers,False,False,1,7,0,1,10,88,top_king_persona_subset
+char__mightiest_warriors,mightiest warriors,Mightiest Warriors,False,False,1,7,0,1,10,89,top_king_persona_subset
+char__mystical_dragon,mystical dragon,Mystical Dragon,False,False,1,7,0,1,10,90,top_king_persona_subset
+char__proprietor,proprietor,Proprietor,False,False,1,7,0,1,10,91,top_king_persona_subset
+char__sioux_chef,sioux chef,Sioux Chef,False,False,1,7,0,1,10,92,top_king_persona_subset
+char__tern,tern,Tern,False,False,1,7,0,1,10,93,top_king_persona_subset
+char__traders,traders,Traders,False,False,1,7,0,1,10,94,top_king_persona_subset
+char__waiting_priest,waiting priest,Waiting Priest,False,False,1,7,0,1,10,95,top_king_persona_subset
+char__wild_boar,wild boar,Wild Boar,False,False,1,7,0,1,10,96,top_king_persona_subset
+char__worshipper,worshipper,Worshipper,False,False,1,7,0,1,10,97,top_king_persona_subset
+char__light,light,Light,False,False,0,0,9,9,9,98,top_king_persona_subset
+char__table,table,Table,False,False,0,0,9,8,9,99,top_king_persona_subset
+char__cook,cook,Cook,False,False,0,0,8,7,8,100,top_king_persona_subset
+char__friends,friends,Friends,False,False,0,0,8,7,8,101,top_king_persona_subset
+char__others,others,Others,False,False,0,0,8,7,8,102,top_king_persona_subset
+char__royalty,royalty,Royalty,False,False,0,0,8,8,8,103,top_king_persona_subset
+char__sons,sons,Sons,False,False,0,0,8,7,8,104,top_king_persona_subset
+char__staff,staff,Staff,False,False,0,0,8,4,8,105,top_king_persona_subset
+char__villagers,villagers,Villagers,False,False,0,0,8,5,8,106,top_king_persona_subset
+char__gods,gods,Gods,False,False,0,0,7,6,7,107,top_king_persona_subset
+char__jester,jester,Jester,False,False,0,0,7,6,7,108,top_king_persona_subset
+char__magician,magician,Magician,False,False,0,0,7,2,7,109,top_king_persona_subset
+char__old_man,old man,Old Man,False,False,0,0,7,6,7,110,top_king_persona_subset
+char__slave,slave,Slave,False,False,0,0,7,5,7,111,top_king_persona_subset
+char__soul,soul,Soul,False,False,0,0,7,5,7,112,top_king_persona_subset
+char__witch,witch,Witch,False,False,0,0,7,2,7,113,top_king_persona_subset
+char__bear,bear,Bear,False,False,0,0,6,4,6,114,top_king_persona_subset
+char__beast,beast,Beast,False,False,0,0,6,5,6,115,top_king_persona_subset
+char__fly,fly,Fly,False,False,0,0,6,5,6,116,top_king_persona_subset
+char__general,general,General,False,False,0,0,6,4,6,117,top_king_persona_subset
+char__girl,girl,Girl,False,True,0,0,6,6,6,118,top_king_persona_subset
+char__husband,husband,Husband,False,True,0,0,6,4,6,119,top_king_persona_subset
+char__leader,leader,Leader,False,False,0,0,6,6,6,120,top_king_persona_subset
+char__plants,plants,Plants,False,False,0,0,6,1,6,121,top_king_persona_subset
+char__potion,potion,Potion,False,False,0,0,6,5,6,122,top_king_persona_subset
+char__queen_s,queen's,Queen'S,False,False,0,0,6,5,6,123,top_king_persona_subset
+char__sister,sister,Sister,False,False,0,0,6,3,6,124,top_king_persona_subset
+char__bridge,bridge,Bridge,False,False,0,0,5,2,5,125,top_king_persona_subset
+char__citizen,citizen,Citizen,False,False,0,0,5,4,5,126,top_king_persona_subset
+char__drunk,drunk,Drunk,False,False,0,0,5,5,5,127,top_king_persona_subset
+char__royal_guard,royal guard,Royal Guard,False,False,0,0,5,3,5,128,top_king_persona_subset
+char__spirits,spirits,Spirits,False,False,0,0,5,3,5,129,top_king_persona_subset
+char__wall,wall,Wall,False,False,0,0,5,5,5,130,top_king_persona_subset
+char__warrior,warrior,Warrior,False,False,0,0,5,5,5,131,top_king_persona_subset
+char__wizard,wizard,Wizard,False,False,0,0,5,3,5,132,top_king_persona_subset
+char__captain,captain,Captain,False,False,0,0,4,1,4,133,top_king_persona_subset
+char__chicken,chicken,Chicken,False,False,0,0,4,3,4,134,top_king_persona_subset
+char__cooks,cooks,Cooks,False,False,0,0,4,3,4,135,top_king_persona_subset
+char__fairy,fairy,Fairy,False,False,0,0,4,2,4,136,top_king_persona_subset
+char__farmer,farmer,Farmer,False,True,0,0,4,3,4,137,top_king_persona_subset
+char__gardener,gardener,Gardener,False,False,0,0,4,3,4,138,top_king_persona_subset
+char__orc,orc,Orc,False,False,0,0,4,2,4,139,top_king_persona_subset
+char__owner,owner,Owner,False,False,0,0,4,4,4,140,top_king_persona_subset
+char__townsperson,townsperson,Townsperson,False,False,0,0,4,4,4,141,top_king_persona_subset
+char__executioners,executioners,Executioners,False,False,1,0,0,1,3,142,top_king_persona_subset
+char__staircase,staircase,Staircase,False,False,1,0,0,1,3,143,top_king_persona_subset
+char__artist,artist,Artist,False,False,0,0,3,2,3,144,top_king_persona_subset
+char__bandit,bandit,Bandit,False,False,0,0,3,2,3,145,top_king_persona_subset
+char__bird,bird,Bird,False,True,0,0,3,3,3,146,top_king_persona_subset
+char__boar,boar,Boar,False,False,0,0,3,2,3,147,top_king_persona_subset
+char__brave_knight,brave knight,Brave Knight,False,False,0,0,3,3,3,148,top_king_persona_subset
+char__chamber_maid,chamber maid,Chamber Maid,False,False,0,0,3,1,3,149,top_king_persona_subset
+char__dark_lord,dark lord,Dark Lord,False,False,0,0,3,1,3,150,top_king_persona_subset
+char__families,families,Families,False,False,0,0,3,3,3,151,top_king_persona_subset
+char__gather,gather,Gather,False,False,0,0,3,3,3,152,top_king_persona_subset
+char__grandfather,grandfather,Grandfather,False,False,0,0,3,3,3,153,top_king_persona_subset
+char__high_priest,high priest,High Priest,False,False,0,0,3,3,3,154,top_king_persona_subset
+char__ladies,ladies,Ladies,False,False,0,0,3,3,3,155,top_king_persona_subset
+char__local,local,Local,False,False,0,0,3,2,3,156,top_king_persona_subset
+char__member,member,Member,False,False,0,0,3,3,3,157,top_king_persona_subset
+char__mistress,mistress,Mistress,False,False,0,0,3,3,3,158,top_king_persona_subset
+char__party,party,Party,False,False,0,0,3,3,3,159,top_king_persona_subset
+char__sacrifice,sacrifice,Sacrifice,False,False,0,0,3,3,3,160,top_king_persona_subset
+char__turkey,turkey,Turkey,False,False,0,0,3,2,3,161,top_king_persona_subset
+char__wizards,wizards,Wizards,False,False,0,0,3,3,3,162,top_king_persona_subset
+char__young_boy,young boy,Young Boy,False,False,0,0,3,3,3,163,top_king_persona_subset
+char__young_man,young man,Young Man,False,False,0,0,3,2,3,164,top_king_persona_subset
+char__assassin,assassin,Assassin,False,False,0,0,2,2,2,165,top_king_persona_subset
+char__baby,baby,Baby,False,False,0,0,2,1,2,166,top_king_persona_subset
+char__court_jester,court jester,Court Jester,False,False,0,0,2,2,2,167,top_king_persona_subset
+char__cow,cow,Cow,False,False,0,0,2,2,2,168,top_king_persona_subset
+char__deer,deer,Deer,False,False,0,0,2,2,2,169,top_king_persona_subset
+char__doctor,doctor,Doctor,False,False,0,0,2,2,2,170,top_king_persona_subset
+char__dove,dove,Dove,False,False,0,0,2,2,2,171,top_king_persona_subset
+char__faerie,faerie,Faerie,False,False,0,0,2,2,2,172,top_king_persona_subset
+char__fighter,fighter,Fighter,False,False,0,0,2,2,2,173,top_king_persona_subset
+char__footman,footman,Footman,False,False,0,0,2,2,2,174,top_king_persona_subset
+char__insect,insect,Insect,False,False,0,0,2,2,2,175,top_king_persona_subset
+char__insects,insects,Insects,False,False,0,0,2,2,2,176,top_king_persona_subset
+char__king_s_guard,king's guard,King'S Guard,False,False,0,0,2,2,2,177,top_king_persona_subset
+char__mad_king,mad king,Mad King,False,False,0,0,2,1,2,178,top_king_persona_subset
+char__messenger,messenger,Messenger,False,False,0,0,2,2,2,179,top_king_persona_subset
+char__pet,pet,Pet,False,False,0,0,2,1,2,180,top_king_persona_subset
+char__pig,pig,Pig,False,False,0,0,2,2,2,181,top_king_persona_subset
+char__prisoners,prisoners,Prisoners,False,False,0,0,2,2,2,182,top_king_persona_subset
+char__scientist,scientist,Scientist,False,False,0,0,2,2,2,183,top_king_persona_subset
+char__tower,tower,Tower,False,False,0,0,2,2,2,184,top_king_persona_subset
+char__traitor,traitor,Traitor,False,False,0,0,2,2,2,185,top_king_persona_subset
+char__troll,troll,Troll,False,False,0,0,2,1,2,186,top_king_persona_subset
+char__worms,worms,Worms,False,False,0,0,2,1,2,187,top_king_persona_subset
+char__adulterer,adulterer,Adulterer,False,False,0,0,1,1,1,188,top_king_persona_subset
+char__advisor,advisor,Advisor,False,False,0,0,1,1,1,189,top_king_persona_subset
+char__apprentice,apprentice,Apprentice,False,False,0,0,1,1,1,190,top_king_persona_subset
+char__artists,artists,Artists,False,False,0,0,1,1,1,191,top_king_persona_subset
+char__assistant,assistant,Assistant,False,False,0,0,1,1,1,192,top_king_persona_subset
+char__attendant,attendant,Attendant,False,False,0,0,1,1,1,193,top_king_persona_subset
+char__beaver,beaver,Beaver,False,False,0,0,1,1,1,194,top_king_persona_subset
+char__bedroom,bedroom,Bedroom,False,False,0,0,1,1,1,195,top_king_persona_subset
+char__blacksmiths,blacksmiths,Blacksmiths,False,False,0,0,1,1,1,196,top_king_persona_subset
+char__butler,butler,Butler,False,False,0,0,1,1,1,197,top_king_persona_subset
+char__captive,captive,Captive,False,False,0,0,1,1,1,198,top_king_persona_subset
+char__cat,cat,Cat,False,False,0,0,1,1,1,199,top_king_persona_subset
+char__character,character,Character,False,False,0,0,1,1,1,200,top_king_persona_subset
+char__chief,chief,Chief,False,False,0,0,1,1,1,201,top_king_persona_subset
+char__companion,companion,Companion,False,False,0,0,1,1,1,202,top_king_persona_subset
+char__court_wizard,court wizard,Court Wizard,False,False,0,0,1,1,1,203,top_king_persona_subset
+char__craftsman,craftsman,Craftsman,False,False,0,0,1,1,1,204,top_king_persona_subset
+char__creature,creature,Creature,False,False,0,0,1,1,1,205,top_king_persona_subset
+char__criminal,criminal,Criminal,False,False,0,0,1,1,1,206,top_king_persona_subset
+char__crow,crow,Crow,False,False,0,0,1,1,1,207,top_king_persona_subset
+char__cut_throat,cut throat,Cut Throat,False,False,0,0,1,1,1,208,top_king_persona_subset
+char__demon,demon,Demon,False,False,0,0,1,1,1,209,top_king_persona_subset
+char__devil,devil,Devil,False,False,0,0,1,1,1,210,top_king_persona_subset
+char__donkey,donkey,Donkey,False,False,0,0,1,1,1,211,top_king_persona_subset
+char__drunkard,drunkard,Drunkard,False,False,0,0,1,1,1,212,top_king_persona_subset
+char__faeries,faeries,Faeries,False,False,0,0,1,1,1,213,top_king_persona_subset
+char__faery,faery,Faery,False,False,0,0,1,1,1,214,top_king_persona_subset
+char__farmers,farmers,Farmers,False,False,0,0,1,1,1,215,top_king_persona_subset
+char__figure,figure,Figure,False,False,0,0,1,1,1,216,top_king_persona_subset
+char__fish,fish,Fish,False,True,0,0,1,1,1,217,top_king_persona_subset
+char__fishermen,fishermen,Fishermen,False,False,0,0,1,1,1,218,top_king_persona_subset
+char__flies,flies,Flies,False,False,0,0,1,1,1,219,top_king_persona_subset
+char__follower,follower,Follower,False,False,0,0,1,1,1,220,top_king_persona_subset
+char__frog,frog,Frog,False,False,0,0,1,1,1,221,top_king_persona_subset
+char__goddess,goddess,Goddess,False,False,0,0,1,1,1,222,top_king_persona_subset
+char__grandmother,grandmother,Grandmother,False,False,0,0,1,1,1,223,top_king_persona_subset
+char__groom,groom,Groom,False,False,0,0,1,1,1,224,top_king_persona_subset
+char__handmaid,handmaid,Handmaid,False,False,0,0,1,1,1,225,top_king_persona_subset
+char__high_priestess,high priestess,High Priestess,False,False,0,0,1,1,1,226,top_king_persona_subset
+char__his_wife,his wife,His Wife,False,False,0,0,1,1,1,227,top_king_persona_subset
+char__hound,hound,Hound,False,False,0,0,1,1,1,228,top_king_persona_subset
+char__individual,individual,Individual,False,False,0,0,1,1,1,229,top_king_persona_subset
+char__judge,judge,Judge,False,False,0,0,1,1,1,230,top_king_persona_subset
+char__kid,kid,Kid,False,False,0,0,1,1,1,231,top_king_persona_subset
+char__librarian,librarian,Librarian,False,False,0,0,1,1,1,232,top_king_persona_subset
+char__lizard,lizard,Lizard,False,False,0,0,1,1,1,233,top_king_persona_subset
+char__loved_ones,loved ones,Loved Ones,False,False,0,0,1,1,1,234,top_king_persona_subset
+char__maester,maester,Maester,False,False,0,0,1,1,1,235,top_king_persona_subset
+char__mage,mage,Mage,False,False,0,0,1,1,1,236,top_king_persona_subset
+char__mice,mice,Mice,False,False,0,0,1,1,1,237,top_king_persona_subset
+char__miner,miner,Miner,False,False,0,0,1,1,1,238,top_king_persona_subset
+char__minister,minister,Minister,False,False,0,0,1,1,1,239,top_king_persona_subset
+char__monster,monster,Monster,False,False,0,0,1,1,1,240,top_king_persona_subset
+char__mouse,mouse,Mouse,False,False,0,0,1,1,1,241,top_king_persona_subset
+char__nobleman,nobleman,Nobleman,False,False,0,0,1,1,1,242,top_king_persona_subset
+char__nobles,nobles,Nobles,False,False,0,0,1,1,1,243,top_king_persona_subset
+char__old_woman,old woman,Old Woman,False,False,0,0,1,1,1,244,top_king_persona_subset
+char__painter,painter,Painter,False,False,0,0,1,1,1,245,top_king_persona_subset
+char__parent,parent,Parent,False,False,0,0,1,1,1,246,top_king_persona_subset
+char__patient,patient,Patient,False,False,0,0,1,1,1,247,top_king_persona_subset
+char__priestess,priestess,Priestess,False,False,0,0,1,1,1,248,top_king_persona_subset
+char__retainer,retainer,Retainer,False,False,0,0,1,1,1,249,top_king_persona_subset
+char__rival,rival,Rival,False,False,0,0,1,1,1,250,top_king_persona_subset
+char__smith,smith,Smith,False,False,0,0,1,1,1,251,top_king_persona_subset
+char__souls,souls,Souls,False,False,0,0,1,1,1,252,top_king_persona_subset
+char__spirit,spirit,Spirit,False,False,0,0,1,1,1,253,top_king_persona_subset
+char__stable_boy,stable boy,Stable Boy,False,False,0,0,1,1,1,254,top_king_persona_subset
+char__student,student,Student,False,False,0,0,1,1,1,255,top_king_persona_subset
+char__survivors,survivors,Survivors,False,False,0,0,1,1,1,256,top_king_persona_subset
+char__toad,toad,Toad,False,False,0,0,1,1,1,257,top_king_persona_subset
+char__torturer,torturer,Torturer,False,False,0,0,1,1,1,258,top_king_persona_subset
+char__trolls,trolls,Trolls,False,False,0,0,1,1,1,259,top_king_persona_subset
+char__troop,troop,Troop,False,False,0,0,1,1,1,260,top_king_persona_subset
+char__warden,warden,Warden,False,False,0,0,1,1,1,261,top_king_persona_subset
+char__watcher,watcher,Watcher,False,False,0,0,1,1,1,262,top_king_persona_subset
+char__watchman,watchman,Watchman,False,False,0,0,1,1,1,263,top_king_persona_subset
+char__wench,wench,Wench,False,False,0,0,1,1,1,264,top_king_persona_subset
