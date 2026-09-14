@@ -1,0 +1,463 @@
+normalized_name,canonical_name,location_category,king_episode_count
+castle,Castle,Inside Castle,34
+courtyard,Courtyard,Outside Palace,24
+palace ballroom,palace ballroom,Inside Palace,22
+dining hall,Dining Hall,Inside Castle,21
+master bedroom,Master Bedroom,Inside Castle,20
+inside the temple,Inside the temple,Inside Temple,20
+throne room,Throne Room,Inside Tower,19
+prayer room,The prayer room,Inside Temple,19
+within the king's mansion,Within the King's Mansion,Inside Temple,18
+kings chambers,Kings chambers,Inside Palace,18
+kings bedroom,Kings bedroom,Inside Castle,16
+king's chambers,King's chambers,Inside Palace,16
+king's quarters,King's Quarters,Shore,16
+apothecary,Apothecary,Town,16
+entrance to castle,Entrance to castle,Outside Castle,16
+privy room,Privy room,Inside Castle,15
+throne,the throne,Inside Palace,15
+spiral staircase,A spiral staircase,Inside Tower,15
+across the king's garden,Across the King's Garden,Trail,15
+king's bedroom,King's Bedroom,Inside Palace,15
+grand balcony,Grand balcony,Inside Palace,14
+throne room,throne room,Shore,14
+room at the top of the tower,The room at the top of the tower,Inside Castle,14
+kitchens,kitchens,Inside Tower,14
+inside the unicorn palace,Inside the Unicorn palace,Inside Palace,14
+washroom,washroom,Inside Castle,14
+lower dungeon guard room,The Lower Dungeon Guard Room,Dungeon,13
+royal kitchen,Royal Kitchen,Inside Palace,13
+dining hall,Dining hall,Inside Castle,13
+secret tunnel,Secret Tunnel,Inside Castle,13
+great hall,The Great Hall,Inside Tower,12
+master bedroom,Master Bedroom,Inside Palace,12
+blacksmith,Blacksmith,Bazaar,12
+tower,Tower,Outside Tower,12
+royal bathroom,Royal Bathroom,Inside Castle,12
+main castle doors,main castle doors,Outside Palace,12
+servant's quarters,Servant's Quarters,Inside Palace,12
+kings bed room,Kings Bed Room,Inside Castle,12
+throne room,Throne room,Inside Tower,12
+great armory,Great Armory,Inside Castle,12
+bed chambers,Bed Chambers,Inside Palace,12
+village at the base of the mountain,Village at the base of the Mountain,Mountain,12
+stable,stable,Outside Castle,12
+main hall,The  main hall,Inside Palace,11
+sacred temple,The Sacred Temple,Inside Church,11
+prison room,Prison room,Inside Tower,11
+banquet hall,Banquet Hall,Inside Castle,11
+torture equipment storage room,Torture equipment storage room,Dungeon,11
+lavoratory,Lavoratory,Inside Castle,11
+beach house,Beach House,Shore,11
+castle maids' room,Castle Maids' Room,Inside Castle,11
+palace entrance,Palace Entrance,Inside Palace,11
+inside the king's castle,Inside the King's Castle,Inside Tower,11
+dungeon,The dungeon,underwater aquapolis,10
+fighting arena inside tourney grounds,Fighting Arena inside Tourney Grounds,supernatural,10
+tub,Tub,Inside Tower,10
+main foyer,main foyer,Inside Castle,10
+princess' library,Princess' Library,Inside Palace,10
+queen's quarters,Queen's quarters,Inside Palace,10
+courtyard exterior,Courtyard exterior,Outside Palace,10
+treasure room,Treasure Room,Inside Castle,10
+grand dining room,The grand dining room,Inside Palace,10
+inside the king's palace,Inside the king's palace,Inside Palace,10
+summit,Summit,Mountain,10
+king's quarters,The King's Quarters,Inside Tower,10
+royal gardens,Royal Gardens,Outside Palace,10
+castle exit,castle exit,Inside Castle,10
+armory,Armory,Inside Castle,10
+hall of echoes,Hall of echoes,Inside Temple,10
+kitchen,kitchen,Inside Castle,9
+weapon closet,Weapon Closet,Inside Tower,9
+royal stables,Royal stables,Outside Castle,9
+beside tower entrance,beside tower entrance,Inside Tower,9
+trailhead,Trailhead,Trail,9
+tower sewers,Tower Sewers,Inside Tower,9
+library,Library,Inside Castle,9
+confessional,Confessional,Inside Church,9
+church garden,Church garden,Outside Church,9
+debtor's prison,Debtor's Prison,Inside Tower,9
+balcony,Balcony,Inside Palace,9
+throne room,The throne room,Inside Palace,9
+moon observatory,The Moon Observatory,city in the clouds,8
+basement,Basement,Inside Castle,8
+bone pit,bone pit,Outside Temple,8
+show room inside the castle,The Show Room Inside the Castle,Inside Castle,8
+altar room,The altar room,Inside Temple,8
+top side tower overlooking view,Top side tower overlooking view,Outside Tower,8
+armory,The armory,Inside Tower,8
+underground cavern,Underground Cavern,Cave,8
+hidden revolutionaries' headquarters,hidden revolutionaries' headquarters,Inside Palace,8
+magic room,Magic Room,supernatural,8
+torture chamber,Torture Chamber,Dungeon,8
+throne room,Throne room,Inside Castle,8
+weapon room,Weapon room,Inside Temple,7
+haunted orchard,Haunted Orchard,Farm,7
+dungeon within a castle,Dungeon within a castle,Dungeon,7
+queen's bedchamber,Queen's Bedchamber,Inside Palace,7
+dry dock room,Dry Dock Room,underwater aquapolis,7
+beyond the wall,Beyond the Wall,Outside Castle,7
+prisoners cells,Prisoners Cells,Dungeon,7
+bottlery,The Bottlery,Inside Castle,7
+castle armory,Castle Armory,Inside Castle,7
+tombstones of the kings,Tombstones of the Kings,Graveyard,7
+confessions room,Confessions room,Inside Church,7
+dungeon,The Dungeon,Inside Palace,7
+meadow,Meadow,Countryside,7
+launching point,Launching point,Lake,7
+garden courtyard,The garden courtyard,Inside Castle,7
+princess' chamber,Princess' Chamber,Inside Tower,7
+foyer,Foyer,Inside Palace,7
+market center,Market Center,Tavern,7
+dock,Dock,Port,6
+countryside,Countryside,Countryside,6
+grassy plains,grassy plains,Trail,6
+fairy forest,Fairy Forest,Forest,6
+storage room,Storage room,Dungeon,6
+palace throne,Palace Throne,Inside Palace,6
+graveyard,Graveyard,Graveyard,6
+bedrooms,bedrooms,Inside Palace,6
+cemetery,Cemetery,Graveyard,6
+haunted swamp,Haunted Swamp,Swamp,6
+weapons storage room,the weapons storage room,Outside Castle,6
+attic,attic,Inside Palace,6
+sheriff office,Sheriff Office,Farm,6
+black smiths shop,Black Smiths shop,Town,6
+festival room,Festival Room,frozen tundra,6
+den,Den,frozen tundra,6
+bazaar,Bazaar,Bazaar,6
+town center,Town center,Town,6
+castle kitchen,Castle Kitchen,Inside Castle,6
+gold room,Gold Room,Inside Tower,6
+tower,Tower,Inside Tower,6
+inside temple crypt,inside temple crypt,Inside Temple,6
+chapel of the eight,Chapel of the eight,Inside Castle,5
+captain's cabin,captain's cabin,Port,5
+barracks,The Barracks,Outside Castle,5
+ghost trail,The Ghost Trail,Trail,5
+beside church entrance,Beside church entrance,Outside Church,5
+grand dancing hall,Grand Dancing Hall,Inside Palace,5
+sitting room,sitting room,Inside Cottage,5
+devils castle,The devils castle,netherworld,5
+garden,Garden,Outside Palace,5
+trash heap,Trash Heap,Wasteland,5
+kitchen,kitchen,Inside Cottage,5
+front altar,the front altar,Inside Temple,5
+next to an altar,Next to an Altar,Inside Church,5
+tent,Tent,Desert,5
+prison room,prison room,Inside Tower,5
+bat room,Bat room,Cave,5
+whipping station,the whipping station,Outside Church,5
+dungeon,Dungeon,Inside Temple,5
+stable,Stable,Outside Palace,5
+king's dorm,King's Dorm,Inside Tower,5
+hidden passageway,Hidden passageway,Inside Temple,4
+cursed grave,A cursed grave,Graveyard,4
+viewing room,Viewing room,netherworld,4
+dining hall,Dining Hall,Inside Tower,4
+horse tent,Horse Tent,Farm,4
+back of the stall,Back of the stall,Bazaar,4
+cactus field,Cactus Field,Desert,4
+jail entrance,Jail entrance,Inside Tower,4
+top floor of palace,Top floor of palace,Inside Palace,4
+town in the desert,Town in the desert,Wasteland,4
+general store,General Store,Town,4
+beside the town church,beside the town church,Outside Church,4
+castle kitchens,Castle Kitchens,Inside Palace,4
+grand hall of the city,Grand hall of the City,city in the clouds,4
+castle front,Castle front,Inside Palace,4
+treasure cavern,Treasure Cavern,Inside Temple,4
+outpost,Outpost,Mountain,4
+rectory,The rectory,Inside Church,4
+sacrificial altar,Sacrificial altar,Inside Temple,4
+farmer's house,Farmer's house,Farm,4
+guard shack,Guard Shack,Outside Tower,4
+fish market,Fish Market,Port,4
+personal quarters,Personal quarters,Inside Palace,4
+murder hole,Murder hole,Inside Tower,4
+temple chamber,temple chamber,Inside Temple,4
+stable,Stable,Farm,4
+torture room,Torture Room,Dungeon,4
+adjacent to the guest castle,Adjacent to the Guest Castle,Farm,4
+arrow house,arrow house,Outside Castle,4
+tower base,The tower base,Outside Tower,4
+dining hall,Dining Hall,Inside Palace,4
+inside tower,Inside Tower,Inside Tower,4
+battlements,Battlements,Outside Castle,4
+curved hallway,Curved Hallway,Inside Tower,4
+dungeon,Dungeon,Inside Castle,4
+queen's chamber,The Queen's Chamber,Inside Palace,3
+chapel,The Chapel,Inside Church,3
+town square,The town square,Town,3
+frozen outpost,Frozen Outpost,frozen tundra,3
+thrones of death,The Thrones of Death,netherworld,3
+open field,An Open Field,Farm,3
+outlaws' jungle,outlaws' jungle,Jungle,3
+secret tunnel,Secret tunnel,Cave,3
+saokra's blacksmith shop,Saokra's Blacksmith Shop,Town,3
+eating area of cave,Eating area of cave,frozen tundra,3
+cave,Cave,Cave,3
+inside the ruined house,inside the ruined house,Inside Cottage,3
+knife seller,Knife Seller,Bazaar,3
+port skyline,Port Skyline,Port,3
+middle of the bazaar,Middle of the Bazaar,Bazaar,3
+desert land,desert land,Desert,3
+alchemists lab,Alchemists Lab,Inside Tower,3
+bright path,Bright Path,Inside Castle,3
+hunting grounds,Hunting grounds,Trail,3
+inside cottage kitchen,Inside cottage kitchen,Inside Cottage,3
+landing in the foyer,Landing in the Foyer,Inside Palace,3
+wealthy area of town,Wealthy area of town,Town,3
+reagent room,Reagent Room,Outside Tower,3
+main house,Main house,Farm,3
+watchtower,Watchtower,Outside Tower,3
+main entrance,Main entrance,Outside Temple,3
+lagoon,The Lagoon,Lake,3
+temple gardens,Temple gardens,Outside Temple,3
+cavern dwelling,cavern dwelling,Desert,3
+horse field,Horse field,Countryside,3
+grand ballroom,Grand Ballroom,Inside Castle,3
+castle royal tower,Castle Royal tower,Inside Castle,3
+yurt,Yurt,Desert,3
+sermon hall,The Sermon Hall,Inside Church,3
+priest's chambers,Priest's chambers,Inside Temple,3
+front row,Front Row,Inside Church,3
+ball room,The Ball Room,Inside Palace,3
+dock at the port,Dock at the Port,Port,3
+arsenal,arsenal,Inside Tower,3
+outside temple,Outside Temple,Outside Temple,3
+bar,The bar,Tavern,3
+pond,Pond,Wasteland,3
+cemetery,Cemetery,Wasteland,3
+bathroom,Bathroom,Inside Tower,3
+abandoned castle on an ocean cliff side,An abandoned castle on an ocean cliff side,Abandoned,3
+staircase,staircase,Inside Tower,3
+tool shed,Tool Shed,Outside Cottage,3
+sanctuary,Sanctuary,Inside Church,3
+dining hall,Dining hall,Inside Tower,3
+inside church,Inside Church,Inside Church,3
+castle foothills,Castle foothills,Outside Tower,3
+hidden garden,Hidden garden,Outside Palace,3
+small hut,Small Hut,Jungle,3
+confessional room,Confessional Room,Inside Church,3
+scenic overlook,scenic overlook,Trail,2
+observatory,Observatory,city in the clouds,2
+prisoner's cell,Prisoner's cell,Dungeon,2
+clergyman's office,Clergyman's office,Inside Temple,2
+tool shed,tool shed,underwater aquapolis,2
+disposal area,Disposal area,Inside Castle,2
+tree house,Tree house,Jungle,2
+horse's stables,Horse's stables,Outside Cottage,2
+decoration shop,Decoration shop,Outside Temple,2
+barn,Barn,Farm,2
+holy alter,holy alter,Inside Church,2
+arch hall,Arch Hall,Inside Castle,2
+outside castle,Outside Castle,Outside Castle,2
+bedding room,the bedding room,Inside Palace,2
+guards quarters,Guards quarters,Inside Tower,2
+cactus field entrance,cactus field entrance,Desert,2
+large galleon,Large Galleon,Port,2
+inside temple,Inside Temple,Inside Temple,2
+lighthouse,Lighthouse,Shore,2
+beach,The beach,Shore,2
+town,Town,Town,2
+secret oasis,Secret Oasis,Desert,2
+fishing pier,Fishing Pier,Shore,2
+old crypt,Old Crypt,Graveyard,2
+confession box,The confession Box,Inside Church,2
+towering mesa,Towering Mesa,Desert,2
+archery zone,Archery zone,Outside Castle,2
+cottage,Cottage,Countryside,2
+peasant's cottage,peasant's cottage,Countryside,2
+battleship,A battleship,Shore,2
+sacrifice chamber,Sacrifice Chamber,Inside Temple,2
+bathing room,bathing room,Inside Temple,2
+collapsed west wing,Collapsed West Wing,Abandoned,2
+dangerous precipice,Dangerous Precipice,Mountain,2
+trail exit,Trail Exit,Trail,2
+town center,town center,Town,2
+firewood forest,Firewood Forest,Forest,2
+beside church pews,Beside church pews,Inside Church,2
+choir room,The Choir room,Inside Church,2
+abandoned mine,abandoned mine,Abandoned,2
+waterfall,waterfall,Mountain,2
+tower dungeon,Tower Dungeon,Inside Tower,2
+forbidden forest,Forbidden Forest,Forest,2
+town courtroom,Town Courtroom,Town,2
+secret magician's workshop,Secret magician's workshop,magical realm,2
+underwater marketplace,Underwater Marketplace,underwater aquapolis,2
+public execution stand,Public execution stand,Bazaar,2
+whipping chamber,whipping chamber,netherworld,2
+tower spire,tower spire,Inside Tower,2
+bell tower,Bell Tower,Inside Church,2
+rectory,Rectory,Inside Church,2
+cave exit,cave exit,Cave,2
+bazaar gambling,Bazaar Gambling,Bazaar,2
+southernmost tower entryway,Southernmost Tower Entryway,Inside Tower,2
+dark kings throne room,The Dark Kings Throne Room,netherworld,2
+lower dungeon,Lower dungeon,netherworld,2
+guard barracks,Guard Barracks,Inside Castle,2
+main gate,Main Gate,Outside Castle,2
+main prayer room,main prayer room,Inside Temple,2
+old queen farm,Old Queen Farm,Wasteland,2
+fountain,the fountain,Graveyard,2
+temple guard station,Temple guard station,Outside Temple,2
+keep,Keep,Inside Tower,2
+main street,Main street,Graveyard,2
+northern shore,Northern Shore,Lake,2
+living quarters,The living quarters,Farm,2
+boathouse,Boathouse,Swamp,2
+town theater,Town Theater,Town,2
+witches cottage,The witches cottage,Outside Cottage,2
+knights quarters,Knights Quarters,Inside Castle,2
+torture room,Torture room,Dungeon,2
+cottage entryway,Cottage entryway,Inside Cottage,2
+dunes,Dunes,Desert,2
+pharmacy,Pharmacy,Town,2
+temple main room,Temple main room,Outside Temple,2
+hall of the goddess,The Hall of the Goddess,Inside Temple,2
+beside temple entrance,Beside temple entrance,Outside Temple,2
+woodlands,woodlands,Forest,2
+castle kitchen,castle kitchen,Inside Castle,2
+troll's lair,The Troll's Lair,Cave,2
+visitor's entrance,Visitor's Entrance,Inside Temple,2
+military outpost at the heart of the swamp,A military outpost at the heart of the swamp,Swamp,2
+brim canal,Brim canal,Lake,2
+main hallway,Main hallway,Inside Palace,2
+castle basement,Castle basement,Inside Castle,2
+royal shipyard,Royal Shipyard,Port,2
+lord's castle,Lord's Castle,netherworld,1
+cloud nine bar,Cloud Nine Bar,city in the clouds,1
+winding staircase,Winding Staircase,Outside Tower,1
+quay,Quay,Port,1
+peasant living quarters,Peasant living quarters,Outside Palace,1
+lava lake,Lava Lake,netherworld,1
+nave,Nave,Inside Church,1
+werewolves tavern,The werewolves tavern,Tavern,1
+pet chamber,Pet chamber,Inside Castle,1
+supply store,Supply store,Port,1
+stained glass room,stained glass room,Inside Church,1
+old gnaisha's,Old Gnaisha's,Bazaar,1
+island,Island,Lake,1
+gathering room,Gathering room,Inside Cottage,1
+soldiers camp,soldiers camp,Swamp,1
+fishmonger's stall,Fishmonger's stall,Port,1
+back room,back room,Inside Church,1
+room hidden in the dense canopy,a room hidden in the dense canopy,Forest,1
+training fields,Training Fields,Outside Palace,1
+stilt home,Stilt Home,Farm,1
+mars desert,Mars desert,Desert,1
+hillside mansion,Hillside Mansion,Countryside,1
+temple entrance,Temple Entrance,Outside Temple,1
+church altar,Church Altar,Inside Church,1
+witch's house,Witch's House,Swamp,1
+faeries den,Faeries Den,magical realm,1
+church foyer,Church foyer,Inside Church,1
+picnic area,picnic area,Forest,1
+abandoned mine entrance,Abandoned mine entrance,Abandoned,1
+cottage safe-room,Cottage safe-room,Inside Cottage,1
+dungeon,Dungeon,netherworld,1
+small clearing,a small clearing,Mountain,1
+nursery,Nursery,Inside Palace,1
+small town located in the hills,Small town located in the hills,Town,1
+large cliffs,Large cliffs,Shore,1
+chamber entrance,chamber entrance,Inside Church,1
+wet dungeon,A wet dungeon,Dungeon,1
+loading dock,Loading Dock,Port,1
+turquoise shore,Turquoise Shore,Shore,1
+path to the manor,path to the manor,Countryside,1
+farmhouse,farmhouse,underwater aquapolis,1
+stonehenge,Stonehenge,supernatural,1
+dwarven blacksmith,Dwarven blacksmith,Mountain,1
+brush den,The Brush Den,Forest,1
+beach house,beach house,Shore,1
+outside church,Outside Church,Outside Church,1
+clearing,Clearing,Jungle,1
+pit of despair,The Pit of Despair,netherworld,1
+underwater aquapolis,Underwater Aquapolis,underwater aquapolis,1
+reaper's lair,Reaper's lair,netherworld,1
+land beyond the wasteland,Land beyond the Wasteland,Abandoned,1
+underground chamber,Underground Chamber,Cave,1
+mud pit,Mud pit,Jungle,1
+lakeside house,Lakeside House,Lake,1
+simple town,Simple Town,Town,1
+high priest chamber,High Priest Chamber,Inside Church,1
+abandoned mine,Abandoned Mine,Mountain,1
+desert tent,desert tent,Wasteland,1
+gold mine,Gold Mine,Abandoned,1
+front of the cottage,Front of the Cottage,Outside Cottage,1
+sacristy,sacristy,Inside Church,1
+mesa peak,mesa peak,Mountain,1
+reception area,Reception area,Graveyard,1
+corn field,Corn field,Farm,1
+mushroom hut,Mushroom Hut,Outside Cottage,1
+winter gardens,The Winter Gardens,Outside Tower,1
+ruin of a house,Ruin of a house,Wasteland,1
+abandoned workers shed,Abandoned workers shed,Graveyard,1
+ferry terminal,Ferry Terminal,Port,1
+school,School,Bazaar,1
+oracle cave,The Oracle Cave,Mountain,1
+main gate,main gate,Countryside,1
+palace garden,Palace Garden,Outside Palace,1
+orc cave,Orc cave,Cave,1
+inside church back row,Inside Church Back Row,Inside Church,1
+town square,Town square,Town,1
+stable hand's quarters,stable hand's quarters,Outside Castle,1
+valley of doom,Valley of doom,Countryside,1
+pig pen,Pig Pen,Countryside,1
+kitchen,Kitchen,Inside Cottage,1
+castle kitchen,Castle Kitchen,Inside Palace,1
+dark cave,Dark Cave,Cave,1
+mountain peak,Mountain Peak,Mountain,1
+within the walls of the city,Within the walls of the city,Inside Tower,1
+royal tomb,Royal Tomb,Inside Temple,1
+entrance to the pine trees,Entrance to the Pine trees,Forest,1
+main chapel,the main chapel,Inside Church,1
+outside tower,Outside tower,Outside Tower,1
+port tavern,Port Tavern,Port,1
+apple trees,Apple trees,Bazaar,1
+temple courtyard,Temple courtyard,Outside Temple,1
+artillery room,Artillery room,Inside Tower,1
+lonely island,a lonely island,Abandoned,1
+bedroom,Bedroom,Inside Cottage,1
+nearby road,nearby road,Countryside,1
+acid yard,the acid yard,Outside Castle,1
+church field,Church field,Outside Church,1
+church entryway,Church Entryway,Inside Church,1
+clean water lake,clean water lake,Lake,1
+attic,Attic,Inside Church,1
+bazaar outside the royal city,bazaar outside the royal city,Bazaar,1
+mysterious shop's entrance,the mysterious shop's entrance,Bazaar,1
+graveyard,Graveyard,Outside Church,1
+pond,Pond,Forest,1
+kitchen,Kitchen,Tavern,1
+behind the servant quarters,Behind the Servant Quarters,Wasteland,1
+central bazaar,Central Bazaar,Bazaar,1
+dancing stoat,The Dancing Stoat,Town,1
+church coat room,church coat room,Inside Church,1
+outside gates,Outside gates,Outside Cottage,1
+abandoned shack,Abandoned Shack,Wasteland,1
+desert cavern,Desert Cavern,Desert,1
+riverbed,Riverbed,Forest,1
+shrine of sretniy,Shrine of Sretniy,Inside Temple,1
+research laboratory,Research Laboratory,frozen tundra,1
+backyard,backyard,Outside Cottage,1
+entryway to the wizards tower,entryway to the wizards tower,Inside Tower,1
+spring bath,the spring bath,Outside Temple,1
+abyss,The Abyss,frozen tundra,1
+town of anoria,Town of Anoria,Town,1
+ice cave,Ice Cave,frozen tundra,1
+small dirt road,The small dirt road,Countryside,1
+outside of the temple offices,outside of the temple offices,Outside Temple,1
+city of elders,city of elders,Town,1
+farmers market,The Farmers market,Bazaar,1
+cold storage room,Cold storage room,Outside Cottage,1
+unsettling forest area,unsettling forest area,Forest,1
+brimswood pub,Brimswood pub,Tavern,1
+mess hall of the servants,mess hall of the servants,city in the clouds,1
+neptune's throne room,Neptune's throne room,underwater aquapolis,1
+marketplace,Marketplace,Port,1
+castle courtyard bazaar,Castle courtyard bazaar,Bazaar,1
+entrance to a cave,Entrance to a Cave,frozen tundra,1
+ghost monk quarters,ghost monk quarters,supernatural,1

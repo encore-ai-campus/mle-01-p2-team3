@@ -1,0 +1,17 @@
+{
+  "characters": 955,
+  "episodes": 11024,
+  "utterances": 140625,
+  "locations": 585,
+  "objects": 1547,
+  "edges_appears_in": 21932,
+  "edges_speaks": 140282,
+  "edges_mentions": 77004,
+  "edges_occurs_in": 11005,
+  "edges_contains_object": 40276,
+  "edges_co_occurs_with": 5229,
+  "king_related_all": 3151,
+  "king_related_strong": 2105,
+  "king_related_weak": 1046,
+  "graphrag_documents_king_strong": 2105
+}
