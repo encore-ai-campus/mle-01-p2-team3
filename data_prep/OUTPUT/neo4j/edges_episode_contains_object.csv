@@ -1,0 +1,488 @@
+episode_id,object_id,object_name,object_count_in_episode
+train_ep_001422,obj__fountain__79de7a61,fountain,14
+train_ep_001422,obj__rose_bush__9f663235,rose bush,14
+train_ep_001422,obj__tulip__0ae57c94,tulip,14
+train_ep_001422,obj__intricate_labyrinth_made_of_shrubs__cf0382f7,intricate labyrinth made of shrubs,14
+train_ep_001422,obj__bench__1d28d258,bench,14
+train_ep_001422,obj__small_lake__1f398a97,small lake,14
+train_ep_001422,obj__shrub__2f5bae73,shrub,14
+train_ep_001438,obj__odd_and_end__46d0903f,odd and end,14
+train_ep_001438,obj__lush_maroon_carpet__7a6b263e,lush maroon carpet,14
+train_ep_001438,obj__tapestry__8873d146,tapestry,14
+train_ep_001438,obj__map__1d78dc8e,map,14
+train_ep_001438,obj__book__821f0328,book,14
+train_ep_001438,obj__parchment__cc1681e6,parchment,14
+train_ep_001493,obj__highly_fortified_tower__d6964cd0,highly fortified tower,14
+train_ep_001494,obj__tree__c0af77cf,tree,14
+train_ep_001494,obj__shrub__2f5bae73,shrub,14
+train_ep_001494,obj__rainbow__cd13b6a6,rainbow,14
+train_ep_001501,obj__stone__0a840ef4,stone,14
+train_ep_001501,obj__fairy_lights__688fba7e,fairy lights,14
+train_ep_001501,obj__moss__06a311b9,moss,14
+train_ep_001812,obj__broom__5bfab488,broom,2
+train_ep_001876,obj__peg__ac401416,peg,13
+train_ep_001876,obj__dusty_floor__3b0bcf0c,dusty floor,14
+train_ep_001876,obj__manical__8a653a0b,manical,6
+train_ep_001876,obj__rusty_bar__905126ea,rusty bar,14
+train_ep_002010,obj__rose_bush__9f663235,rose bush,14
+train_ep_002010,obj__intricate_labyrinth_made_of_shrubs__cf0382f7,intricate labyrinth made of shrubs,14
+train_ep_002010,obj__shrub__2f5bae73,shrub,14
+train_ep_002010,obj__bench__1d28d258,bench,14
+train_ep_002010,obj__fountain__79de7a61,fountain,14
+train_ep_002010,obj__small_lake__1f398a97,small lake,14
+train_ep_002023,obj__candle__ce23a732,candle,14
+train_ep_002023,obj__map__1d78dc8e,map,14
+train_ep_002023,obj__tapestry__8873d146,tapestry,14
+train_ep_002023,obj__lush_maroon_carpet__7a6b263e,lush maroon carpet,14
+train_ep_002023,obj__odd_and_end__46d0903f,odd and end,14
+train_ep_002023,obj__parchment__cc1681e6,parchment,14
+train_ep_002023,obj__book__821f0328,book,11
+train_ep_002071,obj__highly_fortified_tower__d6964cd0,highly fortified tower,2
+train_ep_002073,obj__wine__3f206bd2,wine,11
+train_ep_002073,obj__market__c1c16452,market,11
+train_ep_002073,obj__bar__37b51d19,bar,11
+train_ep_002073,obj__tempior_market__261e7a56,tempior market,11
+train_ep_002073,obj__shelf__1f650330,shelf,11
+train_ep_002073,obj__stool__801f91a6,stool,11
+train_ep_002073,obj__tavern__7e2c4fe3,tavern,11
+train_ep_002077,obj__moss__06a311b9,moss,14
+train_ep_002077,obj__stone__0a840ef4,stone,14
+train_ep_002077,obj__tree__c0af77cf,tree,14
+train_ep_002077,obj__fairy_lights__688fba7e,fairy lights,14
+train_ep_002091,obj__bed__001cbc05,bed,14
+train_ep_002091,obj__throne__253d405e,throne,14
+train_ep_002091,obj__cover__41d0e299,cover,14
+train_ep_002091,obj__suit_of_armor__66f246e8,suit of armor,14
+train_ep_002091,obj__carving__99524e31,carving,14
+train_ep_002242,obj__axe__c89ee4a2,axe,4
+train_ep_002242,obj__mace__22213c39,mace,14
+train_ep_002242,obj__shield__28c69b4c,shield,14
+train_ep_002242,obj__chain__9951112f,chain,14
+train_ep_002242,obj__crossbow__68ea5b5f,crossbow,9
+train_ep_002242,obj__longbows__fd739c14,longbows,14
+train_ep_002242,obj__bow__18222660,bow,14
+train_ep_002242,obj__sword__f3b462d9,sword,14
+train_ep_002242,obj__key__3c6e0b8a,key,14
+train_ep_002242,obj__small_bucket__4269bdf5,small bucket,11
+train_ep_002262,obj__sword__f3b462d9,sword,2
+train_ep_002267,obj__dress__ccaaac95,dress,2
+train_ep_002369,obj__small_bucket__4269bdf5,small bucket,11
+train_ep_002386,obj__crown__408e69f6,crown,8
+train_ep_002447,obj__peg__ac401416,peg,14
+train_ep_002447,obj__rusty_bar__905126ea,rusty bar,14
+train_ep_002447,obj__manical__8a653a0b,manical,14
+train_ep_002531,obj__map__1d78dc8e,map,14
+train_ep_002531,obj__artwork__431a210e,artwork,14
+train_ep_002531,obj__tapestry__8873d146,tapestry,14
+train_ep_002531,obj__lush_maroon_carpet__7a6b263e,lush maroon carpet,14
+train_ep_002531,obj__odd_and_end__46d0903f,odd and end,14
+train_ep_002531,obj__parchment__cc1681e6,parchment,14
+train_ep_002531,obj__book__821f0328,book,14
+train_ep_002579,obj__tree__c0af77cf,tree,14
+train_ep_002579,obj__shrub__2f5bae73,shrub,14
+train_ep_002579,obj__sun__ebd556e6,sun,14
+train_ep_002581,obj__shelf__1f650330,shelf,14
+train_ep_002581,obj__tempior_market__261e7a56,tempior market,14
+train_ep_002581,obj__wine__3f206bd2,wine,4
+train_ep_002581,obj__market__c1c16452,market,14
+train_ep_002581,obj__bar__37b51d19,bar,14
+train_ep_002581,obj__tavern__7e2c4fe3,tavern,14
+train_ep_002586,obj__moss__06a311b9,moss,14
+train_ep_002586,obj__fairy_lights__688fba7e,fairy lights,14
+train_ep_002586,obj__tree__c0af77cf,tree,14
+train_ep_002586,obj__stone__0a840ef4,stone,14
+train_ep_002586,obj__flower__608f0b98,flower,10
+train_ep_002586,obj__carcass__05692c36,carcass,1
+train_ep_002595,obj__bed__001cbc05,bed,9
+train_ep_002595,obj__cover__41d0e299,cover,9
+train_ep_002595,obj__carving__99524e31,carving,9
+train_ep_002595,obj__puppet__76874790,puppet,7
+train_ep_002790,obj__fountain__79de7a61,fountain,14
+train_ep_002790,obj__rose_bush__9f663235,rose bush,14
+train_ep_002790,obj__tulip__0ae57c94,tulip,2
+train_ep_002790,obj__intricate_labyrinth_made_of_shrubs__cf0382f7,intricate labyrinth made of shrubs,14
+train_ep_002790,obj__bench__1d28d258,bench,14
+train_ep_002790,obj__small_lake__1f398a97,small lake,14
+train_ep_002790,obj__shrub__2f5bae73,shrub,14
+train_ep_002805,obj__lush_maroon_carpet__7a6b263e,lush maroon carpet,14
+train_ep_002805,obj__map__1d78dc8e,map,7
+train_ep_002805,obj__odd_and_end__46d0903f,odd and end,14
+train_ep_002805,obj__artwork__431a210e,artwork,14
+train_ep_002805,obj__book__821f0328,book,14
+train_ep_002805,obj__tapestry__8873d146,tapestry,14
+train_ep_002805,obj__parchment__cc1681e6,parchment,14
+train_ep_002805,obj__candle__ce23a732,candle,14
+train_ep_002865,obj__tree__c0af77cf,tree,14
+train_ep_002865,obj__shrub__2f5bae73,shrub,14
+train_ep_002872,obj__moss__06a311b9,moss,14
+train_ep_002872,obj__flower__608f0b98,flower,14
+train_ep_002872,obj__stone__0a840ef4,stone,14
+train_ep_002872,obj__fairy_lights__688fba7e,fairy lights,14
+train_ep_003048,obj__key__3c6e0b8a,key,14
+train_ep_003048,obj__mace__22213c39,mace,14
+train_ep_003048,obj__bow__18222660,bow,8
+train_ep_003048,obj__sword__f3b462d9,sword,12
+train_ep_003048,obj__crossbow__68ea5b5f,crossbow,14
+train_ep_003048,obj__chain__9951112f,chain,14
+train_ep_003048,obj__axe__c89ee4a2,axe,9
+train_ep_003048,obj__longbows__fd739c14,longbows,14
+train_ep_003123,obj__duster__b88a4290,duster,2
+train_ep_003178,obj__small_bucket__4269bdf5,small bucket,11
+train_ep_003193,obj__broom__5bfab488,broom,1
+train_ep_003208,obj__crown__408e69f6,crown,2
+train_ep_003347,obj__lush_maroon_carpet__7a6b263e,lush maroon carpet,14
+train_ep_003347,obj__map__1d78dc8e,map,14
+train_ep_003347,obj__odd_and_end__46d0903f,odd and end,14
+train_ep_003347,obj__artwork__431a210e,artwork,14
+train_ep_003347,obj__book__821f0328,book,14
+train_ep_003347,obj__tapestry__8873d146,tapestry,14
+train_ep_003347,obj__parchment__cc1681e6,parchment,14
+train_ep_003347,obj__candle__ce23a732,candle,14
+train_ep_003404,obj__highly_fortified_tower__d6964cd0,highly fortified tower,14
+train_ep_003404,obj__ornate_goblet__8f8d5ad5,ornate goblet,9
+train_ep_003405,obj__sun__ebd556e6,sun,14
+train_ep_003405,obj__shrub__2f5bae73,shrub,14
+train_ep_003405,obj__rainbow__cd13b6a6,rainbow,14
+train_ep_003405,obj__tree__c0af77cf,tree,14
+train_ep_003412,obj__moss__06a311b9,moss,14
+train_ep_003412,obj__tapestry__8873d146,tapestry,14
+train_ep_003412,obj__plant__9ea0a36b,plant,14
+train_ep_003412,obj__fairy_lights__688fba7e,fairy lights,14
+train_ep_003412,obj__stone__0a840ef4,stone,14
+train_ep_003424,obj__throne__253d405e,throne,14
+train_ep_003424,obj__carving__99524e31,carving,14
+train_ep_003424,obj__cover__41d0e299,cover,14
+train_ep_003424,obj__bed__001cbc05,bed,14
+train_ep_003530,obj__vegetable__4bd349cd,vegetable,14
+train_ep_003530,obj__shelf__1f650330,shelf,14
+train_ep_003530,obj__pot__ecbfde13,pot,14
+train_ep_003530,obj__wood__22811dd9,wood,14
+train_ep_003530,obj__stove__43c3e6f8,stove,14
+train_ep_003530,obj__tray__75b2ade1,tray,14
+train_ep_003530,obj__meat__07202a7e,meat,5
+train_ep_003530,obj__plate__5da21a3e,plate,14
+train_ep_003530,obj__meal__d9ed7694,meal,14
+train_ep_003530,obj__food__62506be3,food,14
+train_ep_003532,obj__rat__e756f6aa,rat,14
+train_ep_003532,obj__bench_made_of_stone__4e6a3f37,bench made of stone,14
+train_ep_003532,obj__moldy_bread__629f5023,moldy bread,14
+train_ep_003532,obj__bucket_for_eliminating_waste__2371ab3a,bucket for eliminating waste,14
+train_ep_003581,obj__axe__c89ee4a2,axe,14
+train_ep_003581,obj__shield__28c69b4c,shield,14
+train_ep_003581,obj__sword__f3b462d9,sword,14
+train_ep_003581,obj__mace__22213c39,mace,14
+train_ep_003581,obj__bow__18222660,bow,8
+train_ep_003581,obj__longbows__fd739c14,longbows,14
+train_ep_003581,obj__crossbow__68ea5b5f,crossbow,7
+train_ep_003616,obj__prayer_book__02828fc9,prayer book,9
+train_ep_003616,obj__hymn_book__2c15b657,hymn book,7
+train_ep_003694,obj__scepter__02ba5e71,scepter,3
+train_ep_003807,obj__fountain__79de7a61,fountain,14
+train_ep_003807,obj__rose_bush__9f663235,rose bush,14
+train_ep_003807,obj__cobbled_walkway__f9c3d16f,cobbled walkway,14
+train_ep_003807,obj__intricate_labyrinth_made_of_shrubs__cf0382f7,intricate labyrinth made of shrubs,14
+train_ep_003807,obj__bench__1d28d258,bench,14
+train_ep_003807,obj__small_lake__1f398a97,small lake,14
+train_ep_003807,obj__shrub__2f5bae73,shrub,14
+train_ep_003895,obj__bed__001cbc05,bed,2
+train_ep_003895,obj__cover__41d0e299,cover,2
+train_ep_003895,obj__carving__99524e31,carving,2
+train_ep_004048,obj__crossbow__68ea5b5f,crossbow,5
+train_ep_004048,obj__sword__f3b462d9,sword,3
+train_ep_004048,obj__axe__c89ee4a2,axe,11
+train_ep_004048,obj__longbows__fd739c14,longbows,14
+train_ep_004048,obj__mace__22213c39,mace,14
+train_ep_004048,obj__bow__18222660,bow,8
+train_ep_004111,obj__scepter__02ba5e71,scepter,5
+train_ep_004200,obj__rag__7542dc7e,rag,5
+train_ep_004268,obj__peg__ac401416,peg,14
+train_ep_004268,obj__dusty_floor__3b0bcf0c,dusty floor,14
+train_ep_004268,obj__manical__8a653a0b,manical,11
+train_ep_004268,obj__rusty_bar__905126ea,rusty bar,14
+train_ep_004414,obj__shrub__2f5bae73,shrub,10
+train_ep_004414,obj__tree__c0af77cf,tree,10
+train_ep_004421,obj__stone__0a840ef4,stone,8
+train_ep_004421,obj__fairy_lights__688fba7e,fairy lights,14
+train_ep_004421,obj__moss__06a311b9,moss,14
+train_ep_004434,obj__throne__253d405e,throne,14
+train_ep_004434,obj__carving__99524e31,carving,14
+train_ep_004434,obj__cover__41d0e299,cover,14
+train_ep_004434,obj__bed__001cbc05,bed,14
+train_ep_004539,obj__vegetable__4bd349cd,vegetable,10
+train_ep_004539,obj__shelf__1f650330,shelf,14
+train_ep_004539,obj__stove__43c3e6f8,stove,14
+train_ep_004539,obj__pot__ecbfde13,pot,14
+train_ep_004539,obj__meat__07202a7e,meat,5
+train_ep_004539,obj__meal__d9ed7694,meal,14
+train_ep_004539,obj__wood__22811dd9,wood,14
+train_ep_004539,obj__food__62506be3,food,14
+train_ep_004584,obj__crossbow__68ea5b5f,crossbow,9
+train_ep_004584,obj__sword__f3b462d9,sword,5
+train_ep_004584,obj__axe__c89ee4a2,axe,9
+train_ep_004584,obj__longbows__fd739c14,longbows,5
+train_ep_004584,obj__mace__22213c39,mace,9
+train_ep_004584,obj__bow__18222660,bow,9
+train_ep_004608,obj__scepter__02ba5e71,scepter,1
+train_ep_004845,obj__stove__43c3e6f8,stove,14
+train_ep_004845,obj__plate__5da21a3e,plate,14
+train_ep_004845,obj__meal__d9ed7694,meal,14
+train_ep_004845,obj__shelf__1f650330,shelf,14
+train_ep_004845,obj__pot__ecbfde13,pot,14
+train_ep_004845,obj__wood__22811dd9,wood,14
+train_ep_004845,obj__food__62506be3,food,14
+train_ep_004924,obj__scepter__02ba5e71,scepter,1
+train_ep_004936,obj__cigar__5e5bc84c,cigar,13
+train_ep_004936,obj__scepter__02ba5e71,scepter,4
+train_ep_005066,obj__books__7d8949bc,books,10
+train_ep_005128,obj__peg__ac401416,peg,14
+train_ep_005128,obj__manical__8a653a0b,manical,14
+train_ep_005128,obj__dusty_floor__3b0bcf0c,dusty floor,14
+train_ep_005209,obj__parchment__cc1681e6,parchment,14
+train_ep_005209,obj__odd_and_end__46d0903f,odd and end,14
+train_ep_005209,obj__book__821f0328,book,14
+train_ep_005209,obj__lush_maroon_carpet__7a6b263e,lush maroon carpet,14
+train_ep_005209,obj__tapestry__8873d146,tapestry,14
+train_ep_005209,obj__map__1d78dc8e,map,14
+train_ep_005230,obj__piece_of_armor__498a2c12,piece of armor,14
+train_ep_005230,obj__tapestry__8873d146,tapestry,14
+train_ep_005230,obj__sword__f3b462d9,sword,14
+train_ep_005230,obj__magical_crystal__f8d5d939,magical crystal,14
+train_ep_005230,obj__necklaces__90ebce90,necklaces,14
+train_ep_005230,obj__gold__e07e81c2,gold,1
+train_ep_005230,obj__treasure_chest__758181f6,treasure chest,14
+train_ep_005230,obj__priceless_pieces_of_art__fceec9eb,priceless pieces of art,14
+train_ep_005230,obj__piece_of_fortune__e676af6c,piece of fortune,14
+train_ep_005263,obj__shrub__2f5bae73,shrub,11
+train_ep_005263,obj__sun__ebd556e6,sun,11
+train_ep_005263,obj__tree__c0af77cf,tree,11
+train_ep_005265,obj__shelf__1f650330,shelf,14
+train_ep_005265,obj__market__c1c16452,market,14
+train_ep_005265,obj__bar__37b51d19,bar,14
+train_ep_005265,obj__tempior_market__261e7a56,tempior market,14
+train_ep_005265,obj__bar_stool__3d9b3e79,bar stool,14
+train_ep_005265,obj__tavern__7e2c4fe3,tavern,14
+train_ep_005265,obj__wine__3f206bd2,wine,14
+train_ep_005270,obj__fairy_lights__688fba7e,fairy lights,14
+train_ep_005270,obj__stone__0a840ef4,stone,14
+train_ep_005270,obj__moss__06a311b9,moss,14
+train_ep_005281,obj__suit_of_armor__66f246e8,suit of armor,14
+train_ep_005281,obj__bed__001cbc05,bed,14
+train_ep_005281,obj__cover__41d0e299,cover,14
+train_ep_005281,obj__carving__99524e31,carving,14
+train_ep_005393,obj__bucket_for_eliminating_waste__2371ab3a,bucket for eliminating waste,14
+train_ep_005393,obj__bench_made_of_stone__4e6a3f37,bench made of stone,14
+train_ep_005393,obj__rat__e756f6aa,rat,14
+train_ep_005393,obj__old_mop__85848a07,old mop,14
+train_ep_005513,obj__crown__408e69f6,crown,7
+train_ep_005536,obj__pen_for_the_chickens__00bc2be0,pen for the chickens,10
+train_ep_005560,obj__pitcher_of_water__9efc18bd,pitcher of water,10
+train_ep_005749,obj__map__1d78dc8e,map,14
+train_ep_005749,obj__odd_and_end__46d0903f,odd and end,14
+train_ep_005749,obj__parchment__cc1681e6,parchment,14
+train_ep_005749,obj__artwork__431a210e,artwork,14
+train_ep_005749,obj__lush_maroon_carpet__7a6b263e,lush maroon carpet,14
+train_ep_005749,obj__tapestry__8873d146,tapestry,14
+train_ep_005749,obj__book__821f0328,book,14
+train_ep_005803,obj__shrub__2f5bae73,shrub,14
+train_ep_005803,obj__rainbow__cd13b6a6,rainbow,14
+train_ep_005803,obj__tree__c0af77cf,tree,14
+train_ep_005805,obj__shelf__1f650330,shelf,14
+train_ep_005805,obj__ale__f7a38033,ale,14
+train_ep_005805,obj__market__c1c16452,market,14
+train_ep_005805,obj__bar__37b51d19,bar,14
+train_ep_005805,obj__tempior_market__261e7a56,tempior market,14
+train_ep_005805,obj__tavern__7e2c4fe3,tavern,14
+train_ep_005805,obj__wine__3f206bd2,wine,10
+train_ep_005809,obj__moss__06a311b9,moss,5
+train_ep_005809,obj__plant__9ea0a36b,plant,5
+train_ep_005809,obj__flower__608f0b98,flower,5
+train_ep_005809,obj__tree__c0af77cf,tree,5
+train_ep_005809,obj__stone__0a840ef4,stone,5
+train_ep_005809,obj__fairy_lights__688fba7e,fairy lights,5
+train_ep_006066,obj__duster__b88a4290,duster,8
+train_ep_006087,obj__paper__7e3f6604,paper,1
+train_ep_006087,obj__pen_for_the_chickens__00bc2be0,pen for the chickens,1
+train_ep_006486,obj__crossbow__68ea5b5f,crossbow,14
+train_ep_006486,obj__mace__22213c39,mace,14
+train_ep_006486,obj__chain__9951112f,chain,14
+train_ep_006486,obj__longbows__fd739c14,longbows,10
+train_ep_006486,obj__axe__c89ee4a2,axe,14
+train_ep_006486,obj__key__3c6e0b8a,key,14
+train_ep_006486,obj__sword__f3b462d9,sword,14
+train_ep_006486,obj__bow__18222660,bow,14
+train_ep_006519,obj__knife__4cbfe673,knife,2
+train_ep_006575,obj__bag_of_herbs__92ed6778,bag of herbs,9
+train_ep_006631,obj__broom__5bfab488,broom,6
+train_ep_006696,obj__peg__ac401416,peg,14
+train_ep_006696,obj__manical__8a653a0b,manical,14
+train_ep_006696,obj__dusty_floor__3b0bcf0c,dusty floor,14
+train_ep_006837,obj__highly_fortified_tower__d6964cd0,highly fortified tower,14
+train_ep_006837,obj__ornate_goblet__8f8d5ad5,ornate goblet,14
+train_ep_006840,obj__market__c1c16452,market,14
+train_ep_006840,obj__tavern__7e2c4fe3,tavern,14
+train_ep_006840,obj__tempior_market__261e7a56,tempior market,14
+train_ep_006840,obj__ale__f7a38033,ale,14
+train_ep_006840,obj__bar__37b51d19,bar,14
+train_ep_006840,obj__bar_stool__3d9b3e79,bar stool,14
+train_ep_006840,obj__wine__3f206bd2,wine,6
+train_ep_006840,obj__shelf__1f650330,shelf,14
+train_ep_006845,obj__tapestry__8873d146,tapestry,9
+train_ep_006845,obj__flower__608f0b98,flower,9
+train_ep_006845,obj__fairy_lights__688fba7e,fairy lights,9
+train_ep_006845,obj__moss__06a311b9,moss,9
+train_ep_006845,obj__stone__0a840ef4,stone,9
+train_ep_006858,obj__bed__001cbc05,bed,14
+train_ep_006858,obj__carpet__37c6ab2f,carpet,14
+train_ep_006858,obj__cover__41d0e299,cover,14
+train_ep_006858,obj__carving__99524e31,carving,14
+train_ep_006858,obj__crystal_ball__8df897a1,crystal ball,4
+train_ep_006961,obj__old_mop__85848a07,old mop,6
+train_ep_006961,obj__moldy_bread__629f5023,moldy bread,14
+train_ep_006961,obj__bench_made_of_stone__4e6a3f37,bench made of stone,14
+train_ep_006961,obj__rat__e756f6aa,rat,14
+train_ep_006961,obj__bucket_for_eliminating_waste__2371ab3a,bucket for eliminating waste,7
+train_ep_007005,obj__sword__f3b462d9,sword,8
+train_ep_007005,obj__axe__c89ee4a2,axe,10
+train_ep_007005,obj__longbows__fd739c14,longbows,14
+train_ep_007005,obj__crossbow__68ea5b5f,crossbow,14
+train_ep_007005,obj__bow__18222660,bow,14
+train_ep_007005,obj__shield__28c69b4c,shield,14
+train_ep_007005,obj__mace__22213c39,mace,14
+train_ep_007120,obj__scepter__02ba5e71,scepter,1
+train_ep_007220,obj__peg__ac401416,peg,14
+train_ep_007220,obj__dusty_floor__3b0bcf0c,dusty floor,14
+train_ep_007220,obj__manical__8a653a0b,manical,14
+train_ep_007220,obj__rusty_bar__905126ea,rusty bar,14
+train_ep_007363,obj__shelf__1f650330,shelf,14
+train_ep_007363,obj__ale__f7a38033,ale,14
+train_ep_007363,obj__bar__37b51d19,bar,14
+train_ep_007363,obj__market__c1c16452,market,14
+train_ep_007363,obj__tempior_market__261e7a56,tempior market,14
+train_ep_007363,obj__tavern__7e2c4fe3,tavern,14
+train_ep_007363,obj__wine__3f206bd2,wine,10
+train_ep_007581,obj__crossbow__68ea5b5f,crossbow,14
+train_ep_007581,obj__chain__9951112f,chain,14
+train_ep_007581,obj__mace__22213c39,mace,14
+train_ep_007581,obj__longbows__fd739c14,longbows,14
+train_ep_007581,obj__bow__18222660,bow,14
+train_ep_007581,obj__axe__c89ee4a2,axe,14
+train_ep_007581,obj__sword__f3b462d9,sword,14
+train_ep_007601,obj__small_bucket__4269bdf5,small bucket,12
+train_ep_007729,obj__crown__408e69f6,crown,11
+train_ep_007861,obj__intricate_labyrinth_made_of_shrubs__cf0382f7,intricate labyrinth made of shrubs,14
+train_ep_007861,obj__rose_bush__9f663235,rose bush,14
+train_ep_007861,obj__tulip__0ae57c94,tulip,14
+train_ep_007861,obj__shrub__2f5bae73,shrub,14
+train_ep_007861,obj__fountain__79de7a61,fountain,14
+train_ep_007861,obj__cobbled_walkway__f9c3d16f,cobbled walkway,14
+train_ep_007861,obj__small_lake__1f398a97,small lake,14
+train_ep_007861,obj__bench__1d28d258,bench,14
+train_ep_007876,obj__map__1d78dc8e,map,14
+train_ep_007876,obj__tapestry__8873d146,tapestry,14
+train_ep_007876,obj__candle__ce23a732,candle,14
+train_ep_007876,obj__book__821f0328,book,14
+train_ep_007876,obj__lush_maroon_carpet__7a6b263e,lush maroon carpet,14
+train_ep_007876,obj__odd_and_end__46d0903f,odd and end,14
+train_ep_007876,obj__parchment__cc1681e6,parchment,6
+train_ep_007899,obj__magical_crystal__f8d5d939,magical crystal,14
+train_ep_007899,obj__piece_of_armor__498a2c12,piece of armor,14
+train_ep_007899,obj__piece_of_fortune__e676af6c,piece of fortune,14
+train_ep_007899,obj__gold__e07e81c2,gold,8
+train_ep_007899,obj__coin__96a9519b,coin,14
+train_ep_007899,obj__sword__f3b462d9,sword,14
+train_ep_007899,obj__necklaces__90ebce90,necklaces,14
+train_ep_007899,obj__treasure_chest__758181f6,treasure chest,14
+train_ep_007940,obj__stone__0a840ef4,stone,14
+train_ep_007940,obj__fairy_lights__688fba7e,fairy lights,14
+train_ep_007940,obj__moss__06a311b9,moss,14
+train_ep_007954,obj__carving__99524e31,carving,14
+train_ep_007954,obj__carpet__37c6ab2f,carpet,14
+train_ep_007954,obj__bed__001cbc05,bed,14
+train_ep_007954,obj__suit_of_armor__66f246e8,suit of armor,4
+train_ep_007954,obj__cover__41d0e299,cover,14
+train_ep_008157,obj__crown__408e69f6,crown,2
+train_ep_008236,obj__duster__b88a4290,duster,7
+train_ep_008277,obj__books__7d8949bc,books,4
+train_ep_008278,obj__scepter__02ba5e71,scepter,2
+train_ep_008338,obj__dusty_floor__3b0bcf0c,dusty floor,14
+train_ep_008338,obj__peg__ac401416,peg,14
+train_ep_008338,obj__manical__8a653a0b,manical,3
+train_ep_008484,obj__sun__ebd556e6,sun,14
+train_ep_008484,obj__tree__c0af77cf,tree,14
+train_ep_008484,obj__rainbow__cd13b6a6,rainbow,14
+train_ep_008484,obj__shrub__2f5bae73,shrub,14
+train_ep_008618,obj__bench_made_of_stone__4e6a3f37,bench made of stone,14
+train_ep_008618,obj__rat__e756f6aa,rat,14
+train_ep_008618,obj__old_mop__85848a07,old mop,14
+train_ep_008618,obj__bucket_for_eliminating_waste__2371ab3a,bucket for eliminating waste,14
+train_ep_008671,obj__chain__9951112f,chain,14
+train_ep_008671,obj__shield__28c69b4c,shield,14
+train_ep_008671,obj__longbows__fd739c14,longbows,14
+train_ep_008671,obj__mace__22213c39,mace,14
+train_ep_008671,obj__key__3c6e0b8a,key,14
+train_ep_008671,obj__axe__c89ee4a2,axe,14
+train_ep_008671,obj__sword__f3b462d9,sword,14
+train_ep_008671,obj__bow__18222660,bow,14
+train_ep_008671,obj__crossbow__68ea5b5f,crossbow,14
+train_ep_008725,obj__crown__408e69f6,crown,3
+train_ep_009029,obj__shrub__2f5bae73,shrub,14
+train_ep_009029,obj__rainbow__cd13b6a6,rainbow,14
+train_ep_009029,obj__tree__c0af77cf,tree,14
+train_ep_009037,obj__flower__608f0b98,flower,14
+train_ep_009037,obj__stone__0a840ef4,stone,14
+train_ep_009037,obj__plant__9ea0a36b,plant,14
+train_ep_009037,obj__moss__06a311b9,moss,14
+train_ep_009037,obj__fairy_lights__688fba7e,fairy lights,14
+train_ep_009037,obj__tapestry__8873d146,tapestry,14
+train_ep_009229,obj__crossbow__68ea5b5f,crossbow,14
+train_ep_009229,obj__chain__9951112f,chain,14
+train_ep_009229,obj__mace__22213c39,mace,14
+train_ep_009229,obj__longbows__fd739c14,longbows,14
+train_ep_009229,obj__bow__18222660,bow,14
+train_ep_009229,obj__axe__c89ee4a2,axe,14
+train_ep_009229,obj__sword__f3b462d9,sword,14
+train_ep_009258,obj__crown__408e69f6,crown,4
+train_ep_009520,obj__intricate_labyrinth_made_of_shrubs__cf0382f7,intricate labyrinth made of shrubs,14
+train_ep_009520,obj__shrub__2f5bae73,shrub,14
+train_ep_009520,obj__fountain__79de7a61,fountain,14
+train_ep_009520,obj__bench__1d28d258,bench,14
+train_ep_009520,obj__small_lake__1f398a97,small lake,14
+train_ep_009520,obj__rose_bush__9f663235,rose bush,14
+train_ep_009593,obj__highly_fortified_tower__d6964cd0,highly fortified tower,14
+train_ep_009594,obj__tree__c0af77cf,tree,14
+train_ep_009594,obj__shrub__2f5bae73,shrub,5
+train_ep_009601,obj__flower__608f0b98,flower,14
+train_ep_009601,obj__moss__06a311b9,moss,14
+train_ep_009601,obj__fairy_lights__688fba7e,fairy lights,14
+train_ep_009601,obj__stone__0a840ef4,stone,14
+train_ep_009601,obj__tree__c0af77cf,tree,14
+train_ep_009615,obj__carving__99524e31,carving,14
+train_ep_009615,obj__cover__41d0e299,cover,14
+train_ep_009615,obj__bed__001cbc05,bed,14
+train_ep_009615,obj__throne__253d405e,throne,14
+train_ep_009615,obj__carpet__37c6ab2f,carpet,14
+train_ep_009721,obj__bucket_for_eliminating_waste__2371ab3a,bucket for eliminating waste,14
+train_ep_009721,obj__rat__e756f6aa,rat,14
+train_ep_009721,obj__bench_made_of_stone__4e6a3f37,bench made of stone,14
+train_ep_009771,obj__crossbow__68ea5b5f,crossbow,7
+train_ep_009771,obj__chain__9951112f,chain,14
+train_ep_009771,obj__longbows__fd739c14,longbows,14
+train_ep_009771,obj__bow__18222660,bow,14
+train_ep_009771,obj__axe__c89ee4a2,axe,5
+train_ep_009771,obj__mace__22213c39,mace,14
+train_ep_009771,obj__sword__f3b462d9,sword,8
+train_ep_009797,obj__dress__ccaaac95,dress,9
+train_ep_009901,obj__bench_made_of_stone__4e6a3f37,bench made of stone,1
+train_ep_009901,obj__old_broom__50873bf9,old broom,1
+train_ep_009901,obj__bucket_for_eliminating_waste__2371ab3a,bucket for eliminating waste,1
+train_ep_009901,obj__old_mop__85848a07,old mop,1
+train_ep_010147,obj__carpet__37c6ab2f,carpet,1
+train_ep_010147,obj__carving__99524e31,carving,1
+train_ep_010147,obj__cover__41d0e299,cover,1
+train_ep_010147,obj__bed__001cbc05,bed,1
+train_ep_010176,obj__dusty_floor__3b0bcf0c,dusty floor,1
+train_ep_010176,obj__peg__ac401416,peg,1
+train_ep_010176,obj__manical__8a653a0b,manical,1
+train_ep_010223,obj__rusty_bar__905126ea,rusty bar,1
+train_ep_010223,obj__peg__ac401416,peg,1
+train_ep_010223,obj__manical__8a653a0b,manical,1

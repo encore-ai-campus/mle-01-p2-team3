@@ -1,0 +1,265 @@
+character_id,normalized_name,canonical_name,appearance_count,speaker_turn_count,mention_count,unique_episode_count,total_score,is_target_agent_name,is_generic_name,source,overall_rank_in_target_subset
+char__king,king,King,332,2117,447,332,3560,True,False,top_king_persona_subset,1
+char__queen,queen,Queen,44,281,143,101,556,False,False,top_king_persona_subset,2
+char__servant,servant,Servant,33,188,53,45,340,False,True,top_king_persona_subset,3
+char__maid,maid,Maid,17,112,30,24,193,False,False,top_king_persona_subset,4
+char__guard,guard,Guard,15,96,52,36,193,False,True,top_king_persona_subset,5
+char__knight,knight,Knight,13,90,33,20,162,False,False,top_king_persona_subset,6
+char__people,people,People,3,16,109,65,134,False,True,top_king_persona_subset,7
+char__brother,brother,Brother,10,70,33,21,133,False,False,top_king_persona_subset,8
+char__townperson,townperson,Townperson,14,88,2,14,132,False,False,top_king_persona_subset,9
+char__guest,guest,Guest,12,80,5,12,121,False,True,top_king_persona_subset,10
+char__merchant,merchant,Merchant,9,63,20,15,110,False,False,top_king_persona_subset,11
+char__person,person,Person,10,61,13,19,104,False,True,top_king_persona_subset,12
+char__princess,princess,Princess,9,63,12,14,102,False,False,top_king_persona_subset,13
+char__blacksmith,blacksmith,Blacksmith,8,51,24,17,99,False,False,top_king_persona_subset,14
+char__lord,lord,Lord,0,0,97,46,97,False,True,top_king_persona_subset,15
+char__man,man,Man,2,14,71,57,91,False,True,top_king_persona_subset,16
+char__chef,chef,Chef,5,35,25,18,75,False,False,top_king_persona_subset,17
+char__noble,noble,Noble,6,42,13,17,73,False,False,top_king_persona_subset,18
+char__subject,subject,Subject,7,39,12,12,72,False,False,top_king_persona_subset,19
+char__family,family,Family,0,0,72,45,72,False,True,top_king_persona_subset,20
+char__royal,royal,Royal,0,0,72,55,72,False,False,top_king_persona_subset,21
+char__father,father,Father,0,0,71,35,71,False,True,top_king_persona_subset,22
+char__diplomat,diplomat,Diplomat,6,42,5,8,65,False,False,top_king_persona_subset,23
+char__dragon,dragon,Dragon,3,19,32,13,60,False,False,top_king_persona_subset,24
+char__guards,guards,Guards,0,0,60,44,60,False,False,top_king_persona_subset,25
+char__officer,officer,Officer,6,38,3,6,59,False,False,top_king_persona_subset,26
+char__spider,spider,Spider,5,35,9,6,59,False,False,top_king_persona_subset,27
+char__enemy,enemy,Enemy,4,28,14,11,54,False,False,top_king_persona_subset,28
+char__child,child,Child,3,18,27,19,54,False,True,top_king_persona_subset,29
+char__kings,kings,Kings,6,30,4,9,52,False,False,top_king_persona_subset,30
+char__thing,thing,Thing,0,0,48,46,48,False,False,top_king_persona_subset,31
+char__murderer,murderer,Murderer,5,28,4,5,47,False,False,top_king_persona_subset,32
+char__fool,fool,Fool,2,11,30,21,47,False,False,top_king_persona_subset,33
+char__his_father,his father,His Father,4,28,3,6,43,False,False,top_king_persona_subset,34
+char__royal_family,royal family,Royal Family,4,24,6,10,42,False,False,top_king_persona_subset,35
+char__wife,wife,Wife,0,0,42,28,42,False,True,top_king_persona_subset,36
+char__priest,priest,Priest,3,20,11,11,40,False,False,top_king_persona_subset,37
+char__son,son,Son,0,0,39,26,39,False,False,top_king_persona_subset,38
+char__rabbit,rabbit,Rabbit,2,14,17,4,37,False,False,top_king_persona_subset,39
+char__visitor,visitor,Visitor,3,21,4,4,34,False,True,top_king_persona_subset,40
+char__thief,thief,Thief,3,9,16,8,34,False,False,top_king_persona_subset,41
+char__battle,battle,Battle,0,0,34,24,34,False,False,top_king_persona_subset,42
+char__prisoner,prisoner,Prisoner,4,15,5,9,32,False,False,top_king_persona_subset,43
+char__mother,mother,Mother,0,0,32,16,32,False,True,top_king_persona_subset,44
+char__debtor,debtor,Debtor,3,21,1,3,31,False,False,top_king_persona_subset,45
+char__pheasant,pheasant,Pheasant,2,12,11,5,29,False,False,top_king_persona_subset,46
+char__customer,customer,Customer,3,18,1,3,28,False,False,top_king_persona_subset,47
+char__priests,priests,Priests,3,18,1,4,28,False,False,top_king_persona_subset,48
+char__villager,villager,Villager,2,14,6,4,26,False,True,top_king_persona_subset,49
+char__dogs,dogs,Dogs,2,14,5,6,25,False,False,top_king_persona_subset,50
+char__prince,prince,Prince,1,7,14,11,24,False,False,top_king_persona_subset,51
+char__apothecary,apothecary,Apothecary,0,0,24,10,24,False,False,top_king_persona_subset,52
+char__friend,friend,Friend,0,0,24,13,24,False,True,top_king_persona_subset,53
+char__animal,animal,Animal,2,9,8,6,23,False,True,top_king_persona_subset,54
+char__fight,fight,Fight,0,0,23,19,23,False,False,top_king_persona_subset,55
+char__soldier,soldier,Soldier,2,14,2,2,22,False,False,top_king_persona_subset,56
+char__horse,horse,Horse,1,7,11,7,21,False,True,top_king_persona_subset,57
+char__daughter,daughter,Daughter,0,0,21,16,21,False,False,top_king_persona_subset,58
+char__woman,woman,Woman,0,0,21,18,21,False,True,top_king_persona_subset,59
+char__courtier,courtier,Courtier,2,14,0,2,20,False,False,top_king_persona_subset,60
+char__young_student_reading_a_book_beneath_a_dogwood_tree,young student reading a book beneath a dogwood tree,Young Student Reading A Book Beneath A Dogwood Tree,2,14,0,2,20,False,False,top_king_persona_subset,61
+char__children,children,Children,0,0,20,17,20,False,False,top_king_persona_subset,62
+char__no_one,no one,No One,0,0,18,16,18,False,False,top_king_persona_subset,63
+char__army,army,Army,0,0,17,12,17,False,False,top_king_persona_subset,64
+char__god,god,God,0,0,16,13,16,False,False,top_king_persona_subset,65
+char__subjects,subjects,Subjects,0,0,15,11,15,False,False,top_king_persona_subset,66
+char__prior,prior,Prior,1,7,4,4,14,False,False,top_king_persona_subset,67
+char__chambermaid,chambermaid,Chambermaid,0,0,14,8,14,False,False,top_king_persona_subset,68
+char__king_of,king of,King Of,0,0,14,14,14,False,False,top_king_persona_subset,69
+char__scholar,scholar,Scholar,1,7,3,2,13,False,False,top_king_persona_subset,70
+char__boy,boy,Boy,0,0,13,12,13,False,True,top_king_persona_subset,71
+char__lady,lady,Lady,0,0,13,11,13,False,True,top_king_persona_subset,72
+char__soldiers,soldiers,Soldiers,0,0,13,8,13,False,False,top_king_persona_subset,73
+char__rat,rat,Rat,1,7,2,2,12,False,True,top_king_persona_subset,74
+char__spiders,spiders,Spiders,1,7,2,2,12,False,False,top_king_persona_subset,75
+char__hunter,hunter,Hunter,1,7,1,2,11,False,False,top_king_persona_subset,76
+char__lady_in_waiting,lady in waiting,Lady In Waiting,1,7,1,2,11,False,False,top_king_persona_subset,77
+char__parishioner,parishioner,Parishioner,1,7,1,1,11,False,False,top_king_persona_subset,78
+char__patron,patron,Patron,1,7,1,1,11,False,False,top_king_persona_subset,79
+char__trader,trader,Trader,1,7,1,1,11,False,False,top_king_persona_subset,80
+char__dog,dog,Dog,0,0,11,4,11,False,False,top_king_persona_subset,81
+char__peasant,peasant,Peasant,0,0,11,9,11,False,True,top_king_persona_subset,82
+char__village,village,Village,0,0,11,9,11,False,False,top_king_persona_subset,83
+char__drunks,drunks,Drunks,1,7,0,1,10,False,False,top_king_persona_subset,84
+char__family_member,family member,Family Member,1,7,0,1,10,False,False,top_king_persona_subset,85
+char__gardener_pulling_weeds,gardener pulling weeds,Gardener Pulling Weeds,1,7,0,1,10,False,False,top_king_persona_subset,86
+char__goblin_king_s_bartender,goblin king's bartender,Goblin King'S Bartender,1,7,0,1,10,False,False,top_king_persona_subset,87
+char__helpers,helpers,Helpers,1,7,0,1,10,False,False,top_king_persona_subset,88
+char__mightiest_warriors,mightiest warriors,Mightiest Warriors,1,7,0,1,10,False,False,top_king_persona_subset,89
+char__mystical_dragon,mystical dragon,Mystical Dragon,1,7,0,1,10,False,False,top_king_persona_subset,90
+char__proprietor,proprietor,Proprietor,1,7,0,1,10,False,False,top_king_persona_subset,91
+char__sioux_chef,sioux chef,Sioux Chef,1,7,0,1,10,False,False,top_king_persona_subset,92
+char__tern,tern,Tern,1,7,0,1,10,False,False,top_king_persona_subset,93
+char__traders,traders,Traders,1,7,0,1,10,False,False,top_king_persona_subset,94
+char__waiting_priest,waiting priest,Waiting Priest,1,7,0,1,10,False,False,top_king_persona_subset,95
+char__wild_boar,wild boar,Wild Boar,1,7,0,1,10,False,False,top_king_persona_subset,96
+char__worshipper,worshipper,Worshipper,1,7,0,1,10,False,False,top_king_persona_subset,97
+char__light,light,Light,0,0,9,9,9,False,False,top_king_persona_subset,98
+char__table,table,Table,0,0,9,8,9,False,False,top_king_persona_subset,99
+char__cook,cook,Cook,0,0,8,7,8,False,False,top_king_persona_subset,100
+char__friends,friends,Friends,0,0,8,7,8,False,False,top_king_persona_subset,101
+char__others,others,Others,0,0,8,7,8,False,False,top_king_persona_subset,102
+char__royalty,royalty,Royalty,0,0,8,8,8,False,False,top_king_persona_subset,103
+char__sons,sons,Sons,0,0,8,7,8,False,False,top_king_persona_subset,104
+char__staff,staff,Staff,0,0,8,4,8,False,False,top_king_persona_subset,105
+char__villagers,villagers,Villagers,0,0,8,5,8,False,False,top_king_persona_subset,106
+char__gods,gods,Gods,0,0,7,6,7,False,False,top_king_persona_subset,107
+char__jester,jester,Jester,0,0,7,6,7,False,False,top_king_persona_subset,108
+char__magician,magician,Magician,0,0,7,2,7,False,False,top_king_persona_subset,109
+char__old_man,old man,Old Man,0,0,7,6,7,False,False,top_king_persona_subset,110
+char__slave,slave,Slave,0,0,7,5,7,False,False,top_king_persona_subset,111
+char__soul,soul,Soul,0,0,7,5,7,False,False,top_king_persona_subset,112
+char__witch,witch,Witch,0,0,7,2,7,False,False,top_king_persona_subset,113
+char__bear,bear,Bear,0,0,6,4,6,False,False,top_king_persona_subset,114
+char__beast,beast,Beast,0,0,6,5,6,False,False,top_king_persona_subset,115
+char__fly,fly,Fly,0,0,6,5,6,False,False,top_king_persona_subset,116
+char__general,general,General,0,0,6,4,6,False,False,top_king_persona_subset,117
+char__girl,girl,Girl,0,0,6,6,6,False,True,top_king_persona_subset,118
+char__husband,husband,Husband,0,0,6,4,6,False,True,top_king_persona_subset,119
+char__leader,leader,Leader,0,0,6,6,6,False,False,top_king_persona_subset,120
+char__plants,plants,Plants,0,0,6,1,6,False,False,top_king_persona_subset,121
+char__potion,potion,Potion,0,0,6,5,6,False,False,top_king_persona_subset,122
+char__queen_s,queen's,Queen'S,0,0,6,5,6,False,False,top_king_persona_subset,123
+char__sister,sister,Sister,0,0,6,3,6,False,False,top_king_persona_subset,124
+char__bridge,bridge,Bridge,0,0,5,2,5,False,False,top_king_persona_subset,125
+char__citizen,citizen,Citizen,0,0,5,4,5,False,False,top_king_persona_subset,126
+char__drunk,drunk,Drunk,0,0,5,5,5,False,False,top_king_persona_subset,127
+char__royal_guard,royal guard,Royal Guard,0,0,5,3,5,False,False,top_king_persona_subset,128
+char__spirits,spirits,Spirits,0,0,5,3,5,False,False,top_king_persona_subset,129
+char__wall,wall,Wall,0,0,5,5,5,False,False,top_king_persona_subset,130
+char__warrior,warrior,Warrior,0,0,5,5,5,False,False,top_king_persona_subset,131
+char__wizard,wizard,Wizard,0,0,5,3,5,False,False,top_king_persona_subset,132
+char__captain,captain,Captain,0,0,4,1,4,False,False,top_king_persona_subset,133
+char__chicken,chicken,Chicken,0,0,4,3,4,False,False,top_king_persona_subset,134
+char__cooks,cooks,Cooks,0,0,4,3,4,False,False,top_king_persona_subset,135
+char__fairy,fairy,Fairy,0,0,4,2,4,False,False,top_king_persona_subset,136
+char__farmer,farmer,Farmer,0,0,4,3,4,False,True,top_king_persona_subset,137
+char__gardener,gardener,Gardener,0,0,4,3,4,False,False,top_king_persona_subset,138
+char__orc,orc,Orc,0,0,4,2,4,False,False,top_king_persona_subset,139
+char__owner,owner,Owner,0,0,4,4,4,False,False,top_king_persona_subset,140
+char__townsperson,townsperson,Townsperson,0,0,4,4,4,False,False,top_king_persona_subset,141
+char__executioners,executioners,Executioners,1,0,0,1,3,False,False,top_king_persona_subset,142
+char__staircase,staircase,Staircase,1,0,0,1,3,False,False,top_king_persona_subset,143
+char__artist,artist,Artist,0,0,3,2,3,False,False,top_king_persona_subset,144
+char__bandit,bandit,Bandit,0,0,3,2,3,False,False,top_king_persona_subset,145
+char__bird,bird,Bird,0,0,3,3,3,False,True,top_king_persona_subset,146
+char__boar,boar,Boar,0,0,3,2,3,False,False,top_king_persona_subset,147
+char__brave_knight,brave knight,Brave Knight,0,0,3,3,3,False,False,top_king_persona_subset,148
+char__chamber_maid,chamber maid,Chamber Maid,0,0,3,1,3,False,False,top_king_persona_subset,149
+char__dark_lord,dark lord,Dark Lord,0,0,3,1,3,False,False,top_king_persona_subset,150
+char__families,families,Families,0,0,3,3,3,False,False,top_king_persona_subset,151
+char__gather,gather,Gather,0,0,3,3,3,False,False,top_king_persona_subset,152
+char__grandfather,grandfather,Grandfather,0,0,3,3,3,False,False,top_king_persona_subset,153
+char__high_priest,high priest,High Priest,0,0,3,3,3,False,False,top_king_persona_subset,154
+char__ladies,ladies,Ladies,0,0,3,3,3,False,False,top_king_persona_subset,155
+char__local,local,Local,0,0,3,2,3,False,False,top_king_persona_subset,156
+char__member,member,Member,0,0,3,3,3,False,False,top_king_persona_subset,157
+char__mistress,mistress,Mistress,0,0,3,3,3,False,False,top_king_persona_subset,158
+char__party,party,Party,0,0,3,3,3,False,False,top_king_persona_subset,159
+char__sacrifice,sacrifice,Sacrifice,0,0,3,3,3,False,False,top_king_persona_subset,160
+char__turkey,turkey,Turkey,0,0,3,2,3,False,False,top_king_persona_subset,161
+char__wizards,wizards,Wizards,0,0,3,3,3,False,False,top_king_persona_subset,162
+char__young_boy,young boy,Young Boy,0,0,3,3,3,False,False,top_king_persona_subset,163
+char__young_man,young man,Young Man,0,0,3,2,3,False,False,top_king_persona_subset,164
+char__assassin,assassin,Assassin,0,0,2,2,2,False,False,top_king_persona_subset,165
+char__baby,baby,Baby,0,0,2,1,2,False,False,top_king_persona_subset,166
+char__court_jester,court jester,Court Jester,0,0,2,2,2,False,False,top_king_persona_subset,167
+char__cow,cow,Cow,0,0,2,2,2,False,False,top_king_persona_subset,168
+char__deer,deer,Deer,0,0,2,2,2,False,False,top_king_persona_subset,169
+char__doctor,doctor,Doctor,0,0,2,2,2,False,False,top_king_persona_subset,170
+char__dove,dove,Dove,0,0,2,2,2,False,False,top_king_persona_subset,171
+char__faerie,faerie,Faerie,0,0,2,2,2,False,False,top_king_persona_subset,172
+char__fighter,fighter,Fighter,0,0,2,2,2,False,False,top_king_persona_subset,173
+char__footman,footman,Footman,0,0,2,2,2,False,False,top_king_persona_subset,174
+char__insect,insect,Insect,0,0,2,2,2,False,False,top_king_persona_subset,175
+char__insects,insects,Insects,0,0,2,2,2,False,False,top_king_persona_subset,176
+char__king_s_guard,king's guard,King'S Guard,0,0,2,2,2,False,False,top_king_persona_subset,177
+char__mad_king,mad king,Mad King,0,0,2,1,2,False,False,top_king_persona_subset,178
+char__messenger,messenger,Messenger,0,0,2,2,2,False,False,top_king_persona_subset,179
+char__pet,pet,Pet,0,0,2,1,2,False,False,top_king_persona_subset,180
+char__pig,pig,Pig,0,0,2,2,2,False,False,top_king_persona_subset,181
+char__prisoners,prisoners,Prisoners,0,0,2,2,2,False,False,top_king_persona_subset,182
+char__scientist,scientist,Scientist,0,0,2,2,2,False,False,top_king_persona_subset,183
+char__tower,tower,Tower,0,0,2,2,2,False,False,top_king_persona_subset,184
+char__traitor,traitor,Traitor,0,0,2,2,2,False,False,top_king_persona_subset,185
+char__troll,troll,Troll,0,0,2,1,2,False,False,top_king_persona_subset,186
+char__worms,worms,Worms,0,0,2,1,2,False,False,top_king_persona_subset,187
+char__adulterer,adulterer,Adulterer,0,0,1,1,1,False,False,top_king_persona_subset,188
+char__advisor,advisor,Advisor,0,0,1,1,1,False,False,top_king_persona_subset,189
+char__apprentice,apprentice,Apprentice,0,0,1,1,1,False,False,top_king_persona_subset,190
+char__artists,artists,Artists,0,0,1,1,1,False,False,top_king_persona_subset,191
+char__assistant,assistant,Assistant,0,0,1,1,1,False,False,top_king_persona_subset,192
+char__attendant,attendant,Attendant,0,0,1,1,1,False,False,top_king_persona_subset,193
+char__beaver,beaver,Beaver,0,0,1,1,1,False,False,top_king_persona_subset,194
+char__bedroom,bedroom,Bedroom,0,0,1,1,1,False,False,top_king_persona_subset,195
+char__blacksmiths,blacksmiths,Blacksmiths,0,0,1,1,1,False,False,top_king_persona_subset,196
+char__butler,butler,Butler,0,0,1,1,1,False,False,top_king_persona_subset,197
+char__captive,captive,Captive,0,0,1,1,1,False,False,top_king_persona_subset,198
+char__cat,cat,Cat,0,0,1,1,1,False,False,top_king_persona_subset,199
+char__character,character,Character,0,0,1,1,1,False,False,top_king_persona_subset,200
+char__chief,chief,Chief,0,0,1,1,1,False,False,top_king_persona_subset,201
+char__companion,companion,Companion,0,0,1,1,1,False,False,top_king_persona_subset,202
+char__court_wizard,court wizard,Court Wizard,0,0,1,1,1,False,False,top_king_persona_subset,203
+char__craftsman,craftsman,Craftsman,0,0,1,1,1,False,False,top_king_persona_subset,204
+char__creature,creature,Creature,0,0,1,1,1,False,False,top_king_persona_subset,205
+char__criminal,criminal,Criminal,0,0,1,1,1,False,False,top_king_persona_subset,206
+char__crow,crow,Crow,0,0,1,1,1,False,False,top_king_persona_subset,207
+char__cut_throat,cut throat,Cut Throat,0,0,1,1,1,False,False,top_king_persona_subset,208
+char__demon,demon,Demon,0,0,1,1,1,False,False,top_king_persona_subset,209
+char__devil,devil,Devil,0,0,1,1,1,False,False,top_king_persona_subset,210
+char__donkey,donkey,Donkey,0,0,1,1,1,False,False,top_king_persona_subset,211
+char__drunkard,drunkard,Drunkard,0,0,1,1,1,False,False,top_king_persona_subset,212
+char__faeries,faeries,Faeries,0,0,1,1,1,False,False,top_king_persona_subset,213
+char__faery,faery,Faery,0,0,1,1,1,False,False,top_king_persona_subset,214
+char__farmers,farmers,Farmers,0,0,1,1,1,False,False,top_king_persona_subset,215
+char__figure,figure,Figure,0,0,1,1,1,False,False,top_king_persona_subset,216
+char__fish,fish,Fish,0,0,1,1,1,False,True,top_king_persona_subset,217
+char__fishermen,fishermen,Fishermen,0,0,1,1,1,False,False,top_king_persona_subset,218
+char__flies,flies,Flies,0,0,1,1,1,False,False,top_king_persona_subset,219
+char__follower,follower,Follower,0,0,1,1,1,False,False,top_king_persona_subset,220
+char__frog,frog,Frog,0,0,1,1,1,False,False,top_king_persona_subset,221
+char__goddess,goddess,Goddess,0,0,1,1,1,False,False,top_king_persona_subset,222
+char__grandmother,grandmother,Grandmother,0,0,1,1,1,False,False,top_king_persona_subset,223
+char__groom,groom,Groom,0,0,1,1,1,False,False,top_king_persona_subset,224
+char__handmaid,handmaid,Handmaid,0,0,1,1,1,False,False,top_king_persona_subset,225
+char__high_priestess,high priestess,High Priestess,0,0,1,1,1,False,False,top_king_persona_subset,226
+char__his_wife,his wife,His Wife,0,0,1,1,1,False,False,top_king_persona_subset,227
+char__hound,hound,Hound,0,0,1,1,1,False,False,top_king_persona_subset,228
+char__individual,individual,Individual,0,0,1,1,1,False,False,top_king_persona_subset,229
+char__judge,judge,Judge,0,0,1,1,1,False,False,top_king_persona_subset,230
+char__kid,kid,Kid,0,0,1,1,1,False,False,top_king_persona_subset,231
+char__librarian,librarian,Librarian,0,0,1,1,1,False,False,top_king_persona_subset,232
+char__lizard,lizard,Lizard,0,0,1,1,1,False,False,top_king_persona_subset,233
+char__loved_ones,loved ones,Loved Ones,0,0,1,1,1,False,False,top_king_persona_subset,234
+char__maester,maester,Maester,0,0,1,1,1,False,False,top_king_persona_subset,235
+char__mage,mage,Mage,0,0,1,1,1,False,False,top_king_persona_subset,236
+char__mice,mice,Mice,0,0,1,1,1,False,False,top_king_persona_subset,237
+char__miner,miner,Miner,0,0,1,1,1,False,False,top_king_persona_subset,238
+char__minister,minister,Minister,0,0,1,1,1,False,False,top_king_persona_subset,239
+char__monster,monster,Monster,0,0,1,1,1,False,False,top_king_persona_subset,240
+char__mouse,mouse,Mouse,0,0,1,1,1,False,False,top_king_persona_subset,241
+char__nobleman,nobleman,Nobleman,0,0,1,1,1,False,False,top_king_persona_subset,242
+char__nobles,nobles,Nobles,0,0,1,1,1,False,False,top_king_persona_subset,243
+char__old_woman,old woman,Old Woman,0,0,1,1,1,False,False,top_king_persona_subset,244
+char__painter,painter,Painter,0,0,1,1,1,False,False,top_king_persona_subset,245
+char__parent,parent,Parent,0,0,1,1,1,False,False,top_king_persona_subset,246
+char__patient,patient,Patient,0,0,1,1,1,False,False,top_king_persona_subset,247
+char__priestess,priestess,Priestess,0,0,1,1,1,False,False,top_king_persona_subset,248
+char__retainer,retainer,Retainer,0,0,1,1,1,False,False,top_king_persona_subset,249
+char__rival,rival,Rival,0,0,1,1,1,False,False,top_king_persona_subset,250
+char__smith,smith,Smith,0,0,1,1,1,False,False,top_king_persona_subset,251
+char__souls,souls,Souls,0,0,1,1,1,False,False,top_king_persona_subset,252
+char__spirit,spirit,Spirit,0,0,1,1,1,False,False,top_king_persona_subset,253
+char__stable_boy,stable boy,Stable Boy,0,0,1,1,1,False,False,top_king_persona_subset,254
+char__student,student,Student,0,0,1,1,1,False,False,top_king_persona_subset,255
+char__survivors,survivors,Survivors,0,0,1,1,1,False,False,top_king_persona_subset,256
+char__toad,toad,Toad,0,0,1,1,1,False,False,top_king_persona_subset,257
+char__torturer,torturer,Torturer,0,0,1,1,1,False,False,top_king_persona_subset,258
+char__trolls,trolls,Trolls,0,0,1,1,1,False,False,top_king_persona_subset,259
+char__troop,troop,Troop,0,0,1,1,1,False,False,top_king_persona_subset,260
+char__warden,warden,Warden,0,0,1,1,1,False,False,top_king_persona_subset,261
+char__watcher,watcher,Watcher,0,0,1,1,1,False,False,top_king_persona_subset,262
+char__watchman,watchman,Watchman,0,0,1,1,1,False,False,top_king_persona_subset,263
+char__wench,wench,Wench,0,0,1,1,1,False,False,top_king_persona_subset,264

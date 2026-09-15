@@ -1,0 +1,97 @@
+normalized_name,canonical_name,object_count_in_target_persona_episodes,is_background_object,is_story_relevant_candidate
+shrub,Shrub,208,False,False
+tree,Tree,180,False,False
+tapestry,Tapestry,163,False,False
+fairy lights,Fairy Lights,154,False,False
+moss,Moss,154,False,False
+sword,Sword,150,False,True
+mace,Mace,149,False,False
+stone,Stone,148,False,False
+longbows,Longbows,141,False,False
+bow,Bow,131,False,False
+shelf,Shelf,123,True,False
+crossbow,Crossbow,121,False,False
+axe,Axe,118,False,False
+odd and end,Odd And End,112,False,False
+lush maroon carpet,Lush Maroon Carpet,112,False,False
+bed,Bed,110,True,False
+cover,Cover,110,False,False
+carving,Carving,110,False,False
+book,Book,109,False,True
+map,Map,105,False,True
+parchment,Parchment,104,False,False
+peg,Peg,99,False,False
+chain,Chain,98,False,False
+dusty floor,Dusty Floor,85,False,False
+small lake,Small Lake,84,False,False
+intricate labyrinth made of shrubs,Intricate Labyrinth Made Of Shrubs,84,False,False
+fountain,Fountain,84,False,False
+bench,Bench,84,True,False
+rose bush,Rose Bush,84,False,False
+market,Market,81,False,False
+tavern,Tavern,81,False,False
+bar,Bar,81,False,False
+tempior market,Tempior Market,81,False,False
+manical,Manical,78,False,False
+bench made of stone,Bench Made Of Stone,71,False,False
+rat,Rat,70,False,False
+rainbow,Rainbow,70,False,False
+flower,Flower,66,False,False
+bucket for eliminating waste,Bucket For Eliminating Waste,64,False,False
+highly fortified tower,Highly Fortified Tower,58,False,False
+rusty bar,Rusty Bar,57,False,False
+artwork,Artwork,56,False,False
+key,Key,56,False,True
+throne,Throne,56,False,True
+candle,Candle,56,True,False
+shield,Shield,56,False,True
+wine,Wine,55,False,False
+sun,Sun,53,False,False
+small bucket,Small Bucket,45,False,False
+carpet,Carpet,43,True,False
+meal,Meal,42,False,False
+ale,Ale,42,False,False
+food,Food,42,False,False
+stove,Stove,42,False,False
+pot,Pot,42,False,False
+wood,Wood,42,False,False
+crown,Crown,37,False,True
+old mop,Old Mop,35,False,False
+plant,Plant,33,False,False
+suit of armor,Suit Of Armor,32,False,True
+tulip,Tulip,30,False,False
+piece of armor,Piece Of Armor,28,False,True
+magical crystal,Magical Crystal,28,False,False
+plate,Plate,28,False,False
+treasure chest,Treasure Chest,28,False,True
+moldy bread,Moldy Bread,28,False,False
+piece of fortune,Piece Of Fortune,28,False,False
+bar stool,Bar Stool,28,False,False
+necklaces,Necklaces,28,False,False
+cobbled walkway,Cobbled Walkway,28,False,False
+vegetable,Vegetable,24,False,False
+ornate goblet,Ornate Goblet,23,False,False
+scepter,Scepter,17,False,False
+duster,Duster,17,False,False
+tray,Tray,14,False,False
+books,Books,14,False,False
+priceless pieces of art,Priceless Pieces Of Art,14,False,False
+coin,Coin,14,False,True
+cigar,Cigar,13,False,False
+stool,Stool,11,True,False
+dress,Dress,11,False,False
+pen for the chickens,Pen For The Chickens,11,False,False
+pitcher of water,Pitcher Of Water,10,False,False
+meat,Meat,10,False,False
+broom,Broom,9,False,False
+bag of herbs,Bag Of Herbs,9,False,False
+gold,Gold,9,False,True
+prayer book,Prayer Book,9,False,True
+hymn book,Hymn Book,7,False,True
+puppet,Puppet,7,False,False
+rag,Rag,5,False,False
+crystal ball,Crystal Ball,4,False,False
+knife,Knife,2,False,True
+carcass,Carcass,1,False,False
+paper,Paper,1,False,False
+old broom,Old Broom,1,False,False
