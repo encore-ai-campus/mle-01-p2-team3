@@ -58,7 +58,6 @@ wheels = [
 ]
 
 [[package]]
-<<<<<<< HEAD
 name = "attrs"
 version = "26.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -68,8 +67,6 @@ wheels = [
 ]
 
 [[package]]
-=======
->>>>>>> 7a219a5f175751a7973681bf48e8cc20b3a23bc2
 name = "certifi"
 version = "2026.7.22"
 source = { registry = "https://pypi.org/simple" }
