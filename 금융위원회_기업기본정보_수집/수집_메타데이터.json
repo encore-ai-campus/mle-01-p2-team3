@@ -1,0 +1,26 @@
+﻿[
+    {
+        "endpoint":  "getCorpOutline_V2",
+        "pageNo":  1,
+        "requestedRows":  10000,
+        "savedRows":  10000,
+        "totalCount":  1292084,
+        "file":  "기업개요_1페이지_10000건.csv"
+    },
+    {
+        "endpoint":  "getAffiliate_V2",
+        "pageNo":  1,
+        "requestedRows":  10000,
+        "savedRows":  10000,
+        "totalCount":  27779181,
+        "file":  "계열회사_1페이지_10000건.csv"
+    },
+    {
+        "endpoint":  "getConsSubsComp_V2",
+        "pageNo":  1,
+        "requestedRows":  10000,
+        "savedRows":  10000,
+        "totalCount":  30224,
+        "file":  "연결대상종속기업_1페이지_10000건.csv"
+    }
+]
