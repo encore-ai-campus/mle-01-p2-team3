@@ -6,7 +6,7 @@ from langchain.agents import create_agent
 from langchain_openai import ChatOpenAI
 
 #도구 가져오기
-from tools.text2cypher import select_names_in_graph,search_graph
+from agent.tools.text2cypher import select_names_in_graph,search_graph
 #+ 담기
 text2cypher_tools = [select_names_in_graph,search_graph]
 
