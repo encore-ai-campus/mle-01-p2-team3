@@ -1,0 +1,20 @@
+{
+  "total_triples": 12281,
+  "schema_pass_triples": 11407,
+  "quote_pass_triples": 11757,
+  "review_population_size": 10929,
+  "rejected_triples": 1352,
+  "schema_compliance_rate": 0.9288331569090464,
+  "quote_match_rate": 0.9573324647829982,
+  "review_population_rate": 0.8899112450126211,
+  "error_counts": {
+    "unknown_relation:IN_INDUSTRY": 874,
+    "quote_not_found_in_source": 524
+  },
+  "relation_counts": {
+    "AFFILIATED_WITH": 478,
+    "HAS_SUBSIDIARY": 4637,
+    "IN_INDUSTRY": 874,
+    "LOCATED_IN": 6292
+  }
+}
