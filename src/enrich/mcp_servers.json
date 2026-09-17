@@ -1,0 +1,7 @@
+{
+  "naver": {
+    "command": "python",
+    "args": ["src/enrich/naver_search_mcp.py"],
+    "transport": "stdio"
+  }
+}

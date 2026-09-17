@@ -1,0 +1,10 @@
+[server]
+# src/streamlit/static 의 웹폰트(을유1945)를 app/static 경로로 서빙합니다.
+enableStaticServing = true
+
+[theme]
+base = "light"
+primaryColor = "#b4aaa1"
+backgroundColor = "#fbfaf8"
+secondaryBackgroundColor = "#f1efea"
+textColor = "#101010"
