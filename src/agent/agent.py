@@ -5,8 +5,13 @@ from dotenv import load_dotenv
 from langchain.agents import create_agent
 from langchain_openai import ChatOpenAI
 
+from langchain.agents.middleware import TodoListMiddleware
+
 #도구 가져오기
-from tools.text2cypher import select_names_in_graph,search_graph
+from .tools.text2cypher import (
+    select_names_in_graph,
+    search_graph,
+)
 #+ 담기
 text2cypher_tools = [select_names_in_graph,search_graph]
 
@@ -52,43 +57,160 @@ SYSTEM_PROMPT = """
 company_data_agent = create_agent(
     model = luna_model,
     tools = text2cypher_tools,
-    system_prompt = SYSTEM_PROMPT
+    system_prompt = SYSTEM_PROMPT,
+    middleware=[
+        TodoListMiddleware(),
+    ],
 )
 
 
-# ====== 여기는 테스트 구문입니다. ======
+# ====== 챗본 연결   ======
 
-#테스트 해보기
-human_prompt= input("기업 정보 도우미. 무엇이든 물어보세요: ")
+if __name__ == "__main__":
 
-#진행하기
-result = company_data_agent.invoke({
-        "messages": [
-            {
-                "role": "user",
-                "content": human_prompt,
-            }
-        ]
-})
+    human_prompt = input(
+        "기업 정보 도우미. 무엇이든 물어보세요: "
+    )
 
-# 사용한 도구 확인
-print("\n[사용한 도구]")
+    result = company_data_agent.invoke(
+        {
+            "messages": [
+                {
+                    "role": "user",
+                    "content": human_prompt,
+                }
+            ]
+        }
+    )
 
-used_tools = []
+    # 사용한 도구 추출
+    used_tools = []
 
-for message in result["messages"]:
-    tool_calls = getattr(message, "tool_calls", None)
+    for message in result.get("messages", []):
+        tool_calls = getattr(message, "tool_calls", None)
 
-    if tool_calls:
+        if not tool_calls:
+            continue
+
         for tool_call in tool_calls:
-            tool_name = tool_call["name"]
-            used_tools.append(tool_name)
+            tool_name = tool_call.get("name")
+
+            if tool_name:
+                used_tools.append(tool_name)
+
+    display_tools = list(dict.fromkeys(used_tools))
+
+    # 최종 답변 텍스트 추출
+    final_message = result["messages"][-1]
+    content = final_message.content
+
+    if isinstance(content, str):
+        answer = content.strip()
+
+    elif isinstance(content, list):
+        text_blocks = []
+
+        for block in content:
+            if (
+                isinstance(block, dict)
+                and block.get("type") == "text"
+                and block.get("text")
+            ):
+                text_blocks.append(block["text"])
+
+        answer = "\n".join(text_blocks).strip()
+
+    else:
+        answer = str(content).strip()
+
+    # 콘솔 출력
+    print("\n[사용한 도구]")
+
+    if display_tools:
+        for tool_name in display_tools:
             print(f"- {tool_name}")
+    else:
+        print("- 사용된 도구 없음")
 
-if not used_tools:
-    print("- 사용된 도구 없음")
+    print("\n[최종 답변]")
+    print(answer)
 
 
-# 최종 답변
-print("\n[최종 답변]")
-print(result["messages"][-1].content)
+
+
+# # ====== 여기는 테스트 구문입니다. ======
+
+# #테스트 해보기
+# human_prompt= input("기업 정보 도우미. 무엇이든 물어보세요: ")
+
+# #진행하기
+# result = company_data_agent.invoke({
+#         "messages": [
+#             {
+#                 "role": "user",
+#                 "content": human_prompt,
+#             }
+#         ]
+# })
+
+
+
+# # ====== 결과 정리 ======
+
+# # 사용한 도구 추출
+# used_tools = []
+
+# for message in result.get("messages", []):
+#     tool_calls = getattr(message, "tool_calls", None)
+
+#     if not tool_calls:
+#         continue
+
+#     for tool_call in tool_calls:
+#         tool_name = tool_call.get("name")
+
+#         if tool_name:
+#             used_tools.append(tool_name)
+
+
+# # 화면 표시용: 같은 도구의 반복 호출은 한 번만 표시
+# display_tools = list(dict.fromkeys(used_tools))
+
+
+# # 최종 답변 텍스트 추출
+# final_message = result["messages"][-1]
+# content = final_message.content
+
+# if isinstance(content, str):
+#     answer = content.strip()
+
+# elif isinstance(content, list):
+#     text_blocks = []
+
+#     for block in content:
+#         if (
+#             isinstance(block, dict)
+#             and block.get("type") == "text"
+#             and block.get("text")
+#         ):
+#             text_blocks.append(block["text"])
+
+#     answer = "\n".join(text_blocks).strip()
+
+# else:
+#     answer = str(content).strip()
+
+
+# # ====== 콘솔 출력 ======
+
+# print("\n[사용한 도구]")
+
+# if display_tools:
+#     for tool_name in display_tools:
+#         print(f"- {tool_name}")
+# else:
+#     print("- 사용된 도구 없음")
+
+
+# print("\n[최종 답변]")
+# print(answer)
