@@ -1,0 +1,186 @@
+{
+  "nodes": {
+    "ParentCompany": {
+      "description": "모기업 또는 계열관계의 기준이 되는 기업",
+      "properties": {
+        "id": {
+          "description": "모기업의 고유 식별자"
+        },
+        "name": {
+          "description": "기업명"
+        },
+        "crno": {
+          "description": "법인등록번호"
+        },
+        "address": {
+          "description": "기업 주소"
+        }
+      }
+    },
+
+    "SubsidiaryCompany": {
+      "description": "모기업과 종속관계로 연결된 기업",
+      "properties": {
+        "id": {
+          "description": "종속기업의 고유 식별자"
+        },
+        "name": {
+          "description": "종속기업명"
+        },
+        "name_norm": {
+          "description": "검색 및 매칭을 위해 정규화한 종속기업명"
+        },
+        "address": {
+          "description": "종속기업 주소"
+        },
+        "domestic": {
+          "description": "종속기업의 국내외 구분"
+        },
+        "business_content": {
+          "description": "종속기업의 주요 사업 내용"
+        }
+      }
+    },
+
+    "Region": {
+      "description": "기업이 위치한 지역",
+      "properties": {
+        "id": {
+          "description": "지역의 고유 식별자"
+        },
+        "name": {
+          "description": "지역명"
+        }
+      }
+    },
+
+    "Industry": {
+      "description": "기업과 관련된 업종 또는 산업 분야",
+      "properties": {
+        "id": {
+          "description": "업종의 고유 식별자"
+        },
+        "name": {
+          "description": "업종명"
+        }
+      }
+    },
+
+    "Section": {
+      "description": "기업의 업종을 묶는 대분류",
+      "properties": {
+        "name": {
+          "description": "대분류명이며 Section 노드의 고유 식별 속성",
+          "type": "string",
+          "unique": true
+        },
+        "category": {
+          "description": "대분류 판별에 사용하는 소분류명 또는 키워드 목록",
+          "type": "array[string]"
+        }
+      }
+    }
+  },
+
+  "relationships": {
+    "AFFILIATED_WITH": {
+      "description": "모기업 간의 계열 관계",
+      "signatures": [
+        {
+          "source": "ParentCompany",
+          "target": "ParentCompany"
+        }
+      ],
+      "properties": {
+        "evidence": {
+          "description": "관계를 뒷받침하는 원문 근거"
+        },
+        "source_case": {
+          "description": "관계가 추출된 원본 데이터 또는 사례 식별 정보"
+        },
+        "source_row": {
+          "description": "관계가 추출된 원본 데이터의 행 위치"
+        }
+      }
+    },
+
+    "HAS_SUBSIDIARY": {
+      "description": "모기업이 종속기업을 가지는 관계",
+      "signatures": [
+        {
+          "source": "ParentCompany",
+          "target": "SubsidiaryCompany"
+        }
+      ],
+      "properties": {
+        "evidence": {
+          "description": "관계를 뒷받침하는 원문 근거"
+        },
+        "source_case": {
+          "description": "관계가 추출된 원본 데이터 또는 사례 식별 정보"
+        },
+        "source_row": {
+          "description": "관계가 추출된 원본 데이터의 행 위치"
+        }
+      }
+    },
+
+    "IN_INDUSTRY": {
+      "description": "기업이 특정 업종 또는 업종 대분류와 관련된 관계",
+      "signatures": [
+        {
+          "source": "ParentCompany",
+          "target": "Industry"
+        },
+        {
+          "source": "SubsidiaryCompany",
+          "target": "Industry"
+        },
+        {
+          "source": "ParentCompany",
+          "target": "Section"
+        },
+        {
+          "source": "SubsidiaryCompany",
+          "target": "Section"
+        }
+      ],
+      "properties": {
+        "evidence": {
+          "description": "관계를 뒷받침하는 원문 근거 또는 Section 분류 근거"
+        },
+        "source_case": {
+          "description": "관계가 추출되거나 생성된 원본 데이터 또는 처리 단계 식별 정보"
+        },
+        "source_row": {
+          "description": "관계가 추출된 원본 데이터의 행 위치"
+        }
+      }
+    },
+
+    "LOCATED_IN": {
+      "description": "기업이 특정 지역에 위치하는 관계",
+      "signatures": [
+        {
+          "source": "ParentCompany",
+          "target": "Region"
+        },
+        {
+          "source": "SubsidiaryCompany",
+          "target": "Region"
+        }
+      ],
+      "properties": {
+        "evidence": {
+          "description": "관계를 뒷받침하는 원문 근거"
+        },
+        "source_case": {
+          "description": "관계가 추출된 원본 데이터 또는 사례 식별 정보"
+        },
+        "source_row": {
+          "description": "관계가 추출된 원본 데이터의 행 위치"
+        }
+      }
+    }
+  }
+}
