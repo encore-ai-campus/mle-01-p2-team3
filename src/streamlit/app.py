@@ -3,16 +3,16 @@ from __future__ import annotations
 import base64
 import html
 import math
-from dataclasses import dataclass
 from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 
+SECTIONS = ["Overview", "Graph", "RAG", "Architecture"]
 STATIC_DIR = Path(__file__).parent / "static"
 DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "clean"
-FONT_WEIGHTS = {400: "Eulyoo1945-Regular", 600: "Eulyoo1945-SemiBold"}
+FONT_WEIGHTS = {400: "GangwonEduAll-Light", 700: "GangwonEduAll-Bold"}
 
 
 def static_serving_enabled() -> bool:
@@ -25,22 +25,28 @@ def static_serving_enabled() -> bool:
 
 
 @st.cache_data(show_spinner=False)
+def _font_data_uri_cached(stem: str, fingerprint: tuple[int, int]) -> str:
+    """fingerprint(수정시각, 크기)를 캐시 키에 포함해 폰트 파일 교체를 반영합니다."""
+    encoded = base64.b64encode((STATIC_DIR / f"{stem}.woff2").read_bytes()).decode("ascii")
+    return f"data:font/woff2;base64,{encoded}"
+
+
 def font_data_uri(stem: str) -> str:
     path = STATIC_DIR / f"{stem}.woff2"
     if not path.is_file():
         return ""
-    encoded = base64.b64encode(path.read_bytes()).decode("ascii")
-    return f"data:font/woff2;base64,{encoded}"
+    stat = path.stat()
+    return _font_data_uri_cached(stem, (int(stat.st_mtime), stat.st_size))
 
 
-def font_face_css(url_prefix: str, weights: tuple[int, ...] = (400, 600)) -> str:
-    """정적 서빙이 가능하면 URL로, 아니면 base64로 을유1945를 심습니다."""
+def font_face_css(url_prefix: str, weights: tuple[int, ...] = (400, 700)) -> str:
+    """정적 서빙이 가능하면 URL로, 아니면 base64로 강원교육모두를 심습니다."""
     use_url = static_serving_enabled()
     blocks = []
     for weight in weights:
         stem = FONT_WEIGHTS[weight]
         if use_url:
-            source = f"url('{url_prefix}{stem}.woff2') format('woff2'), url('{url_prefix}{stem}.woff') format('woff')"
+            source = f"url('{url_prefix}{stem}.woff2') format('woff2')"
         else:
             data_uri = font_data_uri(stem)
             if not data_uri:
@@ -48,7 +54,7 @@ def font_face_css(url_prefix: str, weights: tuple[int, ...] = (400, 600)) -> str
             source = f"url({data_uri}) format('woff2')"
         blocks.append(
             "@font-face {"
-            "font-family: 'Eulyoo1945';"
+            "font-family: 'GangwonEduAll';"
             f"src: {source};"
             f"font-weight: {weight};"
             "font-style: normal;"
@@ -140,30 +146,11 @@ def load_top_connected(limit: int = 5) -> list[dict[str, object]]:
     return rows
 
 
-@dataclass(frozen=True)
-class CompanyNode:
-    id: str
-    group: str
-    size: int
-    x: int
-    y: int
-    description: str
-
-
-@dataclass(frozen=True)
-class CompanyEdge:
-    source: str
-    target: str
-    relation: str
-    confidence: float
-
-
 def get_site_content() -> dict[str, object]:
     return {
         "service_name": "B2B Knowledge Graph Explorer",
         "wordmark": "기업 연결 관계",
         "topbar": "공시 데이터부터 지식그래프까지, 기업 간의 연결 관계를 한 화면에서 탐색하세요",
-        "topbar_chip": "지식그래프 살펴보기",
         "hero_lines": ["기업 간의 연결 관계를 지식그래프로 구축한 프로젝트"],
         "statement": ["계열 관계", "종속 구조", "공급망 연결"],
         "tagline": "기업 관계를 지식 그래프로 연결해 산업 생태계와 잠재 고객사를 빠르게 탐색하는 B2B 리서치 서비스",
@@ -178,24 +165,94 @@ def get_site_content() -> dict[str, object]:
     }
 
 
-def build_sample_graph() -> tuple[list[dict[str, object]], list[dict[str, object]]]:
-    nodes = [
-        CompanyNode("삼성전자", "핵심기업", 46, 480, 268, "반도체, 모바일, 디스플레이 생태계의 중심 기업"),
-        CompanyNode("삼성SDI", "계열사", 30, 196, 132, "배터리 및 전자재료 제조"),
-        CompanyNode("삼성전기", "계열사", 28, 182, 392, "전자부품 및 모듈 공급"),
-        CompanyNode("현대자동차", "유사기업", 34, 776, 148, "모빌리티 제조 및 공급망 운영"),
-        CompanyNode("LG에너지솔루션", "협력사", 31, 792, 386, "배터리 공급 및 에너지 솔루션"),
-        CompanyNode("소재부품 협력사 A", "공급망", 24, 470, 476, "반도체 소재 및 부품 공급 후보"),
+@st.cache_data(show_spinner=False)
+def load_company_options() -> list[dict[str, object]]:
+    """그래프에서 선택할 수 있는 모기업 목록을 연결 수가 많은 순으로 만듭니다."""
+    try:
+        overview = _read_clean("기업개요_최종.csv")
+        affiliates = _read_clean("계열회사_전처리.csv")
+        subsidiaries = _read_clean("종속기업_정리.csv")
+        merged = _read_clean("모기업_계열사_종속기업_통합.csv")
+    except FileNotFoundError:
+        return []
+
+    names: dict[str, str] = {}
+    for frame, key, value in (
+        (merged, "top_crno", "top_corpNm"),
+        (overview, "crno", "corpNm"),
+    ):
+        if key in frame.columns and value in frame.columns:
+            names.update(frame.dropna(subset=[key, value]).set_index(key)[value].to_dict())
+
+    affiliate_count = affiliates.groupby("crno")["afilCmpyNm"].nunique()
+    subsidiary_count = subsidiaries.groupby("crno")["sbrdEnpNm"].nunique()
+    total = affiliate_count.add(subsidiary_count, fill_value=0).sort_values(ascending=False)
+
+    options: list[dict[str, object]] = []
+    for crno, count in total.items():
+        name = names.get(crno)
+        if not name:
+            continue
+        options.append(
+            {
+                "crno": crno,
+                "name": name,
+                "affiliates": int(affiliate_count.get(crno, 0)),
+                "subsidiaries": int(subsidiary_count.get(crno, 0)),
+                "total": int(count),
+            }
+        )
+    return options
+
+
+@st.cache_data(show_spinner=False)
+def load_company_relations(crno: str) -> list[dict[str, str]]:
+    """선택한 기업의 계열사·종속기업을 관계 유형과 함께 돌려줍니다."""
+    try:
+        affiliates = _read_clean("계열회사_전처리.csv")
+        subsidiaries = _read_clean("종속기업_정리.csv")
+    except FileNotFoundError:
+        return []
+
+    rows: list[dict[str, str]] = []
+    for name in affiliates.loc[affiliates["crno"] == crno, "afilCmpyNm"].dropna().unique():
+        rows.append({"name": str(name), "relation": "계열사"})
+    for name in subsidiaries.loc[subsidiaries["crno"] == crno, "sbrdEnpNm"].dropna().unique():
+        rows.append({"name": str(name), "relation": "종속기업"})
+    return rows
+
+
+def build_company_graph(
+    center: str,
+    relations: list[dict[str, str]],
+) -> tuple[list[dict[str, object]], list[dict[str, object]]]:
+    """중심 기업을 가운데 두고 연결 기업을 원형으로 배치합니다."""
+    nodes: list[dict[str, object]] = [
+        {"id": center, "group": "핵심기업", "size": 40, "x": 480, "y": 320, "description": ""}
     ]
-    edges = [
-        CompanyEdge("삼성전자", "삼성SDI", "계열사", 0.94),
-        CompanyEdge("삼성전자", "삼성전기", "계열사", 0.92),
-        CompanyEdge("삼성전자", "소재부품 협력사 A", "공급망", 0.81),
-        CompanyEdge("현대자동차", "LG에너지솔루션", "협력사", 0.78),
-        CompanyEdge("삼성SDI", "LG에너지솔루션", "유사기업", 0.86),
-        CompanyEdge("삼성전자", "현대자동차", "유사기업", 0.67),
-    ]
-    return [node.__dict__ for node in nodes], [edge.__dict__ for edge in edges]
+    edges: list[dict[str, object]] = []
+
+    count = len(relations)
+    # 12개를 넘으면 안쪽/바깥쪽 두 겹으로 나눠 라벨이 겹치지 않게 합니다.
+    two_rings = count > 12
+    for index, row in enumerate(relations):
+        if two_rings:
+            radius = 175 if index % 2 == 0 else 268
+        else:
+            radius = 215
+        angle = -math.pi / 2 + 2 * math.pi * index / max(count, 1)
+        nodes.append(
+            {
+                "id": row["name"],
+                "group": row["relation"],
+                "size": 16 if two_rings else 22,
+                "x": 480 + radius * math.cos(angle) * 1.42,
+                "y": 320 + radius * math.sin(angle),
+                "description": "",
+            }
+        )
+        edges.append({"source": center, "target": row["name"], "relation": row["relation"], "confidence": 1.0})
+    return nodes, edges
 
 
 def build_architecture_steps() -> list[dict[str, str]]:
@@ -224,13 +281,21 @@ def css() -> str:
         --line: #e2dfd8;
         --line-strong: #101010;
         --accent: #b4aaa1;
-        --display: 'Eulyoo1945', 'Apple SD Gothic Neo', serif;
-        --sans: 'Eulyoo1945', 'Inter', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
-        --label: 'Inter', 'Eulyoo1945', sans-serif;
+        --display: 'GangwonEduAll', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+        --sans: 'GangwonEduAll', 'Inter', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+        --label: 'Inter', 'GangwonEduAll', sans-serif;
     }}
 
     .stApp {{ background: var(--paper); color: var(--ink); }}
     .stApp, .stApp p, .stApp li, .stApp span, .stApp label, .stApp div {{ font-family: var(--sans); }}
+    /* 아이콘은 Material Symbols 를 그대로 써야 한다. 위 전역 규칙에서 되돌린다. */
+    [data-testid="stIconMaterial"], .material-symbols-rounded, [class*="material-symbols"] {{
+        font-family: 'Material Symbols Rounded' !important;
+        font-weight: normal !important; font-style: normal !important;
+        letter-spacing: normal !important; text-transform: none !important;
+        white-space: nowrap !important; word-break: normal !important; direction: ltr;
+        font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; -webkit-font-smoothing: antialiased;
+    }}
     [data-testid="stHeader"] {{ background: transparent; }}
     .block-container {{ max-width: 1240px; padding-top: 1.6rem; padding-bottom: 5rem; }}
 
@@ -245,28 +310,64 @@ def css() -> str:
     h2 {{ font-size: 2.6rem !important; line-height: 1.12 !important; margin: .2rem 0 1.4rem !important; }}
     h3 {{ font-size: 1.45rem !important; }}
 
-    /* 상단 안내 바 */
+    /* 상단 밴드: 브랜드 + 안내 문구 (화면 전체 폭) */
     .topbar {{
-        display:flex; align-items:center; justify-content:center; gap: 1rem; flex-wrap: wrap;
         background: var(--accent); color: var(--ink);
-        margin: -1.6rem -100vw 0; padding: .72rem 100vw;
-        font-size: .88rem;
+        margin: -1.6rem -100vw 0; padding: 1.15rem 100vw;
     }}
-    .topbar .chip {{
-        border: 1px solid var(--ink); border-radius: 999px; padding: .18rem .8rem;
-        font-family: var(--label); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+    .topbar-inner {{
+        display:flex; align-items:center; gap: 1.4rem; flex-wrap: wrap;
+    }}
+    .topbar-inner .mark {{
+        font-family: var(--display); font-size: 1.45rem; line-height: 1.2; font-weight: 700;
+        letter-spacing: -0.01em; white-space: nowrap;
+    }}
+    .topbar-msg {{ flex: 0 1 auto; max-width: 46%; font-size: .9rem; }}
+
+    /* 내비게이션(라디오)을 탭처럼 보이게: 밴드 위로 끌어올려 오른쪽 배치 */
+    /* 라디오를 감싼 컨테이너가 내용 폭에 맞춰 줄어들어 우측 정렬이 먹지 않으므로 넓힌다. */
+    [data-testid="stElementContainer"]:has([data-testid="stRadio"]) {{ width: 100% !important; }}
+    /* streamlit 헤더(z-index 999990)가 상단 60px 를 덮어 내비 클릭을 가로채므로,
+       빈 영역은 클릭이 통과하게 하고 내비를 그 위로 올린다. */
+    [data-testid="stHeader"] {{ pointer-events: none !important; background: transparent !important; }}
+    [data-testid="stHeader"] button, [data-testid="stHeader"] a,
+    [data-testid="stToolbar"] > *, [data-testid="stMainMenu"] {{ pointer-events: auto !important; }}
+
+    [data-testid="stRadio"] {{
+        width: 100%; margin-top: -3.4rem; margin-bottom: 3.2rem; position: relative; z-index: 999991;
+    }}
+    [data-testid="stRadio"] > label[data-testid="stWidgetLabel"] {{ display: none !important; }}
+    [data-testid="stRadio"] [role="radiogroup"] {{
+        width: 100%; display: flex; justify-content: flex-end; gap: 2.4rem; flex-wrap: wrap;
+    }}
+    [data-testid="stRadioOption"] {{
+        margin: 0 !important; padding: 0 !important; background: transparent !important; cursor: pointer;
+    }}
+    /* streamlit 의 안내 팝업이 밴드 우측(내비 영역)을 덮어 클릭을 가로채므로 숨긴다. */
+    [data-testid="stSkillsNudgeAnchor"], [data-testid="stSkillsNudge"] {{
+        display: none !important; pointer-events: none !important;
     }}
 
-    /* 브랜드 + 탭 내비게이션 */
-    .brandbar {{ padding: 1.6rem 0 0; }}
-    .brandbar .mark {{ font-family: var(--display); font-size: 1.7rem; line-height: 1; letter-spacing: -0.02em; }}
-    .stTabs {{ margin-top: -2.9rem; }}
-    .stTabs [role="tablist"] {{ justify-content: flex-end; padding-bottom: .2rem; }}
+    /* 라디오 동그라미 제거: 라벨 텍스트(마크다운 컨테이너)만 남긴다. */
+    [data-testid="stRadioOption"] > div > div:not([data-testid="stMarkdownContainer"]) {{
+        display: none !important;
+    }}
+    [data-testid="stRadioOption"] p {{
+        font-family: var(--label) !important; font-size: .76rem !important; letter-spacing: .18em !important;
+        text-transform: uppercase; color: rgba(16, 16, 16, .58) !important; margin: 0 !important;
+        padding-bottom: .3rem; border-bottom: 1px solid transparent;
+    }}
+    [data-testid="stRadioOption"]:hover p {{ color: var(--ink) !important; }}
+    [data-testid="stRadioOption"][data-selected="true"] p {{
+        color: var(--ink) !important; border-bottom-color: var(--ink);
+    }}
+
     .rule {{ height:1px; background: var(--line-strong); margin: 0 0 3.4rem; }}
     .rule.soft {{ background: var(--line); margin: 2.6rem 0; }}
 
     /* 홈 3단 패널 */
     .panel {{ padding: 2.2rem 1.8rem 2rem 0; border-right: 1px solid var(--line); min-height: 320px; }}
+    .panel.panel-last {{ border-right: 0; padding-right: 0; }}
     .panel-title {{ font-size: 1.28rem !important; margin: 0 0 1.5rem !important; }}
     .panel-foot {{ margin-top: 1.4rem; font-family: var(--label); font-size: .68rem; letter-spacing: .06em; color: var(--mute); line-height: 1.7; }}
     .stat {{ font-size: 1.22rem; line-height: 1.65; margin: 0 0 1.6rem; }}
@@ -290,23 +391,6 @@ def css() -> str:
     .ranking .rank-body small {{ color: var(--mute); font-size: .78rem; }}
     .ranking .rank-total {{ font-family: var(--display); font-size: 1.25rem; color: var(--ink); text-align: right; }}
 
-    /* 우측 쇼케이스 */
-    .showcase {{
-        background: var(--accent); color: var(--ink);
-        padding: 2.4rem 2.2rem; min-height: 320px;
-        display:flex; flex-direction: column; justify-content: center;
-    }}
-    .showcase-kicker {{ font-family: var(--label); font-size: .68rem; letter-spacing: .24em; opacity: .75; }}
-    .showcase-title {{
-        font-size: clamp(1.9rem, 2.9vw, 3rem) !important; line-height: 1.2 !important;
-        margin: 1.1rem 0 1.2rem !important; word-break: keep-all;
-    }}
-    .showcase-body {{ font-size: .95rem; line-height: 1.8; margin: 0; max-width: 34rem; }}
-    .showcase-tags {{ display:flex; flex-wrap:wrap; gap:.5rem; margin-top: 1.8rem; }}
-    .showcase-tags span {{
-        border: 1px solid var(--ink); border-radius: 999px; padding: .28rem .85rem; font-size: .78rem;
-    }}
-
     /* editorial rows */
     .kicker {{ font-family: var(--label); font-size: .72rem; letter-spacing: .22em; text-transform: uppercase; color: var(--mute); display:block; margin-bottom: 1.1rem; }}
     .row {{ display:grid; grid-template-columns: 78px 1.05fr 1.6fr 96px; gap: 1.6rem; align-items: baseline; padding: 1.35rem 0; border-top: 1px solid var(--line); }}
@@ -315,13 +399,22 @@ def css() -> str:
     .row .title {{ font-family: var(--display); font-size: 1.5rem; letter-spacing: -0.01em; }}
     .row .body {{ color: var(--mute); font-size: .93rem; line-height: 1.8; font-weight: 400; }}
     .row .tail {{ font-family: var(--label); text-align:right; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }}
-    .row:hover .title {{ font-weight: 600; }}
+    .row:hover .title {{ font-weight: 700; }}
 
     /* question list */
-    .q {{ padding: 1.25rem 0; border-top: 1px solid var(--line); }}
-    .q:last-child {{ border-bottom: 1px solid var(--line); }}
-    .q b {{ font-weight: 600; font-size: 1.02rem; }}
-    .q small {{ font-family: var(--label); display:block; margin-top: .45rem; color: var(--mute); font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; }}
+    .q {{ padding: 1.1rem 0 .1rem; border-top: 1px solid var(--line); }}
+    .q small {{ font-family: var(--label); display:block; color: var(--mute); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }}
+    /* 질문 버튼: 눌러서 RAG 로 넘어가는 링크처럼 보이게 */
+    [data-testid="stVerticalBlock"] .stButton button[kind="secondary"] {{
+        background: transparent !important; border: 0 !important; border-radius: 0 !important;
+        padding: .1rem 0 1.1rem !important; text-align: left !important; justify-content: flex-start !important;
+        text-transform: none !important; letter-spacing: 0 !important;
+    }}
+    [data-testid="stVerticalBlock"] .stButton button[kind="secondary"] p {{
+        font-family: var(--sans) !important; font-size: 1.02rem !important; font-weight: 700 !important;
+        color: var(--ink) !important; text-align: left !important;
+    }}
+    [data-testid="stVerticalBlock"] .stButton button[kind="secondary"]:hover p {{ color: var(--accent) !important; }}
 
     .lede {{ font-size: 1.12rem; line-height: 1.9; font-weight: 400; color: var(--ink); }}
     .note {{ color: var(--mute); font-size: .88rem; line-height: 1.85; font-weight: 400; border-left: 1px solid var(--line-strong); padding-left: 1rem; margin-top: 1.6rem; }}
@@ -365,14 +458,14 @@ def css() -> str:
 
     /* 탭: 비활성 회색, 활성 검정 (streamlit 버전별 마크업 모두 커버) */
     .stTabs [role="tablist"], [data-baseweb="tab-list"] {{
-        gap: 2.4rem !important; background: transparent !important; border-bottom: 1px solid var(--line) !important;
+        gap: 2.4rem !important; background: transparent !important; border-bottom: 0 !important;
     }}
     .stTabs [role="tab"], button[data-baseweb="tab"] {{
         background: transparent !important; padding: 0 0 .85rem 0 !important;
     }}
     .stTabs [role="tab"] p, button[data-baseweb="tab"] p {{
         font-family: var(--label) !important; font-size: .76rem !important; letter-spacing: .18em !important;
-        text-transform: uppercase; color: var(--mute) !important;
+        text-transform: uppercase; color: rgba(16, 16, 16, .58) !important;
     }}
     .stTabs [role="tab"]:hover p {{ color: var(--ink) !important; }}
     .stTabs [role="tab"][aria-selected="true"] p,
@@ -415,15 +508,67 @@ def css() -> str:
     .stCaption p {{ color: var(--mute) !important; font-size: .8rem !important; }}
 
     [data-testid="stSidebar"] {{ background: var(--paper); border-right: 1px solid var(--line); }}
-    [data-testid="stSidebar"] .sb-label {{ font-family: var(--label); font-size: .68rem; letter-spacing: .2em; text-transform: uppercase; color: var(--mute); display:block; margin-top: 1.6rem; }}
+    [data-testid="stSidebar"], [data-testid="stSidebar"] * {{
+        font-family: var(--sans); color: var(--ink) !important;
+    }}
+    [data-testid="stSidebar"] .sb-mark {{
+        font-family: var(--display); font-size: 1.5rem; line-height: 1.25; font-weight: 700; word-break: keep-all;
+    }}
+    [data-testid="stSidebar"] .sb-label {{
+        font-family: var(--label); font-size: .68rem; letter-spacing: .2em; text-transform: uppercase;
+        display:block; margin-top: 1.6rem; font-weight: 700;
+    }}
     [data-testid="stSidebar"] .sb-value {{ font-size: .95rem; margin-top: .3rem; line-height: 1.6; }}
+    [data-testid="stSidebar"] [data-testid="stIconMaterial"] {{ font-family: 'Material Symbols Rounded' !important; }}
 
     [data-testid="stDataFrame"] {{ border: 1px solid var(--line); }}
 
+    /* RAG 챗봇: 다크 테마 잔재 제거 */
+    [data-testid="stChatMessage"] {{
+        background: #ffffff !important; border: 1px solid var(--line) !important; border-radius: 0 !important;
+    }}
+    [data-testid="stChatMessage"] *, [data-testid="stChatMessage"] p, [data-testid="stChatMessage"] li {{
+        color: var(--ink) !important;
+    }}
+    [data-testid="stChatInput"], .stChatInput > div {{
+        background: #ffffff !important; border: 1px solid var(--line-strong) !important; border-radius: 0 !important;
+        box-shadow: none !important;
+    }}
+    [data-testid="stChatInput"] textarea {{
+        color: var(--ink) !important; -webkit-text-fill-color: var(--ink) !important; background: transparent !important;
+    }}
+    [data-testid="stExpander"] {{ background: transparent !important; border: 1px solid var(--line) !important; border-radius: 0 !important; }}
+    [data-testid="stExpander"] summary, [data-testid="stExpander"] summary * , details summary * {{
+        color: var(--ink) !important;
+    }}
+    [data-testid="stExpander"] [data-testid="stExpanderDetails"] * {{ color: var(--ink) !important; }}
+    /* 채팅 입력이 놓이는 하단 영역: 기본 다크 배경 -> 대표 색상 */
+    [data-testid="stBottom"] > div {{ background: var(--accent) !important; }}
+    /* 입력창을 본문(채팅 말풍선)과 같은 폭으로 맞춘다. 갈색 배경 띠는 전체 폭 유지. */
+    [data-testid="stBottomBlockContainer"] {{
+        background: transparent !important;
+        max-width: 1240px !important; margin-left: auto !important; margin-right: auto !important;
+    }}
+
+    /* 답변 속 인라인 코드가 검은 블록으로 보이지 않도록 */
+    [data-testid="stChatMessage"] code, .stMarkdown code, [data-testid="stExpander"] code {{
+        background: #ece8e2 !important; color: var(--ink) !important; padding: .05rem .3rem;
+    }}
+    [data-testid="stChatMessage"] pre, .stMarkdown pre, [data-testid="stCodeBlock"] {{
+        background: #f1efea !important;
+    }}
+    [data-testid="stChatMessage"] pre *, .stMarkdown pre *, [data-testid="stCodeBlock"] * {{
+        color: var(--ink) !important;
+    }}
+
+    [data-testid="stChatMessageAvatarUser"] {{ background: var(--accent) !important; }}
+    [data-testid="stChatMessageAvatarAssistant"] {{ background: var(--ink) !important; }}
+    [data-testid="stChatMessageAvatarUser"] *, [data-testid="stChatMessageAvatarAssistant"] * {{
+        color: var(--paper) !important;
+    }}
+
     @media (max-width: 1100px) {{
-        /* 좁은 화면에서는 브랜드 아래로 탭이 내려오도록 되돌립니다. */
-        .stTabs {{ margin-top: .6rem; }}
-        .stTabs [role="tablist"] {{ justify-content: flex-start; }}
+        .topbar-msg {{ flex-basis: 100%; }}
         .panel {{ border-right: 0; min-height: 0; padding: 1.6rem 0; border-bottom: 1px solid var(--line); }}
     }}
 
@@ -435,40 +580,37 @@ def css() -> str:
     """
 
 
-def render_graph_svg(nodes: list[dict[str, object]], edges: list[dict[str, object]], selected_relation: str) -> str:
+def render_graph_svg(nodes: list[dict[str, object]], edges: list[dict[str, object]]) -> str:
     lookup = {node["id"]: node for node in nodes}
-    visible = [edge for edge in edges if selected_relation == "전체" or edge["relation"] == selected_relation]
+    color_by_relation = {"계열사": "#b4aaa1", "종속기업": "#cfc7bf"}
+    height = 680
 
     edge_markup: list[str] = []
-    for edge in visible:
+    for edge in edges:
         source, target = lookup[edge["source"]], lookup[edge["target"]]
         sx, sy, tx, ty = source["x"], source["y"], target["x"], target["y"]
         mx, my = (sx + tx) / 2, (sy + ty) / 2
         dx, dy = tx - sx, ty - sy
         length = math.hypot(dx, dy) or 1
-        cx, cy = mx - dy / length * 46, my + dx / length * 46
-        px, py = 0.25 * sx + 0.5 * cx + 0.25 * tx, 0.25 * sy + 0.5 * cy + 0.25 * ty
-        label = html.escape(str(edge["relation"]))
-        width = 16 + len(label) * 12
+        cx, cy = mx - dy / length * 34, my + dx / length * 34
+        stroke = color_by_relation.get(str(edge["relation"]), "#cfccc4")
         edge_markup.append(
-            f'<path d="M {sx} {sy} Q {cx:.1f} {cy:.1f} {tx} {ty}" fill="none" stroke="#cfccc4" stroke-width="1" />'
-            f'<rect x="{px - width / 2:.1f}" y="{py - 11:.1f}" width="{width}" height="22" fill="#fbfaf8" />'
-            f'<text x="{px:.1f}" y="{py + 4:.1f}" text-anchor="middle" font-size="11" letter-spacing="1.4" '
-            f'fill="#8c887f" font-family="Eulyoo1945, serif">{label}</text>'
+            f'<path d="M {sx:.1f} {sy:.1f} Q {cx:.1f} {cy:.1f} {tx:.1f} {ty:.1f}" fill="none" stroke="{stroke}" stroke-width="1" />'
         )
 
     node_markup: list[str] = []
     for node in nodes:
         is_core = node["group"] == "핵심기업"
-        fill = "#b4aaa1" if is_core else "#dbd6d1"
+        fill = "#b4aaa1" if is_core else color_by_relation.get(str(node["group"]), "#dbd6d1")
         radius = int(node["size"])
-        group_label = html.escape(str(node["group"]))
+        label = str(node["id"])
+        if len(label) > 14:  # 긴 상호는 줄여서 라벨끼리 겹치지 않게 합니다.
+            label = label[:13] + "…"
         node_markup.append(
-            f'<circle cx="{node["x"]}" cy="{node["y"]}" r="{radius}" fill="{fill}" />'
-            f'<text x="{node["x"]}" y="{node["y"] + radius + 26}" text-anchor="middle" font-size="15" '
-            f'fill="#101010" font-family="Eulyoo1945, serif">{html.escape(str(node["id"]))}</text>'
-            f'<text x="{node["x"]}" y="{node["y"] + radius + 44}" text-anchor="middle" font-size="10" letter-spacing="1.6" '
-            f'fill="#8c887f" font-family="Eulyoo1945, serif">{group_label}</text>'
+            f'<circle cx="{node["x"]:.1f}" cy="{node["y"]:.1f}" r="{radius}" fill="{fill}" />'
+            f'<title>{html.escape(str(node["id"]))}</title>'
+            f'<text x="{node["x"]:.1f}" y="{node["y"] + radius + 20:.1f}" text-anchor="middle" '
+            f'font-size="{15 if is_core else 12}" fill="#101010" font-family="GangwonEduAll, sans-serif">{html.escape(label)}</text>'
         )
 
     return f"""
@@ -477,14 +619,13 @@ def render_graph_svg(nodes: list[dict[str, object]], edges: list[dict[str, objec
     body {{ margin: 0; }}
     </style>
     <div style="background:#fbfaf8;border-top:1px solid #101010;border-bottom:1px solid #e2dfd8;">
-      <svg viewBox="0 0 960 560" width="100%" height="560" role="img" aria-label="기업 관계 지식 그래프">
-        <rect x="0" y="0" width="960" height="560" fill="#fbfaf8" />
+      <svg viewBox="0 0 960 {height}" width="100%" height="{height}" role="img" aria-label="기업 관계 지식 그래프">
+        <rect x="0" y="0" width="960" height="{height}" fill="#fbfaf8" />
         {''.join(edge_markup)}
         {''.join(node_markup)}
       </svg>
     </div>
     """
-
 
 
 def compact(markup: str) -> str:
@@ -497,19 +638,10 @@ def render_topbar(content: dict[str, object]) -> None:
     st.markdown(
         compact(f"""
         <div class="topbar">
-            <span>{content['topbar']}</span>
-            <span class="chip">{content['topbar_chip']}</span>
-        </div>
-        """),
-        unsafe_allow_html=True,
-    )
-
-
-def render_brand(content: dict[str, object]) -> None:
-    st.markdown(
-        compact(f"""
-        <div class="brandbar">
-            <div class="mark">{content['wordmark']}</div>
+            <div class="topbar-inner">
+                <div class="mark">{content['wordmark']}</div>
+                <span class="topbar-msg">{content['topbar']}</span>
+            </div>
         </div>
         """),
         unsafe_allow_html=True,
@@ -517,11 +649,11 @@ def render_brand(content: dict[str, object]) -> None:
 
 
 def render_hero_band(content: dict[str, object]) -> None:
-    """혁신의숲 홈 구조: 데이터 규모 · 연결이 많은 기업 · 그래프 비주얼."""
+    """홈 본문: 데이터 규모와 연결 관계가 많은 기업."""
     stats = load_dataset_stats()
     ranking = load_top_connected(5)
 
-    left, middle, right = st.columns([1, 1.05, 1.75], gap="large")
+    left, middle = st.columns([1, 1.2], gap="large")
 
     with left:
         if stats:
@@ -558,34 +690,28 @@ def render_hero_band(content: dict[str, object]) -> None:
                 for index, row in enumerate(ranking, start=1)
             )
             body = f"""
-            <div class="panel">
+            <div class="panel panel-last">
                 <h3 class="panel-title">연결 관계가 가장 많은 기업</h3>
                 <ol class="ranking">{items}</ol>
                 <div class="panel-foot">계열사 + 종속기업 수 기준 · 기업명이 확인되는 모기업만 집계</div>
             </div>
             """
         else:
-            body = '<div class="panel"><h3 class="panel-title">집계할 관계 데이터가 없습니다</h3></div>'
+            body = '<div class="panel panel-last"><h3 class="panel-title">집계할 관계 데이터가 없습니다</h3></div>'
         st.markdown(compact(body), unsafe_allow_html=True)
 
-    with right:
-        st.markdown(
-            compact(f"""
-            <div class="showcase">
-                <span class="showcase-kicker">KNOWLEDGE GRAPH</span>
-                <h2 class="showcase-title">{content['hero_lines'][0]}</h2>
-                <p class="showcase-body">{content['tagline']}</p>
-                <div class="showcase-tags">
-                    {''.join(f'<span>{item}</span>' for item in content['statement'])}
-                </div>
-            </div>
-            """),
-            unsafe_allow_html=True,
-        )
+
+def ask_in_rag(question: str) -> None:
+    """질문을 RAG 챗봇으로 넘기고 해당 섹션으로 이동한다.
+
+    on_click 콜백에서만 호출한다. 스크립트 본문에서 위젯 키(nav)를 바꾸면
+    streamlit 이 '위젯 생성 후 수정' 으로 막는다.
+    """
+    st.session_state["rag_pending"] = question
+    st.session_state["nav"] = "RAG"
 
 
 def render_problem_and_questions(content: dict[str, object]) -> None:
-    st.markdown('<span class="kicker">why it matters</span>', unsafe_allow_html=True)
     st.markdown("## 흩어진 기업 정보를<br>연결 가능한 영업 지도로", unsafe_allow_html=True)
     left, right = st.columns([1.05, 1], gap="large")
     with left:
@@ -599,64 +725,96 @@ def render_problem_and_questions(content: dict[str, object]) -> None:
             unsafe_allow_html=True,
         )
     with right:
-        cards = "".join(
-            f'<div class="q"><b>{item["question"]}</b><small>{item["feature"]}</small></div>'
-            for item in content["core_questions"]
-        )
-        st.markdown(cards, unsafe_allow_html=True)
+        for index, item in enumerate(content["core_questions"]):
+            st.markdown(
+                f'<div class="q"><small>{item["feature"]}</small></div>',
+                unsafe_allow_html=True,
+            )
+            st.button(
+                item["question"],
+                key=f"q_{index}",
+                use_container_width=True,
+                on_click=ask_in_rag,
+                args=(str(item["question"]),),
+            )
 
 
 def render_graph_explorer() -> None:
-    st.markdown('<span class="kicker">knowledge graph</span>', unsafe_allow_html=True)
     st.markdown("## 기업 관계 그래프 탐색")
-    nodes, edges = build_sample_graph()
-    relation = st.segmented_control("관계 유형", ["전체", "계열사", "공급망", "유사기업", "협력사"], default="전체")
-    relation = relation or "전체"
+
+    options = load_company_options()
+    if not options:
+        st.error("기업 데이터를 불러오지 못했습니다. data/clean 경로를 확인해 주세요.")
+        return
+
+    labels = [f"{row['name']}  ·  계열사 {row['affiliates']} · 종속기업 {row['subsidiaries']}" for row in options]
+    picker, relation_col, limit_col = st.columns([1.6, 1, 1], gap="large")
+    with picker:
+        chosen = st.selectbox("기업 선택", labels, index=0)
+    selected = options[labels.index(chosen)]
+
+    with relation_col:
+        relation = st.segmented_control("관계 유형", ["전체", "계열사", "종속기업"], default="전체") or "전체"
+    with limit_col:
+        limit = st.slider("표시할 연결 기업 수", min_value=4, max_value=40, value=16, step=2)
+
+    relations = load_company_relations(str(selected["crno"]))
+    if relation != "전체":
+        relations = [row for row in relations if row["relation"] == relation]
+
+    total = len(relations)
+    shown = relations[:limit]
+    nodes, edges = build_company_graph(str(selected["name"]), shown)
+
     st.markdown(
-        """
+        f"""
         <div class="legend">
-            <span><i style="background:#b4aaa1;border-color:#b4aaa1"></i>핵심기업</span>
-            <span><i style="background:#dbd6d1;border-color:#dbd6d1"></i>계열사 · 유사기업 · 협력사 · 공급망</span>
-            <span>Edge — 관계 유형 / Confidence</span>
+            <span><i style="background:#b4aaa1;border-color:#b4aaa1"></i>기준 기업 · 계열사</span>
+            <span><i style="background:#cfc7bf;border-color:#cfc7bf"></i>종속기업</span>
+            <span>연결 {total}개 중 {len(shown)}개 표시</span>
         </div>
         """,
         unsafe_allow_html=True,
     )
-    components.html(render_graph_svg(nodes, edges, relation), height=580, scrolling=False)
+
+    if not shown:
+        st.info("선택한 관계 유형에 해당하는 연결 기업이 없습니다.")
+        return
+
+    components.html(render_graph_svg(nodes, edges), height=700, scrolling=False)
+    st.caption("노드에 마우스를 올리면 줄이지 않은 기업명을 볼 수 있습니다. 출처: 금융위원회 계열회사 · 연결대상종속기업")
 
 
 def render_rag_demo() -> None:
-    st.markdown('<span class="kicker">graph rag</span>', unsafe_allow_html=True)
+    """RAG 탭: chatbot.py 의 Graph RAG 에이전트 챗봇을 그대로 붙인다."""
     st.markdown("## 자연어로 묻고<br>그래프로 답합니다", unsafe_allow_html=True)
-    left, right = st.columns([1.3, 1], gap="large")
-    with left:
-        question = st.text_input("질문", value="삼성전자와 연결된 계열사와 유사 기업은 어디인가요?")
-    with right:
-        selected_company = st.selectbox("기준 기업", ["삼성전자", "삼성SDI", "현대자동차", "LG에너지솔루션"])
-    if st.button("답변 생성"):
-        company = html.escape(selected_company)
-        st.markdown(
-            f"""
-            <div class="answer">
-                <span class="label">Question</span>
-                <p>{html.escape(question)}</p>
-                <span class="label">Draft answer</span>
-                <p>{company} 기준으로 그래프를 조회하면 계열 관계, 공급망 관계, 유사기업 관계를 분리해 볼 수 있습니다.
-                예시 데이터에서는 삼성전자와 삼성SDI · 삼성전기가 계열사로 연결되고,
-                LG에너지솔루션은 배터리 산업 키워드 기준의 유사기업 후보로 해석됩니다.</p>
-                <span class="label">Generated cypher</span>
-                <code>MATCH (c:Company {{name: '{company}'}})-[r]-(n:Company)
-RETURN c, type(r), n, r.confidence
-ORDER BY r.confidence DESC</code>
-            </div>
-            """,
-            unsafe_allow_html=True,
+    st.markdown(
+        '<p class="lede">Neo4j 지식그래프를 Text2Cypher 로 조회해 답변하고, 사용한 관계와 도구를 함께 보여줍니다.</p>',
+        unsafe_allow_html=True,
+    )
+
+    try:
+        from chatbot import render_chat_panel
+    except Exception as exc:  # 모듈 자체를 불러오지 못한 경우
+        st.error(f"챗봇 모듈을 불러오지 못했습니다: {exc}")
+        return
+
+    # 다른 섹션에서 넘어온 질문은 한 번만 실행되도록 꺼내서 전달한다.
+    pending = st.session_state.pop("rag_pending", None)
+
+    try:
+        render_chat_panel(
+            state_key="rag_messages",
+            placeholder="예) 신한금융지주의 종속기업을 알려줘",
+            pending_prompt=pending,
         )
-    st.caption("실서비스에서는 Text2Cypher 결과, Neo4j 조회 결과, 문서 근거 문장을 함께 결합합니다.")
+    except ImportError as exc:
+        # 에이전트/드라이버 미설치, .env 누락 등으로 에이전트를 만들지 못한 경우
+        st.error(f"Graph RAG 에이전트를 초기화하지 못했습니다: {exc}")
+        st.caption("`.env` 의 OPENAI_API_KEY, NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD 설정을 확인해 주세요.")
 
 
 def render_architecture(content: dict[str, object]) -> None:
-    st.markdown('<span class="kicker">architecture</span>', unsafe_allow_html=True)
     st.markdown("## 데이터에서 그래프,<br>그리고 답변까지", unsafe_allow_html=True)
     markup = "".join(
         f"""
@@ -680,7 +838,7 @@ def render_sidebar(content: dict[str, object]) -> None:
     with st.sidebar:
         st.markdown(
             f"""
-            <div style="font-family:'Instrument Serif',serif;font-size:2rem;line-height:1;">{content['wordmark']}</div>
+            <div class="sb-mark">{content['wordmark']}</div>
             <span class="sb-label">Service</span>
             <div class="sb-value">{content['service_name']}</div>
             <span class="sb-label">Dataset</span>
@@ -699,18 +857,25 @@ def main() -> None:
     content = get_site_content()
     render_sidebar(content)
     render_topbar(content)
-    render_brand(content)
 
-    overview_tab, graph_tab, rag_tab, architecture_tab = st.tabs(["Overview", "Graph", "RAG", "Architecture"])
-    with overview_tab:
-        render_hero_band(content)
-        st.markdown('<div class="rule soft"></div>', unsafe_allow_html=True)
+    # st.tabs 는 코드에서 탭을 바꿀 수 없어, 질문 클릭 → RAG 이동을 위해 라디오로 내비게이션을 구성한다.
+    section = st.radio(
+        "섹션",
+        SECTIONS,
+        key="nav",
+        horizontal=True,
+        label_visibility="collapsed",
+    )
+
+    if section == "Overview":
         render_problem_and_questions(content)
-    with graph_tab:
+        st.markdown('<div class="rule soft"></div>', unsafe_allow_html=True)
+        render_hero_band(content)
+    elif section == "Graph":
         render_graph_explorer()
-    with rag_tab:
+    elif section == "RAG":
         render_rag_demo()
-    with architecture_tab:
+    else:
         render_architecture(content)
 
 
