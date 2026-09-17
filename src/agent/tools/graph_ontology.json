@@ -3,35 +3,41 @@
     "ParentCompany": {
       "description": "모기업 또는 계열관계의 기준이 되는 기업",
       "properties": {
-        "crno": {
-          "type": "string",
-          "description": "법인등록번호"
+        "id": {
+          "description": "모기업의 고유 식별자"
         },
         "name": {
-          "type": "string",
           "description": "기업명"
         },
+        "crno": {
+          "description": "법인등록번호"
+        },
         "address": {
-          "type": "string",
           "description": "기업 주소"
         }
       }
     },
 
     "SubsidiaryCompany": {
-      "description": "모기업에 종속된 기업",
+      "description": "모기업과 종속관계로 연결된 기업",
       "properties": {
+        "id": {
+          "description": "종속기업의 고유 식별자"
+        },
         "name": {
-          "type": "string",
           "description": "종속기업명"
         },
+        "name_norm": {
+          "description": "검색 및 매칭을 위해 정규화한 종속기업명"
+        },
         "address": {
-          "type": "string",
           "description": "종속기업 주소"
         },
-        "main_business": {
-          "type": "string",
-          "description": "주요 사업 내용"
+        "domestic": {
+          "description": "종속기업의 국내외 구분"
+        },
+        "business_content": {
+          "description": "종속기업의 주요 사업 내용"
         }
       }
     },
@@ -39,18 +45,22 @@
     "Region": {
       "description": "기업이 위치한 지역",
       "properties": {
+        "id": {
+          "description": "지역의 고유 식별자"
+        },
         "name": {
-          "type": "string",
           "description": "지역명"
         }
       }
     },
 
     "Industry": {
-      "description": "종속기업과 관련된 업종",
+      "description": "기업과 관련된 업종 또는 산업 분야",
       "properties": {
+        "id": {
+          "description": "업종의 고유 식별자"
+        },
         "name": {
-          "type": "string",
           "description": "업종명"
         }
       }
@@ -65,7 +75,18 @@
           "source": "ParentCompany",
           "target": "ParentCompany"
         }
-      ]
+      ],
+      "properties": {
+        "evidence": {
+          "description": "관계를 뒷받침하는 원문 근거"
+        },
+        "source_case": {
+          "description": "관계가 추출된 원본 데이터 또는 사례 식별 정보"
+        },
+        "source_row": {
+          "description": "관계가 추출된 원본 데이터의 행 위치"
+        }
+      }
     },
 
     "HAS_SUBSIDIARY": {
@@ -75,7 +96,43 @@
           "source": "ParentCompany",
           "target": "SubsidiaryCompany"
         }
-      ]
+      ],
+      "properties": {
+        "evidence": {
+          "description": "관계를 뒷받침하는 원문 근거"
+        },
+        "source_case": {
+          "description": "관계가 추출된 원본 데이터 또는 사례 식별 정보"
+        },
+        "source_row": {
+          "description": "관계가 추출된 원본 데이터의 행 위치"
+        }
+      }
+    },
+
+    "IN_INDUSTRY": {
+      "description": "기업이 특정 업종 또는 산업 분야와 관련된 관계",
+      "signatures": [
+        {
+          "source": "ParentCompany",
+          "target": "Industry"
+        },
+        {
+          "source": "SubsidiaryCompany",
+          "target": "Industry"
+        }
+      ],
+      "properties": {
+        "evidence": {
+          "description": "관계를 뒷받침하는 원문 근거"
+        },
+        "source_case": {
+          "description": "관계가 추출된 원본 데이터 또는 사례 식별 정보"
+        },
+        "source_row": {
+          "description": "관계가 추출된 원본 데이터의 행 위치"
+        }
+      }
     },
 
     "LOCATED_IN": {
@@ -89,17 +146,18 @@
           "source": "SubsidiaryCompany",
           "target": "Region"
         }
-      ]
-    },
-
-    "IN_INDUSTRY": {
-      "description": "종속기업이 특정 업종과 관련된 관계",
-      "signatures": [
-        {
-          "source": "SubsidiaryCompany",
-          "target": "Industry"
+      ],
+      "properties": {
+        "evidence": {
+          "description": "관계를 뒷받침하는 원문 근거"
+        },
+        "source_case": {
+          "description": "관계가 추출된 원본 데이터 또는 사례 식별 정보"
+        },
+        "source_row": {
+          "description": "관계가 추출된 원본 데이터의 행 위치"
         }
-      ]
+      }
     }
   }
 }
