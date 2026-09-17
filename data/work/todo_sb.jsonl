@@ -201,10 +201,8 @@
 {"key": "농심엔지니어링", "subsidiary_name": "농심엔지니어링(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "산업기계 기구 제조 판매", "parent_corpNm": ""}
 {"key": "에이아이엠씨", "subsidiary_name": "(주)에이아이엠씨", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "매니지먼트 IP부가사업", "parent_corpNm": ""}
 {"key": "gs에너지", "subsidiary_name": "GS에너지(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "에너지관련 지주사업", "parent_corpNm": ""}
-{"key": "인천종합에너지", "subsidiary_name": "인천종합에너지(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "증기 냉온수 및 공기조절공급업", "parent_corpNm": ""}
 {"key": "위드인천에너지", "subsidiary_name": "위드인천에너지(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "증기 냉온수 및 공기조절공급업", "parent_corpNm": ""}
 {"key": "지에스당진솔라팜", "subsidiary_name": "지에스당진솔라팜(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "태양광 발전업", "parent_corpNm": ""}
-{"key": "gs파워", "subsidiary_name": "GS파워(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "전기 증기 및 난방업", "parent_corpNm": ""}
 {"key": "지에스차지비", "subsidiary_name": "지에스차지비(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "전기자동차 충전서비스 사업", "parent_corpNm": ""}
 {"key": "넥스트리뉴어블스솔루션", "subsidiary_name": "넥스트리뉴어블스솔루션 주식회사", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "신재생에너지관련 서비스업", "parent_corpNm": ""}
 {"key": "gs리테일", "subsidiary_name": "(주)GS리테일", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "종합도소매업", "parent_corpNm": ""}
@@ -215,7 +213,6 @@
 {"key": "지에스이피에스", "subsidiary_name": "지에스이피에스(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "전기업", "parent_corpNm": ""}
 {"key": "피엘에스", "subsidiary_name": "(주)피엘에스", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "PDI 및 물류사업", "parent_corpNm": ""}
 {"key": "지에스엔텍", "subsidiary_name": "(주)지에스엔텍", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "설비수주업", "parent_corpNm": ""}
-{"key": "지에스이앤알", "subsidiary_name": "(주)지에스이앤알", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "집단에너지 석유 유통 및 자원개발사업 등", "parent_corpNm": ""}
 {"key": "지에스반월열병합발전", "subsidiary_name": "(주)지에스반월열병합발전", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "집단에너지", "parent_corpNm": ""}
 {"key": "지에스구미열병합발전", "subsidiary_name": "(주)지에스구미열병합발전", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "집단에너지", "parent_corpNm": ""}
 {"key": "지에스동해전력", "subsidiary_name": "(주)지에스동해전력", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "석탄화력발전사업", "parent_corpNm": ""}
@@ -389,7 +386,6 @@
 {"key": "택스워치", "subsidiary_name": "(주)택스워치", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "신문발행업", "parent_corpNm": ""}
 {"key": "바이오테크이노밸리자산관리주3", "subsidiary_name": "바이오테크이노밸리자산관리 주식회사[주3]", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "자산관리업", "parent_corpNm": ""}
 {"key": "바이오테크이노밸리피에프브이주4", "subsidiary_name": "바이오테크이노밸리피에프브이주식회사[주4]", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "부동산업", "parent_corpNm": ""}
-{"key": "한세실업", "subsidiary_name": "한세실업(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "제조업(의류)", "parent_corpNm": ""}
 {"key": "예스이십사", "subsidiary_name": "예스이십사(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "온라인 도서 판매", "parent_corpNm": ""}
 {"key": "동아출판", "subsidiary_name": "동아출판(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "출판업", "parent_corpNm": ""}
 {"key": "한세모빌리티", "subsidiary_name": "한세모빌리티(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "자동차부품제조 및 판매", "parent_corpNm": ""}
@@ -436,8 +432,6 @@
 {"key": "모베이스다이캐스팅", "subsidiary_name": "㈜모베이스다이캐스팅", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "자동차부품제조업", "parent_corpNm": ""}
 {"key": "모베이스시스템", "subsidiary_name": "㈜모베이스시스템", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "정보통신업/서비스업", "parent_corpNm": ""}
 {"key": "모베이스에이에스이씨", "subsidiary_name": "㈜모베이스에이에스이씨", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "정보통신업", "parent_corpNm": ""}
-{"key": "대웅제약", "subsidiary_name": "(주)대웅제약", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "의약품 제조 및 판매", "parent_corpNm": ""}
-{"key": "대웅바이오", "subsidiary_name": "대웅바이오(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "의약품 제조 및 판매", "parent_corpNm": ""}
 {"key": "대웅개발", "subsidiary_name": "(주)대웅개발", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "부동산 임대 및 용역", "parent_corpNm": ""}
 {"key": "대웅생명과학", "subsidiary_name": "(주)대웅생명과학", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "식품 가공 및 판매", "parent_corpNm": ""}
 {"key": "농업회사법인대웅낙원", "subsidiary_name": "농업회사법인 대웅낙원", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "농지임대 및 매매", "parent_corpNm": ""}
@@ -1651,7 +1645,6 @@
 {"key": "에버아이티", "subsidiary_name": "(주)에버아이티", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "전시및광고용조명장치제조업", "parent_corpNm": ""}
 {"key": "우리투자증권", "subsidiary_name": "우리투자증권", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "증권업", "parent_corpNm": ""}
 {"key": "우리파이낸셜", "subsidiary_name": "우리파이낸셜(※)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "기타금융", "parent_corpNm": ""}
-{"key": "우리카드", "subsidiary_name": "우리카드", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "신용카드업", "parent_corpNm": ""}
 {"key": "우리금융저축은행", "subsidiary_name": "우리금융저축은행", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "은행업", "parent_corpNm": ""}
 {"key": "우리종합금융", "subsidiary_name": "우리종합금융", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "종합금융", "parent_corpNm": ""}
 {"key": "우리에프앤아이", "subsidiary_name": "우리에프앤아이", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "기타금융", "parent_corpNm": ""}
@@ -1852,7 +1845,6 @@
 {"key": "비즈바이오젠", "subsidiary_name": "비즈바이오젠(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "서비스.연구개발", "parent_corpNm": ""}
 {"key": "에스티투자조합", "subsidiary_name": "에스티투자조합", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "투자", "parent_corpNm": ""}
 {"key": "그린바이텍", "subsidiary_name": "(주)그린바이텍", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "축산물 및 사료제조/판매", "parent_corpNm": ""}
-{"key": "한강씨엠", "subsidiary_name": "한강씨엠(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "육계가공 및 제조업", "parent_corpNm": ""}
 {"key": "보람농업회사법인", "subsidiary_name": "(주)보람 농업회사법인", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "양돈업", "parent_corpNm": ""}
 {"key": "농업회사법인봉화", "subsidiary_name": "농업회사법인 (주)봉화", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "양돈업", "parent_corpNm": ""}
 {"key": "하림식품", "subsidiary_name": "(주)하림식품", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "식품가공업", "parent_corpNm": ""}
@@ -2586,14 +2578,12 @@
 {"key": "고운누리", "subsidiary_name": "(주)고운누리", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "음료", "parent_corpNm": ""}
 {"key": "엔도더마", "subsidiary_name": "주식회사 엔도더마", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "화장품 제조업", "parent_corpNm": ""}
 {"key": "현대벤디스", "subsidiary_name": "(주)현대벤디스", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "모바일식권사업", "parent_corpNm": ""}
-{"key": "하나카드", "subsidiary_name": "하나카드", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "신용카드업", "parent_corpNm": ""}
 {"key": "하나자산신탁", "subsidiary_name": "하나자산신탁", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "부동산신탁업", "parent_corpNm": ""}
 {"key": "하나저축은행", "subsidiary_name": "하나저축은행", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "상호저축은행업", "parent_corpNm": ""}
 {"key": "하나손해보험", "subsidiary_name": "하나손해보험", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "손해보험업", "parent_corpNm": ""}
 {"key": "하나펀드서비스", "subsidiary_name": "하나펀드서비스", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "일반사무수탁업", "parent_corpNm": ""}
 {"key": "하나대체투자자산운용", "subsidiary_name": "하나대체투자자산운용", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "자산운용업", "parent_corpNm": ""}
 {"key": "하나벤처스", "subsidiary_name": "하나벤처스", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "신기술사업금융업", "parent_corpNm": ""}
-{"key": "하나에프앤아이", "subsidiary_name": "하나에프앤아이", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "NPL 유동화증권투자업 및 자산관리업", "parent_corpNm": ""}
 {"key": "핀크", "subsidiary_name": "핀크", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "기타금융지원서비스업", "parent_corpNm": ""}
 {"key": "하나대체투자블랙락전문투자형사모특별자산투자신탁73호", "subsidiary_name": "하나대체투자블랙락전문투자형사모특별자산투자신탁73호", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "사모집합투자기구", "parent_corpNm": ""}
 {"key": "하나대체투자에너지인프라전문투자형사모특별자산투자신탁31호", "subsidiary_name": "하나대체투자에너지인프라전문투자형사모특별자산투자신탁3-1호", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "사모집합투자기구", "parent_corpNm": ""}
@@ -3027,8 +3017,6 @@
 {"key": "경동강동고객서비스", "subsidiary_name": "경동강동 고객서비스(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "도시가스 안전관리대행", "parent_corpNm": ""}
 {"key": "경동강북고객서비스", "subsidiary_name": "경동강북 고객서비스(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "도시가스 안전관리대행", "parent_corpNm": ""}
 {"key": "경동양산고객서비스", "subsidiary_name": "경동양산 고객서비스(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "도시가스 안전관리대행", "parent_corpNm": ""}
-{"key": "영풍전자", "subsidiary_name": "영풍전자㈜", "need": ["bizCtt"], "known_addr": "경기 안산시 단원구 범지기로 141번길 62", "known_bizCtt": "", "parent_corpNm": ""}
-{"key": "코리아써키트", "subsidiary_name": "㈜코리아써키트", "need": ["bizCtt"], "known_addr": "경기 안산시 단원구 강촌로 139번길 9", "known_bizCtt": "", "parent_corpNm": ""}
 {"key": "태경가스기술1", "subsidiary_name": "태경가스기술(주)(*1)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "탄산가스 및 기화장치 판매", "parent_corpNm": ""}
 {"key": "디어유주2", "subsidiary_name": "㈜디어유 (주2)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "어플리케이션 개발 및 플랫폼 운영", "parent_corpNm": ""}
 {"key": "굿어스", "subsidiary_name": "굿어스㈜", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "IT infrastructure의 Management Operation", "parent_corpNm": ""}
@@ -3055,7 +3043,6 @@
 {"key": "펄스클립", "subsidiary_name": "㈜펄스클립", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "디지털콘텐츠제작", "parent_corpNm": ""}
 {"key": "에치엔지", "subsidiary_name": "㈜에치엔지", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "화장품 제조 및 판매", "parent_corpNm": ""}
 {"key": "근오농림", "subsidiary_name": "근오농림㈜", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "농작물 재배 및 도소매 판매업", "parent_corpNm": ""}
-{"key": "콜마스크", "subsidiary_name": "콜마스크(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "화장품 제조 및 판매", "parent_corpNm": ""}
 {"key": "콜마생활건강", "subsidiary_name": "콜마생활건강㈜", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "식품 및 화장품 도소매", "parent_corpNm": ""}
 {"key": "브라운편입비상장", "subsidiary_name": "(주)브라운편입 (비상장)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "교육서비스업", "parent_corpNm": ""}
 {"key": "씨엔알에스엠오", "subsidiary_name": "주식회사 씨엔알에스엠오", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "임상 용역 서비스", "parent_corpNm": ""}
@@ -3395,7 +3382,6 @@
 {"key": "조선선재온산", "subsidiary_name": "조선선재온산(주)", "need": ["region", "addr", "bizCtt"], "known_addr": "", "known_bizCtt": "", "parent_corpNm": ""}
 {"key": "씨에스로직스", "subsidiary_name": "씨에스로직스(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "부동산 임대 외", "parent_corpNm": ""}
 {"key": "앤로보틱스구나이콤", "subsidiary_name": "(주)앤로보틱스 (구 나이콤)", "need": ["bizCtt"], "known_addr": "경기도 안양시 동안구 시민대로109번길 11", "known_bizCtt": "", "parent_corpNm": ""}
-{"key": "하츠", "subsidiary_name": "(주)하츠", "need": ["bizCtt"], "known_addr": "경기도 평택시 진위면 동부대로 202", "known_bizCtt": "", "parent_corpNm": ""}
 {"key": "현대리뉴어블랩", "subsidiary_name": "현대리뉴어블랩 주식회사", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "태양광발전업", "parent_corpNm": ""}
 {"key": "현대네비스", "subsidiary_name": "현대네비스 주식회사", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "운송주선업", "parent_corpNm": ""}
 {"key": "프롤로그벤처스", "subsidiary_name": "프롤로그벤처스 주식회사", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "경영컨설팅", "parent_corpNm": ""}
@@ -3826,7 +3812,6 @@
 {"key": "미코파워", "subsidiary_name": "(주)미코파워", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "연료전지 및 신재생에너지", "parent_corpNm": ""}
 {"key": "미코하이테크", "subsidiary_name": "(주)미코하이테크", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "세라믹 공정장비 제작", "parent_corpNm": ""}
 {"key": "에코이노베이션", "subsidiary_name": "(주)에코이노베이션", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "환경관련 엔지니어링서비스업", "parent_corpNm": ""}
-{"key": "현대중공업파워시스템", "subsidiary_name": "현대중공업파워시스템(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "발전 EPC 및 선박부품 제조", "parent_corpNm": ""}
 {"key": "에임즈주식혼합일반사모투자신탁제1호", "subsidiary_name": "에임즈 주식혼합 일반사모투자신탁 제1호", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "신탁업 및 집합투자업", "parent_corpNm": ""}
 {"key": "에임즈주식혼합일반사모투자신탁제2호", "subsidiary_name": "에임즈 주식혼합 일반사모투자신탁 제2호", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "신탁업 및 집합투자업", "parent_corpNm": ""}
 {"key": "양주그린에너지1호", "subsidiary_name": "(주)양주그린에너지1호", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "수소연료전지발전업", "parent_corpNm": ""}
@@ -4617,7 +4602,6 @@
 {"key": "토스인사이트", "subsidiary_name": "토스인사이트㈜", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "경제 및 경영학 연구개발업", "parent_corpNm": ""}
 {"key": "더라이즈인스티튜트오브디자인", "subsidiary_name": "더라이즈인스티튜트오브디자인㈜", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "전문 과학 및 기술서비스업", "parent_corpNm": ""}
 {"key": "프로젝트아리제오차", "subsidiary_name": "프로젝트아리제오차(유)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "기타금융업", "parent_corpNm": ""}
-{"key": "엠파크", "subsidiary_name": "엠파크(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "중고자동차매매 및 경매업 점포임대업 외", "parent_corpNm": ""}
 {"key": "몽베르컨트리클럽", "subsidiary_name": "몽베르컨트리클럽(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "골프장 운영업", "parent_corpNm": ""}
 {"key": "엠파크서비스", "subsidiary_name": "엠파크서비스(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "자동차 종합정비 성능검사업", "parent_corpNm": ""}
 {"key": "글로벌이앤비", "subsidiary_name": "(주)글로벌이앤비", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "행사 및 광고업", "parent_corpNm": ""}
@@ -4663,7 +4647,6 @@
 {"key": "코오롱이앤피", "subsidiary_name": "코오롱이앤피㈜", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "폴리옥시메틸렌수지 등의 제조가공 및 판매", "parent_corpNm": ""}
 {"key": "그린나래", "subsidiary_name": "그린나래㈜", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "골프장 운영업", "parent_corpNm": ""}
 {"key": "슈퍼트레인", "subsidiary_name": "슈퍼트레인㈜", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "골프웨어 판매", "parent_corpNm": ""}
-{"key": "코오롱머티리얼", "subsidiary_name": "코오롱머티리얼㈜", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "화학섬유의 제조 판매 및 염색가공", "parent_corpNm": ""}
 {"key": "아토메탈테크코리아", "subsidiary_name": "아토메탈테크코리아㈜", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "합금철 제조업", "parent_corpNm": ""}
 {"key": "케이오에이", "subsidiary_name": "㈜케이오에이", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "캐시미어 원사 제조 및 판매", "parent_corpNm": ""}
 {"key": "퍼플아이오", "subsidiary_name": "㈜퍼플아이오", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "소프트웨어 솔루션", "parent_corpNm": ""}
@@ -4776,7 +4759,6 @@
 {"key": "현대사료", "subsidiary_name": "현대사료㈜", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "배합사료 제조 판매업", "parent_corpNm": ""}
 {"key": "포톤앤큐구비엘디", "subsidiary_name": "(주)포톤앤큐(구.비엘디)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "휴대폰 카메라모듈 부품 제조", "parent_corpNm": ""}
 {"key": "비엘디에프앤비", "subsidiary_name": "(주)비엘디에프앤비", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "음식점업외", "parent_corpNm": ""}
-{"key": "인지에이원", "subsidiary_name": "인지에이원(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "제조업(자동차 부품)", "parent_corpNm": ""}
 {"key": "인지에이엠티", "subsidiary_name": "인지에이엠티(주)", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "제조업(자동차 부품)", "parent_corpNm": ""}
 {"key": "멀티에셋프리미어셀렉트사모재간접1호", "subsidiary_name": "멀티에셋프리미어셀렉트사모재간접1호", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "단기자금", "parent_corpNm": ""}
 {"key": "한국글로벌올에셋사모재간접투자신탁11호", "subsidiary_name": "한국글로벌올에셋사모재간접투자신탁1-1호", "need": ["region", "addr"], "known_addr": "", "known_bizCtt": "단기자금", "parent_corpNm": ""}
