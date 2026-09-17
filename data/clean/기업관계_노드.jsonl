@@ -560,6 +560,306 @@
 {"id": "parent_company:1101110889836", "type": "ParentCompany", "properties": {"crno": "1101110889836", "name": "(주)오픈베이스", "address": "서울특별시 서초구 매헌로 16 (양재동, 하이브랜드 리빙관4층)"}}
 {"id": "parent_company:1101110889985", "type": "ParentCompany", "properties": {"crno": "1101110889985", "name": "(주)녹십자셀", "address": "경기도 용인시 기흥구 이현로30번길 107 GC녹십자셀센터"}}
 {"id": "parent_company:1101110896683", "type": "ParentCompany", "properties": {"crno": "1101110896683", "name": "(주)파인디지털", "address": "경기도 성남시 분당구 성남대로925번길 41"}}
+{"id": "parent_company:1101110995378", "type": "ParentCompany", "properties": {"crno": "1101110995378", "name": "현대캐피탈주식회사", "address": "서울특별시 중구 세종대로 14 (남대문로5가, 그랜드센트럴(GRANDCENTRAL))"}}
+{"id": "parent_company:1101111042574", "type": "ParentCompany", "properties": {"crno": "1101111042574", "name": "(주)현대에버다임", "address": "충청북도 진천군 진천읍 부영길 49"}}
+{"id": "parent_company:1101111081093", "type": "ParentCompany", "properties": {"crno": "1101111081093", "name": "(주)대림", "address": "서울특별시 강서구 공항대로 165 에이동 8층(마곡동, 원그로브)"}}
+{"id": "parent_company:1101111109134", "type": "ParentCompany", "properties": {"crno": "1101111109134", "name": "(주)씨제이이엔엠", "address": "서울특별시 서초구 과천대로 870-13"}}
+{"id": "parent_company:1101111129497", "type": "ParentCompany", "properties": {"crno": "1101111129497", "name": "(주)카카오", "address": "제주특별자치도 제주시 첨단로 242"}}
+{"id": "parent_company:1101111144297", "type": "ParentCompany", "properties": {"crno": "1101111144297", "name": "(주)엘지헬로비전", "address": "경기도 고양시 덕양구 동송로 30 17층(동산동, MBN미디어센터)"}}
+{"id": "parent_company:1101111217416", "type": "ParentCompany", "properties": {"crno": "1101111217416", "name": "롯데캐피탈주식회사", "address": "서울특별시 강남구 테헤란로 142 (역삼동, 캐피탈타워) 7층"}}
+{"id": "parent_company:1101111258220", "type": "ParentCompany", "properties": {"crno": "1101111258220", "name": "(주)한국토지신탁", "address": "서울특별시 강남구 테헤란로 137 코레이트타워"}}
+{"id": "parent_company:1101111296676", "type": "ParentCompany", "properties": {"crno": "1101111296676", "name": "(주)LG유플러스", "address": "서울특별시 용산구 한강대로 32 (한강로3가) LG유플러스 용산사옥"}}
+{"id": "parent_company:1101111315286", "type": "ParentCompany", "properties": {"crno": "1101111315286", "name": "(주)에이피에스", "address": "경기도 화성시 동탄면 동탄산단9길 23-12 (동탄면)"}}
+{"id": "parent_company:1101111412256", "type": "ParentCompany", "properties": {"crno": "1101111412256", "name": "효성아이티엑스(주)", "address": "서울특별시 영등포구 선유동2로 57 이레빌딩 15층"}}
+{"id": "parent_company:1101111447021", "type": "ParentCompany", "properties": {"crno": "1101111447021", "name": "드림라인(주)", "address": "서울특별시 구로구 디지털로31길 61 (구로동, 드림마크원데이터센타) 8층"}}
+{"id": "parent_company:1101111468754", "type": "ParentCompany", "properties": {"crno": "1101111468754", "name": "(주)케이티", "address": "경기도 성남시 분당구 불정로 90 KT 본사"}}
+{"id": "parent_company:1101111516933", "type": "ParentCompany", "properties": {"crno": "1101111516933", "name": "엘아이지디펜스앤에어로스페이스(주)", "address": "경기도 용인시 기흥구 마북로 207 엘아이지넥스원(주)"}}
+{"id": "parent_company:1101111598379", "type": "ParentCompany", "properties": {"crno": "1101111598379", "name": "(주)에코프로", "address": "충청북도 청주시 청원구 오창읍 과학산업2로 587-40 주식회사 에코프로"}}
+{"id": "parent_company:1101111602667", "type": "ParentCompany", "properties": {"crno": "1101111602667", "name": "(주)케이지이니시스", "address": "서울특별시 중구 통일로 92 케이지타워 14,15층"}}
+{"id": "parent_company:1101111603764", "type": "ParentCompany", "properties": {"crno": "1101111603764", "name": "(주)쏠리드", "address": "경기도 성남시 분당구 판교역로 220 쏠리드스페이스"}}
+{"id": "parent_company:1101111673220", "type": "ParentCompany", "properties": {"crno": "1101111673220", "name": "씨제이씨지브이(주)", "address": "서울특별시 용산구 한강대로23길 55 아이파크몰 6층(한강로동)"}}
+{"id": "parent_company:1101111710527", "type": "ParentCompany", "properties": {"crno": "1101111710527", "name": "미래에셋벤처투자 주식회사", "address": "경기도 성남시 분당구 판교역로241번길 20"}}
+{"id": "parent_company:1101111764730", "type": "ParentCompany", "properties": {"crno": "1101111764730", "name": "에스엘엘중앙 주식회사", "address": "서울특별시 마포구 상암산로 38 (상암동, JTBC빌딩)"}}
+{"id": "parent_company:1101111775365", "type": "ParentCompany", "properties": {"crno": "1101111775365", "name": "에이치디씨랩스(주)", "address": "서울특별시 서초구 효령로 346 서초 HDC랩스 타워"}}
+{"id": "parent_company:1101111799183", "type": "ParentCompany", "properties": {"crno": "1101111799183", "name": "케이지에코솔루션(주)", "address": "경상남도 밀양시 초동면 초동농공단지길 59 -"}}
+{"id": "parent_company:1101111807910", "type": "ParentCompany", "properties": {"crno": "1101111807910", "name": "전진건설로봇(주)", "address": "충청북도 음성군 금왕읍 대금로 1264"}}
+{"id": "parent_company:1101111827570", "type": "ParentCompany", "properties": {"crno": "1101111827570", "name": "한국항공우주산업(주)", "address": "경상남도 사천시 사남면 공단1로 78 한국항공우주산업"}}
+{"id": "parent_company:1101111829576", "type": "ParentCompany", "properties": {"crno": "1101111829576", "name": "포스코에너지(주)", "address": "서울특별시 강남구 테헤란로 440"}}
+{"id": "parent_company:1101111848980", "type": "ParentCompany", "properties": {"crno": "1101111848980", "name": "NICE인프라(주)", "address": "서울특별시 마포구 새창로 7 6층, 7층, 8층(도화동)"}}
+{"id": "parent_company:1101111867948", "type": "ParentCompany", "properties": {"crno": "1101111867948", "name": "키움증권(주)", "address": "서울특별시 영등포구 의사당대로 96 TP타워(사학연금 서울회관)"}}
+{"id": "parent_company:1101111874654", "type": "ParentCompany", "properties": {"crno": "1101111874654", "name": "AJ네트웍스 주식회사", "address": "서울특별시 송파구 정의로8길 9 (문정동,AJ빌딩)"}}
+{"id": "parent_company:1101111911050", "type": "ParentCompany", "properties": {"crno": "1101111911050", "name": "(주)케이지파이낸셜", "address": "서울특별시 중구 통일로 92 케이지타워 16층"}}
+{"id": "parent_company:1101111948277", "type": "ParentCompany", "properties": {"crno": "1101111948277", "name": "코오롱생명과학(주)", "address": "서울특별시 강서구 마곡동로 110 코오롱 One&Only 타워"}}
+{"id": "parent_company:1101112095837", "type": "ParentCompany", "properties": {"crno": "1101112095837", "name": "한화오션(주)", "address": "경상남도 거제시 거제대로 3370 (아주동)"}}
+{"id": "parent_company:1101112101816", "type": "ParentCompany", "properties": {"crno": "1101112101816", "name": "(주)동원F&B", "address": "서울특별시 서초구 마방로 68 (양재동) 동원산업빌딩"}}
+{"id": "parent_company:1101112137358", "type": "ParentCompany", "properties": {"crno": "1101112137358", "name": "(주)포스코인터내셔널", "address": "서울특별시 강남구 테헤란로 440 포스코센터"}}
+{"id": "parent_company:1101112137895", "type": "ParentCompany", "properties": {"crno": "1101112137895", "name": "(주)대우건설", "address": "서울특별시 중구 을지로 170 (을지로4가)"}}
+{"id": "parent_company:1101112149890", "type": "ParentCompany", "properties": {"crno": "1101112149890", "name": "(주)에스에너지", "address": "서울특별시 송파구 법원로6길 11 4층"}}
+{"id": "parent_company:1101112177388", "type": "ParentCompany", "properties": {"crno": "1101112177388", "name": "현대글로비스(주)", "address": "서울특별시 성동구 왕십리로 83-21 -"}}
+{"id": "parent_company:1101112196304", "type": "ParentCompany", "properties": {"crno": "1101112196304", "name": "한국자산신탁(주)", "address": "서울특별시 강남구 테헤란로 306 (역삼동, 카이트타워)"}}
+{"id": "parent_company:1101112207127", "type": "ParentCompany", "properties": {"crno": "1101112207127", "name": "한국수력원자력주식회사", "address": "경상북도 경주시 문무대왕면 불국로 1655 한국수력원자력주식회사"}}
+{"id": "parent_company:1101112207135", "type": "ParentCompany", "properties": {"crno": "1101112207135", "name": "한국남부발전주식회사", "address": "부산광역시 남구 문현금융로 40 (문현동, 부산국제금융센터) 40 BIFC"}}
+{"id": "parent_company:1101112207177", "type": "ParentCompany", "properties": {"crno": "1101112207177", "name": "한국서부발전주식회사", "address": "충청남도 태안군 태안읍 중앙로 285 (평천리) 한국서부발전(주) 본사"}}
+{"id": "parent_company:1101112217572", "type": "ParentCompany", "properties": {"crno": "1101112217572", "name": "(주)동원엔터프라이즈", "address": "서울특별시 서초구 마방로 68"}}
+{"id": "parent_company:1101112248882", "type": "ParentCompany", "properties": {"crno": "1101112248882", "name": "(주)현대홈쇼핑", "address": "서울특별시 강동구 올림픽로70길 34"}}
+{"id": "parent_company:1101112262527", "type": "ParentCompany", "properties": {"crno": "1101112262527", "name": "(주)엔에스쇼핑", "address": "경기도 성남시 분당구 판교로228번길 15 판교세븐벤처밸리1단지 NS홈쇼핑동"}}
+{"id": "parent_company:1101112276809", "type": "ParentCompany", "properties": {"crno": "1101112276809", "name": "(주)세아홀딩스", "address": "서울특별시 마포구 양화로 45"}}
+{"id": "parent_company:1101112322438", "type": "ParentCompany", "properties": {"crno": "1101112322438", "name": "(주)신한금융지주회사", "address": "서울특별시 중구 세종대로9길 20 태평로2가"}}
+{"id": "parent_company:1101112341850", "type": "ParentCompany", "properties": {"crno": "1101112341850", "name": "모트렉스 주식회사", "address": "경기도 성남시 수정구 금토로80번길 56 위든타워 1동 1301호"}}
+{"id": "parent_company:1101112365321", "type": "ParentCompany", "properties": {"crno": "1101112365321", "name": "(주)국민은행", "address": "서울특별시 영등포구 국제금융로8길 26 국민은행"}}
+{"id": "parent_company:1101112407470", "type": "ParentCompany", "properties": {"crno": "1101112407470", "name": "코스맥스엔비티(주)", "address": "경기도 성남시 분당구 판교로256번길 25 GB2빌딩 6층 (삼평동,제C동)"}}
+{"id": "parent_company:1101112487050", "type": "ParentCompany", "properties": {"crno": "1101112487050", "name": "LG전자(주)", "address": "서울특별시 영등포구 여의대로 128 LG트윈타워"}}
+{"id": "parent_company:1101112507551", "type": "ParentCompany", "properties": {"crno": "1101112507551", "name": "(주)형지엘리트", "address": "인천광역시 연수구 하모니로177번길 49 업무동 10층(송도동, 형지글로벌 패션복합센터)"}}
+{"id": "parent_company:1101112611906", "type": "ParentCompany", "properties": {"crno": "1101112611906", "name": "티케이지휴켐스(주)", "address": "서울특별시 중구 마른내로 27 타워107 15층"}}
+{"id": "parent_company:1101112644725", "type": "ParentCompany", "properties": {"crno": "1101112644725", "name": "(주)현대백화점", "address": "서울특별시 강남구 테헤란로98길 12 -"}}
+{"id": "parent_company:1101112915605", "type": "ParentCompany", "properties": {"crno": "1101112915605", "name": "(주)인티큐브", "address": "서울특별시 마포구 월드컵북로 396, 14층 (상암동, 누리꿈스퀘어비즈니스타워)"}}
+{"id": "parent_company:1101113001685", "type": "ParentCompany", "properties": {"crno": "1101113001685", "name": "SK디앤디(주)", "address": "경기도 성남시 분당구 판교로 332 (삼평동)"}}
+{"id": "parent_company:1101113326588", "type": "ParentCompany", "properties": {"crno": "1101113326588", "name": "롯데렌탈(주)", "address": "경기도 안양시 동안구 전파로 88, 8층"}}
+{"id": "parent_company:1101113555187", "type": "ParentCompany", "properties": {"crno": "1101113555187", "name": "(주)LF", "address": "서울특별시 강남구 언주로 870 (신사동)"}}
+{"id": "parent_company:1101113748253", "type": "ParentCompany", "properties": {"crno": "1101113748253", "name": "CJ제일제당(주)", "address": "서울특별시 중구 동호로 330"}}
+{"id": "parent_company:1101113836678", "type": "ParentCompany", "properties": {"crno": "1101113836678", "name": "주식회사 디비메탈", "address": "서울특별시 강남구 테헤란로 432"}}
+{"id": "parent_company:1101114071207", "type": "ParentCompany", "properties": {"crno": "1101114071207", "name": "(주)엘엑스하우시스", "address": "서울특별시 종로구 새문안로 58 LX광화문빌딩"}}
+{"id": "parent_company:1101114255463", "type": "ParentCompany", "properties": {"crno": "1101114255463", "name": "케이씨코트렐(주)", "address": "서울특별시 마포구 상암산로 34디지털큐브 12층"}}
+{"id": "parent_company:1101114264828", "type": "ParentCompany", "properties": {"crno": "1101114264828", "name": "(주)서진오토모티브", "address": "경기도 시흥시 공단1대로 313"}}
+{"id": "parent_company:1101114382612", "type": "ParentCompany", "properties": {"crno": "1101114382612", "name": "대성산업(주)", "address": "서울특별시 구로구 경인로 662 (신도림동, 디큐브시티 9층, 11층)"}}
+{"id": "parent_company:1101114382878", "type": "ParentCompany", "properties": {"crno": "1101114382878", "name": "(주)피제이메탈", "address": "서울특별시 강남구 테헤란로81길 13삼성동 동원빌딩 11층"}}
+{"id": "parent_company:1101114546523", "type": "ParentCompany", "properties": {"crno": "1101114546523", "name": "주식회사 케이비국민카드", "address": "서울특별시 종로구 새문안로3길 30"}}
+{"id": "parent_company:1101114560268", "type": "ParentCompany", "properties": {"crno": "1101114560268", "name": "제이티비씨 주식회사", "address": "서울특별시 마포구 상암산로 38"}}
+{"id": "parent_company:1101114566406", "type": "ParentCompany", "properties": {"crno": "1101114566406", "name": "(주)메리츠금융지주", "address": "서울특별시 강남구 강남대로 382"}}
+{"id": "parent_company:1101114594952", "type": "ParentCompany", "properties": {"crno": "1101114594952", "name": "(주)이마트", "address": "서울특별시 중구 세종대로7길 37"}}
+{"id": "parent_company:1101114720945", "type": "ParentCompany", "properties": {"crno": "1101114720945", "name": "(주)삼양사", "address": "서울특별시 종로구 종로33길 31 삼양사"}}
+{"id": "parent_company:1101114731299", "type": "ParentCompany", "properties": {"crno": "1101114731299", "name": "넷마블(주)", "address": "서울특별시 구로구 디지털로26길 38 (구로동, 지타워)"}}
+{"id": "parent_company:1101114951243", "type": "ParentCompany", "properties": {"crno": "1101114951243", "name": "애경케미칼(주)", "address": "서울특별시 마포구 양화로 188 9층(동교동)"}}
+{"id": "parent_company:1101114952093", "type": "ParentCompany", "properties": {"crno": "1101114952093", "name": "한국타이어앤테크놀로지(주)", "address": "경기도 성남시 분당구 판교로 286 -"}}
+{"id": "parent_company:1101115079713", "type": "ParentCompany", "properties": {"crno": "1101115079713", "name": "동아에스티(주)", "address": "서울 동대문구 용두동 138 ~255 천호대로 64"}}
+{"id": "parent_company:1101115101839", "type": "ParentCompany", "properties": {"crno": "1101115101839", "name": "주식회사 우리카드", "address": "서울특별시 종로구 종로1길 50 (중학동, 더케이트윈타워)"}}
+{"id": "parent_company:1101115197193", "type": "ParentCompany", "properties": {"crno": "1101115197193", "name": "(주)한진칼", "address": "서울특별시 중구 서소문로 117 -"}}
+{"id": "parent_company:1101115238096", "type": "ParentCompany", "properties": {"crno": "1101115238096", "name": "아세아시멘트(주)", "address": "서울 강남구 역삼2동 726 아세아타워빌딩 14층"}}
+{"id": "parent_company:1101115260669", "type": "ParentCompany", "properties": {"crno": "1101115260669", "name": "(주)종근당", "address": "서울 서대문구 충정로3가 3가 368 종근당빌딩"}}
+{"id": "parent_company:1101115455476", "type": "ParentCompany", "properties": {"crno": "1101115455476", "name": "(주)서연이화", "address": "경기도 안양시 동안구 부림로170번길 41-22 (관양동)"}}
+{"id": "parent_company:1101115505354", "type": "ParentCompany", "properties": {"crno": "1101115505354", "name": "하나카드 주식회사", "address": "서울특별시 중구 을지로 66 (을지로2가, 외환은행본점)"}}
+{"id": "parent_company:1101115542497", "type": "ParentCompany", "properties": {"crno": "1101115542497", "name": "(주)정다운", "address": "전라남도 나주시 동수농공단지길 137-17 (주)정다운"}}
+{"id": "parent_company:1101115554418", "type": "ParentCompany", "properties": {"crno": "1101115554418", "name": "주식회사 삼양패키징", "address": "서울특별시 종로구 종로33길 31"}}
+{"id": "parent_company:1101115604700", "type": "ParentCompany", "properties": {"crno": "1101115604700", "name": "한솔제지(주)", "address": "서울특별시 중구 을지로 100 비동 (을지로2가, 파인애비뉴)"}}
+{"id": "parent_company:1101115698315", "type": "ParentCompany", "properties": {"crno": "1101115698315", "name": "(주)신세계디에프", "address": "서울특별시 중구 퇴계로 77"}}
+{"id": "parent_company:1101116139277", "type": "ParentCompany", "properties": {"crno": "1101116139277", "name": "일동제약(주)", "address": "서울특별시 서초구 바우뫼로27길 2"}}
+{"id": "parent_company:1101116363850", "type": "ParentCompany", "properties": {"crno": "1101116363850", "name": "에이치디현대일렉트릭(주)", "address": "경기도 성남시 분당구 분당수서로 477 HD현대 글로벌 R&D센터"}}
+{"id": "parent_company:1101116390770", "type": "ParentCompany", "properties": {"crno": "1101116390770", "name": "매일유업 주식회사", "address": "서울특별시 종로구 종로1길 50"}}
+{"id": "parent_company:1101116740008", "type": "ParentCompany", "properties": {"crno": "1101116740008", "name": "아이파크현대산업개발(주)", "address": "서울특별시 용산구 한강대로23길 55 현대아이파크몰 9층"}}
+{"id": "parent_company:1101116770138", "type": "ParentCompany", "properties": {"crno": "1101116770138", "name": "효성티앤씨(주)", "address": "서울특별시 마포구 마포대로 119"}}
+{"id": "parent_company:1101116770154", "type": "ParentCompany", "properties": {"crno": "1101116770154", "name": "효성중공업(주)", "address": "서울특별시 마포구 마포대로 119 효성빌딩"}}
+{"id": "parent_company:1101116770170", "type": "ParentCompany", "properties": {"crno": "1101116770170", "name": "에이치에스효성첨단소재(주)", "address": "서울특별시 마포구 마포대로 119 효성빌딩"}}
+{"id": "parent_company:1101116799203", "type": "ParentCompany", "properties": {"crno": "1101116799203", "name": "한일시멘트(주)", "address": "서울특별시 서초구 효령로 275 서초동 1587 한일시멘트빌딩"}}
+{"id": "parent_company:1101116837772", "type": "ParentCompany", "properties": {"crno": "1101116837772", "name": "키움캐피탈 주식회사", "address": "서울특별시 영등포구 여의대로 66 (여의도동, 하이투자증권) 17층"}}
+{"id": "parent_company:1101116860640", "type": "ParentCompany", "properties": {"crno": "1101116860640", "name": "(주)세아제강", "address": "서울특별시 마포구 양화로 45"}}
+{"id": "parent_company:1101350000903", "type": "ParentCompany", "properties": {"crno": "1101350000903", "name": "중소기업은행", "address": "서울특별시 중구 을지로 79 중소기업은행본점"}}
+{"id": "parent_company:1115110000136", "type": "ParentCompany", "properties": {"crno": "1115110000136", "name": "(주)디와이에이", "address": "광주광역시 광산구 소촌로123번길 40-12"}}
+{"id": "parent_company:1146710001456", "type": "ParentCompany", "properties": {"crno": "1146710001456", "name": "한국전력공사(주)", "address": "전라남도 나주시 전력로 55 -"}}
+{"id": "parent_company:1146710006125", "type": "ParentCompany", "properties": {"crno": "1146710006125", "name": "한국가스공사(주)", "address": "대구광역시 동구 첨단로 120-"}}
+{"id": "parent_company:1158110006449", "type": "ParentCompany", "properties": {"crno": "1158110006449", "name": "(주)세코닉스", "address": "경기도 동두천시 평화로2862번길 28"}}
+{"id": "parent_company:1201110000034", "type": "ParentCompany", "properties": {"crno": "1201110000034", "name": "(주)선광", "address": "인천 중구 항동 34-2"}}
+{"id": "parent_company:1201110000323", "type": "ParentCompany", "properties": {"crno": "1201110000323", "name": "핸즈코퍼레이션(주)", "address": "인천광역시 서구 가정로37번길 50"}}
+{"id": "parent_company:1201110001743", "type": "ParentCompany", "properties": {"crno": "1201110001743", "name": "현대제철(주)", "address": "인천광역시 제물포구 중봉대로 63 -"}}
+{"id": "parent_company:1201110001818", "type": "ParentCompany", "properties": {"crno": "1201110001818", "name": "(주)삼익악기", "address": "충청북도 음성군 소이면 소이로 313"}}
+{"id": "parent_company:1201110001959", "type": "ParentCompany", "properties": {"crno": "1201110001959", "name": "이건산업(주)", "address": "인천광역시 남구 염전로 91"}}
+{"id": "parent_company:1201110002056", "type": "ParentCompany", "properties": {"crno": "1201110002056", "name": "케이비아이동양철관(주)", "address": "충청남도 천안시 동남구 풍세면 풍세로 515 동양철관(주)"}}
+{"id": "parent_company:1201110002189", "type": "ParentCompany", "properties": {"crno": "1201110002189", "name": "(주)SIMPAC", "address": "인천광역시 부평구 부평북로 141 (주)SIMPAC"}}
+{"id": "parent_company:1201110003848", "type": "ParentCompany", "properties": {"crno": "1201110003848", "name": "(주)동진쎄미켐", "address": "인천광역시 서구 백범로 644"}}
+{"id": "parent_company:1201110004218", "type": "ParentCompany", "properties": {"crno": "1201110004218", "name": "동화기업(주)", "address": "인천광역시 서구 가정로97번길 28(가좌동)"}}
+{"id": "parent_company:1201110005703", "type": "ParentCompany", "properties": {"crno": "1201110005703", "name": "(주)경인양행", "address": "인천광역시 서구 건지로 199 (석남동) 223-52"}}
+{"id": "parent_company:1201110011990", "type": "ParentCompany", "properties": {"crno": "1201110011990", "name": "일진홀딩스(주)", "address": "경기도 화성시 만년로 905-17"}}
+{"id": "parent_company:1201110018110", "type": "ParentCompany", "properties": {"crno": "1201110018110", "name": "(주)풍산홀딩스", "address": "인천광역시 계양구 아나지로 156 효성동 (주)풍산홀딩스"}}
+{"id": "parent_company:1201110019382", "type": "ParentCompany", "properties": {"crno": "1201110019382", "name": "한세예스24홀딩스(주)", "address": "서울특별시 영등포구 은행로 30 중소기업중앙회 6층"}}
+{"id": "parent_company:1201110050104", "type": "ParentCompany", "properties": {"crno": "1201110050104", "name": "(주)상상인", "address": "경기도 성남시 분당구 황새울로 358 -"}}
+{"id": "parent_company:1201110051590", "type": "ParentCompany", "properties": {"crno": "1201110051590", "name": "대주이엔티(주)", "address": "인천광역시 중구 신포로 4 (사동) 4층"}}
+{"id": "parent_company:1201110147422", "type": "ParentCompany", "properties": {"crno": "1201110147422", "name": "(주)코다코", "address": "충청남도 천안시 서북구 입장면 신대길 8"}}
+{"id": "parent_company:1201110175423", "type": "ParentCompany", "properties": {"crno": "1201110175423", "name": "한일네트웍스(주)", "address": "서울특별시 중구 수표로 34 (저동2가, 씨티센터타워) 11층"}}
+{"id": "parent_company:1201110234469", "type": "ParentCompany", "properties": {"crno": "1201110234469", "name": "에이치디현대인프라코어(주)", "address": "인천광역시 동구 인중로 489(화수동)"}}
+{"id": "parent_company:1201110484303", "type": "ParentCompany", "properties": {"crno": "1201110484303", "name": "한세실업(주)", "address": "서울특별시 영등포구 은행로 29 정우빌딩"}}
+{"id": "parent_company:1201110592908", "type": "ParentCompany", "properties": {"crno": "1201110592908", "name": "자일자동차(주)", "address": "인천광역시 부평구 부평대로 283 (청천동, 부평우림라이온스밸리) 6층 제에이-605"}}
+{"id": "parent_company:1243110000573", "type": "ParentCompany", "properties": {"crno": "1243110000573", "name": "주식회사 파라텍", "address": "충청남도 서산시 수석산업로 51 -"}}
+{"id": "parent_company:1243110004252", "type": "ParentCompany", "properties": {"crno": "1243110004252", "name": "(주)서흥", "address": "충청북도 청주시 흥덕구 오송읍 오송생명로 61 -"}}
+{"id": "parent_company:1243110008999", "type": "ParentCompany", "properties": {"crno": "1243110008999", "name": "KG케미칼(주)", "address": "울산광역시 울주군 온산읍 당월로 322"}}
+{"id": "parent_company:1243110011322", "type": "ParentCompany", "properties": {"crno": "1243110011322", "name": "삼보판지(주)", "address": "경기도 시흥시 공단1대로28번길 120 (정왕동)"}}
+{"id": "parent_company:1243110033235", "type": "ParentCompany", "properties": {"crno": "1243110033235", "name": "(주)원익홀딩스", "address": "경기도 평택시 진위면 마산12로 21 -"}}
+{"id": "parent_company:1244110006602", "type": "ParentCompany", "properties": {"crno": "1244110006602", "name": "(주)디에이피", "address": "경기도 안성시 미양면 보체리 404-1"}}
+{"id": "parent_company:1244110019308", "type": "ParentCompany", "properties": {"crno": "1244110019308", "name": "(주)아모텍", "address": "인천 남동구 남촌동 617 남동공단 5블럭 1롯트"}}
+{"id": "parent_company:1244110093120", "type": "ParentCompany", "properties": {"crno": "1244110093120", "name": "주식회사 아모센스", "address": "충청남도 천안시 서북구 직산읍 모시리 308 천안 제4지방산업단지 19-1블럭"}}
+{"id": "parent_company:1301110001585", "type": "ParentCompany", "properties": {"crno": "1301110001585", "name": "SKC(주)", "address": "경기도 수원시 장안구 정자로 102 SKC첨단기술중앙연구소 (정자동 911-10)"}}
+{"id": "parent_company:1301110005199", "type": "ParentCompany", "properties": {"crno": "1301110005199", "name": "SK네트웍스(주)", "address": "경기도 수원시 장안구 경수대로976번길 19 -"}}
+{"id": "parent_company:1301110006246", "type": "ParentCompany", "properties": {"crno": "1301110006246", "name": "삼성전자(주)", "address": "경기도 수원시 영통구 삼성로 129 (매탄동)"}}
+{"id": "parent_company:1301110006296", "type": "ParentCompany", "properties": {"crno": "1301110006296", "name": "인지컨트롤스(주)", "address": "경기도 시흥시 군자천로 171 (정왕동, 시화공단2다504)"}}
+{"id": "parent_company:1301110007137", "type": "ParentCompany", "properties": {"crno": "1301110007137", "name": "(주)대창", "address": "경기도 시흥시 공단1대로 391"}}
+{"id": "parent_company:1301110010015", "type": "ParentCompany", "properties": {"crno": "1301110010015", "name": "태림포장(주)", "address": "경기도 시흥시 공단1대로379번안길 74"}}
+{"id": "parent_company:1301110010031", "type": "ParentCompany", "properties": {"crno": "1301110010031", "name": "티피(주)", "address": "서울특별시 구로구 디지털로31길 12 태평양물산"}}
+{"id": "parent_company:1301110010841", "type": "ParentCompany", "properties": {"crno": "1301110010841", "name": "(주)케이피에프", "address": "경기도 성남시 분당구 운중로 136 판교송현타워"}}
+{"id": "parent_company:1301110013499", "type": "ParentCompany", "properties": {"crno": "1301110013499", "name": "케이비캐피탈(주)", "address": "경기도 수원시 팔달구 효원로 295"}}
+{"id": "parent_company:1301110026749", "type": "ParentCompany", "properties": {"crno": "1301110026749", "name": "(주)코리아써키트", "address": "경기도 안산시 단원구 강촌로139번길 9"}}
+{"id": "parent_company:1301110026814", "type": "ParentCompany", "properties": {"crno": "1301110026814", "name": "(주)아난티", "address": "충청북도 진천군 백곡면 배티로 818-105"}}
+{"id": "parent_company:1301110028935", "type": "ParentCompany", "properties": {"crno": "1301110028935", "name": "(주)이건홀딩스", "address": "인천 남구 도화동 967-3"}}
+{"id": "parent_company:1301110064351", "type": "ParentCompany", "properties": {"crno": "1301110064351", "name": "에스와이(주)", "address": "경기도 수원시 권선구 정조로 340-2 (권선동, 에스와이빌딩)"}}
+{"id": "parent_company:1311110042950", "type": "ParentCompany", "properties": {"crno": "1311110042950", "name": "(주)팜스코", "address": "경기도 안성시 미양면 제2공단4길 33"}}
+{"id": "parent_company:1311110046291", "type": "ParentCompany", "properties": {"crno": "1311110046291", "name": "엘비세미콘(주)", "address": "경기도 평택시 청북면 청북산단로 138"}}
+{"id": "parent_company:1311110046639", "type": "ParentCompany", "properties": {"crno": "1311110046639", "name": "(주)아이티엠반도체", "address": "충청북도 청주시 청원구 오창읍 양청3길 60"}}
+{"id": "parent_company:1311110367986", "type": "ParentCompany", "properties": {"crno": "1311110367986", "name": "에스프리즘 (주)", "address": "서울특별시 송파구 법원로6길 11 4층"}}
+{"id": "parent_company:1311110481819", "type": "ParentCompany", "properties": {"crno": "1311110481819", "name": "주식회사 카카오모빌리티", "address": "경기도 성남시 분당구 판교역로 152 알파돔타워 13층"}}
+{"id": "parent_company:1311110501021", "type": "ParentCompany", "properties": {"crno": "1311110501021", "name": "에스케이케미칼(주)", "address": "경기도 성남시 분당구 판교로 310"}}
+{"id": "parent_company:1313110030042", "type": "ParentCompany", "properties": {"crno": "1313110030042", "name": "에이치엘홀딩스(주)", "address": "경기도 용인시 기흥구 기흥단지로 46 -"}}
+{"id": "parent_company:1313110083497", "type": "ParentCompany", "properties": {"crno": "1313110083497", "name": "(주)풍산", "address": "경기도 평택시 포승읍 평택항로156번길 134 (주)풍산"}}
+{"id": "parent_company:1313110140776", "type": "ParentCompany", "properties": {"crno": "1313110140776", "name": "에이치엘만도(주)", "address": "경기도 평택시 포승읍 하만호길 32"}}
+{"id": "parent_company:1314110133612", "type": "ParentCompany", "properties": {"crno": "1314110133612", "name": "삼보오토(주)", "address": "충청남도 예산군 응봉면 산단1길 66 (주령리)"}}
+{"id": "parent_company:1314110189425", "type": "ParentCompany", "properties": {"crno": "1314110189425", "name": "(주)후성", "address": "경기도 화성시 팔탄면 현대기아로 72-37"}}
+{"id": "parent_company:1341110000567", "type": "ParentCompany", "properties": {"crno": "1341110000567", "name": "가온전선(주)", "address": "경기도 군포시 엘에스로45번길 120"}}
+{"id": "parent_company:1341110000822", "type": "ParentCompany", "properties": {"crno": "1341110000822", "name": "아진전자부품(주)", "address": "전라북도 정읍시 공단2길 3"}}
+{"id": "parent_company:1341110002258", "type": "ParentCompany", "properties": {"crno": "1341110002258", "name": "(주)오뚜기", "address": "경기도 안양시 동안구 흥안대로 405"}}
+{"id": "parent_company:1341110002878", "type": "ParentCompany", "properties": {"crno": "1341110002878", "name": "(주)노루홀딩스", "address": "경기도 안양시 만안구 박달로 351"}}
+{"id": "parent_company:1341110142575", "type": "ParentCompany", "properties": {"crno": "1341110142575", "name": "(주)노루페인트", "address": "경기도 안양시 만안구 박달로 351"}}
+{"id": "parent_company:1341110168349", "type": "ParentCompany", "properties": {"crno": "1341110168349", "name": "엘에스엠트론(주)", "address": "경기도 안양시 동안구 엘에스로 127"}}
+{"id": "parent_company:1341110168357", "type": "ParentCompany", "properties": {"crno": "1341110168357", "name": "LS전선(주)", "address": "경기도 안양시 동안구 엘에스로 127 LS타워"}}
+{"id": "parent_company:1341110213433", "type": "ParentCompany", "properties": {"crno": "1341110213433", "name": "롯데오토리스 주식회사", "address": "경기도 안양시 동안구 전파로 88"}}
+{"id": "parent_company:1344110001387", "type": "ParentCompany", "properties": {"crno": "1344110001387", "name": "에스케이하이닉스(주)", "address": "경기도 이천시 부발읍 경충대로 2091"}}
+{"id": "parent_company:1344110046664", "type": "ParentCompany", "properties": {"crno": "1344110046664", "name": "(주)선진", "address": "경기도 이천시 대월면 사동로 76"}}
+{"id": "parent_company:1345110000014", "type": "ParentCompany", "properties": {"crno": "1345110000014", "name": "(주)녹십자홀딩스", "address": "경기 용인시 구성읍 동백리 (주)녹십자 303"}}
+{"id": "parent_company:1345110000600", "type": "ParentCompany", "properties": {"crno": "1345110000600", "name": "(주)엠투엔", "address": "서울특별시 중구 소공로 109 한화빌딩 13층(소공동, 한화빌딩)"}}
+{"id": "parent_company:1345110004149", "type": "ParentCompany", "properties": {"crno": "1345110004149", "name": "(주)마니커", "address": "경기도 용인시 기흥구 구성로 278 -"}}
+{"id": "parent_company:1345110004412", "type": "ParentCompany", "properties": {"crno": "1345110004412", "name": "엠케이전자(주)", "address": "경기도 용인시 처인구 포곡읍 금어로 405 엠케이전자"}}
+{"id": "parent_company:1345110083218", "type": "ParentCompany", "properties": {"crno": "1345110083218", "name": "(주)녹십자웰빙", "address": "서울특별시 성동구 왕십리로 241 4층"}}
+{"id": "parent_company:1345110144268", "type": "ParentCompany", "properties": {"crno": "1345110144268", "name": "(주)휴맥스", "address": "경기도 용인시 처인구 영문로 2"}}
+{"id": "parent_company:1345110172532", "type": "ParentCompany", "properties": {"crno": "1345110172532", "name": "(주)지씨셀", "address": "경기도 용인시 기흥구 이현로30번길 107 -"}}
+{"id": "parent_company:1346110000260", "type": "ParentCompany", "properties": {"crno": "1346110000260", "name": "주식회사 대동모빌리티", "address": "경기도 안성시 대덕면 서동대로 4867-11"}}
+{"id": "parent_company:1346110018221", "type": "ParentCompany", "properties": {"crno": "1346110018221", "name": "(주)이녹스", "address": "충청남도 아산시 둔포면 아산밸리로 171"}}
+{"id": "parent_company:1347110001159", "type": "ParentCompany", "properties": {"crno": "1347110001159", "name": "(주)경동나비엔", "address": "경기도 평택시 서탄면 수월암길 95 -"}}
+{"id": "parent_company:1348110003020", "type": "ParentCompany", "properties": {"crno": "1348110003020", "name": "(주)대림제지", "address": "경기 오산시 누읍동 7"}}
+{"id": "parent_company:1348110003187", "type": "ParentCompany", "properties": {"crno": "1348110003187", "name": "한미사이언스(주)", "address": "경기도 화성시 팔탄면 무하로 214 한미약품(주) 팔탄공단"}}
+{"id": "parent_company:1348110075342", "type": "ParentCompany", "properties": {"crno": "1348110075342", "name": "(주)대웅제약", "address": "경기도 화성시 향남읍 제약공단4길 35-14 -"}}
+{"id": "parent_company:1348110094160", "type": "ParentCompany", "properties": {"crno": "1348110094160", "name": "한양디지텍(주)", "address": "경기도 화성시 삼성1로 332-7"}}
+{"id": "parent_company:1348110197550", "type": "ParentCompany", "properties": {"crno": "1348110197550", "name": "한미약품(주)", "address": "경기도 화성시 팔탄면 무하로 214"}}
+{"id": "parent_company:1348110294273", "type": "ParentCompany", "properties": {"crno": "1348110294273", "name": "코스맥스(주)", "address": "경기도 화성시 향남읍 제약공단1길 27, 2길 46"}}
+{"id": "parent_company:1350110029881", "type": "ParentCompany", "properties": {"crno": "1350110029881", "name": "(주)서원", "address": "경기도 안산시 단원구 산단로67번길 94 (목내동, (주)서원)"}}
+{"id": "parent_company:1350110034038", "type": "ParentCompany", "properties": {"crno": "1350110034038", "name": "(주)셀트리온", "address": "인천광역시 연수구 아카데미로 23"}}
+{"id": "parent_company:1350110034400", "type": "ParentCompany", "properties": {"crno": "1350110034400", "name": "신한캐피탈(주)", "address": "경기도 안산시 단원구 당곡로 17 (고잔동, 신한은행)"}}
+{"id": "parent_company:1350110036315", "type": "ParentCompany", "properties": {"crno": "1350110036315", "name": "(주)인지디스플레이", "address": "충청남도 예산군 예산읍 벚꽃로388번길 7 -"}}
+{"id": "parent_company:1350110049607", "type": "ParentCompany", "properties": {"crno": "1350110049607", "name": "(주)다원시스", "address": "경기도 안산시 단원구 시화호수로 485(성곡동) (주) 다원시스"}}
+{"id": "parent_company:1350110057395", "type": "ParentCompany", "properties": {"crno": "1350110057395", "name": "제이더블유생명과학(주)", "address": "충청남도 당진시 송악읍 한진1길 28"}}
+{"id": "parent_company:1350110087483", "type": "ParentCompany", "properties": {"crno": "1350110087483", "name": "(주)비에이치", "address": "인천광역시 부평구 평천로199번길 25"}}
+{"id": "parent_company:1350110106150", "type": "ParentCompany", "properties": {"crno": "1350110106150", "name": "(주)퀀텀레일", "address": "경기도 김포시 양촌읍 황금1로 307-5"}}
+{"id": "parent_company:1350110122156", "type": "ParentCompany", "properties": {"crno": "1350110122156", "name": "서울바이오시스(주)", "address": "경기도 안산시 단원구 산단로163번길 65-16 (원시동)"}}
+{"id": "parent_company:1351110050173", "type": "ParentCompany", "properties": {"crno": "1351110050173", "name": "주식회사 서진캠", "address": "경기도 평택시 청북읍 청북산단로 31 (어연리, 884번지) 주식회사 서진캠"}}
+{"id": "parent_company:1353110013606", "type": "ParentCompany", "properties": {"crno": "1353110013606", "name": "코오롱인더스트리(주)", "address": "서울특별시 강서구 마곡동로 110 코오롱 One&Only 타워"}}
+{"id": "parent_company:1355110106027", "type": "ParentCompany", "properties": {"crno": "1355110106027", "name": "(주)모다이노칩", "address": "경기도 안산시 단원구 동산로27번길 42-7 이노칩테크놀러지(주)"}}
+{"id": "parent_company:1358110124726", "type": "ParentCompany", "properties": {"crno": "1358110124726", "name": "제이씨케미칼(주)", "address": "울산광역시 울주군 온산읍 화산1길 70"}}
+{"id": "parent_company:1450110002801", "type": "ParentCompany", "properties": {"crno": "1450110002801", "name": "모나용평(주)", "address": "강원도 평창군 대관령면 올림픽로 715"}}
+{"id": "parent_company:1501110003058", "type": "ParentCompany", "properties": {"crno": "1501110003058", "name": "(주)대원", "address": "충청북도 청주시 흥덕구 직지대로435번길 15 송정동,(주)대원"}}
+{"id": "parent_company:1501110006185", "type": "ParentCompany", "properties": {"crno": "1501110006185", "name": "(주)심텍홀딩스", "address": "충청북도 청주시 흥덕구 산단로 73"}}
+{"id": "parent_company:1501110205802", "type": "ParentCompany", "properties": {"crno": "1501110205802", "name": "(주)심텍", "address": "충청북도 청주시 흥덕구 산단로 73"}}
+{"id": "parent_company:1501110219184", "type": "ParentCompany", "properties": {"crno": "1501110219184", "name": "(주)에코프로비엠", "address": "충청북도 청주시 청원구 오창읍 2산단로 100 송대리 329"}}
+{"id": "parent_company:1511110053458", "type": "ParentCompany", "properties": {"crno": "1511110053458", "name": "에스와이스틸텍(주)", "address": "충청북도 충주시 엄정면 세고개로 154"}}
+{"id": "parent_company:1543110001997", "type": "ParentCompany", "properties": {"crno": "1543110001997", "name": "(주)체리부로", "address": "충청북도 진천군 이월면 생거진천로 1770"}}
+{"id": "parent_company:1545110001571", "type": "ParentCompany", "properties": {"crno": "1545110001571", "name": "티케이지애강(주)", "address": "충청북도 충주시 중앙탑면 기업도시로 422 -"}}
+{"id": "parent_company:1545110002355", "type": "ParentCompany", "properties": {"crno": "1545110002355", "name": "(주)네패스", "address": "충청북도 청주시 청원구 오창읍 과학산업2로 587-32 주식회사 네패스"}}
+{"id": "parent_company:1545110006076", "type": "ParentCompany", "properties": {"crno": "1545110006076", "name": "일진디스플레이(주)", "address": "충청북도 음성군 대소면 대금로 157"}}
+{"id": "parent_company:1545110039324", "type": "ParentCompany", "properties": {"crno": "1545110039324", "name": "풀무원식품 (주)", "address": "충청북도 음성군 대소면 삼양로 730-27"}}
+{"id": "parent_company:1545110049654", "type": "ParentCompany", "properties": {"crno": "1545110049654", "name": "(주)윈하이텍", "address": "충청북도 음성군 삼성면 하이텍산단로 99"}}
+{"id": "parent_company:1601110002313", "type": "ParentCompany", "properties": {"crno": "1601110002313", "name": "(주)알루코", "address": "대전광역시 대덕구 대화로119번길 31"}}
+{"id": "parent_company:1601110003121", "type": "ParentCompany", "properties": {"crno": "1601110003121", "name": "계룡건설산업(주)", "address": "대전광역시 서구 문정로48번길 48 -"}}
+{"id": "parent_company:1601110003931", "type": "ParentCompany", "properties": {"crno": "1601110003931", "name": "(주)하림지주", "address": "전라북도 익산시 중앙로 121 -"}}
+{"id": "parent_company:1601110014483", "type": "ParentCompany", "properties": {"crno": "1601110014483", "name": "미래에셋생명보험(주)", "address": "서울특별시 마포구 만리재로 24 (신공덕동, 미래에셋생명빌딩)"}}
+{"id": "parent_company:1614110008562", "type": "ParentCompany", "properties": {"crno": "1614110008562", "name": "현대트랜시스주식회사", "address": "충청남도 서산시 성연면 신당1로 105 (갈현리, 현대트랜시스(주))"}}
+{"id": "parent_company:1615110006796", "type": "ParentCompany", "properties": {"crno": "1615110006796", "name": "(주)오스템", "address": "충청남도 천안시 동남구 수신면 수신로 739"}}
+{"id": "parent_company:1615110011795", "type": "ParentCompany", "properties": {"crno": "1615110011795", "name": "세메스 주식회사", "address": "충청남도 천안시 서북구 직산읍 4산단5길 77 (모시리, 세메스)"}}
+{"id": "parent_company:1615110086227", "type": "ParentCompany", "properties": {"crno": "1615110086227", "name": "하나머티리얼즈(주)", "address": "충청남도 천안시 서북구 3공단3로 42"}}
+{"id": "parent_company:1615110148704", "type": "ParentCompany", "properties": {"crno": "1615110148704", "name": "(주)티엠씨", "address": "충청남도 천안시 서북구 입장면 연곡길 443"}}
+{"id": "parent_company:1647110001591", "type": "ParentCompany", "properties": {"crno": "1647110001591", "name": "콜마홀딩스(주)", "address": "세종특별자치시 전의면 덕고개길 12-11"}}
+{"id": "parent_company:1647110030756", "type": "ParentCompany", "properties": {"crno": "1647110030756", "name": "한국콜마(주)", "address": "세종특별자치시 전의면 덕고개길 12-11"}}
+{"id": "parent_company:1648110015300", "type": "ParentCompany", "properties": {"crno": "1648110015300", "name": "(주)위니아", "address": "광주광역시 광산구 하남산단9번로 110 -"}}
+{"id": "parent_company:1648110021208", "type": "ParentCompany", "properties": {"crno": "1648110021208", "name": "하나마이크론(주)", "address": "충남 아산시 음봉면 원남리 95-1번지"}}
+{"id": "parent_company:1648110105010", "type": "ParentCompany", "properties": {"crno": "1648110105010", "name": "(주)이녹스첨단소재", "address": "충청남도 아산시 둔포면 아산밸리로 171"}}
+{"id": "parent_company:1650110006768", "type": "ParentCompany", "properties": {"crno": "1650110006768", "name": "에이치디씨현대이피(주)", "address": "충청남도 당진시 석문면 대호만로 1221-32 현대EP 주식회사"}}
+{"id": "parent_company:1701110000141", "type": "ParentCompany", "properties": {"crno": "1701110000141", "name": "주식회사 아이엠뱅크", "address": "대구광역시 수성구 달구벌대로 2310 (수성동2가)"}}
+{"id": "parent_company:1701110000935", "type": "ParentCompany", "properties": {"crno": "1701110000935", "name": "삼익THK(주)", "address": "대구광역시 달서구 성서동로 163"}}
+{"id": "parent_company:1701110001082", "type": "ParentCompany", "properties": {"crno": "1701110001082", "name": "무림에스피(주)", "address": "서울특별시 강남구 강남대로 656 (신사동)"}}
+{"id": "parent_company:1701110005042", "type": "ParentCompany", "properties": {"crno": "1701110005042", "name": "(주)남선알미늄", "address": "대구광역시 달성군 논공읍 논공중앙로 288"}}
+{"id": "parent_company:1701110006412", "type": "ParentCompany", "properties": {"crno": "1701110006412", "name": "평화홀딩스(주)", "address": "대구광역시 달성군 논공읍 논공로 597"}}
+{"id": "parent_company:1701110006868", "type": "ParentCompany", "properties": {"crno": "1701110006868", "name": "(주)우성머티리얼스", "address": "대구광역시 북구 검단동로 35 (검단동)"}}
+{"id": "parent_company:1701110007733", "type": "ParentCompany", "properties": {"crno": "1701110007733", "name": "경창산업(주)", "address": "대구광역시 달서구 성서로35길 6 월암동"}}
+{"id": "parent_company:1701110014936", "type": "ParentCompany", "properties": {"crno": "1701110014936", "name": "(주)화신", "address": "경상북도 영천시 도남공단길 94-2"}}
+{"id": "parent_company:1701110017237", "type": "ParentCompany", "properties": {"crno": "1701110017237", "name": "대성홀딩스(주)", "address": "대구광역시 중구 명덕로 85 대성홀딩스"}}
+{"id": "parent_company:1701110021816", "type": "ParentCompany", "properties": {"crno": "1701110021816", "name": "동원모빌리티(주)", "address": "경상북도 경산시 진량읍 북리1길 69"}}
+{"id": "parent_company:1701110638661", "type": "ParentCompany", "properties": {"crno": "1701110638661", "name": "에이치디현대(주)", "address": "경기도 성남시 분당구 분당수서로 477 HD현대 글로벌 R&D센터"}}
+{"id": "parent_company:1712110000958", "type": "ParentCompany", "properties": {"crno": "1712110000958", "name": "명신산업(주)", "address": "경상북도 경주시 천북면 천북산단로 91"}}
+{"id": "parent_company:1712110001253", "type": "ParentCompany", "properties": {"crno": "1712110001253", "name": "에코플라스틱(주)", "address": "경상북도 경주시 공단로69번길 30 에코플라스틱(주)"}}
+{"id": "parent_company:1712110005114", "type": "ParentCompany", "properties": {"crno": "1712110005114", "name": "(주)엠에스오토텍", "address": "경상북도 경주시 내남면 포석로 16-9"}}
+{"id": "parent_company:1713110003504", "type": "ParentCompany", "properties": {"crno": "1713110003504", "name": "코오롱이앤피(주)", "address": "경상북도 김천시 공단3길 64 (응명동)"}}
+{"id": "parent_company:1741110000527", "type": "ParentCompany", "properties": {"crno": "1741110000527", "name": "상신브레이크(주)", "address": "대구광역시 달성군 논공읍 논공중앙로33길 10"}}
+{"id": "parent_company:1741110001294", "type": "ParentCompany", "properties": {"crno": "1741110001294", "name": "케이비아이메탈(주)", "address": "대구광역시 달성군 논공읍 논공로87길 88 갑을메탈 대구공장"}}
+{"id": "parent_company:1746110000981", "type": "ParentCompany", "properties": {"crno": "1746110000981", "name": "오씨아이홀딩스 주식회사", "address": "서울특별시 중구 소공로 94 OCI 빌딩"}}
+{"id": "parent_company:1746110002979", "type": "ParentCompany", "properties": {"crno": "1746110002979", "name": "(주)포스코이앤씨", "address": "경상북도 포항시 북구 중흥로 307 (죽도동)"}}
+{"id": "parent_company:1753110000762", "type": "ParentCompany", "properties": {"crno": "1753110000762", "name": "(주)새로닉스", "address": "경상북도 구미시 수출대로9길 36 (주)새로닉스"}}
+{"id": "parent_company:1753110001348", "type": "ParentCompany", "properties": {"crno": "1753110001348", "name": "SK실트론 주식회사", "address": "경상북도 구미시 임수로 53 SK실트론 주식회사"}}
+{"id": "parent_company:1760110020145", "type": "ParentCompany", "properties": {"crno": "1760110020145", "name": "아주스틸(주)", "address": "경상북도 구미시 4공단로 321"}}
+{"id": "parent_company:1760110020640", "type": "ParentCompany", "properties": {"crno": "1760110020640", "name": "한화시스템(주)", "address": "경상북도 구미시 산호대로 264-60 -"}}
+{"id": "parent_company:1760110022654", "type": "ParentCompany", "properties": {"crno": "1760110022654", "name": "(주)엘앤에프", "address": "대구광역시 달서구 이곡동로 11"}}
+{"id": "parent_company:1760110035615", "type": "ParentCompany", "properties": {"crno": "1760110035615", "name": "(주)원익큐엔씨", "address": "경상북도 구미시 산동읍 5공단3로 14 -"}}
+{"id": "parent_company:1801110001494", "type": "ParentCompany", "properties": {"crno": "1801110001494", "name": "고려산업(주)", "address": "부산광역시 중구 중앙대로 22 (중앙동6가)"}}
+{"id": "parent_company:1801110001973", "type": "ParentCompany", "properties": {"crno": "1801110001973", "name": "인터지스(주)", "address": "부산광역시 중구 충장대로9번길 52 마린센터 13층"}}
+{"id": "parent_company:1801110003268", "type": "ParentCompany", "properties": {"crno": "1801110003268", "name": "대한제강(주)", "address": "부산광역시 사하구 하신번영로 69"}}
+{"id": "parent_company:1801110004323", "type": "ParentCompany", "properties": {"crno": "1801110004323", "name": "화승인더스트리(주)", "address": "부산광역시 연제구 중앙대로 1079 장천빌딩 6층"}}
+{"id": "parent_company:1801110020246", "type": "ParentCompany", "properties": {"crno": "1801110020246", "name": "삼보산업 주식회사", "address": "경상남도 창원시 진해구 남의로21번길 36"}}
+{"id": "parent_company:1801110025147", "type": "ParentCompany", "properties": {"crno": "1801110025147", "name": "(주)디아이씨", "address": "울산광역시 울주군 두동면 봉계농공길 8"}}
+{"id": "parent_company:1801110028026", "type": "ParentCompany", "properties": {"crno": "1801110028026", "name": "환영철강공업(주)", "address": "충청남도 당진시 석문면 보덕포로 587 (삼화리, 환영철강)"}}
+{"id": "parent_company:1801110034320", "type": "ParentCompany", "properties": {"crno": "1801110034320", "name": "금강공업(주)", "address": "부산광역시 사하구 다산로 110"}}
+{"id": "parent_company:1801110038447", "type": "ParentCompany", "properties": {"crno": "1801110038447", "name": "(주)오리엔탈정공", "address": "부산광역시 강서구 녹산산단289로 6 오리엔탈정공"}}
+{"id": "parent_company:1801110042612", "type": "ParentCompany", "properties": {"crno": "1801110042612", "name": "(주)성우하이텍", "address": "부산광역시 기장군 정관면 농공길 2-9 (주)성우하이텍"}}
+{"id": "parent_company:1801110054641", "type": "ParentCompany", "properties": {"crno": "1801110054641", "name": "(주)엔케이", "address": "부산광역시 강서구 과학산단로 194-11 (주)엔케이"}}
+{"id": "parent_company:1801110055722", "type": "ParentCompany", "properties": {"crno": "1801110055722", "name": "엘티삼보 주식회사", "address": "부산광역시 남구 자성로 152 715(문현동, 한일오피스텔)"}}
+{"id": "parent_company:1801110062008", "type": "ParentCompany", "properties": {"crno": "1801110062008", "name": "현진소재(주)", "address": "부산광역시 강서구 녹산화전로 63 -"}}
+{"id": "parent_company:1801110102359", "type": "ParentCompany", "properties": {"crno": "1801110102359", "name": "한국선재(주)", "address": "부산광역시 사하구 하신번영로 27 (신평동)"}}
+{"id": "parent_company:1801110328550", "type": "ParentCompany", "properties": {"crno": "1801110328550", "name": "(주)케이에스피", "address": "부산광역시 강서구 녹산산단381로86번길 43"}}
+{"id": "parent_company:1801110633031", "type": "ParentCompany", "properties": {"crno": "1801110633031", "name": "(주)동성케미컬", "address": "부산광역시 사하구 신산로 99"}}
+{"id": "parent_company:1801110750893", "type": "ParentCompany", "properties": {"crno": "1801110750893", "name": "(주)BNK금융지주", "address": "부산광역시 남구 문현금융로 30(문현동)"}}
+{"id": "parent_company:1801111065811", "type": "ParentCompany", "properties": {"crno": "1801111065811", "name": "에이치디현대마린솔루션(주)", "address": "경기도 성남시 분당구 분당수서로 477 경기도 성남시 분당구 분당수서로 477"}}
+{"id": "parent_company:1812110000443", "type": "ParentCompany", "properties": {"crno": "1812110000443", "name": "한국무브넥스(주)", "address": "울산 동구 동부동 194"}}
+{"id": "parent_company:1812110000526", "type": "ParentCompany", "properties": {"crno": "1812110000526", "name": "에이치디현대미포 주식회사", "address": "울산광역시 동구 방어진순환도로 100 (주)현대미포조선"}}
+{"id": "parent_company:1812110000758", "type": "ParentCompany", "properties": {"crno": "1812110000758", "name": "에스제이지세종(주)", "address": "울산광역시 북구 공단길 4 (효문동)"}}
+{"id": "parent_company:1812110002275", "type": "ParentCompany", "properties": {"crno": "1812110002275", "name": "디케이엠이(주)", "address": "울산광역시 남구 처용로 260-37"}}
+{"id": "parent_company:1812110002548", "type": "ParentCompany", "properties": {"crno": "1812110002548", "name": "무림피앤피(주)", "address": "울산광역시 울주군 온산읍 우봉강양로 3-36 -"}}
+{"id": "parent_company:1812110003421", "type": "ParentCompany", "properties": {"crno": "1812110003421", "name": "엔브이에이치코리아(주)", "address": "울산광역시 북구 모듈화산업로 207-14엔브이에이치코리아(주)"}}
+{"id": "parent_company:1845110001252", "type": "ParentCompany", "properties": {"crno": "1845110001252", "name": "(주)화승코퍼레이션", "address": "부산광역시 연제구 중앙대로 1079 -"}}
+{"id": "parent_company:1846110000319", "type": "ParentCompany", "properties": {"crno": "1846110000319", "name": "한국내화(주)", "address": "충청남도 당진시 송산면 무수들길 370"}}
+{"id": "parent_company:1846110000533", "type": "ParentCompany", "properties": {"crno": "1846110000533", "name": "티케이지태광(주)", "address": "경상남도 김해시 김해대로 2635번길 26(안동)"}}
+{"id": "parent_company:1901110006971", "type": "ParentCompany", "properties": {"crno": "1901110006971", "name": "에스케이 머티리얼즈(주)", "address": "경상북도 영주시 가흥공단로 59-33"}}
+{"id": "parent_company:1911110000104", "type": "ParentCompany", "properties": {"crno": "1911110000104", "name": "(주)대동", "address": "대구광역시 달성군 논공읍 논공중앙로34길 35 35"}}
+{"id": "parent_company:1911110000782", "type": "ParentCompany", "properties": {"crno": "1911110000782", "name": "무림페이퍼(주)", "address": "경상남도 진주시 남강로 1003 (상평동)"}}
+{"id": "parent_company:1942110000191", "type": "ParentCompany", "properties": {"crno": "1942110000191", "name": "(주)영흥", "address": "충청남도 보령시 주교면 관창공단길 50 -"}}
+{"id": "parent_company:1942110000480", "type": "ParentCompany", "properties": {"crno": "1942110000480", "name": "한화에어로스페이스(주)", "address": "경상남도 창원시 성산구 창원대로 1204"}}
+{"id": "parent_company:1942110000943", "type": "ParentCompany", "properties": {"crno": "1942110000943", "name": "두산에너빌리티(주)", "address": "경상남도 창원시 성산구 두산볼보로 22 두산중공업 주식회사"}}
+{"id": "parent_company:1942110003096", "type": "ParentCompany", "properties": {"crno": "1942110003096", "name": "신성델타테크(주)", "address": "경상남도 창원시 성산구 공단로271번길 39 신성델타테크(주)"}}
+{"id": "parent_company:1942110014431", "type": "ParentCompany", "properties": {"crno": "1942110014431", "name": "(주)씨티알모빌리티", "address": "울산광역시 북구 모듈화산업로 115"}}
+{"id": "parent_company:1942110025248", "type": "ParentCompany", "properties": {"crno": "1942110025248", "name": "세아창원특수강 주식회사", "address": "경상남도 창원시 성산구 적현로 147"}}
+{"id": "parent_company:1942110032714", "type": "ParentCompany", "properties": {"crno": "1942110032714", "name": "(주)에스에프에이", "address": "경기도 화성시 동탄면 영천로 38"}}
+{"id": "parent_company:1942110036336", "type": "ParentCompany", "properties": {"crno": "1942110036336", "name": "현대로템(주)", "address": "경상남도 창원시 의창구 창원대로 488"}}
+{"id": "parent_company:1942110226226", "type": "ParentCompany", "properties": {"crno": "1942110226226", "name": "(주)경남은행", "address": "경상남도 창원시 마산회원구 3.15대로 642 경남은행본점 경남은행본점"}}
+{"id": "parent_company:1954110007168", "type": "ParentCompany", "properties": {"crno": "1954110007168", "name": "(주)아스트", "address": "경상남도 사천시 용현면 종포산단로 133 -"}}
+{"id": "parent_company:1955110052004", "type": "ParentCompany", "properties": {"crno": "1955110052004", "name": "지에이치신소재(주)", "address": "경상북도 구미시 1공단로4길 141-54"}}
+{"id": "parent_company:1955110069249", "type": "ParentCompany", "properties": {"crno": "1955110069249", "name": "(주)동국알앤에스", "address": "경상남도 김해시 상동면 상동로375번길 26-29 동국내화(주)"}}
+{"id": "parent_company:2001110076179", "type": "ParentCompany", "properties": {"crno": "2001110076179", "name": "미래에셋캐피탈주식회사", "address": "서울특별시 중구 을지로5길 26 미래에셋센터원 웨스트타워 6층"}}
+{"id": "parent_company:2047110003887", "type": "ParentCompany", "properties": {"crno": "2047110003887", "name": "대한조선 주식회사", "address": "전라남도 해남군 화원면 조선소길 498"}}
+{"id": "parent_company:2052110005288", "type": "ParentCompany", "properties": {"crno": "2052110005288", "name": "다스코(주)", "address": "전라남도 화순군 동면 동농공길 26-2"}}
+{"id": "parent_company:2062110018313", "type": "ParentCompany", "properties": {"crno": "2062110018313", "name": "금호피앤비화학(주)", "address": "서울특별시 중구 청계천로 100 시그니처타워 동관 8층"}}
+{"id": "parent_company:2101110000043", "type": "ParentCompany", "properties": {"crno": "2101110000043", "name": "(주)전북은행", "address": "전북특별자치도 전주시 덕진구 백제대로 566 (금암동, 전북은행빌딩)"}}
+{"id": "parent_company:2101110118854", "type": "ParentCompany", "properties": {"crno": "2101110118854", "name": "(주)디에이치오토리드", "address": "전라북도 완주군 봉동읍 완주산단8로 66"}}
+{"id": "parent_company:2111110000042", "type": "ParentCompany", "properties": {"crno": "2111110000042", "name": "페이퍼코리아(주)", "address": "전라북도 군산시 외항로 1245 페이퍼코리아(주)"}}
+{"id": "parent_company:2112110005321", "type": "ParentCompany", "properties": {"crno": "2112110005321", "name": "우리손에프앤지 농업회사법인(주)", "address": "전라남도 나주시 반남면 장송길 73"}}
+{"id": "parent_company:2149110034430", "type": "ParentCompany", "properties": {"crno": "2149110034430", "name": "(주)하림", "address": "전라북도 익산시 망성면 망성로 14 (주)하림"}}
+{"id": "parent_company:2149110058927", "type": "ParentCompany", "properties": {"crno": "2149110058927", "name": "솔루스첨단소재 주식회사", "address": "전북특별자치도 익산시 용안면 동지산안대길 46 -"}}
+{"id": "parent_company:2149110058935", "type": "ParentCompany", "properties": {"crno": "2149110058935", "name": "두산퓨얼셀 주식회사", "address": "전라북도 익산시 석암로7길 100 (팔봉동)"}}
+{"id": "parent_company:2201110050575", "type": "ParentCompany", "properties": {"crno": "2201110050575", "name": "(주)제주항공", "address": "제주특별자치도 제주시 신대로 64 3층"}}
+{"id": "parent_company:2301110052355", "type": "ParentCompany", "properties": {"crno": "2301110052355", "name": "(주)한텍", "address": "울산광역시 울주군 온산읍 연자로 51"}}
+{"id": "parent_company:2301110060126", "type": "ParentCompany", "properties": {"crno": "2301110060126", "name": "(주)세진중공업", "address": "울산광역시 울주군 온산읍 당월로 216-18"}}
+{"id": "parent_company:2301110312741", "type": "ParentCompany", "properties": {"crno": "2301110312741", "name": "에이치디현대중공업(주)", "address": "울산광역시 동구 방어진순환도로 1000"}}
+{"id": "parent_company:2811110087640", "type": "ParentCompany", "properties": {"crno": "2811110087640", "name": "(주)에코비트", "address": "경기도 성남시 수정구 위례서일로 18"}}
+{"id": "parent_company:2844110075258", "type": "ParentCompany", "properties": {"crno": "2844110075258", "name": "DL에너지(주)", "address": "경기도 포천시 창수면 포천로2797번길 17"}}
+{"id": "parent_company:2849110065613", "type": "ParentCompany", "properties": {"crno": "2849110065613", "name": "(주)웅진씽크빅", "address": "경기도 파주시 회동길 20"}}
 {"id": "region:서울", "type": "Region", "properties": {"name": "서울"}}
 {"id": "industry:백화점", "type": "Industry", "properties": {"name": "백화점"}}
 {"id": "industry:아파트건설업", "type": "Industry", "properties": {"name": "아파트 건설업"}}
