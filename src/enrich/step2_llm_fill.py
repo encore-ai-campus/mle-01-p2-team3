@@ -159,9 +159,43 @@ async def run_one(agent, task_text: str, recursion_limit: int) -> tuple[dict, di
     return parse_answer(_text_of(messages[-1])), _usage_of(messages)
 
 
+def _todo_name(todo: dict) -> str:
+    return str(todo.get("corpNm") or todo.get("subsidiary_name") or "")
+
+
+def filter_todos(todos: list[dict], name_contains: list[str]) -> list[dict]:
+    if not name_contains:
+        return todos
+    needles = [name for name in name_contains if name]
+    return [
+        todo for todo in todos
+        if any(needle in _todo_name(todo) for needle in needles)
+    ]
+
+
+def done_keys_for(path: Path, retry_statuses: set[str]) -> set[str]:
+    latest: dict[str, dict] = {}
+    for row in read_jsonl(path):
+        key = row.get("key")
+        if not key:
+            continue
+        latest[key] = row
+
+    done_keys: set[str] = set()
+    for key, row in latest.items():
+        result = row.get("result", {})
+        status = result.get("status", "")
+        confidence = result.get("confidence", "")
+        if status in retry_statuses or f"confidence:{confidence}" in retry_statuses:
+            continue
+        done_keys.add(key)
+    return done_keys
+
+
 async def process(agent, todos: list[dict], out_path: Path, template: str,
-                  concurrency: int, recursion_limit: int, label: str) -> None:
-    done_keys = {row["key"] for row in read_jsonl(out_path) if row.get("key")}
+                  concurrency: int, recursion_limit: int, label: str,
+                  retry_statuses: set[str]) -> None:
+    done_keys = done_keys_for(out_path, retry_statuses)
     pending = [todo for todo in todos if todo["key"] not in done_keys]
     print(f"[{label}] 전체 {len(todos):,}건 / 처리완료 {len(done_keys):,}건 / 이번 실행 {len(pending):,}건")
     if not pending:
@@ -240,11 +274,12 @@ async def main_async(args: argparse.Namespace) -> None:
         jobs.append((TODO_SB, FILLED_SB, SUBS_TASK, "종속기업_정리"))
 
     for todo_path, out_path, template, label in jobs:
-        todos = list(read_jsonl(todo_path))
+        todos = filter_todos(list(read_jsonl(todo_path)), args.name_contains)
         if args.limit:
             todos = todos[: args.limit]
         await process(agent, todos, out_path, template,
-                      args.concurrency, args.recursion_limit, label)
+                      args.concurrency, args.recursion_limit, label,
+                      set(args.retry_status))
 
 
 def main() -> None:
@@ -258,6 +293,11 @@ def main() -> None:
     parser.add_argument("--model", default=os.getenv("OPENAI_MODEL", "gpt-5.6-luna"))
     parser.add_argument("--recursion-limit", type=int, default=12,
                         help="한 건당 에이전트 최대 스텝 수")
+    parser.add_argument("--name-contains", action="append", default=[],
+                        help="회사명에 이 문자열이 들어간 작업만 처리한다. 여러 번 지정 가능")
+    parser.add_argument("--retry-status", action="append", default=[],
+                        help="기존 결과가 이 status 이면 다시 처리한다. 예: error, not_found, parse_error. "
+                             "confidence:low 도 가능")
     args = parser.parse_args()
     asyncio.run(main_async(args))
 

@@ -1,3 +1,6 @@
+# llm 관련
+data/work
+
 # 용량 큰 데이터
 data/light_data.pkl
 

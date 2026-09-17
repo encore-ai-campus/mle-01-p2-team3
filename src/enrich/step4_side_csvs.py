@@ -21,7 +21,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from enrich.common import (  # noqa: E402
-    CLEAN, FILLED_CORP, FILLED_SUBS, FINAL_CSV, RAW, STEP1_CSV, TODO_OV, TODO_SB,
+    CLEAN, FILLED_CORP, FILLED_OV, FILLED_SUBS, FINAL_CSV, RAW, STEP1_CSV, TODO_OV, TODO_SB,
     is_useful_addr, norm_name, read_jsonl, region_from_addr, write_jsonl,
 )
 
@@ -96,6 +96,18 @@ def build_lookup() -> tuple[dict, dict]:
                 _put(by_crno, row["crno"], **values)
             _put(by_name, norm_name(row.get(name_field, "")), **values)
             llm += 1
+    for row in read_jsonl(FILLED_OV):
+        result = row.get("result", {})
+        if result.get("status") != "found" or result.get("confidence") == "low":
+            continue
+        values = {
+            "addr": result.get("addr", ""),
+            "sicNm": result.get("sicNm") or result.get("bizCtt", ""),
+        }
+        if row.get("crno"):
+            _put(by_crno, row["crno"], **values)
+        _put(by_name, norm_name(row.get("corpNm", "")), **values)
+        llm += 1
     print(f"LLM 조사 결과 {llm:,}건 반영")
     return by_crno, by_name
 

@@ -19,7 +19,7 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from enrich.common import (  # noqa: E402
-    FILLED_CORP, FILLED_SUBS, FINAL_CSV, REGIONS, STEP1_CSV, WORK,
+    FILLED_CORP, FILLED_OV, FILLED_SUBS, FINAL_CSV, REGIONS, STEP1_CSV, WORK,
     is_useful_addr, norm_name, read_jsonl, region_from_addr,
 )
 
@@ -97,6 +97,48 @@ def apply_corp(df: pd.DataFrame, min_rank: int) -> None:
                 df.at[idx, column] = value
                 log(idx, key, column, "", value, result)
             # 주소만 찾고 지역을 비워 둔 경우 주소에서 파생
+            region_col = f"{prefix}_region"
+            if df.at[idx, region_col] == "":
+                region = region_from_addr(df.at[idx, f"{prefix}_addr"])
+                if region:
+                    df.at[idx, region_col] = region
+                    log(idx, key, region_col, "", region, result)
+
+
+def apply_overview(df: pd.DataFrame, min_rank: int) -> None:
+    by_key: dict[str, dict] = {}
+    by_name: dict[str, dict] = {}
+    for row in read_jsonl(FILLED_OV):
+        result = row.get("result", {})
+        if not usable(result, min_rank):
+            continue
+        if row.get("crno"):
+            by_key[row["crno"]] = result
+        name_key = norm_name(row.get("corpNm", ""))
+        if name_key:
+            by_name[name_key] = result
+    print(f"[기업개요_최종] 반영 가능한 결과 {len(by_key) + len(by_name):,}건")
+    if not by_key and not by_name:
+        return
+
+    for prefix in ("top", "affiliate"):
+        crno_col, name_col = f"{prefix}_crno", f"{prefix}_corpNm"
+        sub = df[df[name_col] != ""]
+        for idx, row in sub.iterrows():
+            key = row[crno_col] or f"name:{norm_name(row[name_col])}"
+            result = by_key.get(row[crno_col]) or by_name.get(norm_name(row[name_col]))
+            if not result:
+                continue
+            for field, column in (("addr", f"{prefix}_addr"),
+                                  ("region", f"{prefix}_region"),
+                                  ("sicNm", f"{prefix}_sicNm")):
+                if df.at[idx, column] != "":
+                    continue
+                value = clean_value(field, result.get(field, ""))
+                if not value:
+                    continue
+                df.at[idx, column] = value
+                log(idx, key, column, "", value, result)
             region_col = f"{prefix}_region"
             if df.at[idx, region_col] == "":
                 region = region_from_addr(df.at[idx, f"{prefix}_addr"])
@@ -201,6 +243,7 @@ def main() -> None:
 
     print(f"\nLLM 결과 반영 (confidence >= {args.min_confidence})")
     apply_corp(df, min_rank)
+    apply_overview(df, min_rank)
     apply_subs(df, min_rank)
 
     if not args.no_cross_fill:
