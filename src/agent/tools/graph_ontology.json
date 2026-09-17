@@ -92,7 +92,7 @@
       ]
     },
 
-    "RELATED_IN_INDUSTRY": {
+    "IN_INDUSTRY": {
       "description": "종속기업이 특정 업종과 관련된 관계",
       "signatures": [
         {
