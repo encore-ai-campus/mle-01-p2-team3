@@ -20,16 +20,25 @@ NEO4J_URI = os.getenv("NEO4J_URI")
 NEO4J_USER = os.getenv("NEO4J_USER")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
-if not all([NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD]):
-    raise RuntimeError(
-        "Neo4j 환경변수가 설정되지 않았습니다. "
-        "NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD를 확인하세요."
-    )
+# GRAPH_DB=aura 이면 로컬 대신 Aura(AURA_*) 의 그래프를 조회한다. 없으면 기존처럼 로컬.
+GRAPH_DB = os.getenv("GRAPH_DB", "local").strip().lower()
 
-driver = GraphDatabase.driver(
-    NEO4J_URI,
-    auth=(NEO4J_USER, NEO4J_PASSWORD),
-)
+if GRAPH_DB == "aura":
+    from .news_vector import get_aura_driver
+
+    driver = get_aura_driver()
+
+else:
+    if not all([NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD]):
+        raise RuntimeError(
+            "Neo4j 환경변수가 설정되지 않았습니다. "
+            "NEO4J_URI, NEO4J_USER, NEO4J_PASSWORD를 확인하세요."
+        )
+
+    driver = GraphDatabase.driver(
+        NEO4J_URI,
+        auth=(NEO4J_USER, NEO4J_PASSWORD),
+    )
 
 
 # ====== 온톨로지 ======
