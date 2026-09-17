@@ -16,6 +16,7 @@ if str(PROJECT_ROOT) not in sys.path:
 
 
 MAX_GRAPH_EVIDENCE_ROWS = 20
+MAX_NEWS_EVIDENCE_ROWS = 10
 
 
 def _get_value(obj: Any, key: str, default: Any = None) -> Any:
@@ -201,6 +202,67 @@ def select_display_graph_evidence(
         return matched_rows[:max_rows]
 
     return graph_rows[:max_rows]
+
+
+def extract_news_evidence(result: dict[str, Any]) -> list[dict[str, Any]]:
+    """search_news(벡터 검색) 결과 중 기사 근거만 추출한다."""
+    news_rows: list[dict[str, Any]] = []
+    seen: set[str] = set()
+
+    for message in result.get("messages", []):
+        if _get_value(message, "name", None) != "search_news":
+            continue
+
+        payload = _parse_tool_content(_get_value(message, "content", None))
+        results = payload.get("results", [])
+
+        if not isinstance(results, list):
+            continue
+
+        for row in results:
+            if not isinstance(row, dict):
+                continue
+
+            title = str(row.get("title", "")).strip()
+            if not title:
+                continue
+
+            dedup_key = str(row.get("url") or title)
+            if dedup_key in seen:
+                continue
+            seen.add(dedup_key)
+
+            news_rows.append(
+                {
+                    "title": title,
+                    "summary": row.get("summary"),
+                    "date": row.get("date"),
+                    "publisher": row.get("publisher"),
+                    "url": row.get("url"),
+                    "company": row.get("company"),
+                    "crno": row.get("crno"),
+                    "score": row.get("score"),
+                    "cosine": row.get("cosine"),
+                }
+            )
+
+    return news_rows
+
+
+def select_display_news_evidence(
+    news_rows: list[dict[str, Any]],
+    max_rows: int = MAX_NEWS_EVIDENCE_ROWS,
+) -> list[dict[str, Any]]:
+    """유사도(score) 가 높은 순으로 정렬해 화면 표시량을 제한한다."""
+    if max_rows <= 0:
+        return []
+
+    ordered = sorted(
+        news_rows,
+        key=lambda row: row.get("score") if isinstance(row.get("score"), (int, float)) else 0,
+        reverse=True,
+    )
+    return ordered[:max_rows]
 
 
 def build_graph_visualization_data(
@@ -465,6 +527,51 @@ def render_graph_evidence(
             )
 
 
+def render_news_evidence(
+    news_rows: list[dict[str, Any]],
+    total_rows: int | None = None,
+) -> None:
+    """답변에 사용된 뉴스 벡터 검색 근거를 기사 카드로 표시한다."""
+    import streamlit as st
+
+    if not news_rows:
+        return
+
+    total = total_rows if total_rows is not None else len(news_rows)
+    shown = len(news_rows)
+
+    title = f"관련 뉴스 · 벡터 검색 ({shown}개 표시"
+    if total > shown:
+        title += f" / 전체 {total}개"
+    title += ")"
+
+    with st.expander(title, expanded=True):
+        for index, row in enumerate(news_rows):
+            if index > 0:
+                st.divider()
+
+            headline = str(row.get("title") or "제목 없음")
+            url = row.get("url")
+            st.markdown(f"**[{headline}]({url})**" if url else f"**{headline}**")
+
+            meta_parts = [
+                str(row[key])
+                for key in ("date", "publisher", "company")
+                if row.get(key)
+            ]
+            score = row.get("score")
+            if isinstance(score, (int, float)):
+                meta_parts.append(f"유사도 {score:.4f}")
+            if meta_parts:
+                st.caption(" · ".join(meta_parts))
+
+            if row.get("summary"):
+                st.write(row["summary"])
+
+        if total > shown:
+            st.caption(f"검색된 기사가 많아 {total}개 중 {shown}개만 표시합니다.")
+
+
 _BOLD_PATTERN = re.compile(r"\*\*(.+?)\*\*", re.DOTALL)
 _CODE_SPAN_PATTERN = re.compile(r"(`+[^`]*`+)")
 
@@ -512,6 +619,10 @@ def render_chat_history(messages: list[dict[str, Any]]) -> None:
                 render_graph_evidence(
                     graph_rows,
                     graph_total,
+                )
+                render_news_evidence(
+                    message.get("news_evidence", []),
+                    message.get("news_evidence_total"),
                 )
                 render_tool_expander(
                     message.get("used_tools", [])
@@ -576,6 +687,11 @@ def render_chat_panel(
                 all_graph_evidence,
             )
 
+            all_news_evidence = extract_news_evidence(result)
+            display_news_evidence = select_display_news_evidence(
+                all_news_evidence,
+            )
+
             if not answer:
                 answer = "답변을 생성하지 못했습니다. 다시 질문해 주세요."
 
@@ -591,6 +707,11 @@ def render_chat_panel(
                 len(all_graph_evidence),
             )
 
+            render_news_evidence(
+                display_news_evidence,
+                len(all_news_evidence),
+            )
+
             render_tool_expander(used_tools)
 
             st.session_state[state_key].append(
@@ -600,6 +721,8 @@ def render_chat_panel(
                     "used_tools": used_tools,
                     "graph_evidence": display_graph_evidence,
                     "graph_evidence_total": len(all_graph_evidence),
+                    "news_evidence": display_news_evidence,
+                    "news_evidence_total": len(all_news_evidence),
                 }
             )
 
@@ -614,6 +737,8 @@ def render_chat_panel(
                     "used_tools": [],
                     "graph_evidence": [],
                     "graph_evidence_total": 0,
+                    "news_evidence": [],
+                    "news_evidence_total": 0,
                     "is_error": True,
                 }
             )
