@@ -3,6 +3,7 @@ from __future__ import annotations
 import ast
 import html
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -14,7 +15,7 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 
-MAX_GRAPH_EVIDENCE_ROWS = 10
+MAX_GRAPH_EVIDENCE_ROWS = 20
 
 
 def _get_value(obj: Any, key: str, default: Any = None) -> Any:
@@ -464,6 +465,30 @@ def render_graph_evidence(
             )
 
 
+_BOLD_PATTERN = re.compile(r"\*\*(.+?)\*\*", re.DOTALL)
+_CODE_SPAN_PATTERN = re.compile(r"(`+[^`]*`+)")
+
+
+def render_answer_markdown(text: str) -> None:
+    """답변을 렌더링한다.
+
+    마크다운(CommonMark)은 **강조** 뒤에 곧바로 글자가 오면 닫는 기호로 보지 않는다.
+    한국어는 '**휴양콘도 운영업**을' 처럼 조사가 붙어서 별표가 그대로 노출되므로,
+    코드 스팬 밖의 ** 쌍만 <strong> 으로 바꿔서 렌더링한다.
+    """
+    import streamlit as st
+
+    parts = []
+    for segment in _CODE_SPAN_PATTERN.split(str(text)):
+        if segment.startswith("`"):
+            parts.append(segment)  # 코드 스팬은 그대로 둔다
+            continue
+        escaped = html.escape(segment, quote=False)
+        parts.append(_BOLD_PATTERN.sub(r"<strong>\g<1></strong>", escaped))
+
+    st.markdown("".join(parts), unsafe_allow_html=True)
+
+
 def render_chat_history(messages: list[dict[str, Any]]) -> None:
     import streamlit as st
 
@@ -474,7 +499,7 @@ def render_chat_history(messages: list[dict[str, Any]]) -> None:
             if message.get("is_error"):
                 st.error(message["content"])
             else:
-                st.markdown(message["content"])
+                render_answer_markdown(message["content"])
 
             if role == "assistant":
                 graph_rows = message.get("graph_evidence", [])
@@ -493,32 +518,33 @@ def render_chat_history(messages: list[dict[str, Any]]) -> None:
                 )
 
 
-def main() -> None:
+def render_chat_panel(
+    state_key: str = "messages",
+    placeholder: str = "기업 정보를 질문해 주세요.",
+    reset_label: str | None = "대화 초기화",
+    pending_prompt: str | None = None,
+) -> None:
+    """페이지 설정 없이 챗봇 UI 만 그린다. app.py 의 탭 안에서도 재사용한다."""
     import streamlit as st
     from src.agent.agent import company_data_agent
 
-    st.set_page_config(
-        page_title="기업 정보 챗봇",
-        page_icon="💬",
-    )
+    if state_key not in st.session_state:
+        st.session_state[state_key] = []
 
-    st.title("기업 정보 챗봇")
-
-    if "messages" not in st.session_state:
-        st.session_state.messages = []
-
-    if st.sidebar.button("대화 초기화", use_container_width=True):
-        st.session_state.messages = []
+    if reset_label and st.button(reset_label, key=f"{state_key}_reset"):
+        st.session_state[state_key] = []
         st.rerun()
 
-    render_chat_history(st.session_state.messages)
+    render_chat_history(st.session_state[state_key])
 
-    human_prompt = st.chat_input("기업 정보를 질문해 주세요.")
+    typed_prompt = st.chat_input(placeholder, key=f"{state_key}_input")
+    # 다른 화면에서 넘겨준 질문(pending_prompt)도 입력과 동일하게 처리한다.
+    human_prompt = typed_prompt or pending_prompt
 
     if not human_prompt:
         return
 
-    st.session_state.messages.append(
+    st.session_state[state_key].append(
         {
             "role": "user",
             "content": human_prompt,
@@ -531,7 +557,7 @@ def main() -> None:
     with st.chat_message("assistant"):
         try:
             agent_messages = build_agent_messages(
-                st.session_state.messages
+                st.session_state[state_key]
             )
 
             with st.spinner("조회 중..."):
@@ -553,7 +579,7 @@ def main() -> None:
             if not answer:
                 answer = "답변을 생성하지 못했습니다. 다시 질문해 주세요."
 
-            st.markdown(answer)
+            render_answer_markdown(answer)
 
             render_graph_network(
                 display_graph_evidence,
@@ -567,7 +593,7 @@ def main() -> None:
 
             render_tool_expander(used_tools)
 
-            st.session_state.messages.append(
+            st.session_state[state_key].append(
                 {
                     "role": "assistant",
                     "content": answer,
@@ -581,7 +607,7 @@ def main() -> None:
             error_message = f"조회 중 오류가 발생했습니다: {exc}"
             st.error(error_message)
 
-            st.session_state.messages.append(
+            st.session_state[state_key].append(
                 {
                     "role": "assistant",
                     "content": error_message,
@@ -591,6 +617,18 @@ def main() -> None:
                     "is_error": True,
                 }
             )
+
+
+def main() -> None:
+    """chatbot.py 를 단독 실행할 때 쓰는 진입점."""
+    import streamlit as st
+
+    st.set_page_config(
+        page_title="기업 정보 챗봇",
+        page_icon="💬",
+    )
+    st.title("기업 정보 챗봇")
+    render_chat_panel()
 
 
 if __name__ == "__main__":
