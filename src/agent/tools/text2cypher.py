@@ -50,40 +50,135 @@ GRAPH_ONTOLOGY_TEXT = json.dumps(
 
 # ====== TOOL1 ======
 
-# 스키마 노드 타입 한정하기
 EntityType = Literal[
-    "ParentCompany","SubsidiaryCompany","Region","Industry",
+    "ParentCompany",
+    "SubsidiaryCompany",
+    "Region",
+    "Industry",
 ]
 
-# 노드, 관계 확인 함수
+
+def normalize_entity_name(name: str) -> str:
+    """
+    기업명 비교용 정규화.
+    법인 표기와 공백 차이를 제거한다.
+    """
+    normalized = name.strip()
+
+    for token in [
+        "(주)",
+        "㈜",
+        "주식회사",
+    ]:
+        normalized = normalized.replace(token, "")
+
+    return normalized.replace(" ", "").lower()
+
+
 def select_names_in_graph(
     name: str,
     node_type: EntityType | None = None,
 ):
-    # node_type이 지정된 경우 해당 노드 타입에서만 검색
+    normalized_name = normalize_entity_name(name)
+
     if node_type is not None:
         query = f"""
         MATCH (n:{node_type})
-        WHERE n.name = $name
+
+        WITH
+            n,
+            toLower(
+                replace(
+                    replace(
+                        replace(
+                            replace(n.name, '(주)', ''),
+                            '㈜', ''
+                        ),
+                        '주식회사', ''
+                    ),
+                    ' ', ''
+                )
+            ) AS normalized_node_name
+
+        WHERE
+            n.name = $name
+            OR normalized_node_name = $normalized_name
+            OR normalized_node_name CONTAINS $normalized_name
+
         RETURN
             n.name AS name,
             labels(n)[0] AS node_type,
-            properties(n) AS properties
+            properties(n) AS properties,
+
+            CASE
+                WHEN n.name = $name THEN 'exact'
+                WHEN normalized_node_name = $normalized_name
+                    THEN 'normalized'
+                ELSE 'partial'
+            END AS match_type
+
+        ORDER BY
+            CASE
+                WHEN n.name = $name THEN 0
+                WHEN normalized_node_name = $normalized_name THEN 1
+                ELSE 2
+            END,
+            size(n.name)
+
+        LIMIT 20
         """
+
     else:
-        # 타입을 모르면 전체 노드에서 name으로 검색
         query = """
         MATCH (n)
-        WHERE n.name = $name
+
+        WITH
+            n,
+            toLower(
+                replace(
+                    replace(
+                        replace(
+                            replace(n.name, '(주)', ''),
+                            '㈜', ''
+                        ),
+                        '주식회사', ''
+                    ),
+                    ' ', ''
+                )
+            ) AS normalized_node_name
+
+        WHERE
+            n.name = $name
+            OR normalized_node_name = $normalized_name
+            OR normalized_node_name CONTAINS $normalized_name
+
         RETURN
             n.name AS name,
             labels(n)[0] AS node_type,
-            properties(n) AS properties
+            properties(n) AS properties,
+
+            CASE
+                WHEN n.name = $name THEN 'exact'
+                WHEN normalized_node_name = $normalized_name
+                    THEN 'normalized'
+                ELSE 'partial'
+            END AS match_type
+
+        ORDER BY
+            CASE
+                WHEN n.name = $name THEN 0
+                WHEN normalized_node_name = $normalized_name THEN 1
+                ELSE 2
+            END,
+            size(n.name)
+
+        LIMIT 20
         """
 
     records, summary, keys = driver.execute_query(
         query,
         name=name,
+        normalized_name=normalized_name,
     )
 
     matches = [
@@ -91,12 +186,14 @@ def select_names_in_graph(
             "name": record["name"],
             "node_type": record["node_type"],
             "properties": record["properties"],
+            "match_type": record["match_type"],
         }
         for record in records
     ]
 
     return {
         "query_name": name,
+        "normalized_query_name": normalized_name,
         "found": len(matches) > 0,
         "matches": matches,
     }
@@ -104,16 +201,34 @@ def select_names_in_graph(
 
 #도구1 독스트링
 select_names_in_graph.__doc__ = f"""
-질문에 등장한 기업명, 지역명, 업종명을
-Neo4j에 실제 등록된 노드와 확인합니다.
+질문에 등장한 기업명, 지역명, 업종명이
+Neo4j에 어떤 이름으로 등록되어 있는지 확인합니다.
 
-이름(name)을 중심으로 검색하며,
-node_type이 주어진 경우 해당 노드 타입으로 검색 범위를 제한합니다.
+사용자가 입력한 이름과 그래프의 공식 이름은
+'(주)', '㈜', '주식회사', 공백 등의 차이가 있을 수 있습니다.
 
-이 도구는 엔티티 존재 여부와 노드 타입을 확인하는 용도이며,
-관계 탐색이나 복합 그래프 조회에는 사용하지 않습니다.
+검색 결과의 match_type은 다음 의미를 가집니다.
+
+- exact:
+  입력 이름과 그래프 이름이 정확히 일치합니다.
+
+- normalized:
+  법인 표기와 공백을 제거하면 동일한 이름입니다.
+  일반적으로 가장 우선적으로 사용할 후보입니다.
+
+- partial:
+  입력 이름을 포함하는 관련 후보입니다.
+  여러 후보가 존재할 수 있으므로 node_type과 실제 이름을
+  확인한 뒤 적절한 노드를 선택해야 합니다.
+
+정확히 일치하는 결과가 없더라도
+normalized 또는 partial 후보가 있으면
+그래프에 대상이 없다고 즉시 판단하지 마세요.
+
+후보를 확인한 뒤 실제 관계 탐색은 search_graph를 사용하세요.
 
 온톨로지:
+
 {GRAPH_ONTOLOGY_TEXT}
 """
 
@@ -126,11 +241,67 @@ class GraphSearchInput(BaseModel):
         description="Neo4j에서 실행할 조회 전용 Cypher 쿼리"
     )
 
+# 그래프 근거 출력 규칙 
+
+GRAPH_EVIDENCE_ALIASES = {
+    "source",
+    "relationship",
+    "target",
+}
+
+AGGREGATE_FUNCTIONS = (
+    "COUNT(",
+    "SUM(",
+    "AVG(",
+    "MIN(",
+    "MAX(",
+    "COLLECT(",
+)
+
+def requires_graph_evidence_aliases(cypher: str) -> bool:
+    """
+    개별 관계를 조회하는 Cypher인지 확인합니다.
+
+    단순 집계 조회는 그래프 시각화 대상에서 제외합니다.
+    """
+
+    upper_cypher = cypher.upper()
+
+    # 관계 패턴 존재 여부
+    has_relationship = (
+        "-[" in upper_cypher
+        and (
+            "]->" in upper_cypher
+            or "]-" in upper_cypher
+        )
+    )
+
+    # COUNT, SUM 등의 집계 조회 여부
+    is_aggregate = any(
+        function in upper_cypher
+        for function in AGGREGATE_FUNCTIONS
+    )
+
+    return has_relationship and not is_aggregate
+
+
+def has_graph_evidence_aliases(cypher: str) -> bool:
+    """
+    관계 조회 결과에 UI가 필요한 표준 alias가 있는지 확인합니다.
+    """
+
+    upper_cypher = cypher.upper()
+
+    return all(
+        f" AS {alias.upper()}" in upper_cypher
+        for alias in GRAPH_EVIDENCE_ALIASES
+    )
 
 # Cypher 실제 조회 함수
 def search_graph(cypher: str):
 
-    # 조회 이외의 쿼리 차단
+    # ====== 조회 이외의 쿼리 차단 ======
+
     forbidden_keywords = [
         "CREATE",
         "MERGE",
@@ -143,19 +314,53 @@ def search_graph(cypher: str):
 
     upper_cypher = cypher.upper()
 
-    if any(keyword in upper_cypher for keyword in forbidden_keywords):
+    if any(
+        keyword in upper_cypher
+        for keyword in forbidden_keywords
+    ):
         raise ValueError(
             "search_graph는 조회 전용 도구입니다."
         )
 
-    # Neo4j 조회
-    records, summary, keys = driver.execute_query(cypher)
 
-    # Record 객체를 일반 dict로 변환
+    # ====== 관계 조회 반환 형식 검사 ======
+
+    if (
+        requires_graph_evidence_aliases(cypher)
+        and not has_graph_evidence_aliases(cypher)
+    ):
+        return {
+            "cypher": cypher,
+            "results": [],
+            "error": (
+                "개별 그래프 관계를 조회하는 경우 "
+                "UI 근거 표시를 위해 RETURN 절에 "
+                "source, relationship, target alias가 필요합니다. "
+                "Cypher를 해당 형식으로 다시 작성해서 "
+                "search_graph를 호출하세요."
+            ),
+            "required_aliases": [
+                "source",
+                "relationship",
+                "target",
+            ],
+        }
+
+
+    # ====== Neo4j 조회 ======
+
+    records, summary, keys = driver.execute_query(
+        cypher
+    )
+
+
+    # ====== Record → dict ======
+
     results = [
         dict(record)
         for record in records
     ]
+
 
     return {
         "cypher": cypher,
@@ -164,18 +369,68 @@ def search_graph(cypher: str):
 
 
 #도구2 독스트링
+# ====== TOOL2 독스트링 ======
+
 search_graph.__doc__ = f"""
 Neo4j 그래프에서 관계와 속성을 조회합니다.
 
-입력받은 Cypher를 검사한 뒤 Neo4j에서 실행하고,
+입력받은 Cypher를 검사한 뒤 Neo4j에서 실행하고
 조회 결과를 반환합니다.
 
 반드시 조회 전용 Cypher를 사용해야 하며,
 CREATE, MERGE, DELETE, SET 등의
 데이터 변경 쿼리는 사용할 수 없습니다.
 
-Cypher를 작성할 때는 아래 온톨로지에 정의된
-노드, 관계, 속성을 사용하세요.
+
+[관계 조회 규칙]
+
+기업-기업, 기업-지역, 기업-업종 등
+개별 그래프 관계를 조회할 때는
+UI에서 실제 Graph DB 근거를 표시할 수 있도록
+RETURN 절에서 반드시 다음 alias를 사용하세요.
+
+필수:
+
+- source
+- relationship
+- target
+
+가능하면 다음 정보도 함께 반환하세요.
+
+- source_type
+- target_type
+- evidence
+- source_case
+- source_row
+
+
+관계 조회의 권장 형식:
+
+RETURN
+    source_node.name AS source,
+    labels(source_node)[0] AS source_type,
+    type(rel) AS relationship,
+    target_node.name AS target,
+    labels(target_node)[0] AS target_type,
+    rel.evidence AS evidence,
+    rel.source_case AS source_case,
+    rel.source_row AS source_row
+
+
+source_node, rel, target_node은 예시 변수명이며
+MATCH에서 사용한 변수명에 맞게 변경하세요.
+
+
+[예외]
+
+단순 속성 조회에는 위 형식을 강제하지 않습니다.
+
+COUNT, SUM, AVG 등의 집계 질문에도
+위 형식을 강제하지 않습니다.
+
+필요하지 않은 전체 그래프를 조회하지 말고
+사용자 질문에 필요한 범위만 조회하세요.
+
 
 온톨로지:
 
