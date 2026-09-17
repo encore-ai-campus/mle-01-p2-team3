@@ -12,7 +12,7 @@ from pydantic import BaseModel, Field
 # ====== 환경변수 / Neo4j 연결 ======
 
 # 현재 파일에서 두 단계 상위 폴더의 .env
-ENV_PATH = Path(__file__).resolve().parents[2] / ".env"
+ENV_PATH = Path(__file__).resolve().parents[3] / ".env"
 
 load_dotenv(ENV_PATH)
 

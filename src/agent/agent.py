@@ -6,13 +6,13 @@ from langchain.agents import create_agent
 from langchain_openai import ChatOpenAI
 
 #도구 가져오기
-from agent.tools.text2cypher import select_names_in_graph,search_graph
+from tools.text2cypher import select_names_in_graph,search_graph
 #+ 담기
 text2cypher_tools = [select_names_in_graph,search_graph]
 
 # ====== 환경변수 불러오기 ======
 
-ENV_PATH = Path(__file__).resolve().parent.parent / ".env"
+ENV_PATH = Path(__file__).resolve().parents[2] / ".env"
 
 load_dotenv(ENV_PATH)
 
