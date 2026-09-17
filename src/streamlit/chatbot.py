@@ -545,7 +545,7 @@ def render_news_evidence(
         title += f" / 전체 {total}개"
     title += ")"
 
-    with st.expander(title, expanded=True):
+    with st.expander(title, expanded=False):
         for index, row in enumerate(news_rows):
             if index > 0:
                 st.divider()
