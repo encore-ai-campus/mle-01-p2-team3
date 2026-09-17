@@ -1,14 +1,13 @@
 {
   "total_triples": 12281,
   "schema_pass_triples": 11542,
-  "quote_pass_triples": 6315,
-  "review_population_size": 6301,
-  "rejected_triples": 5980,
+  "quote_pass_triples": 12281,
+  "review_population_size": 11542,
+  "rejected_triples": 739,
   "schema_compliance_rate": 0.9398257470889992,
-  "quote_match_rate": 0.514208940640013,
-  "review_population_rate": 0.513068968325055,
+  "quote_match_rate": 1.0,
+  "review_population_rate": 0.9398257470889992,
   "error_counts": {
-    "quote_not_found_in_source": 5966,
     "invalid_signature:IN_INDUSTRY:ParentCompany->Industry": 739
   },
   "relation_counts": {
