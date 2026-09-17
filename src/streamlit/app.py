@@ -789,7 +789,7 @@ def render_rag_demo() -> None:
     """RAG 탭: chatbot.py 의 Graph RAG 에이전트 챗봇을 그대로 붙인다."""
     st.markdown("## 자연어로 묻고<br>그래프로 답합니다", unsafe_allow_html=True)
     st.markdown(
-        '<p class="lede">Neo4j 지식그래프를 Text2Cypher 로 조회해 답변하고, 사용한 관계와 도구를 함께 보여줍니다.</p>',
+        '<p class="lede">Neo4j 지식그래프를 Text2Cypher 로 조회하고 뉴스 기사를 벡터 검색으로 찾아 답변하며, 사용한 관계·기사와 도구를 함께 보여줍니다.</p>',
         unsafe_allow_html=True,
     )
 
