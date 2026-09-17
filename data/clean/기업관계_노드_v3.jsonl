@@ -1,0 +1,10 @@
+{"id": "section:금융", "type": "Section", "properties": {"name": "금융", "category": ["SPC", "펀드", "지주", "은행", "증권", "보험"]}}
+{"id": "section:제조", "type": "Section", "properties": {"name": "제조", "category": ["전자", "자동차", "화학", "소재", "기계"]}}
+{"id": "section:IT·미디어", "type": "Section", "properties": {"name": "IT·미디어", "category": ["소프트웨어", "통신", "게임", "방송", "콘텐츠"]}}
+{"id": "section:부동산·건설", "type": "Section", "properties": {"name": "부동산·건설", "category": ["부동산", "임대", "건설", "시공"]}}
+{"id": "section:서비스", "type": "Section", "properties": {"name": "서비스", "category": ["호텔", "교육", "컨설팅", "연구", "정비"]}}
+{"id": "section:유통·물류", "type": "Section", "properties": {"name": "유통·물류", "category": ["도소매", "무역", "운송", "창고"]}}
+{"id": "section:바이오·헬스케어", "type": "Section", "properties": {"name": "바이오·헬스케어", "category": ["제약", "의료", "화장품"]}}
+{"id": "section:에너지·환경", "type": "Section", "properties": {"name": "에너지·환경", "category": ["발전", "태양광", "폐기물"]}}
+{"id": "section:식품·농업", "type": "Section", "properties": {"name": "식품·농업", "category": ["식품", "외식", "농축산"]}}
+{"id": "section:모름", "type": "Section", "properties": {"name": "모름", "category": []}}
