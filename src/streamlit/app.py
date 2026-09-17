@@ -77,9 +77,9 @@ def _read_clean(name: str) -> pd.DataFrame:
 def load_dataset_stats() -> dict[str, int]:
     """데이터셋에 실제로 들어 있는 기업 수를 셉니다."""
     try:
-        overview = _read_clean("기업개요_최종.csv")
+        overview = _read_clean("최종_기업개요.csv")
         affiliates = _read_clean("계열회사_전처리.csv")
-        subsidiaries = _read_clean("종속기업_정리.csv")
+        subsidiaries = _read_clean("최종_종속기업_정리.csv")
     except FileNotFoundError:
         return {}
 
@@ -99,10 +99,10 @@ def load_dataset_stats() -> dict[str, int]:
 def load_top_connected(limit: int = 5) -> list[dict[str, object]]:
     """계열사 + 종속기업 수가 많은 순으로 모기업을 정렬합니다."""
     try:
-        overview = _read_clean("기업개요_최종.csv")
+        overview = _read_clean("최종_기업개요.csv")
         affiliates = _read_clean("계열회사_전처리.csv")
-        subsidiaries = _read_clean("종속기업_정리.csv")
-        merged = _read_clean("모기업_계열사_종속기업_통합.csv")
+        subsidiaries = _read_clean("최종_종속기업_정리.csv")
+        merged = _read_clean("최종_모기업_계열사_종속기업_통합.csv")
     except FileNotFoundError:
         return []
 
@@ -169,10 +169,10 @@ def get_site_content() -> dict[str, object]:
 def load_company_options() -> list[dict[str, object]]:
     """그래프에서 선택할 수 있는 모기업 목록을 연결 수가 많은 순으로 만듭니다."""
     try:
-        overview = _read_clean("기업개요_최종.csv")
+        overview = _read_clean("최종_기업개요.csv")
         affiliates = _read_clean("계열회사_전처리.csv")
-        subsidiaries = _read_clean("종속기업_정리.csv")
-        merged = _read_clean("모기업_계열사_종속기업_통합.csv")
+        subsidiaries = _read_clean("최종_종속기업_정리.csv")
+        merged = _read_clean("최종_모기업_계열사_종속기업_통합.csv")
     except FileNotFoundError:
         return []
 
@@ -210,7 +210,7 @@ def load_company_relations(crno: str) -> list[dict[str, str]]:
     """선택한 기업의 계열사·종속기업을 관계 유형과 함께 돌려줍니다."""
     try:
         affiliates = _read_clean("계열회사_전처리.csv")
-        subsidiaries = _read_clean("종속기업_정리.csv")
+        subsidiaries = _read_clean("최종_종속기업_정리.csv")
     except FileNotFoundError:
         return []
 

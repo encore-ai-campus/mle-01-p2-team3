@@ -98,13 +98,12 @@ class SectionInsertV3NotebookTest(unittest.TestCase):
 
         self.assertNotIn("read_jsonl", namespace)
 
-    def test_source_query_reads_company_industry_assignments_from_neo4j(self):
-        namespace = load_testable_namespace()
-        query = namespace["COMPANY_INDUSTRY_SOURCE_QUERY"]
-
-        self.assertIn("(company)-[relation:IN_INDUSTRY]->(industry:Industry)", query)
-        self.assertIn("company.id AS subject", query)
-        self.assertIn("collect(DISTINCT industry.name) AS industry_names", query)
+    def test_notebook_prepares_csvs_and_uses_existing_graph_loader(self):
+        source = "\n".join("".join(cell["source"]) for cell in load_notebook()["cells"])
+        self.assertIn("prepare_files(PROJECT_ROOT)", source)
+        self.assertIn("from src.neo4j.load_graph import import_graph", source)
+        self.assertIn('import_graph(target="aura")', source)
+        self.assertIn("top_대분류", source)
 
     def test_jsonl_writer_creates_standalone_v3_files(self):
         namespace = load_testable_namespace()

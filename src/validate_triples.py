@@ -41,15 +41,15 @@ QUOTE_ERROR_PREFIXES = (
 SECTION_INSERT_V3_CASE = "section_insert_v3"
 
 SECTION_ROWS = [
-    {"name": "금융", "category": ["SPC", "펀드", "지주", "은행", "증권", "보험"]},
-    {"name": "제조", "category": ["전자", "자동차", "화학", "소재", "기계"]},
-    {"name": "IT·미디어", "category": ["소프트웨어", "통신", "게임", "방송", "콘텐츠"]},
-    {"name": "부동산·건설", "category": ["부동산", "임대", "건설", "시공"]},
-    {"name": "서비스", "category": ["호텔", "교육", "컨설팅", "연구", "정비"]},
-    {"name": "유통·물류", "category": ["도소매", "무역", "운송", "창고"]},
-    {"name": "바이오·헬스케어", "category": ["제약", "의료", "화장품"]},
-    {"name": "에너지·환경", "category": ["발전", "태양광", "폐기물"]},
-    {"name": "식품·농업", "category": ["식품", "외식", "농축산"]},
+    {"name": "금융", "category": ["SPC", "펀드", "지주", "은행", "증권", "보험", "금융", "투자", "유동화", "신탁", "대출", "자산운용", "캐피탈", "대부", "여신", "할부", "집합투자", "사모", "특수목적", "기업어음", "벤처", "조합", "손해사정"]},
+    {"name": "제조", "category": ["전자", "자동차", "화학", "소재", "기계", "제조", "반도체", "전지", "케이블", "시멘트", "레미콘", "플라스틱", "철강", "제강", "금속", "섬유", "의류", "선박", "부품"]},
+    {"name": "IT·미디어", "category": ["소프트웨어", "통신", "게임", "방송", "콘텐츠", "IT서비스", "정보통신", "정보기술", "컴퓨터", "데이터베이스", "시스템", "광고", "영화", "드라마", "음악", "엔터테인먼트", "매니지먼트", "연예", "미디어", "컨텐츠", "출판", "인터넷", "플랫폼"]},
+    {"name": "부동산·건설", "category": ["부동산", "임대", "건설", "시공", "개발사업", "시행", "분양", "주택", "건축", "엔지니어링"]},
+    {"name": "서비스", "category": ["호텔", "교육", "컨설팅", "연구", "정비", "서비스", "골프", "여행", "학원", "시설관리", "콜센터", "텔레마케팅", "고객센터", "사업지원", "경영", "경비", "청소", "인력", "전시회", "전시대행", "테마파크", "콘도"]},
+    {"name": "유통·물류", "category": ["도소매", "무역", "운송", "창고", "유통", "물류", "도매", "소매", "도ㆍ소매", "운수", "항만", "해운", "택배", "백화점"]},
+    {"name": "바이오·헬스케어", "category": ["제약", "의료", "화장품", "의약품", "바이오", "헬스", "병원", "건강"]},
+    {"name": "에너지·환경", "category": ["발전", "태양광", "폐기물", "가스", "에너지", "전력", "전기업", "석유", "원유", "연료", "열공급", "증기", "환경"]},
+    {"name": "식품·농업", "category": ["식품", "외식", "농축산", "음료", "음식", "구내식당", "급식", "정육", "농업", "축산", "양돈", "가금류", "작물", "수산", "어업", "생수", "주류", "사료"]},
     {"name": "모름", "category": []},
 ]
 
@@ -445,9 +445,9 @@ def run_quality_check(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Validate knowledge graph triples.")
-    parser.add_argument("--triples", type=Path, default=Path("data/clean/기업관계_트리플.jsonl"))
+    parser.add_argument("--triples", type=Path, default=Path("data/clean/최종_기업관계_트리플.jsonl"))
     parser.add_argument("--ontology", type=Path, default=Path("src/agent/tools/graph_ontology.json"))
-    parser.add_argument("--source-table", type=Path, default=Path("data/clean/모기업_계열사_종속기업_통합.csv"))
+    parser.add_argument("--source-table", type=Path, default=Path("data/clean/최종_모기업_계열사_종속기업_통합.csv"))
     parser.add_argument("--gold", type=Path, default=None)
     parser.add_argument("--output-dir", type=Path, default=Path("data/quality"))
     parser.add_argument("--sample-size", type=int, default=50)

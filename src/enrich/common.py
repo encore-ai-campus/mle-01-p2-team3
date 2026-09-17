@@ -14,7 +14,7 @@ WORK = ROOT / "data" / "work"
 
 SRC_CSV = CLEAN / "모기업_계열사_종속기업_통합.csv"
 STEP1_CSV = CLEAN / "모기업_계열사_종속기업_통합_1차보강.csv"
-FINAL_CSV = CLEAN / "모기업_계열사_종속기업_통합_보강.csv"
+FINAL_CSV = CLEAN / "최종_모기업_계열사_종속기업_통합.csv"
 
 TODO_CORP = WORK / "todo_corp.jsonl"
 TODO_SUBS = WORK / "todo_subs.jsonl"

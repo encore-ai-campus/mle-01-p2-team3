@@ -26,7 +26,7 @@ if not all([AURA_URI, AURA_PASSWORD]):
         "AURA_URI, AURA_USER, AURA_PASSWORD를 .env에서 확인하세요."
     )
 
-NEWS_FILE = PROJECT_ROOT / "data" / "clean" / "news_articles.jsonl"
+NEWS_FILE = PROJECT_ROOT / "data" / "clean" / "최종_뉴스기사.jsonl"
 
 # 한 번 계산한 임베딩은 파일에 저장해 두고 다시 쓴다
 EMB_CACHE_FILE = PROJECT_ROOT / "data" / "news_emb_cache.pkl"
