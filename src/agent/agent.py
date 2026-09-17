@@ -12,8 +12,12 @@ from .tools.text2cypher import (
     select_names_in_graph,
     search_graph,
 )
+from .tools.news_vector import (
+    search_news,
+)
 #+ 담기
 text2cypher_tools = [select_names_in_graph,search_graph]
+news_tools = [search_news]
 
 # ====== 환경변수 불러오기 ======
 
@@ -152,6 +156,33 @@ Cypher 작성 방법, 그래프 온톨로지,
 search_graph 도구의 설명을 따르세요.
 
 
+3. search_news
+
+기업 관련 뉴스 기사를 벡터(의미) 검색하는 도구입니다.
+질문과 가장 가까운 기사의 제목, 요약, 날짜, 연결된 모기업,
+그리고 기사 원문 url을 반환합니다.
+
+다음과 같은 질문에 사용하세요.
+
+- 특정 기업의 뉴스, 최근 소식, 동향
+- 투자, 인수합병, 실적 등 특정 주제와 관련된 기사
+- 답변의 근거 기사나 원문 링크가 필요한 경우
+
+question에는 기업명과 주제를 함께 넣으면 더 정확합니다.
+
+검색 결과는 의미상 가까운 기사일 뿐이므로
+제목과 요약을 보고 질문과 관련 없는 기사는 제외하세요.
+
+뉴스를 근거로 답변할 때는
+각 기사마다 제목, 날짜, 유사도, 원문 url을 반드시 함께 제시하세요.
+유사도는 도구 결과의 score 값을 소수점 넷째 자리까지
+"유사도 0.8177" 형식으로 표시하세요.
+url은 도구가 반환한 값을 그대로 사용하고 임의로 만들지 마세요.
+
+기업 관계와 뉴스가 함께 필요한 질문이라면
+search_graph와 search_news를 함께 사용할 수 있습니다.
+
+
 [도구 사용 원칙]
 
 질문을 먼저 이해한 뒤 필요한 도구만 사용하세요.
@@ -269,7 +300,7 @@ partial 후보가 여러 개라면
 
 company_data_agent = create_agent(
     model = luna_model,
-    tools = text2cypher_tools,
+    tools = text2cypher_tools + news_tools,
     system_prompt = SYSTEM_PROMPT,
     middleware=[
         TodoListMiddleware(),
