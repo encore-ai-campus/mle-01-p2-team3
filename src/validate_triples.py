@@ -30,7 +30,53 @@ QUOTE_ERROR_PREFIXES = (
     "missing_source_identifier",
     "source_row_not_found",
     "quote_not_found_in_source",
+    "section_keyword_mismatch",
 )
+
+# section_insert_v3 케이스의 evidence는 원본 행 인용이 아니라 회사의 여러
+# IN_INDUSTRY→Industry 관계를 집계해 만든 산업명 목록이라, 다른 케이스와 같은
+# "원문 그대로 포함" 검사를 적용할 수 없다. 대신 이 케이스를 만든 것과 동일한
+# 키워드 매칭 규칙(classify_industry)으로 evidence의 산업명들이 실제로 해당
+# object(Section)를 도출하는지 검증한다. (src/neo4j/section_insert_v3.ipynb 참고)
+SECTION_INSERT_V3_CASE = "section_insert_v3"
+
+SECTION_ROWS = [
+    {"name": "금융", "category": ["SPC", "펀드", "지주", "은행", "증권", "보험"]},
+    {"name": "제조", "category": ["전자", "자동차", "화학", "소재", "기계"]},
+    {"name": "IT·미디어", "category": ["소프트웨어", "통신", "게임", "방송", "콘텐츠"]},
+    {"name": "부동산·건설", "category": ["부동산", "임대", "건설", "시공"]},
+    {"name": "서비스", "category": ["호텔", "교육", "컨설팅", "연구", "정비"]},
+    {"name": "유통·물류", "category": ["도소매", "무역", "운송", "창고"]},
+    {"name": "바이오·헬스케어", "category": ["제약", "의료", "화장품"]},
+    {"name": "에너지·환경", "category": ["발전", "태양광", "폐기물"]},
+    {"name": "식품·농업", "category": ["식품", "외식", "농축산"]},
+    {"name": "모름", "category": []},
+]
+
+
+def classify_industry(industry_name: str) -> list[str]:
+    normalized_name = (industry_name or "").casefold()
+    matches = [
+        section["name"]
+        for section in SECTION_ROWS
+        if section["name"] != "모름"
+        and any(keyword.casefold() in normalized_name for keyword in section["category"])
+    ]
+    return matches or ["모름"]
+
+
+def _section_evidence_ok(evidence: str, object_field: str) -> bool:
+    section_name = object_field.split(":", 1)[1] if ":" in object_field else object_field
+    industry_names = [part.strip() for part in evidence.split(",") if part.strip()]
+
+    matched_sections: set[str] = set()
+    for industry_name in industry_names:
+        matched_sections.update(classify_industry(industry_name))
+    matched_sections.discard("모름")
+    if not matched_sections:
+        matched_sections = {"모름"}
+
+    return section_name in matched_sections
 
 
 @dataclass
@@ -110,6 +156,9 @@ def validate_triple(
 
     if "source_doc_id" not in triple:
         errors.append("missing_source_identifier")
+    elif str(triple.get("source_case", "")).strip() == SECTION_INSERT_V3_CASE:
+        if evidence and not _section_evidence_ok(evidence, str(triple.get("object", ""))):
+            errors.append("section_keyword_mismatch")
     elif source_text is not None and evidence and not _quote_in_source(evidence, source_text):
         errors.append("quote_not_found_in_source")
 
@@ -204,7 +253,8 @@ def validate_file(
             continue
 
         source_text = None
-        if source_table:
+        is_section_insert_v3 = str(triple.get("source_case", "")).strip() == SECTION_INSERT_V3_CASE
+        if source_table and not is_section_insert_v3:
             source_row = _to_int(triple.get("source_row"))
             if source_row is None or source_row not in source_table:
                 result = validate_triple(triple, allowed_signatures, line_no=line_no)
@@ -303,7 +353,10 @@ def write_markdown_report(path: Path, summary: dict[str, Any], gold_metrics: dic
 
 - 스키마 준수율: 전체 추출 중 관계명과 source/target 타입이 온톨로지를 지킨 비율
 - 근거 원문 일치율: 전체 추출 중 `evidence` 문자열이 원천 행에 실제 포함된 비율
-- 수동 검토 대상: 스키마 검사와 근거 원문 일치 검사를 모두 통과한 트리플
+  (단, `source_case="section_insert_v3"`는 원천 행 인용이 아니라 여러 Industry 관계를
+  집계한 산업명 목록이므로, 원문 대조 대신 산업명이 동일한 키워드 규칙으로 해당
+  Section을 실제로 도출하는지(`section_keyword_mismatch`) 검사한다.)
+- 수동 검토 대상: 스키마 검사와 근거 일치 검사를 모두 통과한 트리플
 - 샘플 정밀도: `manual_review_sample_50.csv`를 사람이 채점한 뒤 별도로 계산
 
 ## 주요 오류 유형
