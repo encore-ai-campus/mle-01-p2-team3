@@ -27,8 +27,8 @@ from enrich.common import (  # noqa: E402
 
 OV_SRC = CLEAN / "기업개요_최종.csv"
 SB_SRC = CLEAN / "종속기업_정리.csv"
-OV_OUT = CLEAN / "기업개요_최종_보강.csv"
-SB_OUT = CLEAN / "종속기업_정리_보강.csv"
+OV_OUT = CLEAN / "최종_기업개요.csv"
+SB_OUT = CLEAN / "최종_종속기업_정리.csv"
 
 
 def _put(store: dict, key: str, **values: str) -> None:

@@ -23,7 +23,7 @@ PROJECT_ROOT = Path.home() / "projects" / "mle-01-p2-team3"
 DATA_DIR = PROJECT_ROOT / "data" / "clean"
 
 TARGET_FILE = DATA_DIR / "news_target_companies_top100.csv"
-OUTPUT_FILE = DATA_DIR / "news_articles.jsonl"
+OUTPUT_FILE = DATA_DIR / "최종_뉴스기사.jsonl"
 
 NEWS_PER_COMPANY = 5
 DISPLAY_COUNT = 100

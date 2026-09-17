@@ -20,21 +20,28 @@ class GraphOntologyV2Test(unittest.TestCase):
     def test_section_node_exposes_name_and_category_properties(self):
         section = self.ontology["nodes"]["Section"]
 
-        self.assertEqual(set(section["properties"]), {"name", "category"})
+        self.assertEqual(set(section["properties"]), {"id", "name", "category"})
         self.assertEqual(section["properties"]["name"]["type"], "string")
         self.assertEqual(section["properties"]["category"]["type"], "array[string]")
 
-    def test_in_industry_supports_industry_and_section_targets(self):
+    def test_in_industry_supports_only_section_targets(self):
         signatures = self.ontology["relationships"]["IN_INDUSTRY"]["signatures"]
         actual = {(row["source"], row["target"]) for row in signatures}
         expected = {
-            ("ParentCompany", "Industry"),
-            ("SubsidiaryCompany", "Industry"),
             ("ParentCompany", "Section"),
             ("SubsidiaryCompany", "Section"),
         }
 
         self.assertEqual(actual, expected)
+        self.assertNotIn("Industry", self.ontology["nodes"])
+
+    def test_runtime_ontology_matches_v2_and_exposes_news_and_company_details(self):
+        runtime = json.loads(ONTOLOGY_PATH.with_name("graph_ontology.json").read_text(encoding="utf-8"))
+        self.assertEqual(runtime, self.ontology)
+        self.assertIn("News", runtime["nodes"])
+        self.assertIn("RELATED_TO", runtime["relationships"])
+        self.assertIn("representatives", runtime["nodes"]["ParentCompany"]["properties"])
+        self.assertIn("aliases", runtime["nodes"]["ParentCompany"]["properties"])
 
     def test_relationship_signatures_reference_declared_nodes(self):
         node_labels = set(self.ontology["nodes"])

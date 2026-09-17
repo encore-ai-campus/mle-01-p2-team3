@@ -63,7 +63,7 @@ EntityType = Literal[
     "ParentCompany",
     "SubsidiaryCompany",
     "Region",
-    "Industry",
+    "Section",
 ]
 
 
@@ -428,6 +428,47 @@ RETURN
 
 source_node, rel, target_node은 예시 변수명이며
 MATCH에서 사용한 변수명에 맞게 변경하세요.
+
+
+[여러 홉 관계 조회 규칙]
+
+두 개 이상의 관계를 거치는 질문(예: 계열사의 대분류,
+종속기업의 지역)은 한 행에 관계 하나만 담기도록 반환하세요.
+두 번째 홉을 industry_section 같은 별도 컬럼에 넣으면
+UI 그래프에 첫 번째 홉만 표시됩니다.
+
+경로 전체를 path 로 잡고 relationships(path) 를 UNWIND 해서
+관계마다 한 행씩 source, relationship, target 을 반환하세요.
+
+MATCH path = (p:ParentCompany {{name: '(주)한화'}})
+             -[:AFFILIATED_WITH]-(a:ParentCompany)
+             -[:IN_INDUSTRY]->(s:Section)
+UNWIND relationships(path) AS rel
+WITH DISTINCT rel, startNode(rel) AS source_node, endNode(rel) AS target_node
+RETURN
+    coalesce(source_node.name, source_node.title) AS source,
+    labels(source_node)[0] AS source_type,
+    type(rel) AS relationship,
+    coalesce(target_node.name, target_node.title) AS target,
+    labels(target_node)[0] AS target_type,
+    rel.evidence AS evidence,
+    rel.source_case AS source_case,
+    rel.source_row AS source_row
+
+답변은 이 행들을 종합해서 작성하세요.
+(예: 계열사별로 target 이 Section 인 행을 모아 대분류를 정리)
+
+
+[질문 표현과 관계]
+
+- 계열사, 계열회사, 같은 그룹 회사: AFFILIATED_WITH (방향 없이 -[:AFFILIATED_WITH]- 로 조회)
+- 종속기업, 자회사: HAS_SUBSIDIARY (ParentCompany → SubsidiaryCompany)
+- 대분류, 업종 분야, 산업: IN_INDUSTRY → Section
+- 지역, 위치: LOCATED_IN → Region
+- 뉴스와 연결된 기업: RELATED_TO (News → ParentCompany)
+
+"A 계열사의 ~" 처럼 다른 회사를 거쳐 묻는 질문은
+A 자신의 속성이 아니라 연결된 회사들의 정보를 조회해야 합니다.
 
 
 [예외]
