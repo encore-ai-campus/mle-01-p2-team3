@@ -1,17 +1,21 @@
 {
-  "total_triples": 13931,
+  "total_triples": 15462,
   "schema_pass_triples": 13931,
   "quote_pass_triples": 13931,
   "review_population_size": 13931,
-  "rejected_triples": 0,
-  "schema_compliance_rate": 1.0,
-  "quote_match_rate": 1.0,
-  "review_population_rate": 1.0,
-  "error_counts": {},
+  "rejected_triples": 1531,
+  "schema_compliance_rate": 0.9009830552321821,
+  "quote_match_rate": 0.9009830552321821,
+  "review_population_rate": 0.9009830552321821,
+  "error_counts": {
+    "quote_not_found_in_source": 1531,
+    "invalid_signature:IN_INDUSTRY:SubsidiaryCompany->Section": 863,
+    "invalid_signature:IN_INDUSTRY:ParentCompany->Section": 668
+  },
   "relation_counts": {
     "AFFILIATED_WITH": 478,
     "HAS_SUBSIDIARY": 4637,
-    "IN_INDUSTRY": 1766,
+    "IN_INDUSTRY": 3297,
     "LOCATED_IN": 7050
   }
 }
