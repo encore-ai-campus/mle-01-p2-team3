@@ -33,6 +33,17 @@ B2B 영업·마케팅 담당자는 신규 고객사, 협력사, 공급망 파트
 | 송진명 | 관계 유형 분류, 관계 근거 제공 | 계열사, 종속 기업 등 기업 간 관계 유형 구분 <br> 뉴스 기사 등 관계를 추출한 근거 문장 제공 |
 | 김동석 | 기업 데이터 수집 및 전처리 | 수집한 기업 데이터를 정제하고 중복, 누락, 짧은 문서 처리 | 
 
+#### 🤖 Streamlit 화면 
+
+**지식그래프**
+<img src="C:\Users\Playdata\Desktop\mle-01-p2-team3\src\streamlit\source\page\스크린샷 2026-09-18 150100.png">
+
+**맵**
+<img src="C:\Users\Playdata\Desktop\mle-01-p2-team3\src\streamlit\source\page\스크린샷 2026-09-18 150226.png">
+
+**챗봇**
+<img src="C:\Users\Playdata\Desktop\mle-01-p2-team3\src\streamlit\source\page\Animation.gif">
+
 #### 🗨️ 팀원 회고
 
 김동석 : 일부 데이터 전처리와 노드 생성, 온톨로지 수정, 골드셋 평가를 담당하며 데이터 품질이 GraphRAG 답변의 정확도를 좌우한다는 점을 체감했다. 전체 프로젝트를 통해 그래프 설계부터 검색·응답까지의 흐름을 이해했으며, 명확한 스키마와 지속적인 검증, 팀원 간 협업의 중요성을 배웠다.
