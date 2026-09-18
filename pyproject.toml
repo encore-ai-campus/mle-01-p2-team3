@@ -14,9 +14,11 @@ dependencies = [
     "mcp>=1.2.0",
     "neo4j>=6.3.1",
     "pandas>=3.0.5",
+    "pydeck>=0.9.3",
     "pydantic>=2.13.5",
     "python-dotenv>=1.2.3",
     "pyvis>=0.3.2",
+    "requests>=2.31.0",
     "streamlit>=1.64.0",
     "utils>=1.0.2",
 ]

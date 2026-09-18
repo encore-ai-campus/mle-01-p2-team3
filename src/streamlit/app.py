@@ -3,6 +3,7 @@ from __future__ import annotations
 import base64
 import html
 import importlib
+import json
 import math
 import os
 from pathlib import Path
@@ -16,7 +17,7 @@ from pyvis.network import Network
 
 from aura_graph import build_graph_elements, fetch_graph_paths, search_companies
 
-SECTIONS = ["Overview", "Graph", "RAG", "Architecture"]
+SECTIONS = ["Overview", "Graph", "기업 위치 지도", "RAG", "Architecture"]
 STATIC_DIR = Path(__file__).parent / "static"
 DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "clean"
 AURA_ENV_PATH = Path(__file__).resolve().parents[2] / ".env"
@@ -248,6 +249,80 @@ def load_company_relations(crno: str) -> list[dict[str, str]]:
     for name in subsidiaries.loc[subsidiaries["crno"] == crno, "sbrdEnpNm"].dropna().unique():
         rows.append({"name": str(name), "relation": "종속기업"})
     return rows
+
+
+def _representative_text(value: object) -> str:
+    """대표자 배열 문자열을 화면 표시용 텍스트로 변환합니다."""
+    if value is None or pd.isna(value):
+        return ""
+    text = str(value).strip()
+    try:
+        parsed = json.loads(text)
+    except (TypeError, json.JSONDecodeError):
+        return text.strip("[]\\\"'")
+    if isinstance(parsed, list):
+        return ", ".join(str(item).strip() for item in parsed if str(item).strip())
+    return str(parsed)
+
+
+@st.cache_data(show_spinner=False)
+def load_company_map_data() -> pd.DataFrame:
+    """카카오 지오코딩이 완료된 모기업·종속기업 위치를 결합합니다."""
+    parent_geocode_path = DATA_DIR / "parent_company_geocodes.csv"
+    subsidiary_geocode_path = DATA_DIR / "subsidiary_company_geocodes.csv"
+    overview_path = DATA_DIR / "최종_기업개요.csv"
+    if not parent_geocode_path.is_file():
+        return pd.DataFrame()
+
+    geocodes = [
+        pd.read_csv(parent_geocode_path, dtype=str, encoding="utf-8-sig").assign(entity_type="모기업")
+    ]
+    if subsidiary_geocode_path.is_file():
+        geocodes.append(
+            pd.read_csv(subsidiary_geocode_path, dtype=str, encoding="utf-8-sig").assign(entity_type="종속기업")
+        )
+    merged = pd.concat(geocodes, ignore_index=True)
+
+    if not overview_path.is_file():
+        overview = pd.DataFrame(columns=["crno", "enpRprFnm", "enpTlno", "region", "sicNm"])
+    else:
+        overview = _read_clean("최종_기업개요.csv")
+    overview_columns = [
+        column
+        for column in ("crno", "enpRprFnm", "enpTlno", "enpBsadr", "region", "sicNm")
+        if column in overview.columns
+    ]
+    merged = merged.merge(
+        overview[overview_columns].drop_duplicates("crno"),
+        on="crno",
+        how="left",
+        suffixes=("", "_overview"),
+    )
+    merged["latitude"] = pd.to_numeric(merged["latitude"], errors="coerce")
+    merged["longitude"] = pd.to_numeric(merged["longitude"], errors="coerce")
+    merged = merged[
+        (merged["status"] == "ok")
+        & merged["latitude"].notna()
+        & merged["longitude"].notna()
+    ].copy()
+    representative_values = (
+        merged["enpRprFnm"]
+        if "enpRprFnm" in merged.columns
+        else pd.Series("", index=merged.index)
+    )
+    phone_values = (
+        merged["enpTlno"]
+        if "enpTlno" in merged.columns
+        else pd.Series("", index=merged.index)
+    )
+    merged["representative"] = representative_values.map(_representative_text)
+    merged["phone"] = phone_values.fillna("").astype(str).replace("nan", "")
+    merged["display_address"] = merged["address"].fillna("").astype(str)
+    region_values = merged["region"] if "region" in merged.columns else pd.Series("", index=merged.index)
+    sic_values = merged["sicNm"] if "sicNm" in merged.columns else pd.Series("", index=merged.index)
+    merged["region"] = region_values.fillna("").astype(str).replace("nan", "")
+    merged["sicNm"] = sic_values.fillna("").astype(str).replace("nan", "")
+    return merged
 
 
 def build_company_graph(
@@ -893,6 +968,196 @@ def render_graph_explorer() -> None:
     st.caption("AuraDB에서 읽어온 실제 관계입니다. 드래그·줌으로 그래프를 탐색할 수 있습니다.")
 
 
+def render_company_map() -> None:
+    """카카오 지오코딩이 완료된 기업 위치를 지도와 상세 카드로 표시합니다."""
+    st.markdown("## 기업 위치 지도")
+    st.markdown(
+        '<p class="lede">카카오 주소 검색으로 변환된 모기업·종속기업 위치를 지도에서 선택하면 기업 정보를 확인할 수 있습니다.</p>',
+        unsafe_allow_html=True,
+    )
+
+    map_df = load_company_map_data()
+    if map_df.empty:
+        st.warning("지오코딩된 기업 데이터가 없습니다. 먼저 geocode_parent_companies.py를 실행해 주세요.")
+        return
+
+    region_options = ["전체"] + sorted(str(value) for value in map_df["region"].dropna().unique() if str(value).strip())
+    filter_col, search_col = st.columns([1, 2], gap="large")
+    with filter_col:
+        entity_options = ["전체", "모기업", "종속기업"]
+        selected_entity = st.selectbox("기업 유형", entity_options, key="company_map_entity")
+        selected_region = st.selectbox("지역 필터", region_options, key="company_map_region")
+    with search_col:
+        company_query = st.text_input(
+            "기업명 검색",
+            placeholder="예: 롯데쇼핑, 한화, 삼성",
+            key="company_map_query",
+        ).strip()
+    visible = map_df if selected_entity == "전체" else map_df[map_df["entity_type"] == selected_entity]
+    if selected_region != "전체":
+        visible = visible[visible["region"] == selected_region]
+    if company_query:
+        visible = visible[
+            visible["name"].astype(str).str.contains(company_query, case=False, regex=False, na=False)
+        ]
+    # PyDeck 선택 인덱스와 DataFrame 행 번호를 일치시킵니다.
+    visible = visible.copy().reset_index(drop=True)
+    visible["map_id"] = visible["id"].astype(str)
+
+    if company_query and visible.empty:
+        st.warning(f"'{company_query}'에 해당하는 기업을 찾지 못했습니다.")
+        return
+
+    result_caption = f"검색 결과 {len(visible):,}개" if company_query else f"표시 기업 {len(visible):,}개"
+    st.caption(f"{result_caption} · 좌표 변환 성공 {len(map_df):,}개")
+
+    import pydeck as pdk
+
+    if visible.empty:
+        st.info("선택한 지역에 표시할 기업이 없습니다.")
+        return
+
+    visible["tooltip_text"] = visible.apply(
+        lambda row: f"{row['entity_type']} · {row['name']}\\n{row['display_address']}",
+        axis=1,
+    )
+    # 확대 10 수준에서 보이는 작은 역삼각형 크기로 고정합니다.
+    triangle_delta = 0.00025
+    visible["triangle"] = visible.apply(
+        lambda row: [
+            [float(row["longitude"]), float(row["latitude"]) - triangle_delta],
+            [float(row["longitude"]) - triangle_delta, float(row["latitude"]) + triangle_delta * 0.65],
+            [float(row["longitude"]) + triangle_delta, float(row["latitude"]) + triangle_delta * 0.65],
+        ],
+        axis=1,
+    )
+    center_lat = float(visible["latitude"].median())
+    center_lon = float(visible["longitude"].median())
+    deck = pdk.Deck(
+        map_style=None,
+        initial_view_state=pdk.ViewState(
+            latitude=center_lat,
+            longitude=center_lon,
+            zoom=(11.0 if len(visible) == 1 else 9.5) if company_query else (6.2 if selected_region == "전체" else 8.5),
+        ),
+        tooltip={
+            "html": (
+                "<b>{name}</b><br/>"
+                "유형: {entity_type}<br/>"
+                "대표자: {representative}<br/>"
+                "전화번호: {phone}<br/>"
+                "주소: {display_address}"
+            ),
+            "style": {
+                "backgroundColor": "#101010",
+                "color": "white",
+                "fontSize": "13px",
+                "padding": "10px",
+            },
+        },
+        layers=[
+            pdk.Layer(
+                "PolygonLayer",
+                id="parent-company-points",
+                data=visible,
+                get_polygon="triangle",
+                get_fill_color=[180, 100, 70, 190],
+                get_line_color=[70, 50, 40, 220],
+                line_width_min_pixels=1,
+                pickable=True,
+                auto_highlight=True,
+            )
+        ],
+    )
+    map_col, detail_col = st.columns([3.2, 1.2], gap="large")
+    with map_col:
+        selection = st.pydeck_chart(
+            deck,
+            height=620,
+            selection_mode="single-object",
+            on_select="rerun",
+            key="parent_company_map",
+        )
+
+    selected_objects = []
+    selected_indices = []
+    if selection is not None:
+        try:
+            selection_state = selection.selection
+            raw_objects = getattr(selection_state, "objects", []) or []
+            raw_indices = getattr(selection_state, "indices", []) or []
+        except AttributeError:
+            selection_state = selection.get("selection", {})
+            raw_objects = selection_state.get("objects", []) or []
+            raw_indices = selection_state.get("indices", []) or []
+
+        # Streamlit PyDeck state is grouped by layer ID:
+        # {"parent-company-points": [{...}]} and {"parent-company-points": [3]}.
+        if isinstance(raw_objects, dict):
+            selected_objects = next(iter(raw_objects.values()), []) or []
+        else:
+            selected_objects = list(raw_objects)
+        if isinstance(raw_indices, dict):
+            selected_indices = next(iter(raw_indices.values()), []) or []
+        else:
+            selected_indices = list(raw_indices)
+
+    if not selected_objects and not selected_indices:
+        with detail_col:
+            st.info("삼각형을 클릭하면 기업 정보가 표시됩니다.")
+        return
+
+    selected_object = selected_objects[0] if selected_objects else selected_indices[0]
+    selected_id = ""
+    if isinstance(selected_object, dict):
+        selected_crno = str(selected_object.get("crno") or "")
+        selected_id = str(selected_object.get("id") or selected_object.get("map_id") or "")
+        selected_name = str(selected_object.get("name", ""))
+    elif isinstance(selected_object, int) or (isinstance(selected_object, str) and selected_object.isdigit()):
+        selected_index = int(selected_object)
+        selected_row = visible.iloc[selected_index] if 0 <= selected_index < len(visible) else None
+        selected_crno = str(selected_row.get("crno", "")) if selected_row is not None else ""
+        selected_id = str(selected_row.get("id", "")) if selected_row is not None else ""
+        selected_name = str(selected_row.get("name", "")) if selected_row is not None else ""
+    else:
+        parsed_object = None
+        try:
+            parsed_object = json.loads(str(selected_object))
+        except (TypeError, json.JSONDecodeError):
+            pass
+        if isinstance(parsed_object, dict):
+            selected_crno = str(parsed_object.get("crno", ""))
+            selected_id = str(parsed_object.get("id") or parsed_object.get("map_id") or "")
+            selected_name = str(parsed_object.get("name", ""))
+        else:
+            selected_crno = ""
+            selected_name = str(selected_object)
+    selected_rows = visible[visible["crno"].astype(str) == selected_crno]
+    if selected_rows.empty and selected_id:
+        selected_rows = visible[visible["id"].astype(str) == selected_id]
+    if selected_rows.empty:
+        selected_rows = visible[visible["name"] == selected_name]
+    if selected_rows.empty:
+        with detail_col:
+            st.info("선택한 기업 정보를 찾지 못했습니다.")
+        return
+
+    row = selected_rows.iloc[0]
+    with detail_col:
+        st.markdown(
+            "<div style='background:#101010;color:white;border-radius:12px;padding:16px 18px;margin-top:8px;'>"
+            f"<div style='font-size:0.78rem;color:#cfc7bf;margin-bottom:8px;'>선택한 {html.escape(str(row.get('entity_type') or '기업'))}</div>"
+            f"<div style='font-size:1.15rem;font-weight:700;margin-bottom:12px;'>{html.escape(str(row.get('name', '-')))}</div>"
+            f"<div>대표자: {html.escape(str(row.get('representative') or '-'))}</div>"
+            f"<div>전화번호: {html.escape(str(row.get('phone') or '-'))}</div>"
+            f"<div style='margin-top:8px;color:#d8d2cc;font-size:0.86rem;'>주소: {html.escape(str(row.get('display_address') or '-'))}</div>"
+            f"<div style='color:#d8d2cc;font-size:0.86rem;'>지역: {html.escape(str(row.get('region') or '-'))}</div>"
+            f"<div style='color:#d8d2cc;font-size:0.86rem;'>업종: {html.escape(str(row.get('sicNm') or '-'))}</div>"
+            "</div>",
+            unsafe_allow_html=True,
+        )
+
+
 def render_rag_demo() -> None:
     """RAG 탭: chatbot.py 의 Graph RAG 에이전트 챗봇을 그대로 붙인다."""
     st.markdown("## 자연어로 묻고<br>그래프로 답합니다", unsafe_allow_html=True)
@@ -987,6 +1252,8 @@ def main() -> None:
         render_hero_band(content)
     elif section == "Graph":
         render_graph_explorer()
+    elif section == "기업 위치 지도":
+        render_company_map()
     elif section == "RAG":
         render_rag_demo()
     else:

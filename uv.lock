@@ -1119,8 +1119,10 @@ dependencies = [
     { name = "neo4j" },
     { name = "pandas" },
     { name = "pydantic" },
+    { name = "pydeck" },
     { name = "python-dotenv" },
     { name = "pyvis" },
+    { name = "requests" },
     { name = "streamlit" },
     { name = "utils" },
 ]
@@ -1142,8 +1144,10 @@ requires-dist = [
     { name = "neo4j", specifier = ">=6.3.1" },
     { name = "pandas", specifier = ">=3.0.5" },
     { name = "pydantic", specifier = ">=2.13.5" },
+    { name = "pydeck", specifier = ">=0.9.3" },
     { name = "python-dotenv", specifier = ">=1.2.3" },
     { name = "pyvis", specifier = ">=0.3.2" },
+    { name = "requests", specifier = ">=2.31.0" },
     { name = "streamlit", specifier = ">=1.64.0" },
     { name = "utils", specifier = ">=1.0.2" },
 ]
