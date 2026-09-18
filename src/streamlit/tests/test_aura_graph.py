@@ -192,4 +192,86 @@ def test_render_aura_graph_html_enables_dragging_and_uses_company_name():
     assert "롯데쇼핑(주)".encode("unicode_escape").decode() in markup
     assert "dragNodes" in markup
     assert '"fixed": true' not in markup.lower()
-    assert "#b4aaa1" in markup.lower()
+    assert '"color": "#b4aaa1"' in markup.lower()
+
+
+def test_render_aura_graph_html_uses_fixed_rose_periwinkle_tones_for_node_importance():
+    markup = render_aura_graph_html(
+        [
+            {
+                "id": "parent_company:1",
+                "label": "A사",
+                "group": "ParentCompany",
+                "level": 0,
+            },
+            {
+                "id": "subsidiary_company:2",
+                "label": "B사",
+                "group": "ParentCompany",
+                "level": 1,
+            },
+            {
+                "id": "subsidiary_company:3",
+                "label": "C사",
+                "group": "SubsidiaryCompany",
+                "level": 1,
+            },
+        ],
+        [
+            {
+                "source": "parent_company:1",
+                "target": "subsidiary_company:2",
+                "relation": "AFFILIATED_WITH",
+            },
+            {
+                "source": "parent_company:1",
+                "target": "subsidiary_company:3",
+                "relation": "HAS_SUBSIDIARY",
+            }
+        ],
+    )
+
+    assert '"color": "#b4aaa1"' in markup.lower()
+    assert "#f4b6c2" in markup.lower()
+    assert "#b8c0ff" in markup.lower()
+
+
+def test_render_aura_graph_html_uses_fixed_rose_periwinkle_colors():
+    markup = render_aura_graph_html(
+        [
+            {
+                "id": "parent_company:1",
+                "label": "A사",
+                "group": "ParentCompany",
+                "level": 0,
+            },
+            {
+                "id": "subsidiary_company:2",
+                "label": "B사",
+                "group": "SubsidiaryCompany",
+                "level": 1,
+            },
+            {
+                "id": "parent_company:3",
+                "label": "C사",
+                "group": "ParentCompany",
+                "level": 1,
+            },
+        ],
+        [
+            {
+                "source": "parent_company:1",
+                "target": "subsidiary_company:2",
+                "relation": "HAS_SUBSIDIARY",
+            },
+            {
+                "source": "parent_company:1",
+                "target": "parent_company:3",
+                "relation": "AFFILIATED_WITH",
+            }
+        ],
+    )
+
+    assert "#f4b6c2" in markup.lower()
+    assert "#b8c0ff" in markup.lower()
+    assert "#cfccc4" in markup.lower()
