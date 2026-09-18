@@ -24,13 +24,29 @@ AURA_ENV_PATH = Path(__file__).resolve().parents[2] / ".env"
 FONT_WEIGHTS = {400: "GangwonEduAll-Light", 700: "GangwonEduAll-Bold"}
 
 
-def get_aura_config() -> tuple[str, str, str, str]:
-    """Aura 접속 정보를 로컬 .env에서 읽는다. 값 자체는 UI에 노출하지 않는다."""
-    load_dotenv(AURA_ENV_PATH)
-    uri = os.getenv("AURA_URI")
-    user = os.getenv("AURA_USER")
-    password = os.getenv("AURA_PASSWORD")
-    database = os.getenv("AURA_DATABASE")
+def _get_secret(name: str, secrets: object, environ: dict[str, str]) -> str | None:
+    """Streamlit secrets를 먼저 보고, 없으면 환경변수에서 읽는다."""
+    try:
+        value = secrets[name]
+    except Exception:
+        value = environ.get(name)
+    return value or None
+
+
+def get_aura_config(
+    secrets: object | None = None,
+    environ: dict[str, str] | None = None,
+    load_env: bool = True,
+) -> tuple[str, str, str, str]:
+    """Aura 접속 정보를 Streamlit secrets 또는 로컬 .env에서 읽는다."""
+    if load_env:
+        load_dotenv(AURA_ENV_PATH)
+    secrets = st.secrets if secrets is None else secrets
+    environ = os.environ if environ is None else environ
+    uri = _get_secret("AURA_URI", secrets, environ)
+    user = _get_secret("AURA_USER", secrets, environ)
+    password = _get_secret("AURA_PASSWORD", secrets, environ)
+    database = _get_secret("AURA_DATABASE", secrets, environ)
     if not all((uri, user, password, database)):
         raise RuntimeError("AURA_URI, AURA_USER, AURA_PASSWORD, AURA_DATABASE 설정이 필요합니다.")
     return uri, user, password, database
@@ -417,6 +433,22 @@ def css() -> str:
         font-family: 'Material Symbols Rounded' !important;
     }}
 
+    /* 슬라이더: 기본 빨강 대신 대표 색상.
+       손잡이는 단색이라 직접 덮고, 채워진 구간은 값에 따라 인라인 gradient 로 그려져
+       색만 바꿀 수 없으므로 채도를 낮춰 대표 색상 톤으로 보정한다.
+       (config.toml 의 primaryColor 가 적용되면 이 보정 없이도 대표 색상이 된다.) */
+    [data-testid="stSlider"] div[class*="efbyxod3"],
+    [data-testid="stSlider"] [data-baseweb="slider"] div[role="slider"] {{
+        background: var(--accent) !important; border-color: var(--accent) !important; box-shadow: none !important;
+    }}
+    [data-testid="stSlider"] div[class*="efbyxod5"] {{
+        filter: saturate(.18) sepia(.35) brightness(1.02);
+    }}
+    [data-testid="stSlider"] [data-testid="stSliderThumbValue"],
+    [data-testid="stSlider"] [data-testid="stSliderThumbValue"] * {{ color: var(--ink) !important; }}
+    [data-testid="stSlider"] [data-testid="stSliderTickBar"],
+    [data-testid="stSlider"] [data-testid="stSliderTickBar"] * {{ color: var(--mute) !important; }}
+
     /* 지도 상세 카드 */
     .map-card {{ border: 1px solid var(--line-strong); background: #ffffff; padding: 1.2rem 1.3rem; }}
     .map-card-kicker {{
@@ -448,7 +480,7 @@ def css() -> str:
         font-feature-settings: 'liga'; -webkit-font-feature-settings: 'liga'; -webkit-font-smoothing: antialiased;
     }}
     [data-testid="stHeader"] {{ background: transparent; }}
-    .block-container {{ max-width: 1240px; padding-top: 1.6rem; padding-bottom: 5rem; }}
+    .block-container {{ max-width: 1560px; padding-top: 1.6rem; padding-bottom: 5rem; }}
 
     h1, h2, h3, h4 {{
         font-family: var(--display) !important;
@@ -553,21 +585,31 @@ def css() -> str:
     .row:hover .title {{ font-weight: 700; }}
 
     /* question list */
-    .q {{ padding: 1.1rem 0 .1rem; border-top: 1px solid var(--line); }}
-    .q small {{ font-family: var(--label); display:block; color: var(--mute); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; }}
-    /* 질문 버튼: 눌러서 RAG 로 넘어가는 링크처럼 보이게 */
+    /* 질문 바로가기: 라벨 + 카드형 버튼을 가로로 배치 */
+    .q {{ padding: 0 0 .4rem; }}
+    .q small {{
+        font-family: var(--label); display:block; color: var(--mute); font-size: .68rem;
+        letter-spacing: .1em; text-transform: uppercase; word-break: keep-all;
+    }}
     [data-testid="stVerticalBlock"] .stButton button[kind="secondary"] {{
-        background: transparent !important; border: 0 !important; border-radius: 0 !important;
-        padding: .1rem 0 1.1rem !important; text-align: left !important; justify-content: flex-start !important;
-        text-transform: none !important; letter-spacing: 0 !important;
+        background: #ffffff !important; border: 1px solid var(--line) !important; border-radius: 0 !important;
+        padding: .85rem .95rem !important; height: 100%;
+        text-align: left !important; justify-content: flex-start !important; align-items: flex-start !important;
+        text-transform: none !important; letter-spacing: 0 !important; box-shadow: none !important;
     }}
     [data-testid="stVerticalBlock"] .stButton button[kind="secondary"] p {{
-        font-family: var(--sans) !important; font-size: 1.02rem !important; font-weight: 700 !important;
-        color: var(--ink) !important; text-align: left !important;
+        font-family: var(--sans) !important; font-size: .84rem !important; font-weight: 400 !important;
+        line-height: 1.5 !important; color: var(--ink) !important; text-align: left !important;
+        white-space: normal !important; word-break: keep-all;
     }}
-    [data-testid="stVerticalBlock"] .stButton button[kind="secondary"]:hover p {{ color: var(--accent) !important; }}
+
+    [data-testid="stVerticalBlock"] .stButton button[kind="secondary"]:hover {{
+        border-color: var(--ink) !important; background: var(--accent) !important;
+    }}
 
     .lede {{ font-size: 1.12rem; line-height: 1.9; font-weight: 400; color: var(--ink); }}
+    /* 요약 문장은 한 줄로. 폭이 부족하면 어절 단위로만 접는다. */
+    .lede-wide {{ word-break: keep-all; font-size: 1.02rem; margin-bottom: 1.6rem; }}
     .note {{ color: var(--mute); font-size: .88rem; line-height: 1.85; font-weight: 400; border-left: 1px solid var(--line-strong); padding-left: 1rem; margin-top: 1.6rem; }}
 
     /* answer */
@@ -698,7 +740,7 @@ def css() -> str:
     /* 입력창을 본문(채팅 말풍선)과 같은 폭으로 맞춘다. 갈색 배경 띠는 전체 폭 유지. */
     [data-testid="stBottomBlockContainer"] {{
         background: transparent !important;
-        max-width: 1240px !important; margin-left: auto !important; margin-right: auto !important;
+        max-width: 1560px !important; margin-left: auto !important; margin-right: auto !important;
     }}
 
     /* 답변 속 인라인 코드가 검은 블록으로 보이지 않도록 */
@@ -736,6 +778,10 @@ def css() -> str:
         color: var(--paper) !important;
     }}
 
+    @media (max-width: 1340px) {{
+        .lede-wide {{ white-space: normal; }}
+    }}
+
     @media (max-width: 1100px) {{
         .topbar-msg {{ flex-basis: 100%; }}
         .panel {{ border-right: 0; min-height: 0; padding: 1.6rem 0; border-bottom: 1px solid var(--line); }}
@@ -745,6 +791,52 @@ def css() -> str:
         .row {{ grid-template-columns: 1fr; gap: .5rem; }}
         .row .tail {{ text-align:left; }}
     }}
+    /* ── 글씨 크기만 1.5배 ──────────────────────────────────────────
+       루트(rem) 를 키우면 여백·위젯 크기까지 커지므로, 글자 크기만 개별로 올린다.
+       상단 밴드(브랜드·안내문구·내비)와 섹션 제목(h2)은 제외한다. */
+    h3 {{ font-size: 2.18rem !important; }}
+    .panel-title {{ font-size: 1.92rem !important; }}
+    .panel-foot {{ font-size: 1.02rem; }}
+    .stat {{ font-size: 1.83rem; }}
+    .stat b {{ font-size: 5.4rem; }}
+    .stat-rows span {{ font-size: 1.08rem; }}
+    .stat-rows b {{ font-size: 1.53rem; }}
+    .ranking .rank {{ font-size: 1.2rem; }}
+    .ranking .rank-body b {{ font-size: 1.47rem; }}
+    .ranking .rank-body small {{ font-size: 1.17rem; }}
+    .ranking .rank-total {{ font-size: 1.88rem; }}
+    .kicker {{ font-size: 1.08rem; }}
+    .row .idx, .row .tail {{ font-size: 1.11rem; }}
+    .row .title {{ font-size: 2.25rem; }}
+    .row .body {{ font-size: 1.4rem; }}
+    .lede {{ font-size: 1.68rem; }}
+    .lede-wide {{ font-size: 1.53rem; }}
+    .note {{ font-size: 1.32rem; }}
+    .stack span {{ font-size: 1.17rem; }}
+    .legend {{ font-size: 1.11rem; }}
+    .q small {{ font-size: 1.02rem; }}
+    .map-card-kicker {{ font-size: 1.02rem; }}
+    .map-card-name {{ font-size: 1.88rem !important; }}
+    .map-card-row span {{ font-size: 1.05rem; }}
+    .map-card-row b {{ font-size: 1.43rem; }}
+    .map-card-address {{ font-size: 1.29rem; }}
+    .map-hint {{ font-size: 1.35rem; }}
+    [data-testid="stSidebar"] .sb-mark {{ font-size: 2.25rem; }}
+    [data-testid="stSidebar"] .sb-label {{ font-size: 1.02rem; }}
+    [data-testid="stSidebar"] .sb-value {{ font-size: 1.43rem; }}
+
+    /* streamlit 위젯 글씨 */
+    [data-testid="stWidgetLabel"] p {{ font-size: 1.05rem !important; }}
+    .stTextInput input, .stSelectbox [data-baseweb="select"] * {{ font-size: 1.5rem !important; }}
+    [data-testid="stVerticalBlock"] .stButton button[kind="secondary"] p {{ font-size: 1.26rem !important; }}
+    .stButton button {{ font-size: 1.14rem !important; }}
+    .stCaption p, [data-testid="stCaptionContainer"] p {{ font-size: 1.2rem !important; }}
+    [data-testid="stChatMessage"] p, [data-testid="stChatMessage"] li {{ font-size: 1.5rem; }}
+    [data-testid="stChatInput"] textarea {{ font-size: 1.5rem !important; }}
+    [data-testid="stExpander"] summary p {{ font-size: 1.3rem !important; }}
+    [role="option"] {{ font-size: 1.3rem !important; }}
+    [data-testid="stSliderThumbValue"], [data-testid="stSliderTickBar"] {{ font-size: 1.05rem !important; }}
+    [data-testid="stAlert"] p {{ font-size: 1.3rem !important; }}
     </style>
     """
 
@@ -877,7 +969,7 @@ def render_hero_band(content: dict[str, object]) -> None:
             body = f"""
             <div class="panel">
                 <h3 class="panel-title">지식그래프에는 지금,</h3>
-                <p class="stat"><b>{stats['total']:,}</b>개의<br>기업이 연결되어 있습니다.</p>
+                <p class="stat"><b>{stats['total']:,}</b>개의 기업이 연결되어 있습니다.</p>
                 <div class="stat-rows">
                     <div><span>모기업</span><b>{stats['parents']:,}</b></div>
                     <div><span>계열사</span><b>{stats['affiliates']:,}</b></div>
@@ -929,31 +1021,19 @@ def ask_in_rag(question: str) -> None:
 
 
 def render_problem_and_questions(content: dict[str, object]) -> None:
-    st.markdown("## 흩어진 기업 정보를<br>연결 가능한 영업 지도로", unsafe_allow_html=True)
-    left, right = st.columns([1.05, 1], gap="large")
+    st.markdown("## 기업 생태계 분석")
+    st.markdown(f'<p class="lede lede-wide">{content["summary"]}</p>', unsafe_allow_html=True)
+    left, right = st.columns(2, gap="large")
     with left:
-        st.markdown(f'<p class="lede">{content["summary"]}</p>', unsafe_allow_html=True)
         st.markdown(
             '<div class="note"><b>현재</b> — 포털 검색, 기업 홈페이지, 뉴스, 공시, 엑셀 리스트를 사람이 직접 비교하고 관계를 추론합니다.</div>',
             unsafe_allow_html=True,
         )
+    with right:
         st.markdown(
             '<div class="note"><b>해결</b> — 기업, 산업, 제품, 거래·협력 관계를 그래프로 연결하고 자연어 질문을 그래프 질의로 전환합니다.</div>',
             unsafe_allow_html=True,
         )
-    with right:
-        for index, item in enumerate(content["core_questions"]):
-            st.markdown(
-                f'<div class="q"><small>{item["feature"]}</small></div>',
-                unsafe_allow_html=True,
-            )
-            st.button(
-                item["question"],
-                key=f"q_{index}",
-                use_container_width=True,
-                on_click=ask_in_rag,
-                args=(str(item["question"]),),
-            )
 
 
 def render_graph_explorer() -> None:
@@ -1170,13 +1250,26 @@ def render_company_map() -> None:
         st.caption("마커를 클릭하면 기업 정보가 표시됩니다. 지도 출처: OpenStreetMap")
 
 
-def render_rag_demo() -> None:
+def render_question_shortcuts(content: dict[str, object]) -> None:
+    """핵심 질문을 가로로 배치해 누르면 바로 챗봇에 질문한다."""
+    questions = content["core_questions"]
+    columns = st.columns(len(questions), gap="small")
+    for index, (column, item) in enumerate(zip(columns, questions)):
+        with column:
+            st.markdown(f'<div class="q"><small>{item["feature"]}</small></div>', unsafe_allow_html=True)
+            st.button(
+                item["question"],
+                key=f"q_{index}",
+                use_container_width=True,
+                on_click=ask_in_rag,
+                args=(str(item["question"]),),
+            )
+
+
+def render_rag_demo(content: dict[str, object]) -> None:
     """RAG 탭: chatbot.py 의 Graph RAG 에이전트 챗봇을 그대로 붙인다."""
-    st.markdown("## 자연어로 묻고<br>그래프로 답합니다", unsafe_allow_html=True)
-    st.markdown(
-        '<p class="lede">Neo4j 지식그래프를 Text2Cypher 로 조회하고 뉴스 기사를 벡터 검색으로 찾아 답변하며, 사용한 관계·기사와 도구를 함께 보여줍니다.</p>',
-        unsafe_allow_html=True,
-    )
+    render_question_shortcuts(content)
+    st.markdown('<div class="rule soft"></div>', unsafe_allow_html=True)
 
     try:
         import chatbot
@@ -1206,7 +1299,7 @@ def render_rag_demo() -> None:
 
 
 def render_architecture(content: dict[str, object]) -> None:
-    st.markdown("## 데이터에서 그래프,<br>그리고 답변까지", unsafe_allow_html=True)
+    st.markdown("## MVP 기능")
     markup = "".join(
         f"""
         <div class="row">
@@ -1267,7 +1360,7 @@ def main() -> None:
     elif section == "MAP":
         render_company_map()
     elif section == "RAG":
-        render_rag_demo()
+        render_rag_demo(content)
     else:
         render_architecture(content)
 
