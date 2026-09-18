@@ -35,14 +35,17 @@ B2B 영업·마케팅 담당자는 신규 고객사, 협력사, 공급망 파트
 
 #### 🤖 Streamlit 화면 
 
-**지식그래프**
-<img src="C:\Users\Playdata\Desktop\mle-01-p2-team3\src\streamlit\source\page\스크린샷 2026-09-18 150100.png">
+**🖼️ 지식그래프**
 
-**맵**
-<img src="C:\Users\Playdata\Desktop\mle-01-p2-team3\src\streamlit\source\page\스크린샷 2026-09-18 150226.png">
+![지식그래프](src/streamlit/source/page/스크린샷%202026-09-18%20150100.png)
 
-**챗봇**
-<img src="C:\Users\Playdata\Desktop\mle-01-p2-team3\src\streamlit\source\page\Animation.gif">
+**🖼️ 맵**
+
+![맵](src/streamlit/source/page/스크린샷%202026-09-18%20150226.png)
+
+**🖼️ 챗봇**
+
+![챗봇](src/streamlit/source/page/Animation.gif)
 
 #### 🗨️ 팀원 회고
 
