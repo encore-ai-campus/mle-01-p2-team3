@@ -19,9 +19,17 @@ from aura_graph import build_graph_elements, fetch_graph_paths, search_companies
 
 SECTIONS = ["Overview", "Graph", "MAP", "RAG", "Architecture"]
 STATIC_DIR = Path(__file__).parent / "static"
+SOURCE_DIR = Path(__file__).parent / "source"
 DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "clean"
 AURA_ENV_PATH = Path(__file__).resolve().parents[2] / ".env"
 FONT_WEIGHTS = {400: "GangwonEduAll-Light", 700: "GangwonEduAll-Bold"}
+COMPANY_LOGO_FILES = {
+    "대신증권": "images_cutout.png",
+    "신한금융지주회사": "img_ci_cutout.png",
+    "메리츠금융지주": "Metatag_img_cutout.png",
+    "다우기술": "023590_cutout.png",
+    "다우데이타": "540880_cutout.png",
+}
 
 
 def _get_secret(name: str, secrets: object, environ: dict[str, str]) -> str | None:
@@ -82,6 +90,37 @@ def font_data_uri(stem: str) -> str:
         return ""
     stat = path.stat()
     return _font_data_uri_cached(stem, (int(stat.st_mtime), stat.st_size))
+
+
+@st.cache_data(show_spinner=False)
+def _image_data_uri_cached(filename: str, fingerprint: tuple[int, int]) -> str:
+    encoded = base64.b64encode((SOURCE_DIR / filename).read_bytes()).decode("ascii")
+    return f"data:image/png;base64,{encoded}"
+
+
+def image_data_uri(filename: str) -> str:
+    path = SOURCE_DIR / filename
+    if not path.is_file():
+        return ""
+    stat = path.stat()
+    return _image_data_uri_cached(filename, (int(stat.st_mtime), stat.st_size))
+
+
+def _company_logo_key(name: object) -> str:
+    text = "".join(str(name).split())
+    for token in ("(주)", "주식회사"):
+        text = text.replace(token, "")
+    return text
+
+
+def company_logo_markup(name: object) -> str:
+    filename = COMPANY_LOGO_FILES.get(_company_logo_key(name))
+    if not filename:
+        return ""
+    data_uri = image_data_uri(filename)
+    if not data_uri:
+        return ""
+    return f'<img class="rank-logo" src="{data_uri}" alt="" aria-hidden="true">'
 
 
 def font_face_css(url_prefix: str, weights: tuple[int, ...] = (400, 700)) -> str:
@@ -555,6 +594,7 @@ def css() -> str:
     .panel-foot {{ margin-top: 1.4rem; font-family: var(--label); font-size: .68rem; letter-spacing: .06em; color: var(--mute); line-height: 1.7; }}
     .stat {{ font-size: 1.22rem; line-height: 1.65; margin: 0 0 1.6rem; }}
     .stat b {{ display:block; font-family: var(--display); font-size: 3.6rem; font-weight: 400; line-height: 1; color: var(--ink); }}
+    .stat-text {{ display:block; font-size: 2.75rem !important; line-height: 1.25 !important; margin-top: .35rem; }}
     .stat-rows div {{
         display:flex; justify-content:space-between; align-items: baseline;
         padding: .55rem 0; border-top: 1px solid var(--line);
@@ -570,7 +610,14 @@ def css() -> str:
     }}
     .ranking li:first-child {{ border-top: 0; }}
     .ranking .rank {{ font-family: var(--label); font-size: .8rem; color: var(--accent); }}
-    .ranking .rank-body b {{ display:block; font-weight: 400; font-size: .98rem; word-break: keep-all; line-height: 1.4; }}
+    .ranking .rank-company {{
+        display: block; font-weight: 400; font-size: .98rem; word-break: keep-all; line-height: 1.4;
+    }}
+    .ranking .rank-body {{ display: flex; align-items: center; gap: .55rem; }}
+    .ranking .rank-copy {{ display: flex; flex-direction: column; gap: .12rem; min-width: 0; }}
+    .ranking .rank-logo {{
+        width: 3.6rem; height: 2.8rem; object-fit: contain; flex: 0 0 auto;
+    }}
     .ranking .rank-body small {{ color: var(--mute); font-size: .78rem; }}
     .ranking .rank-total {{ font-family: var(--display); font-size: 1.25rem; color: var(--ink); text-align: right; }}
 
@@ -600,7 +647,7 @@ def css() -> str:
     [data-testid="stVerticalBlock"] .stButton button[kind="secondary"] p {{
         font-family: var(--sans) !important; font-size: .84rem !important; font-weight: 400 !important;
         line-height: 1.5 !important; color: var(--ink) !important; text-align: left !important;
-        white-space: normal !important; word-break: keep-all;
+        white-space: nowrap !important; word-break: keep-all;
     }}
 
     [data-testid="stVerticalBlock"] .stButton button[kind="secondary"]:hover {{
@@ -798,11 +845,12 @@ def css() -> str:
     .panel-title {{ font-size: 1.92rem !important; }}
     .panel-foot {{ font-size: 1.02rem; }}
     .stat {{ font-size: 1.83rem; }}
+    .stat-text {{ font-size: 2.0rem !important; }}
     .stat b {{ font-size: 5.4rem; }}
     .stat-rows span {{ font-size: 1.08rem; }}
     .stat-rows b {{ font-size: 1.53rem; }}
     .ranking .rank {{ font-size: 1.2rem; }}
-    .ranking .rank-body b {{ font-size: 1.47rem; }}
+    .ranking .rank-company {{ font-size: 1.47rem; }}
     .ranking .rank-body small {{ font-size: 1.17rem; }}
     .ranking .rank-total {{ font-size: 1.88rem; }}
     .kicker {{ font-size: 1.08rem; }}
@@ -828,7 +876,7 @@ def css() -> str:
     /* streamlit 위젯 글씨 */
     [data-testid="stWidgetLabel"] p {{ font-size: 1.05rem !important; }}
     .stTextInput input, .stSelectbox [data-baseweb="select"] * {{ font-size: 1.5rem !important; }}
-    [data-testid="stVerticalBlock"] .stButton button[kind="secondary"] p {{ font-size: 1.26rem !important; }}
+    [data-testid="stVerticalBlock"] .stButton button[kind="secondary"] p {{ font-size: 1.02rem !important; }}
     .stButton button {{ font-size: 1.14rem !important; }}
     .stCaption p, [data-testid="stCaptionContainer"] p {{ font-size: 1.2rem !important; }}
     [data-testid="stChatMessage"] p, [data-testid="stChatMessage"] li {{ font-size: 1.5rem; }}
@@ -968,8 +1016,8 @@ def render_hero_band(content: dict[str, object]) -> None:
         if stats:
             body = f"""
             <div class="panel">
-                <h3 class="panel-title">지식그래프에는 지금,</h3>
-                <p class="stat"><b>{stats['total']:,}</b>개의 기업이 연결되어 있습니다.</p>
+                <h3 class="panel-title">사이월드에는 지금,</h3>
+                <p class="stat"><b>{stats['total']:,}</b><span class="stat-text">개의 기업이 연결되어 있습니다.</span></p>
                 <div class="stat-rows">
                     <div><span>모기업</span><b>{stats['parents']:,}</b></div>
                     <div><span>계열사</span><b>{stats['affiliates']:,}</b></div>
@@ -990,8 +1038,11 @@ def render_hero_band(content: dict[str, object]) -> None:
                 <li>
                     <span class="rank">{index}.</span>
                     <span class="rank-body">
-                        <b>{html.escape(row['name'])}</b>
-                        <small>계열사 {row['affiliates']} · 종속기업 {row['subsidiaries']}</small>
+                        {company_logo_markup(row['name'])}
+                        <span class="rank-copy">
+                            <b class="rank-company">{html.escape(row['name'])}</b>
+                            <small>계열사 {row['affiliates']} · 종속기업 {row['subsidiaries']}</small>
+                        </span>
                     </span>
                     <span class="rank-total">{row['total']}</span>
                 </li>
@@ -1021,7 +1072,7 @@ def ask_in_rag(question: str) -> None:
 
 
 def render_problem_and_questions(content: dict[str, object]) -> None:
-    st.markdown("## 기업 생태계 분석")
+    st.markdown("## 사이월드")
     st.markdown(f'<p class="lede lede-wide">{content["summary"]}</p>', unsafe_allow_html=True)
     left, right = st.columns(2, gap="large")
     with left:
@@ -1037,7 +1088,6 @@ def render_problem_and_questions(content: dict[str, object]) -> None:
 
 
 def render_graph_explorer() -> None:
-    st.markdown("## 기업 관계 그래프 탐색")
     options = load_company_options()
     if not options:
         st.error("기업 데이터를 불러오지 못했습니다. data/clean 경로를 확인해 주세요.")
@@ -1169,11 +1219,7 @@ def render_leaflet_map_html(markers: list[dict[str, object]], lat: float, lon: f
 
 def render_company_map() -> None:
     """카카오 지오코딩이 완료된 기업 위치를 지도와 상세 카드로 표시합니다."""
-    st.markdown("## 기업 위치 지도")
-    st.markdown(
-        '<p class="lede">카카오 주소 검색으로 변환된 모기업·종속기업 위치를 지도에서 선택하면 기업 정보를 확인할 수 있습니다.</p>',
-        unsafe_allow_html=True,
-    )
+
 
     map_df = load_company_map_data()
     if map_df.empty:
