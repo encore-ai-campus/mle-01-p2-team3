@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import base64
 import html
+import importlib
 import math
 from pathlib import Path
 
@@ -561,9 +562,23 @@ def css() -> str:
         color: var(--ink) !important;
     }}
 
+    /* 답변 대기 캐릭터: 1초에 한 번씩 시계방향 90도 (4초에 한 바퀴) */
+    @keyframes bot-thinking-tick {{
+        0%, 20% {{ transform: rotate(0deg); }}
+        25%, 45% {{ transform: rotate(90deg); }}
+        50%, 70% {{ transform: rotate(180deg); }}
+        75%, 95% {{ transform: rotate(270deg); }}
+        100% {{ transform: rotate(360deg); }}
+    }}
+    img[alt="조회 중"] {{
+        animation: bot-thinking-tick 4s ease-in-out infinite;
+        transform-origin: 50% 50%;
+    }}
+
     /* 이미지 아바타(캐릭터)는 배경 없이 그림만 보이게 */
     [data-testid="stChatMessage"] > img {{
         background: transparent !important; object-fit: contain; border-radius: 0 !important;
+        width: 4rem !important; height: 4rem !important; flex-shrink: 0;  /* 기본 2rem 의 2배 */
     }}
     [data-testid="stChatMessageAvatarUser"] {{ background: var(--accent) !important; }}
     [data-testid="stChatMessageAvatarAssistant"] {{ background: var(--ink) !important; }}
@@ -798,7 +813,13 @@ def render_rag_demo() -> None:
     )
 
     try:
-        from chatbot import render_chat_panel
+        import chatbot
+
+        # streamlit 은 임포트된 모듈을 항상 다시 불러오지는 않는다.
+        # chatbot.py 를 고쳐도 서버 재시작 없이 반영되도록 매 실행마다 갱신한다.
+        # (모듈 최상단은 상수·정규식뿐이라 비용이 거의 없고, 에이전트 임포트는 함수 안에서 일어난다.)
+        importlib.reload(chatbot)
+        render_chat_panel = chatbot.render_chat_panel
     except Exception as exc:  # 모듈 자체를 불러오지 못한 경우
         st.error(f"챗봇 모듈을 불러오지 못했습니다: {exc}")
         return

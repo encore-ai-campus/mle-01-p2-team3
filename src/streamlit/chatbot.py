@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import ast
+import base64
 import html
 import json
 import re
 import sys
+from functools import lru_cache
 from pathlib import Path
 from typing import Any
 
@@ -27,6 +29,16 @@ def assistant_avatar(thinking: bool = False) -> str | None:
     """챗봇 아바타 경로. 파일이 없으면 streamlit 기본 아바타로 둔다."""
     path = THINKING_AVATAR if thinking else ANSWER_AVATAR
     return str(path) if path.is_file() else None
+
+
+@lru_cache(maxsize=4)
+def avatar_data_uri(thinking: bool = False) -> str:
+    """아바타를 data URI 로 돌려준다. 말풍선 없이 직접 <img> 로 그릴 때 쓴다."""
+    path = THINKING_AVATAR if thinking else ANSWER_AVATAR
+    if not path.is_file():
+        return ""
+    encoded = base64.b64encode(path.read_bytes()).decode("ascii")
+    return f"data:image/png;base64,{encoded}"
 
 
 def _get_value(obj: Any, key: str, default: Any = None) -> Any:
@@ -697,26 +709,39 @@ def render_chat_panel(
     with st.chat_message("user"):
         st.markdown(human_prompt)
 
-    # 생성 중에는 '?!' 아바타를 보여주고, 답변이 나오면 지운 뒤 완료 아바타로 다시 그린다.
+    # 생성 중에는 '?!' 아바타 한 줄만 보여주고, 답변이 나오면 그 줄을 지운 뒤
+    # 완료 아바타로 답변 줄을 새로 그린다. (두 줄이 동시에 보이지 않게 한다)
     thinking_slot = st.empty()
+    thinking_uri = avatar_data_uri(thinking=True)
     with thinking_slot.container():
-        with st.chat_message("assistant", avatar=assistant_avatar(thinking=True)):
+        if thinking_uri:
+            # 3초에 한 번씩 시계방향으로 90도씩 돌아 12초에 한 바퀴를 돈다.
+            # 회전 애니메이션(@keyframes bot-thinking-tick)은 app.py 의 전역 CSS 에 있다.
+            # 슬롯 안에 넣은 <style> 은 슬롯을 비울 때 같이 사라져서 적용되지 않는다.
+            st.markdown(
+                '<div style="display:flex;justify-content:center;padding:2rem 0;">'
+                f'<img src="{thinking_uri}" alt="조회 중" '
+                'style="width:216px;height:216px;object-fit:contain;">'
+                "</div>",
+                unsafe_allow_html=True,
+            )
+        else:
             with st.spinner("조회 중..."):
                 st.empty()
 
-    with st.chat_message("assistant", avatar=assistant_avatar()):
-        try:
-            agent_messages = build_agent_messages(
-                st.session_state[state_key]
-            )
+    try:
+        agent_messages = build_agent_messages(
+            st.session_state[state_key]
+        )
 
-            result = company_data_agent.invoke(
-                {
-                    "messages": agent_messages,
-                }
-            )
-            thinking_slot.empty()
+        result = company_data_agent.invoke(
+            {
+                "messages": agent_messages,
+            }
+        )
+        thinking_slot.empty()
 
+        with st.chat_message("assistant", avatar=assistant_avatar()):
             answer = extract_answer(result)
             used_tools = extract_used_tools(result)
 
@@ -765,23 +790,25 @@ def render_chat_panel(
                 }
             )
 
-        except Exception as exc:
-            thinking_slot.empty()
-            error_message = f"조회 중 오류가 발생했습니다: {exc}"
+    except Exception as exc:
+        thinking_slot.empty()
+        error_message = f"조회 중 오류가 발생했습니다: {exc}"
+
+        with st.chat_message("assistant", avatar=assistant_avatar()):
             st.error(error_message)
 
-            st.session_state[state_key].append(
-                {
-                    "role": "assistant",
-                    "content": error_message,
-                    "used_tools": [],
-                    "graph_evidence": [],
-                    "graph_evidence_total": 0,
-                    "news_evidence": [],
-                    "news_evidence_total": 0,
-                    "is_error": True,
-                }
-            )
+        st.session_state[state_key].append(
+            {
+                "role": "assistant",
+                "content": error_message,
+                "used_tools": [],
+                "graph_evidence": [],
+                "graph_evidence_total": 0,
+                "news_evidence": [],
+                "news_evidence_total": 0,
+                "is_error": True,
+            }
+        )
 
 
 def main() -> None:
