@@ -18,6 +18,16 @@ if str(PROJECT_ROOT) not in sys.path:
 MAX_GRAPH_EVIDENCE_ROWS = 20
 MAX_NEWS_EVIDENCE_ROWS = 10
 
+ASSETS_DIR = Path(__file__).resolve().parent / "static"
+THINKING_AVATAR = ASSETS_DIR / "bot-thinking.png"   # 답변 생성 중
+ANSWER_AVATAR = ASSETS_DIR / "bot-answer.png"       # 답변 완료
+
+
+def assistant_avatar(thinking: bool = False) -> str | None:
+    """챗봇 아바타 경로. 파일이 없으면 streamlit 기본 아바타로 둔다."""
+    path = THINKING_AVATAR if thinking else ANSWER_AVATAR
+    return str(path) if path.is_file() else None
+
 
 def _get_value(obj: Any, key: str, default: Any = None) -> Any:
     if isinstance(obj, dict):
@@ -623,7 +633,8 @@ def render_chat_history(messages: list[dict[str, Any]]) -> None:
     for message in messages:
         role = message["role"]
 
-        with st.chat_message(role):
+        avatar = assistant_avatar() if role == "assistant" else None
+        with st.chat_message(role, avatar=avatar):
             if message.get("is_error"):
                 st.error(message["content"])
             else:
@@ -686,18 +697,25 @@ def render_chat_panel(
     with st.chat_message("user"):
         st.markdown(human_prompt)
 
-    with st.chat_message("assistant"):
+    # 생성 중에는 '?!' 아바타를 보여주고, 답변이 나오면 지운 뒤 완료 아바타로 다시 그린다.
+    thinking_slot = st.empty()
+    with thinking_slot.container():
+        with st.chat_message("assistant", avatar=assistant_avatar(thinking=True)):
+            with st.spinner("조회 중..."):
+                st.empty()
+
+    with st.chat_message("assistant", avatar=assistant_avatar()):
         try:
             agent_messages = build_agent_messages(
                 st.session_state[state_key]
             )
 
-            with st.spinner("조회 중..."):
-                result = company_data_agent.invoke(
-                    {
-                        "messages": agent_messages,
-                    }
-                )
+            result = company_data_agent.invoke(
+                {
+                    "messages": agent_messages,
+                }
+            )
+            thinking_slot.empty()
 
             answer = extract_answer(result)
             used_tools = extract_used_tools(result)
@@ -748,6 +766,7 @@ def render_chat_panel(
             )
 
         except Exception as exc:
+            thinking_slot.empty()
             error_message = f"조회 중 오류가 발생했습니다: {exc}"
             st.error(error_message)
 

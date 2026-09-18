@@ -561,6 +561,10 @@ def css() -> str:
         color: var(--ink) !important;
     }}
 
+    /* 이미지 아바타(캐릭터)는 배경 없이 그림만 보이게 */
+    [data-testid="stChatMessage"] > img {{
+        background: transparent !important; object-fit: contain; border-radius: 0 !important;
+    }}
     [data-testid="stChatMessageAvatarUser"] {{ background: var(--accent) !important; }}
     [data-testid="stChatMessageAvatarAssistant"] {{ background: var(--ink) !important; }}
     [data-testid="stChatMessageAvatarUser"] *, [data-testid="stChatMessageAvatarAssistant"] * {{
