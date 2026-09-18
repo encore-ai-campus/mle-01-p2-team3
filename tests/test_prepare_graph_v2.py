@@ -9,6 +9,9 @@ from src.neo4j import prepare_graph_v2 as prep
 from src.neo4j.load_graph import validate_graph
 
 
+GDS_DERIVED_PROPERTIES = {"gdsPageRank", "gdsCommunityId"}
+
+
 class PrepareGraphTest(unittest.TestCase):
     def test_deletion_uses_id_prefix_not_label(self):
         nodes = [
@@ -78,7 +81,9 @@ class PrepareGraphTest(unittest.TestCase):
         self.assertFalse(any(n["id"].startswith("industry:") for n in nodes))
         ontology = json.loads((prep.ROOT / "src/agent/tools/graph_ontology.json").read_text(encoding="utf-8"))
         for node in nodes:
-            self.assertTrue(set(node["properties"]) <= set(ontology["nodes"][node["type"]]["properties"]))
+            ontology_properties = set(ontology["nodes"][node["type"]]["properties"])
+            derived_properties = GDS_DERIVED_PROPERTIES if node["type"] != "News" else set()
+            self.assertTrue(set(node["properties"]) <= ontology_properties | derived_properties)
 
     def test_loader_rejects_dangling_edges_before_connecting(self):
         row = {"subject": "missing", "subject_type": "News", "relation": "RELATED_TO",

@@ -1,14 +1,22 @@
 {
-  "total_triples": 1531,
-  "schema_pass_triples": 1531,
-  "quote_pass_triples": 1531,
-  "review_population_size": 1531,
-  "rejected_triples": 0,
+  "total_triples": 26072,
+  "schema_pass_triples": 26072,
+  "quote_pass_triples": 17430,
+  "review_population_size": 17430,
+  "rejected_triples": 8642,
   "schema_compliance_rate": 1.0,
-  "quote_match_rate": 1.0,
-  "review_population_rate": 1.0,
-  "error_counts": {},
+  "quote_match_rate": 0.668533292420988,
+  "review_population_rate": 0.668533292420988,
+  "error_counts": {
+    "missing_source_identifier": 7407,
+    "section_keyword_mismatch": 1235,
+    "source_row_not_found": 380
+  },
   "relation_counts": {
-    "IN_INDUSTRY": 1531
+    "AFFILIATED_WITH": 1573,
+    "HAS_SUBSIDIARY": 7821,
+    "IN_INDUSTRY": 8952,
+    "LOCATED_IN": 7346,
+    "RELATED_TO": 380
   }
 }
