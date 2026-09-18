@@ -23,6 +23,7 @@ SOURCE_DIR = Path(__file__).parent / "source"
 DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "clean"
 AURA_ENV_PATH = Path(__file__).resolve().parents[2] / ".env"
 FONT_WEIGHTS = {400: "GangwonEduAll-Light", 700: "GangwonEduAll-Bold"}
+CENTER_NODE_COLOR = "#524D49"   # 그래프 중심(기준) 노드
 COMPANY_LOGO_FILES = {
     "대신증권": "images_cutout.png",
     "신한금융지주회사": "img_ci_cutout.png",
@@ -969,7 +970,7 @@ def render_aura_graph_html(nodes: list[dict[str, object]], edges: list[dict[str,
             node["id"],
             label=str(node["label"]),
             title=html.escape(f"{node['label']} · {node['group']} · {node['level']}단계"),
-            color="#b4aaa1" if is_center else node_colors.get(str(node["group"]), "#dbd6d1"),
+            color=CENTER_NODE_COLOR if is_center else node_colors.get(str(node["group"]), "#dbd6d1"),
             font={"color": "#101010", "size": 18 if is_center else 13},
             size=30 if is_center else 17,
         )
