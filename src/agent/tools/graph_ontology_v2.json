@@ -34,14 +34,6 @@
         "sicNm": {
           "description": "업종명",
           "type": "string"
-        },
-        "gdsPageRank": {
-          "description": "로컬 Neo4j GDS PageRank 중심성 점수",
-          "type": "number"
-        },
-        "gdsCommunityId": {
-          "description": "로컬 Neo4j GDS Leiden 커뮤니티 ID",
-          "type": "integer"
         }
       }
     },
@@ -70,14 +62,6 @@
         "region": {
           "description": "종속기업 지역명",
           "type": "string"
-        },
-        "gdsPageRank": {
-          "description": "로컬 Neo4j GDS PageRank 중심성 점수",
-          "type": "number"
-        },
-        "gdsCommunityId": {
-          "description": "로컬 Neo4j GDS Leiden 커뮤니티 ID",
-          "type": "integer"
         }
       }
     },
@@ -89,14 +73,6 @@
         },
         "name": {
           "description": "지역명"
-        },
-        "gdsPageRank": {
-          "description": "로컬 Neo4j GDS PageRank 중심성 점수",
-          "type": "number"
-        },
-        "gdsCommunityId": {
-          "description": "로컬 Neo4j GDS Leiden 커뮤니티 ID",
-          "type": "integer"
         }
       }
     },
@@ -115,14 +91,6 @@
         "id": {
           "description": "section:대분류명 형식의 고유 ID",
           "type": "string"
-        },
-        "gdsPageRank": {
-          "description": "로컬 Neo4j GDS PageRank 중심성 점수",
-          "type": "number"
-        },
-        "gdsCommunityId": {
-          "description": "로컬 Neo4j GDS Leiden 커뮤니티 ID",
-          "type": "integer"
         }
       }
     },
