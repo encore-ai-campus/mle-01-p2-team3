@@ -4,16 +4,43 @@ import base64
 import html
 import importlib
 import math
+import os
 from pathlib import Path
 
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
+from dotenv import load_dotenv
+from neo4j import GraphDatabase
+from pyvis.network import Network
+
+from aura_graph import build_graph_elements, fetch_graph_paths, search_companies
 
 SECTIONS = ["Overview", "Graph", "RAG", "Architecture"]
 STATIC_DIR = Path(__file__).parent / "static"
 DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "clean"
+AURA_ENV_PATH = Path(__file__).resolve().parents[2] / ".env"
 FONT_WEIGHTS = {400: "GangwonEduAll-Light", 700: "GangwonEduAll-Bold"}
+
+
+def get_aura_config() -> tuple[str, str, str, str]:
+    """Aura 접속 정보를 로컬 .env에서 읽는다. 값 자체는 UI에 노출하지 않는다."""
+    load_dotenv(AURA_ENV_PATH)
+    uri = os.getenv("AURA_URI")
+    user = os.getenv("AURA_USER")
+    password = os.getenv("AURA_PASSWORD")
+    database = os.getenv("AURA_DATABASE")
+    if not all((uri, user, password, database)):
+        raise RuntimeError("AURA_URI, AURA_USER, AURA_PASSWORD, AURA_DATABASE 설정이 필요합니다.")
+    return uri, user, password, database
+
+
+@st.cache_resource(show_spinner=False)
+def get_aura_driver(uri: str, user: str, password: str):
+    """재실행마다 새 연결을 만들지 않도록 Aura 드라이버를 재사용한다."""
+    driver = GraphDatabase.driver(uri, auth=(user, password))
+    driver.verify_connectivity()
+    return driver
 
 
 def static_serving_enabled() -> bool:
@@ -647,6 +674,54 @@ def render_graph_svg(nodes: list[dict[str, object]], edges: list[dict[str, objec
     """
 
 
+def render_aura_graph_html(nodes: list[dict[str, object]], edges: list[dict[str, object]]) -> str:
+    """Aura 그래프를 드래그·줌 가능한 네트워크로 렌더링한다."""
+    node_colors = {
+        "ParentCompany": "#b4aaa1",
+        "SubsidiaryCompany": "#cfc7bf",
+        "Section": "#d7b98f",
+        "Region": "#b8c5c8",
+        "News": "#d6d1ca",
+    }
+    edge_colors = {
+        "AFFILIATED_WITH": "#b4aaa1",
+        "HAS_SUBSIDIARY": "#cfc7bf",
+        "IN_INDUSTRY": "#d7b98f",
+        "LOCATED_IN": "#b8c5c8",
+        "RELATED_TO": "#d6d1ca",
+    }
+    network = Network(height="680px", width="100%", directed=True, bgcolor="#fbfaf8", font_color="#101010", cdn_resources="in_line")
+    network.set_options(
+        """
+        var options = {
+          "interaction": {"dragNodes": true, "dragView": true, "zoomView": true},
+          "physics": {"enabled": true, "barnesHut": {"gravitationalConstant": -18000, "springLength": 145}},
+          "edges": {"smooth": {"type": "continuous"}, "arrows": {"to": {"enabled": true, "scaleFactor": 0.45}}}
+        }
+        """
+    )
+    for node in nodes:
+        is_center = node["level"] == 0
+        network.add_node(
+            node["id"],
+            label=str(node["label"]),
+            title=html.escape(f"{node['label']} · {node['group']} · {node['level']}단계"),
+            color="#b4aaa1" if is_center else node_colors.get(str(node["group"]), "#dbd6d1"),
+            font={"color": "#101010", "size": 18 if is_center else 13},
+            size=30 if is_center else 17,
+        )
+    for edge in edges:
+        relation = str(edge["relation"])
+        network.add_edge(
+            edge["source"],
+            edge["target"],
+            title=relation,
+            color=edge_colors.get(relation, "#cfccc4"),
+            width=1.2,
+        )
+    return network.generate_html()
+
+
 def compact(markup: str) -> str:
     """줄바꿈/들여쓰기를 제거합니다. 빈 줄이 있으면 streamlit 의 마크다운 파서가 HTML 블록을 끊습니다."""
     return "".join(line.strip() for line in markup.splitlines())
@@ -760,7 +835,6 @@ def render_problem_and_questions(content: dict[str, object]) -> None:
 
 def render_graph_explorer() -> None:
     st.markdown("## 기업 관계 그래프 탐색")
-
     options = load_company_options()
     if not options:
         st.error("기업 데이터를 불러오지 못했습니다. data/clean 경로를 확인해 주세요.")
@@ -777,31 +851,46 @@ def render_graph_explorer() -> None:
     with limit_col:
         limit = st.slider("표시할 연결 기업 수", min_value=4, max_value=40, value=16, step=2)
 
-    relations = load_company_relations(str(selected["crno"]))
-    if relation != "전체":
-        relations = [row for row in relations if row["relation"] == relation]
+    relation_type = {"계열사": "AFFILIATED_WITH", "종속기업": "HAS_SUBSIDIARY"}.get(relation)
+    try:
+        uri, user, password, database = get_aura_config()
+        driver = get_aura_driver(uri, user, password)
+        matches = search_companies(driver, str(selected["name"]), database)
+        exact_matches = [row for row in matches if row["name"] == selected["name"]]
+        if not exact_matches:
+            st.info("선택한 기업은 Aura 그래프에 아직 없습니다.")
+            return
+        paths = fetch_graph_paths(
+            driver,
+            str(exact_matches[0]["id"]),
+            database,
+            path_limit=100,
+            relationship_type=relation_type,
+        )
+    except Exception as exc:
+        st.error(f"Aura 관계 조회에 실패했습니다: {type(exc).__name__}: {exc}")
+        return
 
-    total = len(relations)
-    shown = relations[:limit]
-    nodes, edges = build_company_graph(str(selected["name"]), shown)
+    if not paths:
+        st.info("선택한 관계 유형에 해당하는 Aura 그래프 연결이 없습니다.")
+        return
 
+    total = len(paths)
+    shown = paths[:limit]
+    center_id = str(exact_matches[0]["id"])
+    nodes, edges = build_graph_elements(shown, center_id=center_id)
     st.markdown(
         f"""
         <div class="legend">
-            <span><i style="background:#b4aaa1;border-color:#b4aaa1"></i>기준 기업 · 계열사</span>
-            <span><i style="background:#cfc7bf;border-color:#cfc7bf"></i>종속기업</span>
+            <span><i style="background:#b4aaa1;border-color:#b4aaa1"></i>계열 관계</span>
+            <span><i style="background:#cfc7bf;border-color:#cfc7bf"></i>종속 관계</span>
             <span>연결 {total}개 중 {len(shown)}개 표시</span>
         </div>
         """,
         unsafe_allow_html=True,
     )
-
-    if not shown:
-        st.info("선택한 관계 유형에 해당하는 연결 기업이 없습니다.")
-        return
-
-    components.html(render_graph_svg(nodes, edges), height=700, scrolling=False)
-    st.caption("노드에 마우스를 올리면 줄이지 않은 기업명을 볼 수 있습니다. 출처: 금융위원회 계열회사 · 연결대상종속기업")
+    components.html(render_aura_graph_html(nodes, edges), height=700, scrolling=False)
+    st.caption("AuraDB에서 읽어온 실제 관계입니다. 드래그·줌으로 그래프를 탐색할 수 있습니다.")
 
 
 def render_rag_demo() -> None:
