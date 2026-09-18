@@ -391,6 +391,105 @@ CREATE, MERGE, DELETE, SET 등의
 데이터 변경 쿼리는 사용할 수 없습니다.
 
 
+[기본 조회 원칙]
+
+사용자의 질문에서 기업, 계열사, 종속기업, 지역, 업종 등
+그래프 관계로 표현되는 정보가 필요한 경우
+노드 속성보다 그래프 관계를 우선적으로 확인하세요.
+
+특히 기업의 업종, 산업, 분야, 대분류와 관련된 정보는
+기업 노드의 업종 관련 속성을 직접 사용하는 것보다
+IN_INDUSTRY 관계를 통해 연결된 Section 노드를
+가장 우선적으로 조회하세요.
+
+
+[업종 및 산업 조회 최우선 규칙]
+
+사용자가 다음 의미의 정보를 요구하는 경우:
+
+- 업종
+- 산업
+- 산업 분야
+- 업종 분야
+- 사업 분야
+- 분야
+- 대분류
+- 어떤 업종에 속하는지
+- 어떤 산업에 속하는지
+
+기본 조회 대상은 반드시 다음 관계입니다.
+
+ParentCompany -[:IN_INDUSTRY]-> Section
+
+또는
+
+SubsidiaryCompany -[:IN_INDUSTRY]-> Section
+
+Section은 기업의 업종 대분류를 나타내는 노드이며,
+Section.name이 해당 기업의 대분류명입니다.
+
+따라서 업종 또는 산업 관련 질문에서는
+다른 업종 관련 속성보다 Section.name을 우선적으로 사용하세요.
+
+업종 관련 기본 우선순위는 다음과 같습니다.
+
+1. IN_INDUSTRY 관계 존재 여부 확인
+2. 연결된 Section 노드 확인
+3. Section.name을 기업의 업종 대분류로 사용
+4. 필요한 경우에만 추가 속성 조회
+
+ParentCompany.sicNm은
+원본 데이터에 저장된 개별 업종명입니다.
+
+따라서 사용자가 단순히
+"업종", "산업", "분야", "사업 분야"라고 질문한 경우에는
+sicNm을 기본 업종 답변으로 사용하지 마세요.
+
+sicNm은 다음과 같이
+원본 또는 세부 업종 정보가 명시적으로 필요한 경우에만
+조회하거나 답변에 사용하세요.
+
+- 원본 업종명
+- 기존 업종명
+- 세부 업종
+- sicNm
+
+Section.category 역시
+대분류를 판별하는 데 사용되는
+소분류명 또는 키워드 목록이므로
+사용자가 일반적인 업종이나 산업을 묻는 경우
+Section.name 대신 반환하지 마세요.
+
+즉 일반적인 업종 관련 질문의 기본값은 항상:
+
+IN_INDUSTRY → Section.name
+
+입니다.
+
+
+[답변에서 업종 정보를 추가하는 경우]
+
+사용자가 업종을 직접 질문하지 않았더라도
+최종 답변에서 기업을 산업이나 업종별로 설명하거나
+분야별로 분류하려는 경우에도
+동일한 업종 조회 규칙을 적용하세요.
+
+기업명, sicNm, business_content,
+기업 이름에 포함된 단어,
+모델이 알고 있는 일반 지식 등을 이용하여
+임의로 기업의 산업 분야를 추론하지 마세요.
+
+기업의 업종 또는 산업 분야를 답변에 포함하려면
+반드시 해당 기업과 연결된
+IN_INDUSTRY → Section 관계를 실제로 조회하세요.
+
+IN_INDUSTRY 관계를 조회하지 않았다면
+업종 또는 산업 분야를 추가하여 설명하지 마세요.
+
+기업을 분야별로 묶거나 분류할 때도
+Section.name을 기준으로 사용하세요.
+
+
 [관계 조회 규칙]
 
 기업-기업, 기업-지역, 기업-업종 등
@@ -399,13 +498,11 @@ UI에서 실제 Graph DB 근거를 표시할 수 있도록
 RETURN 절에서 반드시 다음 alias를 사용하세요.
 
 필수:
-
 - source
 - relationship
 - target
 
 가능하면 다음 정보도 함께 반환하세요.
-
 - source_type
 - target_type
 - evidence
@@ -425,61 +522,123 @@ RETURN
     rel.source_case AS source_case,
     rel.source_row AS source_row
 
-
 source_node, rel, target_node은 예시 변수명이며
 MATCH에서 사용한 변수명에 맞게 변경하세요.
 
 
 [여러 홉 관계 조회 규칙]
 
-두 개 이상의 관계를 거치는 질문(예: 계열사의 대분류,
-종속기업의 지역)은 한 행에 관계 하나만 담기도록 반환하세요.
-두 번째 홉을 industry_section 같은 별도 컬럼에 넣으면
-UI 그래프에 첫 번째 홉만 표시됩니다.
+두 개 이상의 관계를 거치는 질문은
+경로 전체의 관계가 UI에 표시될 수 있도록
+한 행에 관계 하나만 담아 반환하세요.
 
-경로 전체를 path 로 잡고 relationships(path) 를 UNWIND 해서
-관계마다 한 행씩 source, relationship, target 을 반환하세요.
+첫 번째 관계의 결과와
+두 번째 관계의 최종값을 한 행의 별도 컬럼으로 합치지 마세요.
 
-MATCH path = (p:ParentCompany {{name: '(주)한화'}})
-             -[:AFFILIATED_WITH]-(a:ParentCompany)
-             -[:IN_INDUSTRY]->(s:Section)
-UNWIND relationships(path) AS rel
-WITH DISTINCT rel, startNode(rel) AS source_node, endNode(rel) AS target_node
-RETURN
-    coalesce(source_node.name, source_node.title) AS source,
-    labels(source_node)[0] AS source_type,
-    type(rel) AS relationship,
-    coalesce(target_node.name, target_node.title) AS target,
-    labels(target_node)[0] AS target_type,
-    rel.evidence AS evidence,
-    rel.source_case AS source_case,
-    rel.source_row AS source_row
+경로 전체를 path로 조회하고
+relationships(path)를 UNWIND하여
+각 관계마다 source, relationship, target을 반환하세요.
 
-답변은 이 행들을 종합해서 작성하세요.
-(예: 계열사별로 target 이 Section 인 행을 모아 대분류를 정리)
+특히 다음과 같이
+다른 기업을 거쳐 업종을 조회하는 질문에서는
+
+ParentCompany
+→ AFFILIATED_WITH 또는 HAS_SUBSIDIARY
+→ 기업
+→ IN_INDUSTRY
+→ Section
+
+의 전체 경로를 조회하세요.
+
+최종 업종 대분류는
+target_type이 Section인 관계 행의
+target 값을 기준으로 판단하세요.
 
 
 [질문 표현과 관계]
 
-- 계열사, 계열회사, 같은 그룹 회사: AFFILIATED_WITH (방향 없이 -[:AFFILIATED_WITH]- 로 조회)
-- 종속기업, 자회사: HAS_SUBSIDIARY (ParentCompany → SubsidiaryCompany)
-- 대분류, 업종 분야, 산업: IN_INDUSTRY → Section
-- 지역, 위치: LOCATED_IN → Region
-- 뉴스와 연결된 기업: RELATED_TO (News → ParentCompany)
+- 계열사, 계열회사, 같은 그룹 회사:
+  AFFILIATED_WITH
+  방향 없이 -[:AFFILIATED_WITH]- 로 조회
 
-"A 계열사의 ~" 처럼 다른 회사를 거쳐 묻는 질문은
-A 자신의 속성이 아니라 연결된 회사들의 정보를 조회해야 합니다.
+- 종속기업, 자회사:
+  HAS_SUBSIDIARY
+  ParentCompany → SubsidiaryCompany
+
+- 업종, 산업, 분야, 사업 분야, 업종 분야, 대분류:
+  IN_INDUSTRY
+  ParentCompany 또는 SubsidiaryCompany → Section
+
+- 지역, 위치:
+  LOCATED_IN
+  ParentCompany 또는 SubsidiaryCompany → Region
+
+- 뉴스와 연결된 기업:
+  RELATED_TO
+  News → ParentCompany
 
 
-[예외]
+[다른 기업을 거치는 질문]
 
-단순 속성 조회에는 위 형식을 강제하지 않습니다.
+"A의 계열사의 업종"
+"A의 자회사들이 속한 산업"
+"A 그룹 기업들의 분야"
 
-COUNT, SUM, AVG 등의 집계 질문에도
-위 형식을 강제하지 않습니다.
+처럼 다른 기업을 거쳐 업종이나 산업을 묻는 경우에는
+A 자신의 업종 속성을 조회하지 마세요.
 
-필요하지 않은 전체 그래프를 조회하지 말고
-사용자 질문에 필요한 범위만 조회하세요.
+먼저 관련 기업을 관계로 찾은 뒤
+각 기업에 대해 IN_INDUSTRY → Section을 조회하세요.
+
+업종을 최종적으로 판단할 때는
+각 기업의 Section.name을 사용하세요.
+
+
+[속성 조회 규칙]
+
+주소, 홈페이지, 대표자, 법인등록번호 등
+노드 자체의 속성을 직접 묻는 경우에는
+해당 노드의 속성을 조회할 수 있습니다.
+
+그러나 다음 표현은
+단순 속성 조회로 처리하지 마세요.
+
+- 업종
+- 산업
+- 분야
+- 사업 분야
+- 업종 분야
+- 대분류
+
+이 표현들은 기본적으로
+IN_INDUSTRY → Section 관계 조회로 처리하세요.
+
+
+[집계 질문]
+
+COUNT, SUM, AVG 등 집계 질문에서는
+일반 관계 조회 반환 형식을 강제하지 않습니다.
+
+다만 업종별 기업 수,
+산업별 계열사 수,
+대분류별 기업 수처럼
+업종을 기준으로 집계하는 경우에는
+반드시 Section을 기준으로 집계하세요.
+
+sicNm이나 임의의 업종 문자열을 기준으로
+대분류 집계를 대신하지 마세요.
+
+
+[조회 범위]
+
+질문에 필요한 범위만 조회하세요.
+
+다만 업종이나 산업 정보를 답변에 사용하려면
+필요한 IN_INDUSTRY → Section 조회는
+생략하지 마세요.
+
+조회 결과에 없는 업종이나 산업 정보를
+추론하여 보완하지 마세요.
 
 
 온톨로지:
