@@ -88,11 +88,7 @@ B2B 영업·마케팅 담당자는 신규 고객사, 협력사, 공급망 파트
 
 ### 📌 온톨로지 설계
 
-본 프로젝트의 온톨로지는 기업 관계 데이터를 Neo4j 지식그래프로 저장하고 조회하기 위한 스키마입니다. 주요 노드는 `ParentCompany`, `SubsidiaryCompany`, `Region`, `Section`, `News`로 구성되며, 각각 모기업, 종속기업, 지역, 업종 대분류, 기업 관련 뉴스를 의미합니다.
-
-관계는 `AFFILIATED_WITH`, `HAS_SUBSIDIARY`, `IN_INDUSTRY`, `LOCATED_IN`, `RELATED_TO`로 정의했습니다. 이를 통해 모기업 간 계열 관계, 모기업-종속기업 관계, 기업-업종 관계, 기업-지역 관계, 뉴스-기업 관계를 표현합니다.
-
-각 관계에는 `evidence`, `source_case`, `source_row` 속성을 포함해 관계가 생성된 원천 데이터와 근거를 추적할 수 있도록 했습니다. 이 온톨로지는 트리플 검증, Neo4j 적재, Text2Cypher 기반 질의응답의 공통 기준으로 활용됩니다.
+![온톨로지 설계도](artifacts/ontology_visualization.png)
 
 ---
 
