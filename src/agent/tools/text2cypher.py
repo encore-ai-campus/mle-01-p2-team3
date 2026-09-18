@@ -1,5 +1,6 @@
 import os
 import json
+import re
 
 from pathlib import Path
 from typing import Literal
@@ -356,6 +357,25 @@ def search_graph(cypher: str):
         }
 
 
+    # ====== 잘못된 type() 사용 검사 ======
+
+    invalid_type_pattern = re.search(
+        r"type\s*\(\s*\([^)]*\)\s*-\[",
+        cypher,
+        flags=re.IGNORECASE,
+    )
+
+    if invalid_type_pattern:
+        return {
+            "cypher": cypher,
+            "results": [],
+            "error": (
+                "type()에는 경로나 관계 패턴을 넣을 수 없습니다. "
+                "MATCH에서 선언한 Relationship 변수에 직접 type()을 적용하세요. "
+                "예: type(rel) AS relationship"
+            ),
+        }
+
     # ====== Neo4j 조회 ======
 
     records, summary, keys = driver.execute_query(
@@ -526,6 +546,32 @@ source_node, rel, target_node은 예시 변수명이며
 MATCH에서 사용한 변수명에 맞게 변경하세요.
 
 
+[관계 타입 반환 규칙]
+
+MATCH에서 관계 변수를 정의한 경우
+relationship alias는 반드시 해당 Relationship 변수에
+type()을 적용하여 반환하세요.
+
+예:
+
+MATCH (a)-[rel:IN_INDUSTRY]->(b)
+
+올바른 형식:
+type(rel) AS relationship
+
+잘못된 형식:
+type((a)-[rel]->(b)) AS relationship
+type((a)-->(b)) AS relationship
+
+type()에는 경로나 관계 패턴을 넣지 마세요.
+반드시 MATCH 또는 UNWIND에서 얻은
+Relationship 변수 하나만 전달하세요.
+
+이미 MATCH에서 관계 변수 rel을 선언했다면
+RETURN에서 관계 패턴을 다시 만들어 type()에 넣지 말고
+그 관계 변수를 그대로 사용하세요.
+
+
 [여러 홉 관계 조회 규칙]
 
 두 개 이상의 관계를 거치는 질문은
@@ -630,6 +676,7 @@ Cypher를 실행하기 전에 다음을 반드시 확인하세요.
 3. WHERE에서 사용하는 모든 변수가 현재 스코프에 존재하는가
 4. WITH가 있다면 이후 사용할 변수가 모두 WITH를 통과했는가
 5. 존재하지 않는 변수명이나 이전 스코프에서 사라진 변수를 사용하지 않았는가
+6. type()에 전달한 값이 경로나 패턴이 아니라 실제 Relationship 변수 하나인가
 
 특히
 "Variable ... not defined"
