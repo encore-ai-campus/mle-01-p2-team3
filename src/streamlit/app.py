@@ -30,6 +30,15 @@ COMPANY_LOGO_FILES = {
     "다우기술": "023590_cutout.png",
     "다우데이타": "540880_cutout.png",
 }
+GRAPH_NODE_COLORS = {
+    "center": "#b4aaa1",
+    "ParentCompany": "#f4b6c2",
+    "SubsidiaryCompany": "#b8c0ff",
+    "Section": "#f8c8dc",
+    "Region": "#b8d8f0",
+    "News": "#e8dfd2",
+}
+GRAPH_EDGE_COLOR = "#cfccc4"
 
 
 def _get_secret(name: str, secrets: object, environ: dict[str, str]) -> str | None:
@@ -937,22 +946,11 @@ def render_graph_svg(nodes: list[dict[str, object]], edges: list[dict[str, objec
     """
 
 
-def render_aura_graph_html(nodes: list[dict[str, object]], edges: list[dict[str, object]]) -> str:
+def render_aura_graph_html(
+    nodes: list[dict[str, object]],
+    edges: list[dict[str, object]],
+) -> str:
     """Aura 그래프를 드래그·줌 가능한 네트워크로 렌더링한다."""
-    node_colors = {
-        "ParentCompany": "#b4aaa1",
-        "SubsidiaryCompany": "#cfc7bf",
-        "Section": "#d7b98f",
-        "Region": "#b8c5c8",
-        "News": "#d6d1ca",
-    }
-    edge_colors = {
-        "AFFILIATED_WITH": "#b4aaa1",
-        "HAS_SUBSIDIARY": "#cfc7bf",
-        "IN_INDUSTRY": "#d7b98f",
-        "LOCATED_IN": "#b8c5c8",
-        "RELATED_TO": "#d6d1ca",
-    }
     network = Network(height="680px", width="100%", directed=True, bgcolor="#fbfaf8", font_color="#101010", cdn_resources="in_line")
     network.set_options(
         """
@@ -969,9 +967,9 @@ def render_aura_graph_html(nodes: list[dict[str, object]], edges: list[dict[str,
             node["id"],
             label=str(node["label"]),
             title=html.escape(f"{node['label']} · {node['group']} · {node['level']}단계"),
-            color="#b4aaa1" if is_center else node_colors.get(str(node["group"]), "#dbd6d1"),
+            color=GRAPH_NODE_COLORS["center"] if is_center else GRAPH_NODE_COLORS.get(str(node["group"]), "#dbd6d1"),
             font={"color": "#101010", "size": 18 if is_center else 13},
-            size=30 if is_center else 17,
+            size=30 if is_center else 22 if node["group"] == "ParentCompany" else 17,
         )
     for edge in edges:
         relation = str(edge["relation"])
@@ -979,7 +977,7 @@ def render_aura_graph_html(nodes: list[dict[str, object]], edges: list[dict[str,
             edge["source"],
             edge["target"],
             title=relation,
-            color=edge_colors.get(relation, "#cfccc4"),
+            color=GRAPH_EDGE_COLOR,
             width=1.2,
         )
     return network.generate_html()
@@ -1135,8 +1133,8 @@ def render_graph_explorer() -> None:
     st.markdown(
         f"""
         <div class="legend">
-            <span><i style="background:#b4aaa1;border-color:#b4aaa1"></i>계열 관계</span>
-            <span><i style="background:#cfc7bf;border-color:#cfc7bf"></i>종속 관계</span>
+            <span>계열 관계</span>
+            <span>종속 관계</span>
             <span>연결 {total}개 중 {len(shown)}개 표시</span>
         </div>
         """,
