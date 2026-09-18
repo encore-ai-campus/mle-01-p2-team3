@@ -7,6 +7,7 @@
 | GDS 그래프명 | `companyGraph` |
 | 노드 수 | 8190 |
 | 관계 수 | 51650 |
+| GDS 속성 저장 노드 수 | 2 |
 
 ## PageRank 허브 Top 10
 
@@ -27,11 +28,11 @@
 
 | 순위 | 커뮤니티 ID | 노드 수 | 주요 라벨 | 대표 노드 |
 | ---: | ---: | ---: | --- | --- |
-| 1 | 26 | 2951 | SubsidiaryCompany, ParentCompany, Region, Section | Kiwoom Asia Master Fund, Kiwoom Securities Holdings USA Inc., Kiwoom Securities USA Inc., 키움 시리우스사모투자합자회사, 키움뉴히어로4호스케일업펀드, 키움푸드테크 사모투자합자회사, 키움크리스제일호 사모투자합자회사, 키움뉴히어로5호디지털혁신펀드, 키움뉴히어로6호창업초기펀드, 케이에프비에스제이호기업재무안정사모투자 합자회사 |
-| 2 | 20 | 1015 | SubsidiaryCompany, ParentCompany, Region, Section | 평화씨엠비(주), (주)평화이엔지, 창인인재개발원(주), (주)엠제이비전테크, (주)이노빌, 에이치디현대마린솔루션테크㈜, 에스제이지세움(주), 에스제이지아센텍(주), (주)에스제이지이브이(*5), 에스제이지중앙연구소(주) |
-| 3 | 16 | 808 | SubsidiaryCompany, ParentCompany, Region, Section | KBI산업개발㈜, 에이치엘로지스앤코㈜, 목포신항만운영㈜, 배곧신도시지역특성화타운㈜, 에이치엘에코텍㈜, 다올칸피던스일반사모부동산 투자신탁제57호, 코람코전문투자형사모 부동산투자신탁117호(주1), 한일E&C㈜, 에스케이하이이엔지㈜, KOLON ENP EUROPE GmbH |
-| 4 | 32 | 738 | SubsidiaryCompany, ParentCompany, Section, Region | 제주한림해상풍력(주), 탐라해상풍력발전(주), (주)디앤오, (주)미래엠, (주)디앤오씨엠, (주)디앤오리츠운용(*2), (주)엘지씨엔에스(*1), (주)지티이노비젼, (주)엘지스포츠, (주)엘지경영개발원 |
-| 5 | 21 | 624 | SubsidiaryCompany, ParentCompany, Region, Section | 키움 AIM 일반사모부동산투자신탁제1호, 디앤디인베스트먼트㈜, ㈜디디아이오에스108 위탁관리부동산투자회사(주2), ㈜대유금형, 한국수력원자력(주), 한국남동발전(주), 한국중부발전(주), 한국서부발전(주), 한국남부발전(주), 한국전력기술(주) |
+| 1 | 44 | 2640 | SubsidiaryCompany, ParentCompany, Region, Section | Kiwoom Asia Master Fund, Kiwoom Securities Holdings USA Inc., Kiwoom Securities USA Inc., 키움 시리우스사모투자합자회사, 키움뉴히어로4호스케일업펀드, 키움푸드테크 사모투자합자회사, 키움크리스제일호 사모투자합자회사, 키움뉴히어로5호디지털혁신펀드, 키움뉴히어로6호창업초기펀드, 케이에프비에스제이호기업재무안정사모투자 합자회사 |
+| 2 | 8 | 1044 | SubsidiaryCompany, ParentCompany, Region, Section | 에이치디현대마린솔루션테크㈜, 에스제이지세움(주), 에스제이지아센텍(주), (주)에스제이지이브이(*5), 에스제이지중앙연구소(주), ㈜KBI에이스텍, (주)에스에이엠티, 세일이엔에스(주), 에스제이세일기공(주), 중부발전서비스(주) |
+| 3 | 9 | 830 | SubsidiaryCompany, ParentCompany, Region, Section | KBI산업개발㈜, 에이치엘로지스앤코㈜, 목포신항만운영㈜, 배곧신도시지역특성화타운㈜, 에이치엘에코텍㈜, 다올칸피던스일반사모부동산 투자신탁제57호, 키움로지스틱스일반사모부동산투자신탁제1호, 지인유동화제십삼차㈜(주2), 코람코전문투자형사모 부동산투자신탁117호(주1), 한일E&C㈜ |
+| 4 | 63 | 773 | SubsidiaryCompany, ParentCompany, Section | 당진고대부두운영(주)(*1), (주)피엘에스, (주)지에스엔텍, 에스케이하이스텍㈜, (주)디앤오, (주)미래엠, (주)디앤오씨엠, (주)디앤오리츠운용(*2), (주)엘지씨엔에스(*1), (주)지티이노비젼 |
+| 5 | 47 | 544 | SubsidiaryCompany, ParentCompany, Region, Section | 한화오션에코텍㈜, 오션이앤아이㈜, 키움 AIM 일반사모부동산투자신탁제1호, 한화오션엔지니어링㈜, 천장산풍력 주식회사, 고군산해상풍력 주식회사, 보령녹도풍력 주식회사, 영광칠해해상풍력 주식회사, 디앤디인베스트먼트㈜, ㈜디디아이오에스108 위탁관리부동산투자회사(주2) |
 
 ## 해석 기준
 

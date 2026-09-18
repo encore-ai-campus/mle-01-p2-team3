@@ -16,9 +16,12 @@ from neo4j import GraphDatabase
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 OUTPUT_JSON = PROJECT_ROOT / "data" / "quality" / "gds_report.json"
 OUTPUT_MD = PROJECT_ROOT / "data" / "quality" / "gds_report.md"
+OUTPUT_PROPERTIES = PROJECT_ROOT / "data" / "quality" / "gds_node_properties.jsonl"
 
 NODE_LABELS = ["ParentCompany", "SubsidiaryCompany", "Section", "Region"]
 RELATIONSHIPS = ["AFFILIATED_WITH", "HAS_SUBSIDIARY", "IN_INDUSTRY", "LOCATED_IN"]
+PAGERANK_PROPERTY = "gdsPageRank"
+COMMUNITY_PROPERTY = "gdsCommunityId"
 GDS_SESSION_ENV_KEYS = ("AURA_GDS_SESSION_ID", "GDS_SESSION_ID")
 GDS_CREATION_ENV_KEYS = {
     "memory": ("AURA_GDS_MEMORY", "GDS_MEMORY"),
@@ -174,12 +177,80 @@ def run_pagerank(
     ]
 
 
+def write_gds_properties(
+    session: Any,
+    graph_name: str,
+    gds_config: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    pagerank_config = dict(gds_config or {})
+    pagerank_config["writeProperty"] = PAGERANK_PROPERTY
+    pagerank = session.run(
+        """
+        CALL gds.pageRank.write($graphName, $configuration)
+        YIELD nodePropertiesWritten
+        RETURN nodePropertiesWritten
+        """,
+        graphName=graph_name,
+        configuration=pagerank_config,
+    ).single()
+
+    leiden_config = dict(gds_config or {})
+    leiden_config["writeProperty"] = COMMUNITY_PROPERTY
+    leiden_config.setdefault("randomSeed", 42)
+    leiden_config.setdefault("concurrency", 1)
+    leiden = session.run(
+        """
+        CALL gds.leiden.write($graphName, $configuration)
+        YIELD nodePropertiesWritten, communityCount, modularity
+        RETURN nodePropertiesWritten, communityCount, modularity
+        """,
+        graphName=graph_name,
+        configuration=leiden_config,
+    ).single()
+
+    return {
+        "pagerank": dict(pagerank),
+        "leiden": dict(leiden),
+    }
+
+
+def export_gds_properties(session: Any) -> list[dict[str, Any]]:
+    rows = session.run(
+        """
+        MATCH (n)
+        WHERE any(label IN labels(n) WHERE label IN $labels)
+          AND (n.gdsPageRank IS NOT NULL OR n.gdsCommunityId IS NOT NULL)
+        RETURN
+          n.id AS id,
+          labels(n)[0] AS label,
+          coalesce(n.name, n.title, n.id) AS name,
+          n.gdsPageRank AS gdsPageRank,
+          n.gdsCommunityId AS gdsCommunityId
+        ORDER BY label ASC, id ASC
+        """,
+        labels=NODE_LABELS,
+    ).data()
+    return [
+        {
+            "id": row["id"],
+            "label": row["label"],
+            "name": row["name"],
+            "gdsPageRank": None if row.get("gdsPageRank") is None else float(row["gdsPageRank"]),
+            "gdsCommunityId": None if row.get("gdsCommunityId") is None else int(row["gdsCommunityId"]),
+        }
+        for row in rows
+    ]
+
+
 def run_leiden(
     session: Any,
     graph_name: str,
     limit: int = 5,
     gds_config: dict[str, Any] | None = None,
 ) -> list[dict[str, Any]]:
+    configuration = dict(gds_config or {})
+    configuration.setdefault("randomSeed", 42)
+    configuration.setdefault("concurrency", 1)
     rows = session.run(
         """
         CALL gds.leiden.stream($graphName, $configuration)
@@ -201,7 +272,7 @@ def run_leiden(
         """,
         graphName=graph_name,
         limit=limit,
-        configuration=dict(gds_config or {}),
+        configuration=configuration,
     ).data()
     return [
         {
@@ -223,10 +294,18 @@ def build_report(
 ) -> dict[str, Any]:
     ensure_required_labels(session)
     projection = dict(project_graph(session, graph_name, gds_config, target))
+    writes = write_gds_properties(session, graph_name, gds_config)
+    exported_properties = export_gds_properties(session)
     return {
         "graphName": graph_name,
         "createdAt": datetime.now().isoformat(timespec="seconds"),
         "projection": projection,
+        "writes": writes,
+        "exportedProperties": {
+            "count": len(exported_properties),
+            "path": str(OUTPUT_PROPERTIES.relative_to(PROJECT_ROOT)),
+        },
+        "_exportedPropertyRows": exported_properties,
         "nodeLabels": NODE_LABELS,
         "relationships": RELATIONSHIPS,
         "pagerank_top10": run_pagerank(session, graph_name, gds_config=gds_config),
@@ -259,6 +338,7 @@ def to_markdown(report: dict[str, Any]) -> str:
 | GDS 그래프명 | `{report["graphName"]}` |
 | 노드 수 | {projection["nodeCount"]} |
 | 관계 수 | {projection["relationshipCount"]} |
+| GDS 속성 저장 노드 수 | {len(report.get("exportedProperties", []))} |
 
 ## PageRank 허브 Top 10
 
@@ -282,8 +362,13 @@ def to_markdown(report: dict[str, Any]) -> str:
 
 def write_report(report: dict[str, Any], json_path: Path = OUTPUT_JSON, md_path: Path = OUTPUT_MD) -> None:
     json_path.parent.mkdir(parents=True, exist_ok=True)
-    json_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    md_path.write_text(to_markdown(report), encoding="utf-8")
+    public_report = {key: value for key, value in report.items() if not key.startswith("_")}
+    json_path.write_text(json.dumps(public_report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    md_path.write_text(to_markdown(public_report), encoding="utf-8")
+    OUTPUT_PROPERTIES.write_text(
+        "\n".join(json.dumps(row, ensure_ascii=False) for row in report.get("_exportedPropertyRows", [])) + "\n",
+        encoding="utf-8",
+    )
 
 
 def run(
@@ -307,7 +392,7 @@ def run(
         with driver.session(database=database) as session:
             report = build_report(session, graph_name, gds_config, target)
     write_report(report)
-    return report
+    return {key: value for key, value in report.items() if not key.startswith("_")}
 
 
 def main() -> None:

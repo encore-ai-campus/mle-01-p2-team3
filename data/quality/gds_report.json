@@ -1,10 +1,24 @@
 {
   "graphName": "companyGraph",
-  "createdAt": "2026-09-18T09:24:30",
+  "createdAt": "2026-09-18T09:33:21",
   "projection": {
     "graphName": "companyGraph",
     "nodeCount": 8190,
     "relationshipCount": 51650
+  },
+  "writes": {
+    "pagerank": {
+      "nodePropertiesWritten": 8190
+    },
+    "leiden": {
+      "nodePropertiesWritten": 8190,
+      "communityCount": 77,
+      "modularity": 0.48801959649101434
+    }
+  },
+  "exportedProperties": {
+    "count": 8190,
+    "path": "data\\quality\\gds_node_properties.jsonl"
   },
   "nodeLabels": [
     "ParentCompany",
@@ -23,68 +37,68 @@
       "rank": 1,
       "name": "서울",
       "label": "Region",
-      "score": 643.4232397330851
+      "score": 643.4232397330904
     },
     {
       "rank": 2,
       "name": "금융",
       "label": "Section",
-      "score": 547.8804341789265
+      "score": 547.880434178933
     },
     {
       "rank": 3,
       "name": "제조",
       "label": "Section",
-      "score": 197.85655447690775
+      "score": 197.8565544769081
     },
     {
       "rank": 4,
       "name": "경기",
       "label": "Region",
-      "score": 156.77637510680992
+      "score": 156.77637510681035
     },
     {
       "rank": 5,
       "name": "서비스",
       "label": "Section",
-      "score": 85.06134533124126
+      "score": 85.0613453312415
     },
     {
       "rank": 6,
       "name": "부동산·건설",
       "label": "Section",
-      "score": 79.06438583031769
+      "score": 79.06438583031785
     },
     {
       "rank": 7,
       "name": "IT·미디어",
       "label": "Section",
-      "score": 75.1499497346915
+      "score": 75.14994973469163
     },
     {
       "rank": 8,
       "name": "모름",
       "label": "Section",
-      "score": 70.72810109753385
+      "score": 70.72810109753401
     },
     {
       "rank": 9,
       "name": "유통·물류",
       "label": "Section",
-      "score": 69.30349787521094
+      "score": 69.30349787521115
     },
     {
       "rank": 10,
       "name": "(주)신한금융지주회사",
       "label": "ParentCompany",
-      "score": 59.080474344265326
+      "score": 59.08047434426559
     }
   ],
   "communities_top5": [
     {
       "rank": 1,
-      "communityId": 26,
-      "size": 2951,
+      "communityId": 44,
+      "size": 2640,
       "labels": [
         "SubsidiaryCompany",
         "ParentCompany",
@@ -106,8 +120,8 @@
     },
     {
       "rank": 2,
-      "communityId": 20,
-      "size": 1015,
+      "communityId": 8,
+      "size": 1044,
       "labels": [
         "SubsidiaryCompany",
         "ParentCompany",
@@ -115,22 +129,22 @@
         "Section"
       ],
       "sampleNodes": [
-        "평화씨엠비(주)",
-        "(주)평화이엔지",
-        "창인인재개발원(주)",
-        "(주)엠제이비전테크",
-        "(주)이노빌",
         "에이치디현대마린솔루션테크㈜",
         "에스제이지세움(주)",
         "에스제이지아센텍(주)",
         "(주)에스제이지이브이(*5)",
-        "에스제이지중앙연구소(주)"
+        "에스제이지중앙연구소(주)",
+        "㈜KBI에이스텍",
+        "(주)에스에이엠티",
+        "세일이엔에스(주)",
+        "에스제이세일기공(주)",
+        "중부발전서비스(주)"
       ]
     },
     {
       "rank": 3,
-      "communityId": 16,
-      "size": 808,
+      "communityId": 9,
+      "size": 830,
       "labels": [
         "SubsidiaryCompany",
         "ParentCompany",
@@ -144,39 +158,38 @@
         "배곧신도시지역특성화타운㈜",
         "에이치엘에코텍㈜",
         "다올칸피던스일반사모부동산 투자신탁제57호",
+        "키움로지스틱스일반사모부동산투자신탁제1호",
+        "지인유동화제십삼차㈜(주2)",
         "코람코전문투자형사모 부동산투자신탁117호(주1)",
-        "한일E&C㈜",
-        "에스케이하이이엔지㈜",
-        "KOLON ENP EUROPE GmbH"
+        "한일E&C㈜"
       ]
     },
     {
       "rank": 4,
-      "communityId": 32,
-      "size": 738,
+      "communityId": 63,
+      "size": 773,
       "labels": [
         "SubsidiaryCompany",
         "ParentCompany",
-        "Section",
-        "Region"
+        "Section"
       ],
       "sampleNodes": [
-        "제주한림해상풍력(주)",
-        "탐라해상풍력발전(주)",
+        "당진고대부두운영(주)(*1)",
+        "(주)피엘에스",
+        "(주)지에스엔텍",
+        "에스케이하이스텍㈜",
         "(주)디앤오",
         "(주)미래엠",
         "(주)디앤오씨엠",
         "(주)디앤오리츠운용(*2)",
         "(주)엘지씨엔에스(*1)",
-        "(주)지티이노비젼",
-        "(주)엘지스포츠",
-        "(주)엘지경영개발원"
+        "(주)지티이노비젼"
       ]
     },
     {
       "rank": 5,
-      "communityId": 21,
-      "size": 624,
+      "communityId": 47,
+      "size": 544,
       "labels": [
         "SubsidiaryCompany",
         "ParentCompany",
@@ -184,16 +197,16 @@
         "Section"
       ],
       "sampleNodes": [
+        "한화오션에코텍㈜",
+        "오션이앤아이㈜",
         "키움 AIM 일반사모부동산투자신탁제1호",
+        "한화오션엔지니어링㈜",
+        "천장산풍력 주식회사",
+        "고군산해상풍력 주식회사",
+        "보령녹도풍력 주식회사",
+        "영광칠해해상풍력 주식회사",
         "디앤디인베스트먼트㈜",
-        "㈜디디아이오에스108 위탁관리부동산투자회사(주2)",
-        "㈜대유금형",
-        "한국수력원자력(주)",
-        "한국남동발전(주)",
-        "한국중부발전(주)",
-        "한국서부발전(주)",
-        "한국남부발전(주)",
-        "한국전력기술(주)"
+        "㈜디디아이오에스108 위탁관리부동산투자회사(주2)"
       ]
     }
   ]

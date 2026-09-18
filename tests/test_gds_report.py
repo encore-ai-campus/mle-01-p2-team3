@@ -32,6 +32,27 @@ class FakeSession:
             return FakeResult([{"exists": False}])
         if "gds.graph.project" in query:
             return FakeResult([{"graphName": "companyGraph", "nodeCount": 4, "relationshipCount": 3}])
+        if "gds.pageRank.write" in query:
+            return FakeResult([{"nodePropertiesWritten": 4}])
+        if "gds.leiden.write" in query:
+            return FakeResult([{"nodePropertiesWritten": 4, "communityCount": 2, "modularity": 0.42}])
+        if "gdsPageRank IS NOT NULL" in query:
+            return FakeResult([
+                {
+                    "id": "parent:1",
+                    "label": "ParentCompany",
+                    "name": "A사",
+                    "gdsPageRank": 2.5,
+                    "gdsCommunityId": 7,
+                },
+                {
+                    "id": "section:finance",
+                    "label": "Section",
+                    "name": "금융",
+                    "gdsPageRank": 1.2,
+                    "gdsCommunityId": 7,
+                },
+            ])
         if "gds.pageRank.stream" in query:
             return FakeResult([
                 {"rank": 1, "name": "A사", "label": "ParentCompany", "score": 2.5},
@@ -70,9 +91,14 @@ class GdsReportTest(unittest.TestCase):
         )
 
         self.assertEqual(report["projection"]["nodeCount"], 4)
+        self.assertEqual(report["writes"]["pagerank"]["nodePropertiesWritten"], 4)
+        self.assertEqual(report["writes"]["leiden"]["communityCount"], 2)
+        self.assertEqual(report["exportedProperties"]["count"], 2)
         self.assertEqual(report["pagerank_top10"][0]["name"], "A사")
         self.assertEqual(report["communities_top5"][0]["communityId"], 7)
         joined_queries = "\n".join(query for query, _ in session.queries)
+        self.assertIn("gds.pageRank.write", joined_queries)
+        self.assertIn("gds.leiden.write", joined_queries)
         self.assertIn("gds.pageRank.stream", joined_queries)
         self.assertIn("gds.leiden.stream", joined_queries)
         project_parameters = next(parameters for query, parameters in session.queries if "gds.graph.project" in query)
@@ -84,7 +110,29 @@ class GdsReportTest(unittest.TestCase):
         pagerank_parameters = next(parameters for query, parameters in session.queries if "gds.pageRank.stream" in query)
         leiden_parameters = next(parameters for query, parameters in session.queries if "gds.leiden.stream" in query)
         self.assertEqual(pagerank_parameters["configuration"], {})
-        self.assertEqual(leiden_parameters["configuration"], {})
+        self.assertEqual(leiden_parameters["configuration"]["randomSeed"], 42)
+        self.assertEqual(leiden_parameters["configuration"]["concurrency"], 1)
+
+    def test_write_gds_properties_uses_expected_node_properties(self):
+        session = FakeSession()
+
+        writes = gds_report.write_gds_properties(session, "companyGraph")
+
+        self.assertEqual(writes["pagerank"]["nodePropertiesWritten"], 4)
+        self.assertEqual(writes["leiden"]["nodePropertiesWritten"], 4)
+        pagerank_parameters = next(parameters for query, parameters in session.queries if "gds.pageRank.write" in query)
+        leiden_parameters = next(parameters for query, parameters in session.queries if "gds.leiden.write" in query)
+        self.assertEqual(pagerank_parameters["configuration"]["writeProperty"], "gdsPageRank")
+        self.assertEqual(leiden_parameters["configuration"]["writeProperty"], "gdsCommunityId")
+        self.assertEqual(leiden_parameters["configuration"]["randomSeed"], 42)
+        self.assertEqual(leiden_parameters["configuration"]["concurrency"], 1)
+
+    def test_export_gds_properties_returns_id_based_rows(self):
+        rows = gds_report.export_gds_properties(FakeSession())
+
+        self.assertEqual(rows[0]["id"], "parent:1")
+        self.assertEqual(rows[0]["gdsPageRank"], 2.5)
+        self.assertEqual(rows[0]["gdsCommunityId"], 7)
 
     def test_aura_projection_uses_relationship_type_list(self):
         self.assertEqual(gds_report.build_relationship_projection("aura"), gds_report.RELATIONSHIPS)
@@ -120,6 +168,11 @@ class GdsReportTest(unittest.TestCase):
         report = {
             "graphName": "companyGraph",
             "projection": {"nodeCount": 4, "relationshipCount": 3},
+            "writes": {
+                "pagerank": {"nodePropertiesWritten": 4},
+                "leiden": {"nodePropertiesWritten": 4, "communityCount": 2},
+            },
+            "exportedProperties": {"count": 1, "path": "data/quality/gds_node_properties.jsonl"},
             "pagerank_top10": [
                 {"rank": 1, "name": "A사", "label": "ParentCompany", "score": 2.5}
             ],

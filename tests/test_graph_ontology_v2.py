@@ -20,9 +20,11 @@ class GraphOntologyV2Test(unittest.TestCase):
     def test_section_node_exposes_name_and_category_properties(self):
         section = self.ontology["nodes"]["Section"]
 
-        self.assertEqual(set(section["properties"]), {"id", "name", "category"})
+        self.assertTrue({"id", "name", "category", "gdsPageRank", "gdsCommunityId"} <= set(section["properties"]))
         self.assertEqual(section["properties"]["name"]["type"], "string")
         self.assertEqual(section["properties"]["category"]["type"], "array[string]")
+        self.assertEqual(section["properties"]["gdsPageRank"]["type"], "number")
+        self.assertEqual(section["properties"]["gdsCommunityId"]["type"], "integer")
 
     def test_in_industry_supports_only_section_targets(self):
         signatures = self.ontology["relationships"]["IN_INDUSTRY"]["signatures"]
