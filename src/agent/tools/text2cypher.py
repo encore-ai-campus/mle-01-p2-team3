@@ -1,5 +1,6 @@
 import os
 import json
+import re
 
 from pathlib import Path
 from typing import Literal
@@ -356,6 +357,25 @@ def search_graph(cypher: str):
         }
 
 
+    # ====== 잘못된 type() 사용 검사 ======
+
+    invalid_type_pattern = re.search(
+        r"type\s*\(\s*\([^)]*\)\s*-\[",
+        cypher,
+        flags=re.IGNORECASE,
+    )
+
+    if invalid_type_pattern:
+        return {
+            "cypher": cypher,
+            "results": [],
+            "error": (
+                "type()에는 경로나 관계 패턴을 넣을 수 없습니다. "
+                "MATCH에서 선언한 Relationship 변수에 직접 type()을 적용하세요. "
+                "예: type(rel) AS relationship"
+            ),
+        }
+
     # ====== Neo4j 조회 ======
 
     records, summary, keys = driver.execute_query(
@@ -526,21 +546,71 @@ source_node, rel, target_node은 예시 변수명이며
 MATCH에서 사용한 변수명에 맞게 변경하세요.
 
 
+[관계 타입 반환 규칙]
+
+MATCH에서 관계 변수를 정의한 경우
+relationship alias는 반드시 해당 Relationship 변수에
+type()을 적용하여 반환하세요.
+
+예:
+
+MATCH (a)-[rel:IN_INDUSTRY]->(b)
+
+올바른 형식:
+type(rel) AS relationship
+
+잘못된 형식:
+type((a)-[rel]->(b)) AS relationship
+type((a)-->(b)) AS relationship
+
+type()에는 경로나 관계 패턴을 넣지 마세요.
+반드시 MATCH 또는 UNWIND에서 얻은
+Relationship 변수 하나만 전달하세요.
+
+이미 MATCH에서 관계 변수 rel을 선언했다면
+RETURN에서 관계 패턴을 다시 만들어 type()에 넣지 말고
+그 관계 변수를 그대로 사용하세요.
+
+
 [여러 홉 관계 조회 규칙]
 
 두 개 이상의 관계를 거치는 질문은
 경로 전체의 관계가 UI에 표시될 수 있도록
 한 행에 관계 하나만 담아 반환하세요.
 
-첫 번째 관계의 결과와
-두 번째 관계의 최종값을 한 행의 별도 컬럼으로 합치지 마세요.
-
 경로 전체를 path로 조회하고
 relationships(path)를 UNWIND하여
 각 관계마다 source, relationship, target을 반환하세요.
 
-특히 다음과 같이
-다른 기업을 거쳐 업종을 조회하는 질문에서는
+여러 홉 조회에서는 특별한 이유가 없다면
+최종 노드의 값을 region, industry, affiliated_company 등의
+별도 컬럼으로 다시 추가하지 마세요.
+
+최종 답변에 필요한 값은
+반환된 source, relationship, target 행을 이용하여 판단하세요.
+
+예를 들어
+
+ParentCompany
+→ AFFILIATED_WITH
+→ ParentCompany
+→ LOCATED_IN
+→ Region
+
+경로를 조회했다면,
+
+AFFILIATED_WITH 행에서는
+계열사 관계를 확인하고,
+
+LOCATED_IN 행에서는
+source를 해당 기업,
+target을 해당 기업의 지역으로 사용하세요.
+
+따라서 "계열사 중 서울이 아닌 기업의 회사명과 지역"처럼
+두 번째 관계의 정보가 필요한 경우에도
+LOCATED_IN 관계 행의 source와 target을 사용하여 답변하세요.
+
+마찬가지로
 
 ParentCompany
 → AFFILIATED_WITH 또는 HAS_SUBSIDIARY
@@ -548,11 +618,69 @@ ParentCompany
 → IN_INDUSTRY
 → Section
 
-의 전체 경로를 조회하세요.
+경로에서는
+
+IN_INDUSTRY 관계 행의
+source를 기업명,
+target을 해당 기업의 업종 대분류로 사용하세요.
 
 최종 업종 대분류는
-target_type이 Section인 관계 행의
-target 값을 기준으로 판단하세요.
+target_type이 Section인 관계 행의 target 값을 기준으로 판단하세요.
+
+
+[Cypher 변수 스코프 규칙]
+
+Cypher에서 WITH를 사용하면
+WITH에 포함되지 않은 변수는
+이후 RETURN, WHERE, ORDER BY, MATCH 등에서 사용할 수 없습니다.
+
+따라서 WITH 이후에 사용할 변수는
+반드시 해당 WITH 절에 포함하세요.
+
+특히 relationships(path)를 UNWIND한 뒤
+원래 MATCH에서 정의한 노드 변수를
+최종 RETURN이나 ORDER BY에서 다시 사용하려면
+그 변수를 WITH에서 반드시 유지하세요.
+
+예를 들어 다음 변수를 MATCH에서 사용했고:
+
+(c:ParentCompany)
+(r:Region)
+
+UNWIND 이후에도 c 또는 r을 사용할 필요가 있다면:
+
+WITH
+    c,
+    r,
+    rel,
+    startNode(rel) AS source_node,
+    endNode(rel) AS target_node
+
+처럼 필요한 변수를 모두 전달해야 합니다.
+
+그러나 여러 홉 관계 조회에서는
+가능하면 c.name, r.name 등을 별도 컬럼으로 다시 반환하기보다
+source, relationship, target 표준 행을 이용하는 방식을 우선하세요.
+
+이미 명시적인 노드 변수를 사용하고 있는 경우
+nodes(path)의 인덱스를 이용해 같은 노드를 다시 찾는 것도
+가능하면 피하세요.
+
+
+[Cypher 실행 전 검증]
+
+Cypher를 실행하기 전에 다음을 반드시 확인하세요.
+
+1. RETURN에서 사용하는 모든 변수가 현재 스코프에 존재하는가
+2. ORDER BY에서 사용하는 모든 변수가 현재 스코프에 존재하는가
+3. WHERE에서 사용하는 모든 변수가 현재 스코프에 존재하는가
+4. WITH가 있다면 이후 사용할 변수가 모두 WITH를 통과했는가
+5. 존재하지 않는 변수명이나 이전 스코프에서 사라진 변수를 사용하지 않았는가
+6. type()에 전달한 값이 경로나 패턴이 아니라 실제 Relationship 변수 하나인가
+
+특히
+"Variable ... not defined"
+오류가 발생할 수 있는 형태가 없는지 확인한 뒤 실행하세요.
 
 
 [질문 표현과 관계]
