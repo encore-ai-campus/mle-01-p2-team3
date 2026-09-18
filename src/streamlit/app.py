@@ -17,7 +17,7 @@ from pyvis.network import Network
 
 from aura_graph import build_graph_elements, fetch_graph_paths, search_companies
 
-SECTIONS = ["Overview", "Graph", "기업 위치 지도", "RAG", "Architecture"]
+SECTIONS = ["Overview", "Graph", "MAP", "RAG", "Architecture"]
 STATIC_DIR = Path(__file__).parent / "static"
 DATA_DIR = Path(__file__).resolve().parents[2] / "data" / "clean"
 AURA_ENV_PATH = Path(__file__).resolve().parents[2] / ".env"
@@ -391,6 +391,54 @@ def css() -> str:
 
     .stApp {{ background: var(--paper); color: var(--ink); }}
     .stApp, .stApp p, .stApp li, .stApp span, .stApp label, .stApp div {{ font-family: var(--sans); }}
+    /* 드롭다운·툴팁·다이얼로그는 .stApp 밖(포털)에 그려지므로 body 기준으로도 지정한다. */
+    body, body input, body textarea, body button, body select, body option,
+    [data-baseweb="popover"], [data-baseweb="popover"] *,
+    [data-baseweb="menu"], [data-baseweb="menu"] *,
+    [role="listbox"], [role="listbox"] *, [role="option"], [role="option"] *,
+    [data-baseweb="tooltip"], [data-baseweb="tooltip"] *,
+    [data-testid="stTooltipContent"], [data-testid="stTooltipContent"] *,
+    div[data-baseweb="select"] *, [data-testid="stSelectboxVirtualDropdown"], [data-testid="stSelectboxVirtualDropdown"] * {{
+        font-family: var(--sans) !important;
+    }}
+    /* 드롭다운 목록: 밝은 배경 + 검정 글씨 */
+    [data-baseweb="popover"] [role="listbox"],
+    [data-testid="stSelectboxVirtualDropdown"],
+    [data-testid="stSelectboxVirtualDropdown"] > div {{
+        background: #ffffff !important; border: 1px solid var(--line) !important; border-radius: 0 !important;
+        box-shadow: 0 8px 24px rgba(16, 16, 16, .08) !important;
+    }}
+    [role="option"] {{ color: var(--ink) !important; }}
+    [role="option"][aria-selected="true"], [role="option"]:hover {{
+        background: var(--accent) !important; color: var(--ink) !important;
+    }}
+    /* 아이콘 폰트는 위 규칙에서 되돌린다. */
+    [data-testid="stIconMaterial"], .material-symbols-rounded {{
+        font-family: 'Material Symbols Rounded' !important;
+    }}
+
+    /* 지도 상세 카드 */
+    .map-card {{ border: 1px solid var(--line-strong); background: #ffffff; padding: 1.2rem 1.3rem; }}
+    .map-card-kicker {{
+        font-family: var(--label); font-size: .68rem; letter-spacing: .18em; text-transform: uppercase; color: var(--mute);
+    }}
+    .map-card-name {{ font-size: 1.25rem !important; margin: .5rem 0 1.1rem !important; word-break: keep-all; }}
+    .map-card-row {{
+        display:flex; justify-content:space-between; gap:.8rem; align-items: baseline;
+        padding: .5rem 0; border-top: 1px solid var(--line);
+    }}
+    .map-card-row span {{ font-family: var(--label); font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: var(--mute); }}
+    .map-card-row b {{ font-weight: 400; font-size: .95rem; text-align: right; word-break: keep-all; }}
+    .map-card-address {{
+        margin-top: .9rem; padding-top: .9rem; border-top: 1px solid var(--line);
+        font-size: .86rem; line-height: 1.7; color: var(--mute); word-break: keep-all;
+    }}
+    .map-hint {{
+        border: 1px dashed var(--line-strong); padding: 1.1rem 1.2rem; color: var(--mute);
+        font-size: .9rem; line-height: 1.6; word-break: keep-all;
+    }}
+    /* 지도 캔버스 테두리 정리 */
+    [data-testid="stDeckGlJsonChart"] {{ border: 1px solid var(--line-strong); }}
     /* 아이콘은 Material Symbols 를 그대로 써야 한다. 위 전역 규칙에서 되돌린다. */
     [data-testid="stIconMaterial"], .material-symbols-rounded, [class*="material-symbols"] {{
         font-family: 'Material Symbols Rounded' !important;
@@ -968,6 +1016,77 @@ def render_graph_explorer() -> None:
     st.caption("AuraDB에서 읽어온 실제 관계입니다. 드래그·줌으로 그래프를 탐색할 수 있습니다.")
 
 
+def render_leaflet_map_html(markers: list[dict[str, object]], lat: float, lon: float, zoom: int) -> str:
+    """일반 지도(도로·공원·수계) 위에 핀을 찍는 Leaflet 지도를 만듭니다.
+
+    pydeck 의 TileLayer 는 streamlit 의 JSON 스펙에서 래스터 타일을 그리지 못해
+    (하위 레이어가 GeoJsonLayer 로 처리됨) 지도가 비어 보입니다. 그래서 Leaflet 을 직접 씁니다.
+    """
+    payload = json.dumps(markers, ensure_ascii=False)
+    pin_svg = (
+        "<svg xmlns='http://www.w3.org/2000/svg' width='28' height='38' viewBox='0 0 48 64'>"
+        "<path d='M24 2C13.5 2 5 10.5 5 21c0 13.5 19 41 19 41s19-27.5 19-41C43 10.5 34.5 2 24 2z' "
+        "fill='#b4aaa1' stroke='#101010' stroke-width='3' stroke-linejoin='round'/>"
+        "<circle cx='24' cy='21' r='6.5' fill='#101010'/></svg>"
+    )
+    return f"""
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/MarkerCluster.Default.css"/>
+    <style>
+      {font_face_css("/app/static/", weights=(400, 700))}
+      html, body {{ margin: 0; padding: 0; }}
+      #map {{ height: 620px; border: 1px solid #101010; }}
+      .leaflet-container {{ font-family: 'GangwonEduAll', sans-serif; background: #fbfaf8; }}
+      .leaflet-popup-content-wrapper {{ border-radius: 0; box-shadow: 0 6px 20px rgba(16,16,16,.14); }}
+      .leaflet-popup-content {{ margin: 14px 16px; min-width: 210px; }}
+      .pin-name {{ font-size: 1.02rem; font-weight: 700; margin-bottom: .1rem; word-break: keep-all; }}
+      .pin-type {{ font-size: .7rem; letter-spacing: .1em; color: #8c887f; text-transform: uppercase; }}
+      .pin-row {{ display:flex; gap:.6rem; padding:.28rem 0; border-top:1px solid #e2dfd8; font-size:.86rem; }}
+      .pin-row span {{ color:#8c887f; min-width: 3.4rem; }}
+      .pin-addr {{ margin-top:.5rem; padding-top:.5rem; border-top:1px solid #e2dfd8; font-size:.82rem; color:#8c887f; line-height:1.6; word-break: keep-all; }}
+      .marker-cluster div {{ background: #b4aaa1; color: #101010; font-weight: 700; }}
+      .marker-cluster {{ background: rgba(180,170,161,.45); }}
+    </style>
+    <div id="map"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.5.3/leaflet.markercluster.min.js"></script>
+    <script>
+      const rows = {payload};
+      const map = L.map('map', {{ scrollWheelZoom: true }}).setView([{lat}, {lon}], {zoom});
+      L.tileLayer('https://tile.openstreetmap.org/{{z}}/{{x}}/{{y}}.png', {{
+        maxZoom: 19,
+        attribution: '&copy; OpenStreetMap'
+      }}).addTo(map);
+
+      const icon = L.divIcon({{
+        html: `{pin_svg}`,
+        className: 'company-pin',
+        iconSize: [28, 38],
+        iconAnchor: [14, 37],
+        popupAnchor: [0, -34]
+      }});
+
+      const escapeHtml = (value) => String(value == null ? '' : value)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+      const cluster = L.markerClusterGroup({{ maxClusterRadius: 48, spiderfyOnMaxZoom: true }});
+      rows.forEach((row) => {{
+        const popup = `
+          <div class="pin-type">${{escapeHtml(row.type)}}</div>
+          <div class="pin-name">${{escapeHtml(row.name)}}</div>
+          <div class="pin-row"><span>대표자</span>${{escapeHtml(row.rep)}}</div>
+          <div class="pin-row"><span>전화</span>${{escapeHtml(row.phone)}}</div>
+          <div class="pin-row"><span>업종</span>${{escapeHtml(row.sic)}}</div>
+          <div class="pin-addr">${{escapeHtml(row.addr)}}</div>`;
+        cluster.addLayer(L.marker([row.lat, row.lng], {{ icon }}).bindPopup(popup));
+      }});
+      map.addLayer(cluster);
+    </script>
+    """
+
+
+
 def render_company_map() -> None:
     """카카오 지오코딩이 완료된 기업 위치를 지도와 상세 카드로 표시합니다."""
     st.markdown("## 기업 위치 지도")
@@ -1011,151 +1130,44 @@ def render_company_map() -> None:
     result_caption = f"검색 결과 {len(visible):,}개" if company_query else f"표시 기업 {len(visible):,}개"
     st.caption(f"{result_caption} · 좌표 변환 성공 {len(map_df):,}개")
 
-    import pydeck as pdk
-
     if visible.empty:
         st.info("선택한 지역에 표시할 기업이 없습니다.")
         return
 
-    visible["tooltip_text"] = visible.apply(
-        lambda row: f"{row['entity_type']} · {row['name']}\\n{row['display_address']}",
-        axis=1,
-    )
-    # 확대 10 수준에서 보이는 작은 역삼각형 크기로 고정합니다.
-    triangle_delta = 0.00025
-    visible["triangle"] = visible.apply(
-        lambda row: [
-            [float(row["longitude"]), float(row["latitude"]) - triangle_delta],
-            [float(row["longitude"]) - triangle_delta, float(row["latitude"]) + triangle_delta * 0.65],
-            [float(row["longitude"]) + triangle_delta, float(row["latitude"]) + triangle_delta * 0.65],
-        ],
-        axis=1,
-    )
-    center_lat = float(visible["latitude"].median())
-    center_lon = float(visible["longitude"].median())
-    deck = pdk.Deck(
-        map_style=None,
-        initial_view_state=pdk.ViewState(
-            latitude=center_lat,
-            longitude=center_lon,
-            zoom=(11.0 if len(visible) == 1 else 9.5) if company_query else (6.2 if selected_region == "전체" else 8.5),
-        ),
-        tooltip={
-            "html": (
-                "<b>{name}</b><br/>"
-                "유형: {entity_type}<br/>"
-                "대표자: {representative}<br/>"
-                "전화번호: {phone}<br/>"
-                "주소: {display_address}"
-            ),
-            "style": {
-                "backgroundColor": "#101010",
-                "color": "white",
-                "fontSize": "13px",
-                "padding": "10px",
-            },
-        },
-        layers=[
-            pdk.Layer(
-                "PolygonLayer",
-                id="parent-company-points",
-                data=visible,
-                get_polygon="triangle",
-                get_fill_color=[180, 100, 70, 190],
-                get_line_color=[70, 50, 40, 220],
-                line_width_min_pixels=1,
-                pickable=True,
-                auto_highlight=True,
-            )
-        ],
-    )
-    map_col, detail_col = st.columns([3.2, 1.2], gap="large")
-    with map_col:
-        selection = st.pydeck_chart(
-            deck,
-            height=620,
-            selection_mode="single-object",
-            on_select="rerun",
-            key="parent_company_map",
-        )
+    # 마커가 너무 많으면 브라우저가 느려지므로 상한을 둡니다.
+    max_markers = 3000
+    plotted = visible.head(max_markers)
 
-    selected_objects = []
-    selected_indices = []
-    if selection is not None:
-        try:
-            selection_state = selection.selection
-            raw_objects = getattr(selection_state, "objects", []) or []
-            raw_indices = getattr(selection_state, "indices", []) or []
-        except AttributeError:
-            selection_state = selection.get("selection", {})
-            raw_objects = selection_state.get("objects", []) or []
-            raw_indices = selection_state.get("indices", []) or []
+    markers = [
+        {
+            "lat": float(row["latitude"]),
+            "lng": float(row["longitude"]),
+            "name": str(row.get("name", "") or ""),
+            "type": str(row.get("entity_type", "") or ""),
+            "rep": str(row.get("representative", "") or "-"),
+            "phone": str(row.get("phone", "") or "-"),
+            "addr": str(row.get("display_address", "") or "-"),
+            "sic": str(row.get("sicNm", "") or "-"),
+        }
+        for _, row in plotted.iterrows()
+    ]
 
-        # Streamlit PyDeck state is grouped by layer ID:
-        # {"parent-company-points": [{...}]} and {"parent-company-points": [3]}.
-        if isinstance(raw_objects, dict):
-            selected_objects = next(iter(raw_objects.values()), []) or []
-        else:
-            selected_objects = list(raw_objects)
-        if isinstance(raw_indices, dict):
-            selected_indices = next(iter(raw_indices.values()), []) or []
-        else:
-            selected_indices = list(raw_indices)
-
-    if not selected_objects and not selected_indices:
-        with detail_col:
-            st.info("삼각형을 클릭하면 기업 정보가 표시됩니다.")
-        return
-
-    selected_object = selected_objects[0] if selected_objects else selected_indices[0]
-    selected_id = ""
-    if isinstance(selected_object, dict):
-        selected_crno = str(selected_object.get("crno") or "")
-        selected_id = str(selected_object.get("id") or selected_object.get("map_id") or "")
-        selected_name = str(selected_object.get("name", ""))
-    elif isinstance(selected_object, int) or (isinstance(selected_object, str) and selected_object.isdigit()):
-        selected_index = int(selected_object)
-        selected_row = visible.iloc[selected_index] if 0 <= selected_index < len(visible) else None
-        selected_crno = str(selected_row.get("crno", "")) if selected_row is not None else ""
-        selected_id = str(selected_row.get("id", "")) if selected_row is not None else ""
-        selected_name = str(selected_row.get("name", "")) if selected_row is not None else ""
+    center_lat = float(plotted["latitude"].median())
+    center_lon = float(plotted["longitude"].median())
+    if company_query:
+        zoom = 13 if len(plotted) == 1 else 11
     else:
-        parsed_object = None
-        try:
-            parsed_object = json.loads(str(selected_object))
-        except (TypeError, json.JSONDecodeError):
-            pass
-        if isinstance(parsed_object, dict):
-            selected_crno = str(parsed_object.get("crno", ""))
-            selected_id = str(parsed_object.get("id") or parsed_object.get("map_id") or "")
-            selected_name = str(parsed_object.get("name", ""))
-        else:
-            selected_crno = ""
-            selected_name = str(selected_object)
-    selected_rows = visible[visible["crno"].astype(str) == selected_crno]
-    if selected_rows.empty and selected_id:
-        selected_rows = visible[visible["id"].astype(str) == selected_id]
-    if selected_rows.empty:
-        selected_rows = visible[visible["name"] == selected_name]
-    if selected_rows.empty:
-        with detail_col:
-            st.info("선택한 기업 정보를 찾지 못했습니다.")
-        return
+        zoom = 7 if selected_region == "전체" else 10
 
-    row = selected_rows.iloc[0]
-    with detail_col:
-        st.markdown(
-            "<div style='background:#101010;color:white;border-radius:12px;padding:16px 18px;margin-top:8px;'>"
-            f"<div style='font-size:0.78rem;color:#cfc7bf;margin-bottom:8px;'>선택한 {html.escape(str(row.get('entity_type') or '기업'))}</div>"
-            f"<div style='font-size:1.15rem;font-weight:700;margin-bottom:12px;'>{html.escape(str(row.get('name', '-')))}</div>"
-            f"<div>대표자: {html.escape(str(row.get('representative') or '-'))}</div>"
-            f"<div>전화번호: {html.escape(str(row.get('phone') or '-'))}</div>"
-            f"<div style='margin-top:8px;color:#d8d2cc;font-size:0.86rem;'>주소: {html.escape(str(row.get('display_address') or '-'))}</div>"
-            f"<div style='color:#d8d2cc;font-size:0.86rem;'>지역: {html.escape(str(row.get('region') or '-'))}</div>"
-            f"<div style='color:#d8d2cc;font-size:0.86rem;'>업종: {html.escape(str(row.get('sicNm') or '-'))}</div>"
-            "</div>",
-            unsafe_allow_html=True,
-        )
+    components.html(
+        render_leaflet_map_html(markers, center_lat, center_lon, zoom),
+        height=640,
+        scrolling=False,
+    )
+    if len(visible) > max_markers:
+        st.caption(f"마커는 {max_markers:,}개까지 표시합니다. 지역·기업명으로 범위를 좁혀 보세요.")
+    else:
+        st.caption("마커를 클릭하면 기업 정보가 표시됩니다. 지도 출처: OpenStreetMap")
 
 
 def render_rag_demo() -> None:
@@ -1252,7 +1264,7 @@ def main() -> None:
         render_hero_band(content)
     elif section == "Graph":
         render_graph_explorer()
-    elif section == "기업 위치 지도":
+    elif section == "MAP":
         render_company_map()
     elif section == "RAG":
         render_rag_demo()
