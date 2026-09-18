@@ -33,11 +33,9 @@ QUOTE_ERROR_PREFIXES = (
     "section_keyword_mismatch",
 )
 
-# section_insert_v3 케이스의 evidence는 원본 행 인용이 아니라 회사의 여러
-# IN_INDUSTRY→Industry 관계를 집계해 만든 산업명 목록이라, 다른 케이스와 같은
-# "원문 그대로 포함" 검사를 적용할 수 없다. 대신 이 케이스를 만든 것과 동일한
-# 키워드 매칭 규칙(classify_industry)으로 evidence의 산업명들이 실제로 해당
-# object(Section)를 도출하는지 검증한다. (src/neo4j/section_insert_v3.ipynb 참고)
+# section_insert_v3의 IN_INDUSTRY evidence도 회사명·주소·업종명을 포함한
+# 원문 행 인용이다. source_row가 가리키는 원천 행에 evidence가 포함되는지
+# 다른 관계와 동일한 방식으로 검증한다.
 SECTION_INSERT_V3_CASE = "section_insert_v3"
 
 SECTION_ROWS = [
@@ -156,9 +154,6 @@ def validate_triple(
 
     if "source_doc_id" not in triple:
         errors.append("missing_source_identifier")
-    elif str(triple.get("source_case", "")).strip() == SECTION_INSERT_V3_CASE:
-        if evidence and not _section_evidence_ok(evidence, str(triple.get("object", ""))):
-            errors.append("section_keyword_mismatch")
     elif source_text is not None and evidence and not _quote_in_source(evidence, source_text):
         errors.append("quote_not_found_in_source")
 
@@ -253,8 +248,7 @@ def validate_file(
             continue
 
         source_text = None
-        is_section_insert_v3 = str(triple.get("source_case", "")).strip() == SECTION_INSERT_V3_CASE
-        if source_table and not is_section_insert_v3:
+        if source_table:
             source_row = _to_int(triple.get("source_row"))
             if source_row is None or source_row not in source_table:
                 result = validate_triple(triple, allowed_signatures, line_no=line_no)
@@ -352,10 +346,8 @@ def write_markdown_report(path: Path, summary: dict[str, Any], gold_metrics: dic
 ## 계산 기준
 
 - 스키마 준수율: 전체 추출 중 관계명과 source/target 타입이 온톨로지를 지킨 비율
-- 근거 원문 일치율: 전체 추출 중 `evidence` 문자열이 원천 행에 실제 포함된 비율
-  (단, `source_case="section_insert_v3"`는 원천 행 인용이 아니라 여러 Industry 관계를
-  집계한 산업명 목록이므로, 원문 대조 대신 산업명이 동일한 키워드 규칙으로 해당
-  Section을 실제로 도출하는지(`section_keyword_mismatch`) 검사한다.)
+- 근거 원문 일치율: 전체 추출 중 `evidence` 문자열이 해당 `source_row`의 원천 행에
+  실제 포함되는 비율. Section(`IN_INDUSTRY`) 관계도 같은 방식으로 검사한다.
 - 수동 검토 대상: 스키마 검사와 근거 일치 검사를 모두 통과한 트리플
 - 샘플 정밀도: `manual_review_sample_50.csv`를 사람이 채점한 뒤 별도로 계산
 

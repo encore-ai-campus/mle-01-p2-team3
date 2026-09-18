@@ -1,15 +1,14 @@
 {
   "total_triples": 26072,
   "schema_pass_triples": 26072,
-  "quote_pass_triples": 17430,
-  "review_population_size": 17430,
-  "rejected_triples": 8642,
+  "quote_pass_triples": 25692,
+  "review_population_size": 25692,
+  "rejected_triples": 380,
   "schema_compliance_rate": 1.0,
-  "quote_match_rate": 0.668533292420988,
-  "review_population_rate": 0.668533292420988,
+  "quote_match_rate": 0.9854249769868058,
+  "review_population_rate": 0.9854249769868058,
   "error_counts": {
-    "missing_source_identifier": 7407,
-    "section_keyword_mismatch": 1235,
+    "missing_source_identifier": 380,
     "source_row_not_found": 380
   },
   "relation_counts": {
