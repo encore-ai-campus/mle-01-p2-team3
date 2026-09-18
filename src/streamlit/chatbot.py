@@ -272,6 +272,9 @@ def build_graph_visualization_data(
     nodes_by_id: dict[str, dict[str, Any]] = {}
     edges: list[dict[str, Any]] = []
 
+    # 추가
+    seen_edges: set[tuple[str, str, str]] = set()
+
     for row in graph_rows:
         source = str(row.get("source", "")).strip()
         target = str(row.get("target", "")).strip()
@@ -298,6 +301,7 @@ def build_graph_visualization_data(
                 ),
             },
         )
+
         nodes_by_id.setdefault(
             target_id,
             {
@@ -311,6 +315,20 @@ def build_graph_visualization_data(
             },
         )
 
+        # -----------------------------
+        # 같은 관계는 그래프에서 한 번만 그림
+        # -----------------------------
+        edge_key = (
+            source_id,
+            relationship,
+            target_id,
+        )
+
+        if edge_key in seen_edges:
+            continue
+
+        seen_edges.add(edge_key)
+
         edge_title = [f"관계: {html.escape(relationship)}"]
 
         evidence = row.get("evidence")
@@ -319,11 +337,15 @@ def build_graph_visualization_data(
 
         source_case = row.get("source_case")
         if source_case not in (None, ""):
-            edge_title.append(f"source_case: {html.escape(str(source_case))}")
+            edge_title.append(
+                f"source_case: {html.escape(str(source_case))}"
+            )
 
         source_row = row.get("source_row")
         if source_row not in (None, ""):
-            edge_title.append(f"source_row: {html.escape(str(source_row))}")
+            edge_title.append(
+                f"source_row: {html.escape(str(source_row))}"
+            )
 
         edges.append(
             {
@@ -336,7 +358,6 @@ def build_graph_visualization_data(
         )
 
     return list(nodes_by_id.values()), edges
-
 
 def populate_pyvis_network(
     network: Any,
